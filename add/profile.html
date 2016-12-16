@@ -1,0 +1,214 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ADD</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/accord.css">
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/jquery.form.js"></script>
+	<script type="text/javascript" src="js/jquery.session.js"></script>
+
+	<script>
+	//перенаправление на начальную страницу если пользователь не произвел вход
+	var reIndex = $.session.get("auth");
+	console.log(reIndex);
+	if(reIndex == undefined){
+		var url = "./index.php";
+		$(location).attr('href',url);
+	}
+	
+	//гармошка
+	$(document).ready(function(){
+		var accordion_head = $('.accordion > li > a'),
+		accordion_body = $('.accordion li > .sub-menu');
+		accordion_head.first().addClass('active').next().slideDown('normal');
+		accordion_head.on('click', function(event){
+			event.preventDefault();
+				if ($(this).attr('class') != 'active'){
+					accordion_body.slideUp('normal');
+					$(this).next().stop(true,true).slideToggle('normal');
+					accordion_head.removeClass('active');
+					$(this).addClass('active');
+				}
+		});
+		$("#outReg").click(function(){
+			$.session.remove('auth');
+			
+			var url = "./index.php";
+			$(location).attr('href',url);
+		});
+	});
+	</script>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header clearfix">
+		<div class="logotip clearfix">
+		
+			<div class="add_block clearfix">
+				<a class="add"><span>+</span> ADD</a>
+			</div>
+			
+			<div class="register clearfix">
+				<a href="#" id="reg">Register</a>
+				<a href="#" id="inn">Inn</a>
+			</div>
+		</div>
+	</div>
+	
+	
+	<article class="clearfix">
+	
+		<div class="sort clearfix">
+			<p class="grad_line">
+				<a id="grad" href="#"></a>
+				<a id="line" href="#"></a>
+			</p>
+			<p>Sort:<strong> date</strong> (<span id="datea">&#9650;</span><span id="dated">&#9660;</span>);
+			<strong>price</strong> (<span id="pricea">&#9650;</span><span id="priced">&#9660;</span>)</p>
+		</div>
+		
+		<div class="navigation">
+			<ul>
+				<li class="main_category"><a href="#" id="all"><span>Home</span></a></li>
+				<li class="category"><a href="#" id="electr"><span>Electronic</span></a></li>
+				<li class="category"><a href="#" id="clos"><span>Closer</span></a></li>
+				<li class="category"><a href="#"><span>Furniture</span></a></li>
+				<li class="category"><a href="#"><span>Kitchen</span></a></li>
+				<li class="category"><a href="#"><span>Auto</span></a></li>
+				<li class="category"><a href="#"><span>Sport</span></a></li>
+				<li class="category"><a href="#"><span>Tools</span></a></li>
+				<li class="category"><a href="#"><span>Films</span></a></li>
+				<li class="category"><a href="#"><span>Music</span></a></li>
+			</ul>
+		</div>
+		
+		<div class="data">
+			<p id="reg_message"></p>
+		
+			<div id="content">
+				<div id="main">
+					<div id="fon"></div>
+					<div id="load"></div>
+
+					<ul id="tovar"></ul>
+				</div>
+			</div>		
+		
+			<div class="wrapper_accord">
+				<ul class="accordion">
+					<li id="one" class="files">
+						<a href="#one">Changing Profile</a>
+						<ul class="sub-menu">
+							<li class="oneText"><label for="info_pass">Current Password</label><input type="text" name="info_pass" id="info_pass" value="" /></li>
+							<li class="oneText"><label for="info_new_pass">New Password</label><input type="text" name="info_new_pass" id="info_new_pass" value="" /></li>
+							<li class="oneText"><label for="info_name">Name</label><input type="text" name="info_name" id="info_name" value="" /></li>
+							<li class="oneText"><label for="info_email">E-mail</label><input type="text" name="info_email" id="info_email" value="" /></li>
+							<li class="oneTextBtn"><p type="submit" name="save_submit_ch" id="form_submit_ch">Change</p></li>
+						</ul>
+					</li>
+					
+					
+					<li id="two" class="mail">
+						<a href="#two">To add a new advert</a>
+						<ul class="sub-menu">
+							<li class="twoText"><label>Category</label>
+								<select name="form_cat" id="form_cat">
+									<option selected value="electronic">Electronic</option>
+									<option value="closer">Closer</option>
+								</select>
+							</li>
+							<li class="twoText"><label>Title</label><input type="text" name="form_title" id="form_title" required /></li>
+							<li class="twoText"><label>Price</label><input type="text" name="form_price" id="form_price" required /></li>
+							<li class="twoText"><label>Phone</label><input type="text" name="form_phone" id="form_phone" required /></li>
+							<li class="twoText"><label>Mail</label><input type="text" name="form_mail" id="form_mail" required /></li>
+							<li class="twoTextImg"><label>Pictures</label>
+								<div class="addimage clearfix">
+									<p id="delImg">x</p>
+									<div class="fileform">
+										<div id="fileformlabel"></div>
+										<div class="selectbutton">View</div>
+										<input type="file" enctype="multipart/form-data" accept=".txt,image/*" name="files" id="files" onchange="getName(this.value);" />
+									</div>
+								</div>
+								<output id="list"><img id="image_preview" src="" alt="no"></output>
+								
+								<script>
+								//предпросмотр загружаемых картинок
+								$(document).ready(function(){
+									$('#files').change(function(){
+										$('#image_preview').show(200);
+										var input = $(this)[0];
+										if ( input.files && input.files[0]){
+											if ( input.files[0].type.match('image.*')){
+												var reader = new FileReader();
+												reader.onload = function(e){
+													$('#image_preview').attr('src', e.target.result);
+												}
+												reader.readAsDataURL(input.files[0]);
+											}
+										}
+										$("#delImg").click(function(){
+											document.getElementById("files").value = '';
+											$("#image_preview").removeAttr("src").hide(200);
+											input = '';
+											reader = '';
+											var filen = '';
+											var del = document.getElementById("fileformlabel");
+											del.innerHTML = filen;
+										});
+									});
+								});
+								
+								//информация о загружаемом файле
+								function getName(str){
+									if(str.lastIndexOf('\\')){
+										var i = str.lastIndexOf('\\')+1;
+									}else{
+										var i = str.lastIndexOf('/')+1;
+									}
+									var filename = str.slice(i);			
+									var uploaded = document.getElementById("fileformlabel");
+									uploaded.innerHTML = filename;
+								}
+								</script>
+
+							</li>
+							<li class="twoTextEdit clearfix">
+								<textarea id="editor1" name="editor1"></textarea>
+							</li>
+							<li class="twoTextBtn"><button type="submit" id="submit_form" class="submit button">ADD</button></li>
+						</ul>
+					</li>
+
+					
+					<li id="three" class="cloud">
+						<a href="#three">My ads</a>
+						<ul class="sub-menu"></ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="nav_bottom">
+			<input type='hidden' id='current_page' />
+			<input type='hidden' id='show_per_page' />
+			<div id='page_navigation'></div>
+		</div>
+	</article>
+	
+	<footer>
+		<div class="menu_bottom"></div>
+		<div class="logo_small"></div>
+	</footer>
+</div>
+
+	<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>

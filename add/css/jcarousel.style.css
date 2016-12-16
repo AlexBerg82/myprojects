@@ -1,0 +1,108 @@
+.jcarousel-wrapper {
+    margin: 0 auto;
+    position: relative;
+    border: 10px solid #fff;
+	height: 470px;
+}
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.jcarousel-pagination {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+}
+.jcarousel-pagination a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0;
+    line-height: 12px;
+    min-width: 12px;
+    background: #fff;
+	border:3px solid rgba(0, 0, 0, 0.9);
+    padding: 0px;
+    text-align: center;
+    margin-right: 4px;
+    opacity: 0.8;
+}
+.jcarousel-pagination a.active {
+    background: #4E443C;
+    color: #fff;
+    opacity: 1;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+	border:3px solid #fff;
+}
+.jcarousel ul li{
+	float: left;
+	position: relative;
+}
+.jcarousel ul li .links{
+	padding-left: 20px;
+	position: absolute;
+	bottom: 10%;
+	left: 3%;
+	width: 290px;
+	height: 190px;
+}
+.jcarousel ul li .links p{
+	width: 100%;
+	color: #fff;
+	padding-left: 15px;
+	font: bold 52px sans-serif;
+	background: rgba(5, 5, 5, 0.7);
+}
+.links a{
+	float:right;
+	line-height:25px;
+	text-decoration:none;
+	color:#fff;
+	text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.6), -1px 0px 0px rgba(0, 0, 0, 0.6);
+}
+.links a:hover{
+	color:#aaa;
+	text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.8), -1px -1px 3px rgba(0, 0, 0, 0.8);
+}
+.jcarousel ul li .links p:nth-child(1){
+	width: 66%;
+	color: orange;
+	padding-top: 10px;
+}
+.jcarousel ul li .links p:nth-child(2) {
+	width: 66%;
+}
+.jcarousel ul li .links p:nth-child(3) {
+	padding-bottom: 10px;
+}
+
+
+@media (min-width: 321px) and (max-width: 600px){
+	.jcarousel ul {
+		width: 300em;
+	}
+	.jcarousel-wrapper {
+		height: 250px;
+	}
+	.jcarousel ul li .links p{
+		font: bold 38px sans-serif;
+		background: rgba(5, 5, 5, 0);
+		padding-left: 0px;
+	}
+	.jcarousel ul li .links{
+		padding-left: 0px;
+		left: 0;
+	}
+	.links a{
+		float:left;
+	}
+	.carousel-element{
+	height: 250px;
+	}
+}

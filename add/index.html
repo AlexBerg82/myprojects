@@ -1,0 +1,165 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ADD</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/accord.css">
+	<link rel="stylesheet" type="text/css" href="css/jcarousel.style.css">
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/jquery.form.js"></script>
+	<script type="text/javascript" src="js/jquery.session.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header clearfix">
+		<div class="logotip clearfix">
+		
+			<div class="add_block clearfix">
+				<a class="add"><span>+</span> ADD</a>
+			</div>
+			
+			<div class="register clearfix">
+				<a href="#" id="reg">Register</a>			
+				<a href="#" id="inn">Inn</a>
+				
+				<div class="login_form">
+					<div class="corner"></div>
+					<form id="form_inn" method="post">
+						<h3>Login</h3>
+						<p id="mess_auth">Invalid username and(or) Password</p>
+						<ul class="log_pass clearfix">
+							<li><input type="text" id="auth_login" placeholder="Login or E-mail" /></li>
+							<li><input type="password" id="auth_pass" placeholder="Password" /><span id="btn_pass_sh" class="pass_show"></span></li>
+						</ul>
+						<ul class="rem_chck clearfix">
+							<li><input type="checkbox" name="rememberme" id="rememberme" /><label for="rememberme">Remember</label></li>
+							<li><a href="#" id="remindpass">Forgot your password?</a></li>
+						</ul>
+						<p type="submit" id="btn_auth">Login</p>
+						<p class="auth_load"><img src="./img/loading.gif" /></p>
+					 </form>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	<article class="clearfix">
+	
+		<div class="sort clearfix">
+			<p class="grad_line">
+				<a id="grad" href="#"></a>
+				<a id="line" href="#"></a>
+			</p>
+			<p>Sort:<strong> date</strong> (<span id="datea">&#9650;</span><span id="dated">&#9660;</span>);
+			<strong>price</strong> (<span id="pricea">&#9650;</span><span id="priced">&#9660;</span>)</p>
+		</div>
+		
+		<div class="navigation">
+			<ul>
+				<li class="main_category"><a href="#" id="all"><span>Home</span></a></li>
+				<li class="category"><a href="#" id="electr"><span>Electronic</span></a></li>
+				<li class="category"><a href="#" id="clos"><span>Closer</span></a></li>
+				<li class="category"><a href="#"><span>Furniture</span></a></li>
+				<li class="category"><a href="#"><span>Kitchen</span></a></li>
+				<li class="category"><a href="#"><span>Auto</span></a></li>
+				<li class="category"><a href="#"><span>Sport</span></a></li>
+				<li class="category"><a href="#"><span>Tools</span></a></li>
+				<li class="category"><a href="#"><span>Films</span></a></li>
+				<li class="category"><a href="#"><span>Music</span></a></li>
+			</ul>
+		</div>
+		
+		<div class="data">
+		<p id="reg_message"></p>
+			<div id="content">
+				<div id="main">
+					<div id="fon"></div>
+					<div id="load"></div>
+				
+					<div class="wrap_slider">
+						<div class="jcarousel-wrapper clearfix">
+								<div class="jcarousel">
+									<ul>
+										<li class="carousel-element"><img src="images/slid/1.png" alt="no-foto"><div class="links"><p>BUILD</p><p>YOUR</p><p>BUSINES</p><a href="#">Read more...</a></div></li>
+										<li class="carousel-element"><img src="images/slid/2.png" alt="no-foto"><div class="links"><p>BUILD</p><p>YOUR</p><p>BUSINES</p><a href="#">Read more...</a></div></li>
+										<li class="carousel-element"><img src="images/slid/3.png" alt="no-foto"><div class="links"><p>BUILD</p><p>YOUR</p><p>BUSINES</p><a href="#">Read more...</a></div></li>
+									</ul>
+								</div>
+							<p class="jcarousel-pagination"></p>
+						</div>
+					</div>
+				
+					<ul id="tovar"></ul>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="nav_bottom">
+			<input type='hidden' id='current_page' />
+			<input type='hidden' id='show_per_page' />
+			<div id='page_navigation'></div>
+		</div>
+	</article>
+	
+	<footer>
+		<div class="footer_menu clearfix">
+			<div class="footer_menu_wrapper">
+				<p class="titl_footer_menu">SOCIALS</p>
+				<ul class="footer_menu-list">
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Flickr</a></li>
+					<li><a href="#">Twitter</a></li>
+				</ul>
+			</div>
+			<div class="footer_menu_wrapper">
+				<p class="titl_footer_menu">LINKS</p>
+				<ul class="footer_menu-list">
+					<li><a href="#">How to Write a Blog</a></li>
+					<li><a href="#">Create a Blog in 4 Steps</a></li>
+					<li><a href="#">15 Tips to Increase Traffic</a></li>
+				</ul>
+			</div>
+			<div class="footer_menu_wrapper">
+				<p class="titl_footer_menu">BLOGROLL</p>
+				<ul class="footer_menu-list">
+					<li><a href="#">Blogs Blog</a></li>
+					<li><a href="#">Roll Up Roll Up</a></li>
+					<li><a href="#">Blog Free</a></li>
+				</ul>
+			</div>
+			<div class="footer_menu_wrapper">
+				<p class="titl_footer_menu">ABOUT US</p>
+				<ul class="footer_menu-list">
+					<li><a href="#">Agriculture</a></li>
+					<li><a href="#">Harvest</a></li>
+					<li><a href="#">Company news</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="wrap_footer clearfix">
+			<ul class="foot_menu clearfix">
+				<li class="clearfix"><p>&#10026;&nbsp;&nbsp;</p><a href="#">BuildHomeLtd. Street Name 123 23 45 Cityname</a></li>
+				<li class="clearfix"><p>&#9743;&nbsp;&nbsp;</p><a href="#">+123 900 123 456</a></li>
+				<li class="clearfix"><p>&#9993;&nbsp;&nbsp;</p><a href="#">info@buildhome.web</a></li>
+			</ul>
+			<p class="footer_copyright">&copy; 2014 Build Home</p>	
+		</div>
+	</footer>
+</div>
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="js/slide.js"></script>
+	
+</body>
+</html>

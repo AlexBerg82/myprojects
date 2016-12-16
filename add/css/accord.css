@@ -1,0 +1,330 @@
+.wrapper_accord{
+	width: 85%;
+	padding-left:30px;
+	padding-top:30px;
+}
+.accordion li {
+	list-style: none;
+	margin-top: 5px;
+}
+.accordion li > a {
+	display: block;
+	position: relative;
+	min-width: 110px;
+	padding: 0 10px 0 50px;
+	height: 40px;
+	color: #000;
+	font: bold 12px/41px Arial, sans-serif;
+	text-decoration: none;
+	background: #fff;
+	border:1px solid #E8E8E8;
+}
+.accordion > li:hover > a{
+	color: #2A2D32;
+	background: #EFEFEF;
+}
+.accordion > li > a.active {
+	color: #fff;
+	background: #F4B60D;
+	border:1px solid #F4B60D
+}
+.accordion > li > a:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 40px;
+	height: 40px;
+	background-image: url(../img/icons.png);
+	background-position: 0px 0px;
+}
+.accordion li.files > a:before {
+	background-position: 0px -43px;
+	border-right:2px solid #E8E8E8;
+}
+.accordion li.files:hover > a:before,
+.accordion li.files:target > a:before,
+.accordion li.files > a.active:before {
+	background-position: 0px 0px;
+	border-right:1px solid #F6C53D;
+}
+.accordion li.mail > a:before {
+	background-position: 0px -43px; border-right:2px solid #E8E8E8;
+}
+.accordion li.mail:hover > a:before,
+.accordion li.mail:target > a:before,
+.accordion li.mail > a.active:before {
+	background-position: 0px 0px; border-right:1px solid #F6C53D;
+}
+
+.accordion li.cloud > a:before {
+	background-position: 0px -43px; border-right:2px solid #E8E8E8;
+}
+.accordion li.cloud:hover > a:before,
+.accordion li.cloud:target > a:before,
+.accordion li.cloud > a.active:before {
+	background-position: 0px 0px; border-right:1px solid #F6C53D;
+}
+
+.accordion li.sign > a:before {
+	background-position: 0px -43px; border-right:2px solid #E8E8E8;
+}
+.accordion li.sign:hover > a:before,
+.accordion li.sign:target > a:before,
+.accordion li.sign > a.active:before {
+	background-position: 0px 0px; border-right:1px solid #F6C53D;
+}
+
+.accordion li > .sub-menu {
+	display: none;
+}
+.accordion li:target > .sub-menu {
+	display: block;
+}
+.sub-menu{
+	padding: 10px 0 20px 20px;
+}
+.oneText{
+	width: 98%;
+	height: 25px;
+}
+.oneText label{
+	float: left;
+}
+.oneText input{
+	float: right;
+}
+.oneTextBtn{
+	width: 98%;
+	height: 25px;
+	padding: 10px 0 10px 0;
+}
+#form_submit_ch{
+	cursor: pointer;
+	font:bold 13px sans-serif;
+	padding: 5px 10px;
+	border: 1px solid #DCDCDC;
+	border-radius: 5px;
+	-wedkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	width: 100px;
+	float: right;
+	text-align: center;
+}
+#form_submit_ch:hover{
+	background-color: #aaa;
+	border:1px solid black;
+}
+.twoText{
+	width: 98%;
+	height: 25px;
+}
+.twoText label{
+	float: left;
+}
+.twoText input{
+	float: right;
+}
+.twoText select{
+	float: right;
+}
+.twoTextBtn{
+	width: 98%;
+	height: 25px;
+	padding: 10px 0 10px 0;
+}
+#submit_form{
+	cursor: pointer;
+	font:bold 13px sans-serif;
+	padding: 5px 10px;
+	border: 1px solid #DCDCDC;
+	border-radius: 5px;
+	-wedkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	width: 100px;
+	float: right;
+	text-align: center;
+}
+#submit_form:hover{
+	background-color: #aaa;
+	border:1px solid black;
+}
+.twoTextImg{
+	width: 98%;
+	max-height: 125px;
+	padding-bottom: 15px;
+}
+.twoTextImg label{
+	float: left;
+}
+#delImg{
+	cursor:pointer;
+	font:bold 13px sans-serif;
+	padding: 3px 7px 5px 7px;
+	border: 1px solid gray;
+	border-radius: 50%;
+	-wedkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	text-align: center;
+	float: right;
+	line-height:12px;
+	margin-left:5px;
+	background-color:#DCDCDC;
+}
+.twoTextEdit{
+	width: 98%;
+	max-height: 126px;
+	padding-bottom: 15px;
+	text-align: right;
+}
+textarea{
+	float: right;
+	resize: none;
+	max-width: 50%;  
+	max-height: 126px;   
+	width: 85%;  
+	height: 100%;  
+	min-width: 90%;  
+	min-height: 126px;
+}
+.thumb {
+	height: 75px;
+	border: 1px solid #000;
+	margin: 10px 5px 0 0;
+}
+.addUserImg{
+	width: 92%;
+	min-height: 25%;
+	overflow: hidden;
+	border:1px solid #9C9C9C;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	padding:10px;
+	margin:10px;
+	list-style:none;
+}
+.addUserImg .tovar_img{
+	width: 80px;
+	float: left;
+	text-align:center;
+	padding-left:15px;
+	padding-top: 10px;
+}
+
+.addUserImg .tovar_img img{
+	width: 90%;
+	height: 90%;
+}
+
+.addUserImg .tovar_right{
+	width: 73%;
+	float: left;
+	margin-left: 20px;
+}
+.addUserImg .tovar_right > p{
+	min-height:25px;
+	margin-left: 7px;
+	margin-top: 5px;
+	font: 18px sans-serif;
+	font-weight: bold;
+	color:#000080;
+}
+.addUserImg .tovar_right .tovar_desc > p{
+	width: 100%;
+	overflow: hidden;
+	margin:5px;
+	height:55px;
+	float: left;
+	border:1px solid #D3D3D3;
+	padding: 3px;
+	font: 15px sans-serif;
+}
+.addUserImg .tovar_right .tovar_desc .tovar_price{
+	float: left;
+	width: 100%;
+	margin: 5px;
+	text-align:right;
+}
+.addUserImg .tovar_right .tovar_desc .tovar_price > p{
+	min-height:30px;
+	font: 17px sans-serif;
+	font-weight: bold;
+	float: left;
+}
+.addUserImg .tovar_right .tovar_desc .tovar_price > p span{
+	font: 15px sans-serif;
+	color:gray;
+}
+.addUserImg .tovar_right .tovar_desc .tovar_price a{
+	float: right;
+	padding:8px 20px;
+	min-width: 75px;
+	display: block;
+	text-align:center;
+	background-color:#EE2C2C;
+	cursor:pointer;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+    font: 14px sans-serif;
+	font-weight: 600;
+	color:#000;
+}
+#image_preview{
+	width: 100px;
+	height: 80px;
+	display: none;
+}
+.fileform { 
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 18px;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    width: 200px;
+	float: right;
+}
+.fileform .selectbutton { 
+    background-color: #A2A3A3;
+    border: 1px solid #939494;
+    border-radius: 2px;
+    color: #FFFFFF;
+    float: right;
+    font-size: 13px;
+    height: 12px;
+    line-height: 12px;
+    overflow: hidden;
+    padding: 2px 6px;
+    text-align: center;
+    vertical-align: middle;
+    width: 40px;
+}
+.fileform #files{
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    -moz-opacity: 0; 
+    filter: alpha(opacity=0); 
+    opacity: 0; 
+    font-size: 150px; 
+    height: 30px; 
+    z-index:20;
+}
+.fileform #fileformlabel{ 
+	background-color: #FFFFFF;
+	float: left;
+	height: 16px;
+	line-height: 16px;
+	overflow: hidden;
+	padding: 2px;
+	text-align: left;
+	vertical-align: middle;
+	width:100px;
+}
