@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/jquery.form.js"></script>
 	<script type="text/javascript" src="js/jquery.session.js"></script>
+	<script type="text/javascript" src="js/jquery.textchange.js"></script>
 </head>
 
 <body>
@@ -58,8 +59,16 @@
 				<a id="grad" href="#"></a>
 				<a id="line" href="#"></a>
 			</p>
-			<p>Sort:<strong> date</strong> (<span id="datea">&#9650;</span><span id="dated">&#9660;</span>);
-			<strong>price</strong> (<span id="pricea">&#9650;</span><span id="priced">&#9660;</span>)</p>
+			<div class="sorts clearfix">
+				<p>Sort:<strong> date</strong> (<span id="datea">&#9650;</span><span id="dated">&#9660;</span>);
+				<strong>price</strong> (<span id="pricea">&#9650;</span><span id="priced">&#9660;</span>)</p>
+				
+				<div class="search clearfix">
+					<div class="input_search2 clearfix">
+						<input type="text" class="input_search" id="input_search" placeholder="Search...">
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		<div class="navigation">

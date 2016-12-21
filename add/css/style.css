@@ -484,26 +484,80 @@ article{
 	float: left;
 	margin: 2px;
 }
-.sort p:nth-child(1){
+.grad_line{
 	margin-left: 20px;
 	width: 15%;
 	float: left;
 }
-.sort p:nth-child(2){
-	margin-right: 20px;
+.sorts{
 	width: 80%;
 	float: right;
 	line-height:20px;
 }
-.sort span{
+.sorts > p{
+	margin-right: 20px;
+	width: 25%;
+	float: right;
+	line-height:20px;
+}
+
+.search {
+	width: 20%;
+	float: right;
+	position:relative;
+}
+.input_search2 {
+	position: absolute;
+	width: 98%;
+	padding-top: 0px;
+	padding-right: 0px;
+	border: 1px solid #181A1D;
+	background-color: #35383C;
+}
+.search .input_search2 .input_search {
+	margin: 0 auto;
+	width: 97%;
+	padding: 0px 0px 2px 4px;
+	font: 14px sans-serif;
+	list-style: none;
+	border: none;
+	float: left;
+	background-color: #35383C;
+	color: #fff;
+}
+.search .input_search2 .input_search::-moz-placeholder {
+              color: #626466; }
+.search .input_search2 .input_search::-webkit-input-placeholder {
+              color: #626466; }
+.search .input_search2 .input_search:-moz-placeholder {
+              color: #626466; }
+.search .input_search2 .input_search:-ms-input-placeholder {
+              color: #626466; }
+.search .input_search2 .input_search:focus::-webkit-input-placeholder {
+              color: transparent; }
+.search .input_search2 .input_search:focus::-moz-placeholder {
+              color: transparent; }
+.search .input_search2 .input_search:focus:-moz-placeholder {
+              color: transparent; }
+.search .input_search2 .input_search:focus:-ms-input-placeholder {
+              color: transparent; }
+
+
+
+
+
+
+
+
+.sorts span{
 	color:#000;
 	text-decoration: none;
 	cursor: pointer;
 }
-.sort span:hover{
+.sorts span:hover{
 	color:#fff;
 }
-.sort strong{
+.sorts strong{
 	color:blue;
 }
 .navigation{
@@ -832,6 +886,32 @@ footer{
 	line-height: 45px;
 	margin-right: 30px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (min-width: 1201px) and (max-width: 1300px){

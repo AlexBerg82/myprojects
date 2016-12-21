@@ -20,6 +20,7 @@
 				}
 		});
 		
+		
 		var usrImg;
 		var usrImgType;
 		
@@ -130,12 +131,42 @@
 		}
 	});
 
+
+	//функция смены кнопок сортировки в исходное состояние
+	function reButton(){
+		$("#datea2").replaceWith('<span id="datea">&#9650;</span>');
+		$("#dated2").replaceWith('<span id="dated">&#9660;</span>');
+		$("#pricea2").replaceWith('<span id="pricea">&#9650;</span>');
+		$("#priced2").replaceWith('<span id="priced">&#9660;</span>');
+		
+		
+		$("#pricea").click(function(){
+			idt = $(this).attr('id');
+			sorter(ids,idt);
+		});
+
+		$("#priced").click(function(){
+			idt = $(this).attr('id');
+			sorter(ids,idt);
+		});
+
+		$("#datea").click(function(){
+			idt = $(this).attr('id');
+			sorter(ids,idt);
+		});
+
+		$("#dated").click(function(){
+			idt = $(this).attr('id');
+			sorter(ids,idt);
+		});
+	}
+	
 	
 	//функция сортировки
 	var ids = '';
 	var idt = '';
 
-	function sorter(ids,sor){
+	function sorter(ids,idt){
 		$("#fon").css({'display':'block'});
 			
 		$("#load").fadeIn(500,function(){
@@ -146,7 +177,7 @@
 				dataType:'json',
 				success:function(html){
 					$('#tovar').html('');		//очистка содержимого для вставки новых данных
-
+	
 					if(html != null){
 					
 						//вставка отсортированных элементов
@@ -352,9 +383,14 @@
 	});	
 	}
 
-
-	//сортировка и переход по категориям
+	
+	//переход по категориям и вызов функции сортировки
 	$("#electr").click(function(){
+		input_search2 = '';
+		$("#input_search").val('');
+		
+		reButton();
+		
 		$('.wrap_slider').hide();
 		$('.wrapper_accord').hide();
 		$('.sort').show();
@@ -367,6 +403,11 @@
 	});
 
 	$("#clos").click(function(){
+		input_search2 = '';
+		$("#input_search").val('');
+		
+		reButton();
+		
 		$('.wrap_slider').hide();
 		$('.wrapper_accord').hide();
 		$('.sort').show();
@@ -383,27 +424,107 @@
 		$(location).attr('href',url);
 	});
 
-	$("#pricea").click(function(){
-		idt = $(this).attr('id');
-		sorter(ids,idt);
+
+	//поиск
+	$("#input_search").bind('textchange', function(){
+		var input_search = $("#input_search").val();
+
+		if(input_search.length >= 3 && input_search.length < 64){
+			$.ajax({
+				type: "POST",
+				url: "./include/search.php",
+				data: "text="+input_search,
+				dataType: "html",
+				cache: false,
+				success: function(dataSrch){
+				
+					//смена кнопок сортировки для функции сортировки после поиска
+					$("#datea").replaceWith('<span id="datea2">&#9650;</span>');
+					$("#dated").replaceWith('<span id="dated2">&#9660;</span>');
+					$("#pricea").replaceWith('<span id="pricea2">&#9650;</span>');
+					$("#priced").replaceWith('<span id="priced2">&#9660;</span>');
+						
+					if(dataSrch > ''){
+						$('#tovar').html('');
+						$('.nav_bottom').hide();
+
+						$('#tovar').html(dataSrch);
+
+						//проверка кук отвечающих за разное отображение товара
+						if($.cookie('select_style') == 'line'){
+							$("#tovar li").removeClass('grad');
+							$("#tovar li").addClass('line');
+						} else {
+							$("#tovar li").addClass('grad');
+							$("#tovar li").removeClass('line');
+						}
+						
+						
+						var idt2 = '';
+						var input_search2;
+						
+						$("#pricea2").click(function(){
+							idt2 = $(this).attr('id');
+							input_search2 = $("#input_search").val();
+							searchFiltr(idt2,input_search2);
+						});
+
+						$("#priced2").click(function(){
+							idt2 = $(this).attr('id');
+							input_search2 = $("#input_search").val();
+							searchFiltr(idt2,input_search2);
+						});
+
+						$("#datea2").click(function(){
+							idt2 = $(this).attr('id');
+							input_search2 = $("#input_search").val();
+							searchFiltr(idt2,input_search2);
+						});
+
+						$("#dated2").click(function(){
+							idt2 = $(this).attr('id');
+							input_search2 = $("#input_search").val();
+							searchFiltr(idt2,input_search2);
+						});
+						
+					}
+				}
+			});
+
+		}
 	});
+	
 
-	$("#priced").click(function(){
-		idt = $(this).attr('id');
-		sorter(ids,idt);
-	});
+	//функция сортировки объявлений отобранных по поиску
+	function searchFiltr(idt2,input_search2){
+		$.ajax({
+			type: "POST",
+			url: "./include/search.php",
+			data: "text="+input_search2+'&sortr='+idt2,
+			dataType: "html",
+			cache: false,
+			success: function(dataSrch2){
+				if(dataSrch2 > ''){
+					$('#tovar').html('');
+					$('.nav_bottom').hide();
 
-	$("#datea").click(function(){
-		idt = $(this).attr('id');
-		sorter(ids,idt);
-	});
+					$('#tovar').html(dataSrch2);
 
-	$("#dated").click(function(){
-		idt = $(this).attr('id');
-		sorter(ids,idt);
-	});
+					//проверка кук отвечающих за разное отображение товара
+					if($.cookie('select_style') == 'line'){
+						$("#tovar li").removeClass('grad');
+						$("#tovar li").addClass('line');
+					} else {
+						$("#tovar li").addClass('grad');
+						$("#tovar li").removeClass('line');
+					}
 
+				}
+			}
+		});
+	}
 
+	
 	//вход зарегистрированного пользователя через форму входа
 	$("#btn_auth").click(function(){
 
@@ -500,7 +621,8 @@
 
 	//просмотр профиля пользователя
 	var viewLogin = $.session.get("auth_login");
-
+	
+//if(sessTemp == $.session.get("auth")){
 	$.ajax({
 		type: "POST",
 		url: "./include/view_add.php",
@@ -519,21 +641,24 @@
 				dataType: "json",
 				cache: false,
 				success: function(data){
+					if(data > ''){
 					
-					$.each(data, function(key, value){
-						if(value != 'null'){
-							if(key == 'name'){
-								if(document.getElementById('info_name') != null){
-									document.getElementById('info_name').value = value;
+						$.each(data, function(key, value){
+							if(value != 'null'){
+								if(key == 'name'){
+									if(document.getElementById('info_name') != null){
+										document.getElementById('info_name').value = value;
+									}
 								}
-							}
-							if(key == 'email'){
-								if(document.getElementById('info_email') != null){
-									document.getElementById('info_email').value = value;
+								if(key == 'email'){
+									if(document.getElementById('info_email') != null){
+										document.getElementById('info_email').value = value;
+									}
 								}
-							}
-						}	
-					});
+							}	
+						});
+						
+					}	
 					
 					
 					//редактирование учетных данных пользователя
@@ -577,8 +702,8 @@
 
 		}
 	});
-
-
+//}
+	
 	//вызов функции регистрации нового пользователя
 	regUser();
 });
