@@ -13,7 +13,9 @@ body{
    font-family: sans-serif; 
    font-size: 13px;
 }
-
+.wrapper{
+	padding-top:5px;
+}
 table{
 	border-collapse: collapse;
 }
@@ -53,7 +55,7 @@ table a:hover{
 	
 	position:absolute;
 	top: -5px;
-	right: -3px;
+	right: -4px;
 }
 
 
@@ -93,4 +95,144 @@ table a:hover{
 .zipList > li > a:hover{
 	background-color:#E8E8E8;
 	color: #000;
+}
+
+
+
+#addUnit{
+	position:absolute;
+	cursor:pointer;
+	font:bold 15px sans-serif;
+	padding: 3px 6px 1px 6px;
+	border: 1px solid gray;
+	border-radius: 50%;
+	-wedkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	text-align: center;
+	float: right;
+	line-height:16px;
+	background-color:#DCDCDC;
+	top:8px;
+	right:8px;
+}
+#addUnit:hover{
+	background-color:#fff;
+}
+
+.filtr{
+	width: 500px;
+	height: 100px;
+	background-color:rgba(95,158,160,0.8);
+	position:absolute;
+	z-index:9999;
+	top:-100px;
+}
+.corner{
+	width: 30px;
+	height: 13px;
+	background-color:rgba(95,158,160,0.8);
+	position:absolute;
+	bottom:-13px;
+	border-radius: 0 0 5px 0;
+	-wedkit-border-radius: 0 0 5px 0;
+	-moz-border-radius: 0 0 5px 0;
+}
+.corner p,.corner2 p{
+	font-size: 10px;
+	text-align:center;
+	line-height:15px;
+	color:gray;
+}
+.corner2 p{
+	line-height:30px;
+}
+.filtr:hover{
+	top:0;
+}
+
+.panel{
+	width: 40px;
+	height: 300px;
+	background-color:rgba(95,158,160,0.8);
+	position:absolute;
+	z-index:9999;
+	top:0;
+	right:-40px;
+}
+.corner2{
+	width: 13px;
+	height: 30px;
+	background-color:rgba(95,158,160,0.8);
+	position:absolute;
+	top:0;
+	left:-13px;
+	border-radius: 0 0 0 5px;
+	-wedkit-border-radius: 0 0 0 5px;
+	-moz-border-radius: 0 0 0 5px;
+}
+.panel:hover{
+	right:0px;
+}
+
+
+
+.csm{
+	width: 25px;
+	height: 25px;
+	background: url(../img/csm.png) no-repeat;
+	background-size: 100% 100%;
+	position:absolute;
+	cursor:pointer;
+	border: 1px solid gray;
+	border-radius: 5px;
+	-wedkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	top:38px;
+	right:6px;
+}
+.print{
+	width: 25px;
+	height: 25px;
+	background: url(../img/print.png) no-repeat;
+	background-size: 100% 100%;
+	position:absolute;
+	cursor:pointer;
+	border: 1px solid gray;
+	border-radius: 5px;
+	-wedkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	top:68px;
+	right:6px;
+}
+.csm:hover{
+	background: url(../img/csmact.png) no-repeat;
+	background-size: 100% 100%;
+}
+.print:hover{
+	background: url(../img/printon.png) no-repeat;
+	background-size: 100% 100%;
+}
+.filters{
+	width: 60%;
+	padding-left: 5px;
+	padding-top: 2px;
+}
+.filters label{
+	color: #fff;
+}
+.listPlace label,.departament label{
+	float:left;
+	line-height:20px;
+}
+.listPlace select{
+	float:right;
+	width: 150px;
+}
+.departament select{
+	float:right;
+	width: 150px;
+}
+.listSale,.timePeriod{
+	padding-top: 2px;
+	padding-bottom: 2px;
 }

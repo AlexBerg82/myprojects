@@ -1,0 +1,357 @@
+﻿body{
+   width: auto;
+   height: 570px;
+   padding:5px;
+		/*border: 1px solid red;*/
+}
+#block-body{
+   width: 100%;
+   height: 100%;
+   text-align: center;
+		/*border: 1px solid green;*/
+}
+#bod{
+   width: 100%;
+   height: 525px;
+		/*border: 1px solid blue;*/
+   margin: 0 auto;
+   text-align: left;
+   /*background: url(/oborudovanie/www/images/fon3.jpg);*/
+}
+#head{
+   position:relative;
+   width: 100%;
+   height: 10%;
+   display: none;
+   font: 13px sans-serif;
+		/*border: 1px solid yellow;*/
+   margin: 5px auto;
+   padding-top: 5px;
+   text-align: left;
+   background: url(/oborudovanie/www/images/fon3.jpg);
+}
+
+
+
+#filtr{
+   /*position: absolute;*/
+  /* margin-top: -58px;*/
+   /*margin-left: 91%;*/
+   cursor: pointer;
+   width: 78px;
+   height: 28px;
+   border: none;
+   font:bold 13px sans-serif;
+			/*border: 1px solid green;*/
+   background: url(/oborudovanie/www/images/add.png);
+}
+
+#filtr:hover{
+   background: url(/oborudovanie/www/images/addact.png);
+}
+
+#dat1,#dat2,#dat3,#dat4,#dat5,#dat6,#dat7,#dat8,#dat9,#dat10,#dat11,#dat12,#dat13,#dat14,#dat15,
+#dat16,#dat17,#dat18,#dat19,#dat20,#dat21,#dat22,#dat23,#dat24,#dat25,#dat26,#dat27,#dat28,#dat29,#dat30,
+#dat31,#dat32,#dat33,#dat34,#dat35,#dat36,#dat37,#dat38,#dat39,#dat40,#dat41,#dat42,#dat43,#dat44,#dat45,
+#dat46,#dat47,#dat48,#dat49,#dat50,#dat51,#dat52,#dat53,#dat54,#dat55,#dat56,#dat57,#dat58,#dat59,#dat60,
+#dat61,#dat62,#dat63,#dat64,#dat65,#dat66,#dat67,#dat68,#dat69,#dat70,#dat71,#dat72,#dat73,#dat74,#dat75,
+#dat76,#dat77,#dat78,#dat79,#dat80,#dat81,#dat82,#dat83,#dat84,#dat85,#dat86,#dat87,#dat88,#dat89,#dat90,
+#dat91,#dat92,#dat93,#dat94,#dat95,#dat96,#dat97,#dat98,#dat99,#dat100,
+#dat101,#dat102,#dat103,#dat104,#dat105,#dat106,#dat107,#dat108,#dat109,#dat110,#dat111,#dat112,#dat113,#dat114,#dat115,
+#dat116,#dat117,#dat118,#dat119,#dat120,#dat121,#dat122,#dat123,#dat124,#dat125,#dat126,#dat127,#dat128,#dat129,#dat130,
+#dat131,#dat132,#dat133,#dat134,#dat135,#dat136,#dat137,#dat138,#dat139,#dat140,#dat141,#dat142,#dat143,#dat144,#dat145,
+#dat146,#dat147,#dat148,#dat149,#dat150,#dat151,#dat152,#dat153,#dat154,#dat155,#dat156,#dat157,#dat158,#dat159,#dat160,
+#dat161,#dat162,#dat163,#dat164,#dat165,#dat166,#dat167,#dat168,#dat169,#dat170,#dat171,#dat172,#dat173,#dat174,#dat175,
+#dat176,#dat177,#dat178,#dat179,#dat180,#dat181,#dat182,#dat183,#dat184,#dat185,#dat186,#dat187,#dat188,#dat189,#dat190,
+#dat191,#dat192,#dat193,#dat194,#dat195,#dat196,#dat197,#dat198,#dat199,#dat200{
+   display: none;
+			/*border: 1px solid green;*/
+   height: auto;
+   width: auto;
+   margin-top: 5px;
+}
+#dats1,#dats2,#dats23,#dats4,#dats5,#dats6,#dats7,#dats8,#dats9,#dats10,#dats11,#dats12,#dats13,#dats14,#dats15,
+#dats16,#dats17,#dats18,#dats19,#dats20,#dats21,#dats22,#dats23,#dats24,#dats25,#dats26,#dats27,#dats28,#dats29,#dats30,
+#dats31,#dats32,#dats33,#dats34,#dats35,#dats36,#dats37,#dats38,#dats39,#dats40,#dats41,#dats42,#dats43,#dats44,#dats45,
+#dats46,#dats47,#dats48,#dats49,#dats50,#dats51,#dats52,#dats53,#dats54,#dats55,#dats56,#dats57,#dats58,#dats59,#dats60,
+#dats61,#dats62,#dats63,#dats64,#dats65,#dats66,#dats67,#dats68,#dats69,#dats70,#dats71,#dats72,#dats73,#dats74,#dats75,
+#dats76,#dats77,#dats78,#dats79,#dats80,#dats81,#dats82,#dats83,#dats84,#dats85,#dats86,#dats87,#dats88,#dats89,#dats90,
+#dats91,#dats92,#dats93,#dats94,#dats95,#dats96,#dats97,#dats98,#dats99,#dats100,
+#dats101,#dats102,#dats103,#dats104,#dats105,#dats106,#dats107,#dats108,#dats109,#dats110,#dats111,#dats112,#dats113,#dats114,#dats115,
+#dats116,#dats117,#dats118,#dats119,#dats120,#dats121,#dats122,#dats123,#dats124,#dats125,#dats126,#dats127,#dats128,#dats129,#dats130,
+#dats131,#dats132,#dats133,#dats134,#dats135,#dats136,#dats137,#dats138,#dats139,#dats140,#dats141,#dats142,#dats143,#dats144,#dats145,
+#dats146,#dats147,#dats148,#dats149,#dats150,#dats151,#dats152,#dats153,#dats154,#dats155,#dats156,#dats157,#dats158,#dats159,#dats160,
+#dats161,#dats162,#dats163,#dats164,#dats165,#dats166,#dats167,#dats168,#dats169,#dats170,#dats171,#dats172,#dats173,#dats174,#dats175,
+#dats176,#dats177,#dats178,#dats179,#dats180,#dats181,#dats182,#dats183,#dats184,#dats185,#dats186,#dats187,#dats188,#dats189,#dats190,
+#dats191,#dats192,#dats193,#dats194,#dats195,#dats196,#dats197,#dats198,#dats199,#dats200{
+   display: none;
+			/*border: 1px solid green;*/
+   height: auto;
+   width: auto;
+   margin-top: 5px;
+}
+table{
+   border-collapse: collapse;
+   border: 2px solid white;
+}
+td{
+   font: 12px sans-serif;
+   border: 2px solid white;		/* Граница вокруг ячеек */
+}
+
+#bod > h4{
+   position: absolute;
+   margin-top: 12px;
+   margin-left: 42px;
+   width: 60px;
+   height: 15px;
+   font:bold 13px sans-serif;
+}
+
+#imgch{
+   position: absolute;
+   margin-top: 10px;
+   margin-left: 15px;
+}
+form > p{
+   margin-top: 10px;
+   /*border: 1px solid blue;*/
+}
+
+#close{
+   position: absolute;
+   margin-top: 5px;
+   margin-left: 5px;
+   cursor: pointer;
+}
+
+#printer{
+   margin-top: 10px;
+   margin-right: 5px;
+   float: right;
+   position: relative;
+   cursor: pointer;
+   display: block;
+   height: 28px;
+   width: 28px;
+				/*border: 1px solid red;*/
+   background: url(/oborudovanie/www/images/print.png) no-repeat;
+}
+#csm{
+   margin-top: 10px;
+   margin-right: 5px;
+   float: right;
+   position: relative;
+   cursor: pointer;
+   display: block;
+   height: 28px;
+   width: 28px;
+				/*border: 1px solid red;*/
+   background: url(/oborudovanie/www/images/csm.png) no-repeat;
+}
+
+#printer:hover{
+   background: url(/oborudovanie/www/images/printon.png) no-repeat;
+}
+#csm:hover{
+   background: url(/oborudovanie/www/images/csmact.png) no-repeat;
+}
+.tcal {
+	width: 100px;
+			/*border: 1px solid red;*/
+}
+.thd{
+   cursor:pointer;
+}
+
+
+#zipp1,#zipp2,#zipp23,#zipp4,#zipp5,#zipp6,#zipp7,#zipp8,#zipp9,#zipp10,#zipp11,#zipp12,#zipp13,#zipp14,#zipp15,
+#zipp16,#zipp17,#zipp18,#zipp19,#zipp20,#zipp21,#zipp22,#zipp23,#zipp24,#zipp25,#zipp26,#zipp27,#zipp28,#zipp29,#zipp30,
+#zipp31,#zipp32,#zipp33,#zipp34,#zipp35,#zipp36,#zipp37,#zipp38,#zipp39,#zipp40,#zipp41,#zipp42,#zipp43,#zipp44,#zipp45,
+#zipp46,#zipp47,#zipp48,#zipp49,#zipp50,#zipp51,#zipp52,#zipp53,#zipp54,#zipp55,#zipp56,#zipp57,#zipp58,#zipp59,#zipp60,
+#zipp61,#zipp62,#zipp63,#zipp64,#zipp65,#zipp66,#zipp67,#zipp68,#zipp69,#zipp70,#zipp71,#zipp72,#zipp73,#zipp74,#zipp75,
+#zipp76,#zipp77,#zipp78,#zipp79,#zipp80,#zipp81,#zipp82,#zipp83,#zipp84,#zipp85,#zipp86,#zipp87,#zipp88,#zipp89,#zipp90,
+#zipp91,#zipp92,#zipp93,#zipp94,#zipp95,#zipp96,#zipp97,#zipp98,#zipp99,#zipp100,
+#zipp101,#zipp102,#zipp103,#zipp104,#zipp105,#zipp106,#zipp107,#zipp108,#zipp109,#zipp110,#zipp111,#zipp112,#zipp113,#zipp114,#zipp115,
+#zipp116,#zipp117,#zipp118,#zipp119,#zipp120,#zipp121,#zipp122,#zipp123,#zipp124,#zipp125,#zipp126,#zipp127,#zipp128,#zipp129,#zipp130,
+#zipp131,#zipp132,#zipp133,#zipp134,#zipp135,#zipp136,#zipp137,#zipp138,#zipp139,#zipp140,#zipp141,#zipp142,#zipp143,#zipp144,#zipp145,
+#zipp146,#zipp147,#zipp148,#zipp149,#zipp150,#zipp151,#zipp152,#zipp153,#zipp154,#zipp155,#zipp156,#zipp157,#zipp158,#zipp159,#zipp160,
+#zipp161,#zipp162,#zipp163,#zipp164,#zipp165,#zipp166,#zipp167,#zipp168,#zipp169,#zipp170,#zipp171,#zipp172,#zipp173,#zipp174,#zipp175,
+#zipp176,#zipp177,#zipp178,#zipp179,#zipp180,#zipp181,#zipp182,#zipp183,#zipp184,#zipp185,#zipp186,#zipp187,#zipp188,#zipp189,#zipp190,
+#zipp191,#zipp192,#zipp193,#zipp194,#zipp195,#zipp196,#zipp197,#zipp198,#zipp199,#zipp200{
+   /*position: absolute;*/
+   /*cursor:pointer;*/
+   height: 12px;
+   width: 16px;
+   margin-top: 5px;
+   margin-left: 50px;
+      /*display: block;*/
+}
+#zipper1,#zipper2,#zipper23,#zipper4,#zipper5,#zipper6,#zipper7,#zipper8,#zipper9,#zipper10,#zipper11,#zipper12,#zipper13,#zipper14,#zipper15,
+#zipper16,#zipper17,#zipper18,#zipper19,#zipper20,#zipper21,#zipper22,#zipper23,#zipper24,#zipper25,#zipper26,#zipper27,#zipper28,#zipper29,#zipper30,
+#zipper31,#zipper32,#zipper33,#zipper34,#zipper35,#zipper36,#zipper37,#zipper38,#zipper39,#zipper40,#zipper41,#zipper42,#zipper43,#zipper44,#zipper45,
+#zipper46,#zipper47,#zipper48,#zipper49,#zipper50,#zipper51,#zipper52,#zipper53,#zipper54,#zipper55,#zipper56,#zipper57,#zipper58,#zipper59,#zipper60,
+#zipper61,#zipper62,#zipper63,#zipper64,#zipper65,#zipper66,#zipper67,#zipper68,#zipper69,#zipper70,#zipper71,#zipper72,#zipper73,#zipper74,#zipper75,
+#zipper76,#zipper77,#zipper78,#zipper79,#zipper80,#zipper81,#zipper82,#zipper83,#zipper84,#zipper85,#zipper86,#zipper87,#zipper88,#zipper89,#zipper90,
+#zipper91,#zipper92,#zipper93,#zipper94,#zipper95,#zipper96,#zipper97,#zipper98,#zipper99,#zipper100,
+#zipper101,#zipper102,#zipper103,#zipper104,#zipper105,#zipper106,#zipper107,#zipper108,#zipper109,#zipper110,#zipper111,#zipper112,#zipper113,#zipper114,#zipper115,
+#zipper116,#zipper117,#zipper118,#zipper119,#zipper120,#zipper121,#zipper122,#zipper123,#zipper124,#zipper125,#zipper126,#zipper127,#zipper128,#zipper129,#zipper130,
+#zipper131,#zipper132,#zipper133,#zipper134,#zipper135,#zipper136,#zipper137,#zipper138,#zipper139,#zipper140,#zipper141,#zipper142,#zipper143,#zipper144,#zipper145,
+#zipper146,#zipper147,#zipper148,#zipper149,#zipper150,#zipper151,#zipper152,#zipper153,#zipper154,#zipper155,#zipper156,#zipper157,#zipper158,#zipper159,#zipper160,
+#zipper161,#zipper162,#zipper163,#zipper164,#zipper165,#zipper166,#zipper167,#zipper168,#zipper169,#zipper170,#zipper171,#zipper172,#zipper173,#zipper174,#zipper175,
+#zipper176,#zipper177,#zipper178,#zipper179,#zipper180,#zipper181,#zipper182,#zipper183,#zipper184,#zipper185,#zipper186,#zipper187,#zipper188,#zipper189,#zipper190,
+#zipper191,#zipper192,#zipper193,#zipper194,#zipper195,#zipper196,#zipper197,#zipper198,#zipper199,#zipper200{
+   border: 1px solid gray;
+   display: none;
+   height: auto;
+   width: 160px;
+   position: absolute;
+     /* margin-top: -1035px;*/
+   background-color: white;
+   margin-left: 77px;
+}
+
+
+
+.titl:hover::after {
+    content: attr(data-title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    /*left: 67%; top: 30%;  Положение подсказки */
+	margin-left: 7px;
+	margin-top: 15px;
+    z-index: 1; /* Отображаем подсказку поверх других элементов */
+    /*background: rgba(255,255,230,0.9);  Полупрозрачный цвет фона */
+	background: white;
+    font-family: Arial, sans-serif; /* Гарнитура шрифта */
+    font-size: 11px; /* Размер текста подсказки */
+    padding: 5px 10px; /* Поля */
+    border: 1px solid #333; /* Параметры рамки */
+	   border-radius: 5px 5px 5px 5px;
+	   -wedkit-border-radius: 5px 5px 5px 5px;
+	   -moz-border-radius: 5px 5px 5px 5px;
+}
+
+#date_end img{
+	cursor:pointer;
+}
+#date_begin img{
+	cursor:pointer;
+}
+#hidoff{
+   cursor: cell;
+}
+#hid1,#hid2,#hid3,#hid4,#hid5,#hid6,#hid7,#hid8,#hid9,#hid10,#hid11,#hid12,#hid13,#hid14,#hid15,
+#hid16,#hid17,#hid18,#hid19,#hid20,#hid21,#hid22,#hid23,#hid24,#hid25,#hid26,#hid27,#hid28,#hid29,#hid30,
+#hid31,#hid32,#hid33,#hid34,#hid35,#hid36,#hid37,#hid38,#hid39,#hid40,#hid41,#hid42,#hid43,#hid44,#hid45,
+#hid46,#hid47,#hid48,#hid49,#hid50,#hid51,#hid52,#hid53,#hid54,#hid55,#hid56,#hid57,#hid58,#hid59,#hid60,
+#hid61,#hid62,#hid63,#hid64,#hid65,#hid66,#hid67,#hid68,#hid69,#hid70,#hid71,#hid72,#hid73,#hid74,#hid75,
+#hid76,#hid77,#hid78,#hid79,#hid80,#hid81,#hid82,#hid83,#hid84,#hid85,#hid86,#hid87,#hid88,#hid89,#hid90,
+#hid91,#hid92,#hid93,#hid94,#hid95,#hid96,#hid97,#hid98,#hid99,#hid100,
+#hid101,#hid102,#hid103,#hid104,#hid105,#hid106,#hid107,#hid108,#hid109,#hid110,#hid111,#hid112,#hid113,#hid114,#hid115,
+#hid116,#hid117,#hid118,#hid119,#hid120,#hid121,#hid122,#hid123,#hid124,#hid125,#hid126,#hid127,#hid128,#hid129,#hid130,
+#hid131,#hid132,#hid133,#hid134,#hid135,#hid136,#hid137,#hid138,#hid139,#hid140,#hid141,#hid142,#hid143,#hid144,#hid145,
+#hid146,#hid147,#hid148,#hid149,#hid150,#hid151,#hid152,#hid153,#hid154,#hid155,#hid156,#hid157,#hid158,#hid159,#hid160,
+#hid161,#hid162,#hid163,#hid164,#hid165,#hid166,#hid167,#hid168,#hid169,#hid170,#hid171,#hid172,#hid173,#hid174,#hid175,
+#hid176,#hid177,#hid178,#hid179,#hid180,#hid181,#hid182,#hid183,#hid184,#hid185,#hid186,#hid187,#hid188,#hid189,#hid190,
+#hid191,#hid192,#hid193,#hid194,#hid195,#hid196,#hid197,#hid198,#hid199,#hid200{
+   cursor: not-allowed;
+}
+
+
+/*печать*/
+	@media print{
+	   #head{display: none;}
+	   #block-vis{display: none;}
+	   body{color: #000; background: #fff;}
+	   #galka{display: none;}
+	   h4{display: none;}
+	   .dates{display: none;}
+	}
+
+#left{
+   display: none;
+   height:auto;
+   width: 420px;
+   position: fixed;
+   background-color: #F5F5F5;
+   margin-left: 35%;
+   margin-top: -470px;
+    border-radius: 5px 5px 5px 5px;
+	-wedkit-border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+					/*border: 1px solid red;*/
+   z-index: 100;
+   padding-right: 20px;
+   padding-bottom: 15px;
+}
+#add-input{
+   position: fixed;
+   margin-top: -10px;
+   margin-left: -10px;
+   cursor:pointer;
+}
+.closs{
+			/*border: 1px solid red;*/
+   float: right;
+   margin-top: -10px;
+   margin-right: -30px;
+   cursor: pointer;
+}
+#shadw{
+			/*border: 1px solid yellow;*/
+   margin-top: -8px;
+   margin-left: -8px;
+   opacity: 0.6;
+   display: none;
+   width: 100%;
+   height: 99%;
+   position: fixed;
+   z-index: 50;
+   background: url(/oborudovanie/www/images/fon.jpg);
+}
+.label-comment{
+   color: blue;
+   margin-top: 10px;
+   position: absolute;
+   font: 14px sans-serif;
+   margin-left: 40px;
+			/*border: 1px solid yellow;*/
+}
+.label-comment2{
+  /* margin-top: -5px;*/
+   position: absolute;
+   font: 14px sans-serif;
+   margin-left: 250px;
+			/*border: 1px solid yellow;*/
+}
+.title-review{
+   font: 14px sans-serif;
+   color: red;
+   float: left;
+			border: 1px solid blue;
+}
+.ulli{
+   margin-top: 40px;
+}
+.ulli li{
+   margin-left: -20px;
+   height: 35px;
+   list-style-type: none;
+			border: 1px solid #F5F5F5;
+}
+.ulli input{
+   margin-top: -8px;
+   margin-right: 15px;
+   height: 20px;
+			border: 1px solid gray;
+}
+.ulli select{
+   margin-top: -8px;
+   margin-right: 15px;
+			border: 1px solid gray;
+}
+.ulli textarea{
+   margin-top: -16px;
+   margin-right: 15px;
+			border: 1px solid gray;
+}
