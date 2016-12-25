@@ -12,48 +12,50 @@
 </head>
 <body>
 <div class="wrapper">
-	<div class="filtr">
+	<div class="filtr clearfix">
 		<div class="corner"><p>&#9660;</p></div>
 		
 		<div class="filters">
 			<p class="listPlace clearfix">
 				<label for="town">Место нахождения</label>
-				<select required name="town">
-					<option selected id="all" onClick=""> Все </option>
-					<option value="" id="vishgorod" value="Вышгород"> Вышгород </option>
-					<option value="" id="dnepr" onClick=""> Днепропетровск </option>
+				<select required id="town">
+					<option value="" selected> Все </option>
+					<option value="Вышгород"> Вышгород </option>
+					<option value="Днепропетровск"> Днепропетровск </option>
+				</select>
+			</p>
+			
+			<p class="timePeriod">
+				<label for="mans">45</label>
+				<input type=checkbox name="45" id="45" value="45" [checked] />
+				<label for="pros">Просроченные</label>
+				<input type=checkbox name="pros" id="pros" value="Просроченные" [checked] />
+			</p>
+
+			<p class="departament clearfix">
+				<label for="department">Отдел</label>
+				<select required id="depart">
+					<option value="" selected> Все </option>
+					<option value="ЛабораторияЕЕ"> Лаборатория </option>
+					<option value="ВТВ"> ВТВ </option>
+					<option value="КБ"> КБ </option>
+					<option value="Ремонт"> Ремонтный участок </option>
+					<option value="Производство"> Производство </option>
 				</select>
 			</p>
 
 			<p class="listSale">
 				<label for="spis">Списаны</label>
-				<input type=checkbox id="spisano" name="spis" value="" onClick=""[checked] />
+				<input type=checkbox name="spis" id="spis" value="Списано" [checked] />
 				<label for="prod">Проданы</label>
-				<input type=checkbox id="prodano" name="prod" value="" onClick=""[checked] />
+				<input type=checkbox name="prod" id="prod" value="Продано" [checked] />
 			</p>
-
-			<p class="departament clearfix">
-				<label for="department">Отдел</label>
-				<select required name="department">
-					<option selected> Все </option>
-					<option value="" id="laboratory"> Лаборатория </option>
-					<option value="" id="vtv"> ВТВ </option>
-					<option value="" id="kb"> КБ </option>
-					<option value="" id="remont"> Ремонтный участок </option>
-					<option value="" id="manufacture"> Производство </option>
-				</select>
-			</p>
-
-			<p class="timePeriod">
-				<label for="days45">45</label>
-				<input type=checkbox id="45" name="mans" value="" onClick=""[checked] />
-				<label for="pros">Просроченные</label>
-				<input type=checkbox id="prosrochka" name="pros" value="" onClick=""[checked] />
-			</p>
+			
+			<button id="fltr">Фильтр</button>
 		</div>
 		
 	</div>
-	
+
 	<div class="panel">
 		<div class="corner2"><p>&#9668;</p></div>
 		<p id="addUnit">+</p>
@@ -77,9 +79,6 @@
 			<th class="thd" onclick="sort(this)"><p>Осталось до поверки</p></th>
 			<th><p>Примечание</p></td>
 		</tr>
-		<?php
-
-		?>
 	</table>
 </div>
 </body>

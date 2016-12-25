@@ -121,18 +121,25 @@ table a:hover{
 
 .filtr{
 	width: 500px;
-	height: 100px;
+	/**/height: 100px;
 	background-color:rgba(95,158,160,0.8);
-	position:absolute;
+	/**/position:absolute;
 	z-index:9999;
-	top:-100px;
+	/**/top:-100px;
+
+
+
+}
+
+.filters{
+
 }
 .corner{
 	width: 30px;
 	height: 13px;
 	background-color:rgba(95,158,160,0.8);
 	position:absolute;
-	bottom:-13px;
+	/**/bottom:-13px;
 	border-radius: 0 0 5px 0;
 	-wedkit-border-radius: 0 0 5px 0;
 	-moz-border-radius: 0 0 5px 0;
@@ -146,7 +153,7 @@ table a:hover{
 .corner2 p{
 	line-height:30px;
 }
-.filtr:hover{
+/**/.filtr:hover{
 	top:0;
 }
 

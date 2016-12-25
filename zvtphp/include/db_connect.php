@@ -1,5 +1,5 @@
-<?php
-//ïîäêëþ÷åíèå ê ÁÄ
+ï»¿<?php
+//Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ Ðº Ð‘Ð”
 $db_host = 'localhost';
 $db_database = 'spisok';
 $db_user = 'root';
@@ -7,6 +7,6 @@ $db_pass = '';
 
 $link = mysql_connect($db_host, $db_user, $db_pass);
 
-mysql_select_db($db_database, $link) or die("Íåâîçìîæíî âûáðàòü áàçó äàííûõ: ".mysql_error());
-mysql_query("SET names UTF-8");
+mysql_select_db($db_database, $link) or die("ÐÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ Ð²Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ Ð±Ð°Ð·Ñƒ Ð´Ð°Ð½Ð½Ñ‹Ñ…: ".mysql_error());
+mysql_query("SET names UTF8");
 ?>
