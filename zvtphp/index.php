@@ -27,28 +27,26 @@
 			
 			<p class="timePeriod">
 				<label for="mans">45</label>
-				<input type=checkbox name="45" id="45" value="45" [checked] />
+				<input type=checkbox name="45" id="time" />
 				<label for="pros">Просроченные</label>
-				<input type=checkbox name="pros" id="pros" value="Просроченные" [checked] />
+				<input type=checkbox name="pros" id="pros" />
 			</p>
 
 			<p class="departament clearfix">
 				<label for="department">Отдел</label>
 				<select required id="depart">
 					<option value="" selected> Все </option>
-					<option value="ЛабораторияЕЕ"> Лаборатория </option>
-					<option value="ВТВ"> ВТВ </option>
+					<option value="Лаб_сч_.э.э"> ЛабораторияЭЭ </option>
 					<option value="КБ"> КБ </option>
-					<option value="Ремонт"> Ремонтный участок </option>
-					<option value="Производство"> Производство </option>
+					<option value="Лаб_сч_т"> ЛабораторияТ </option>
 				</select>
 			</p>
 
 			<p class="listSale">
 				<label for="spis">Списаны</label>
-				<input type=checkbox name="spis" id="spis" value="Списано" [checked] />
+				<input type=checkbox name="spis" id="spis" />
 				<label for="prod">Проданы</label>
-				<input type=checkbox name="prod" id="prod" value="Продано" [checked] />
+				<input type=checkbox name="prod" id="prod" />
 			</p>
 			
 			<button id="fltr">Фильтр</button>
