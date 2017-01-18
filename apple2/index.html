@@ -11,6 +11,20 @@
 	
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	
+	<script>
+	$(function(){
+		var offset = $('#wrap_link').offset();
+		var topPadding = 30;
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > offset.top) {
+				$('#wrap_link').stop().animate({marginTop: $(window).scrollTop() - offset.top + topPadding});
+			} else {
+				$('#wrap_link').stop().animate({marginTop: 0});
+			}
+		});
+	});
+	</script>
 </head>
 <body>
 <noscript><meta http-equiv="refresh" content="0;url=nojs.html"/></noscript>
@@ -41,27 +55,28 @@
 			<div class="text">
 				<div class="main_foto">
 					<img src="img/main.png" alt="no-foto" />
+					
+					<div id="wrap_link" class="clearfix">
+						<div class="left_link">
+							<div class="text_left_link clearfix">
+								<h1>Про нас:</h1>
+								<p>ТОВ «Садовий центр горіхоплідних культур «Ярославсад» - це підприємство, що займається вирощуванням сертифікованих саджанців сортового горіха грецького та наданням послуг із закладення промислових садів по вирощуванню даної культури.</p>
+								<p><a href="#">Про нас</a></p>
+							</div>
+						</div>
+						<div class="right_link">
+							<div class="text_right_link">
+								<h1>Про нас:</h1>
+								<p>ТОВ «Садовий центр горіхоплідних культур «Ярославсад» - це підприємство, що займається вирощуванням сертифікованих саджанців сортового горіха грецького та наданням послуг із закладення промислових садів по вирощуванню даної культури.</p>
+								<p><a href="#">Про нас</a></p>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 				<h1>Садовий центр горіхоплідних культур «Ярославсад»</h1>
 				<p>«Хто дихає садом, той дихає здоров`ям, поезією, молодістю, радістю життя, довголіттям. Поспішайте зайнятись садом, хто ще може, кому ще час»
 				<span>Л.П.Симиренко</span></p>
-			</div>
-		</div>
-						
-		<div id="wrap_link" class="clearfix">
-			<div class="left_link">
-				<div class="text_left_link clearfix">
-					<h1>Про нас:</h1>
-					<p>ТОВ «Садовий центр горіхоплідних культур «Ярославсад» - це підприємство, що займається вирощуванням сертифікованих саджанців сортового горіха грецького та наданням послуг із закладення промислових садів по вирощуванню даної культури.</p>
-					<p><a href="#">Про нас</a></p>
-				</div>
-			</div>
-			<div class="right_link">
-				<div class="text_right_link">
-					<h1>Про нас:</h1>
-					<p>ТОВ «Садовий центр горіхоплідних культур «Ярославсад» - це підприємство, що займається вирощуванням сертифікованих саджанців сортового горіха грецького та наданням послуг із закладення промислових садів по вирощуванню даної культури.</p>
-					<p><a href="#">Про нас</a></p>
-				</div>
 			</div>
 		</div>
 	</article>

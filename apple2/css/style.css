@@ -97,25 +97,25 @@ article{
 /*index*/
 .main .text p{
 	width: 300px;
-	margin-right: 80px;
 	float: right;
-	font-family: italic;
+	margin-right: 80px;
+	font: italic 15px sans-serif;
+	text-align:justify;
 	text-shadow: 1px 1.2px 0 #696969;
-	text-align: justify;
-	color: #fff;
+	color:#fff;
 }
 .main .text p span{
-	margin-top: 25px;
 	float: right;
+	margin-top: 25px;
 }
 .main_foto{
 	width: 100%;
 	position: relative;
 }
 .main_foto img{
+	display: block;
 	max-width: 100%;
 	margin: 0 auto;
-	display: block;
 }
 /*content*/
 /*about*/
@@ -305,19 +305,24 @@ footer{
 #wrap_link{
 	width: 1000px;
 	min-height: 250px;
-	margin: 40px auto;
+	left: 13%;
+	top: 10%;
+	position: absolute;
+	z-index:15;
 }
 .left_link{
 	width: 45%;
 	height: 100%;
-	float: left;
 	padding-bottom: 25px;
+	float: left;
+	background-color: rgba(207, 207, 207, 0.4);
 }
 .right_link{
 	width: 45%;
 	height: 100%;
-	float: right;
 	padding-bottom: 25px;
+	float: right;
+	background-color: rgba(207, 207, 207, 0.4);
 }
 /*links*/
 /*content*/
