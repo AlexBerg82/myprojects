@@ -1,14 +1,33 @@
-﻿<!doctype html>
+﻿<?php
+include "include/tozip.php"
+?>
+<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>ЗВТ</title>
 	<link rel="stylesheet" media="screen" href="css/style.css" />
-
+	<link rel="stylesheet" type="text/css" href="css/tcal.css" />
+	
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/tab.js"></script>
+	<script type="text/javascript" src="js/jquery.session.js"></script>
+	<script type="text/javascript" src="js/tcal.js"></script>
 	
+	<script>
+		//информация о загружаемом файле
+		function getName(str){
+			if(str.lastIndexOf("\\")){
+				var i = str.lastIndexOf("\\")+1;
+			}else{
+				var i = str.lastIndexOf("/")+1;
+			}
+			var filename = str.slice(i);
+			var uploaded = document.getElementById("fileformlabel");
+			uploaded.innerHTML = filename;
+		}
+	</script>
 </head>
 <body>
 <div class="wrapper">
@@ -54,16 +73,18 @@
 		
 	</div>
 
-	<div class="panel">
+	
+	<div class="panel clearfix">
 		<div class="corner2"><p>&#9668;</p></div>
-		<p id="addUnit">+</p>
-		<p class="csm"></p>
-		<p class="print"></p>
-
+		<div class="cp">
+			<a href="template.php" target="_blank" class="csm" id="csm"></a>
+			<a href="#" class="print"></a>
+		</div>
 	</div>
 	
+
 	<table border="1" class="spc">
-		<tr>
+		<tr class="hid">
 			<th><p>№ п/п</p></th>
 			<th class="thd" onclick="sort(this)"><p>Место нахождения</p></th>
 			<th class="thd" onclick="sort(this)"><p>Наименование</p></th>
@@ -78,6 +99,8 @@
 			<th><p>Примечание</p></td>
 		</tr>
 	</table>
+	<p id="addUnit">+</p>
 </div>
+
 </body>
 </html>

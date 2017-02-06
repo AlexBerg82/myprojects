@@ -1,4 +1,5 @@
 ﻿<?php
+if($_SERVER["REQUEST_METHOD"] == "POST"){
 include "db_connect.php";
 	
 function retResalt($link){
@@ -116,4 +117,5 @@ function retResalt($link){
 	
 $goods = retResalt($link);
 exit(json_encode($goods));
+}
 ?>
