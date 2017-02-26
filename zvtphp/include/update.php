@@ -154,7 +154,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 if(isset($_GET['temper'])){
 	foreach( $_FILES as $file ){
 
-		if($file['type'] == 'image/jpeg' || $file['type'] == 'image/jpg' || $file['type'] == 'image/gif' || $file['type'] == 'image/png'){
+		if($file['type'] == 'image/jpeg' || $file['type'] == 'image/jpg' || $file['type'] == 'image/gif' || $file['type'] == 'image/png' || $file['type'] == 'application/pdf' || $file['type'] == 'application/x-pdf' || $file['type'] == 'application/acrobat' || $file['type'] == 'applications/vnd.pdf' || $file['type'] == 'text/pdf' || $file['type'] == 'text/x-pdf'){
 
 			$imgext = strtolower(preg_replace("#.+\.([a-z]+)$#i", "$1", $file['name']));
 			$newfilename = 'file'.'-'.$_GET['nameBegin'].'.'.$imgext;

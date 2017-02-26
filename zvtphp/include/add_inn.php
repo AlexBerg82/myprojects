@@ -21,6 +21,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	
 	
 	
+
+	$healthy = array("/");
+	$yummy   = array("-");
+	$redName = str_replace($healthy, $yummy, $redName);
+
+	$healthy2 = array("/");
+	$yummy2   = array("-");
+	$redSymbol = str_replace($healthy2, $yummy2, $redSymbol);
+	
+	
+	
+	
 	$dateBegin = date_create($redBegin);
 	$dateBegin = date_format($dateBegin, 'Y-m-d');
 	
@@ -55,7 +67,7 @@ if(isset($_POST['redName'])){
 	$path = '../base/'.$redPlace.'/'.$redDepart.'/'.$redName.'/'.$redSymbol.'/';
 
 
-	
+
 	
 	//вставка в БД
 	mysql_query("INSERT INTO oborudovanie(place,name,symbol,period,date_begin,date_end,number_factory,number_serial,department,note,vise,path_full,extra)
@@ -80,7 +92,7 @@ if(isset($_POST['redName'])){
 if(isset($_GET['temper'])){
 	
 	foreach( $_FILES as $file ){
-		if($file['type'] == 'image/jpeg' || $file['type'] == 'image/jpg' || $file['type'] == 'image/gif' || $file['type'] == 'image/png'){
+		if($file['type'] == 'image/jpeg' || $file['type'] == 'image/jpg' || $file['type'] == 'image/gif' || $file['type'] == 'image/png' || $file['type'] == 'application/pdf' || $file['type'] == 'application/x-pdf' || $file['type'] == 'application/acrobat' || $file['type'] == 'applications/vnd.pdf' || $file['type'] == 'text/pdf' || $file['type'] == 'text/x-pdf'){
 		
 			$imgext = strtolower(preg_replace("#.+\.([a-z]+)$#i", "$1", $file['name']));
 			$newfilename = 'file'.'-'.$_GET['nameBegin'].'.'.$imgext;

@@ -1,4 +1,4 @@
-/*PLUGIN BASICS */
+﻿/*PLUGIN BASICS */
 .sliderkit{display:none;position:relative;overflow:hidden;text-align:left;}
 .sliderkit a,
 .sliderkit a:hover{text-decoration:none;}
@@ -32,5 +32,5 @@
 .sliderkit-panel img{width: 100%;height: 100%;}
 
 /* Panel */
-.sliderkit-panels{top:0;left:0;width:1300px;height:535px; background-color:red;}
+.sliderkit-panels{top:0;left:0;width:1300px;height:535px;}
 .photosgallery-minimalistic .sliderkit-panel{top:0;left:0;width:100%;height:490px;}
