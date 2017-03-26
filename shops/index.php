@@ -15,8 +15,6 @@
 	<script type="text/javascript" src="js/lodash.js"></script>
 	
 	<script type="text/javascript" src="js/shopscript.js"></script>
-	
-
 </head>
 <body>
 <div class="wrapper">
@@ -29,16 +27,20 @@
 				<p>Future</p>
 			</div>
 		</div>
+		
 		<div class="register">
 			<a href="#" id="reg"><span>Регистрация</span></a>			
 			<a href="#" id="inn"><span>Вход</span></a>
 		</div>
+		
 		<div class="language">
 			<div class="lang" id="ukr"></div>
 			<div class="lang" id="rus"></div>
 			<div class="lang" id="eng"></div>
 		</div>
+		
 		<div class="cart"><p></p></div>
+		
 		<div class="search clearfix">
 			<div class="wrap_search clearfix">
 				<input type="text" class="input_search" id="input_search" placeholder="Поиск...">
@@ -52,6 +54,7 @@
 		</div>
 	
 	<div class="content clearfix">
+		<div class="title_cart"><p>Корзина</p></div>
 		
 		<div class="sort clearfix">
 			<p class="grad_line clearfix">
@@ -125,6 +128,7 @@
 </div>
 
 <div class="modal" id="modal_out"></div>
+
 <script type="text/javascript" src="js/language.js"></script>
 </body>
 </html>

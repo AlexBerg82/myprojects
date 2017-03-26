@@ -1,11 +1,9 @@
-<?php
+﻿<?php
 include "db_connect.php";
-
-$typ = $_POST["typ"];
 
 	function retUnit($link){
 
-		$result = mysql_query("SELECT brand,type, COUNT(brand) FROM product GROUP BY brand", $link);
+		$result = mysql_query("SELECT brand,type, COUNT(brand) FROM product GROUP BY brand,type", $link);
 		
 		if (mysql_num_rows($result) > 0){
 			$row = mysql_fetch_array($result);

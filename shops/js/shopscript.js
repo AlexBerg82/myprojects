@@ -32,18 +32,18 @@
 
 	
 	
-	//создание списка категорий товаров
+		//загрузка категорий и подготовка к выводу
 		$.ajax({
 			url:'./include/units.php',
 				type:'post',
 				dataType:'json',
 				success:function(data){
 
+					//создание списка категорий товаров
 					for(value in data){
 						arrType.push(data[value]['type']);
 					}
 					var arrSortFrnd = _.union(arrType);
-
 
 					for(var i=0; i < arrSortFrnd.length; i++){
 						$("#menu").append('<li><span><p id="'+arrSortFrnd[i]+'">'+arrSortFrnd[i]+'</p></span><ul id="list'+arrSortFrnd[i]+'"></ul></li>');
@@ -54,12 +54,12 @@
 						}
 					}
 
-						$("#mobile").replaceWith('<p id="mobile">Мобильные телефоны</p>');
-						$("#notebook").replaceWith('<p id="notebook">Ноутбуки</p>');				
+					
+					$("#mobile").replaceWith('<p id="mobile">Мобильные телефоны</p>');
+					$("#notebook").replaceWith('<p id="notebook">Ноутбуки</p>');				
+					$("#notepad").replaceWith('<p id="notepad">Планшеты</p>');	
+					
 
-					
-					
-					
 					$("#menu li ul").hide();
 					$(".filter").hide();
 
@@ -71,39 +71,32 @@
 						}
 					});
 				
-					$(".submenu").click(function(){
-					   $(".filter").slideToggle(200);
-					});
+					//фильтр по параметрам
+					//$(".submenu").click(function(){
+					//	$(".filter").slideToggle(200);
+					//});
 					
 
-
-
-
-		$.ajax({
-			url:'./include/count_cat.php',
-			type:'post',
-			dataType:'json',
-			success:function(html){
-				for(val in html){
-					$("#brand_"+html[val][1]+"_"+html[val][0]+" > input + label > p").append(html[val][2]);
-					//console.log(html[val][0] + ' ' + html[val][2]);
-				}
-			}
-		});
+				//подсчет категории товаров
+				$.ajax({
+					url:'./include/count_cat.php',
+					type:'post',
+					dataType:'json',
+					success:function(html){
+						for(val in html){
+							$("#brand_"+html[val][1]+"_"+html[val][0]+" > input + label > p").html(html[val][2]);
+						}
+					}
+				});
 
 	
-					
-
-					
-					
-					
-	//выборка по категории и сортировка
+	
+	//выборка по категории
 	$('input[type=checkbox]').change(function(){
 		var types = $(this).attr('class');
 
 		if(this.checked){
 			idBrand.push("'"+$(this).val()+"'");
-			//console.log(idBrand);
 			
 			//функция сортировки
 			var sort = '';
@@ -157,7 +150,7 @@
 							$('.nav_bottom').show();
 							$('.content').append('<script src="js/paginate.js"></script>');
 
-							
+						//просмотр товара
 						$(".tovar_right > p").click(function(){
 							var tovarUnit = $(this).attr('id');
 							console.log(tovarUnit.substr(5));
@@ -187,6 +180,7 @@
 										$("#tovar").append('<ul class="tabs first_tab"><li class="t1 tab_active"><a>Описание</a></li><li class="t2"><a>Характеристики</a></li><li class="t3"><a>Отзывы</a></li></ul><div class="t1"><ul class="page1"><li>'+html[value]['desc']+'</li></ul></div><div class="t2"><ul class="page2"><li>'+html[value]['feat']+'</li></ul></div><div class="t3"><ul class="page1"><li></li></ul></div>');
 									}
 									
+									//вкладки товара
 									$('ul.tabs.first_tab li').click(function(){
 										var thisClass = this.className.slice(0,2);
 										$('div.t1').hide();
@@ -197,7 +191,7 @@
 										$(this).addClass('tab_active');
 									});
 									
-									//добавление в корзину
+									//добавление в корзину товара
 									$('.buyBtn').click(function(){
 										var buyId = $(this).attr("id");
 										$.ajax({
@@ -212,11 +206,12 @@
 										});
 									});
 									
-									//выход из модалки регистрации по нажатию на фон
+									//модалка (дополнительные фото товара)
 									$(".img_small").click(function(){
 										$('.modal').fadeIn(500);
 									});
-									//выход из модалки регистрации по нажатию на фон
+									
+									//выход из модалки по нажатию на фон
 									$("#modal_out").click(function(){
 										$('.modal').fadeOut(500);
 									});
@@ -248,7 +243,7 @@
 			
 			//функция сортировки
 			var sort = '';
-			//вывод по категории
+
 			function sorter(sort){
 				$.ajax({
 					url:'./include/functions.php',
@@ -295,7 +290,8 @@
 							
 							$('.nav_bottom').show();
 							$('.content').append('<script src="js/paginate.js"></script>');
-
+						
+						//просмотр товара
 						$(".tovar_right > p").click(function(){
 							var tovarUnit = $(this).attr('id');
 							console.log(tovarUnit.substr(5));
@@ -325,6 +321,7 @@
 										$("#tovar").append('<ul class="tabs first_tab"><li class="t1 tab_active"><a>Описание</a></li><li class="t2"><a>Характеристики</a></li><li class="t3"><a>Отзывы</a></li></ul><div class="t1"><ul class="page1"><li>'+html[value]['desc']+'</li></ul></div><div class="t2"><ul class="page2"><li>'+html[value]['feat']+'</li></ul></div><div class="t3"><ul class="page1"><li></li></ul></div>');
 									}
 									
+									//вкладки товара
 									$('ul.tabs.first_tab li').click(function(){
 										var thisClass = this.className.slice(0,2);
 										$('div.t1').hide();
@@ -350,11 +347,12 @@
 										});
 									});
 									
-									//выход из модалки регистрации по нажатию на фон
+									//модалка (дополнительные фото товара)
 									$(".img_small").click(function(){
 										$('.modal').fadeIn(500);
 									});
-									//выход из модалки регистрации по нажатию на фон
+									
+									//выход из модалки по нажатию на фон
 									$("#modal_out").click(function(){
 										$('.modal').fadeOut(500);
 									});
@@ -383,6 +381,7 @@
 			}
 		}
 		
+		//сортировка
 		sorter(sort);
 		
 		$("#namea2").replaceWith('<span id="namea">&#9650;</span>');
@@ -474,6 +473,7 @@
 							var sortr = '';
 							var input_search2;
 							
+							
 							$("#pricea2").click(function(){
 								sortr = $(this).attr('id');
 								input_search2 = $("#input_search").val();
@@ -501,10 +501,9 @@
 						
 						
 
-									
+						//просмотр товара
 						$(".tovar_right > p").click(function(){
 							var tovarUnit = $(this).attr('id');
-							//console.log(tovarUnit.substr(5));
 							
 							$.ajax({
 								url:'./include/unit.php',
@@ -529,6 +528,7 @@
 										$("#tovar").append('<ul class="tabs first_tab"><li class="t1 tab_active"><a>Описание</a></li><li class="t2"><a>Характеристики</a></li><li class="t3"><a>Отзывы</a></li></ul><div class="t1"><ul class="page1"><li>'+html[value]['desc']+'</li></ul></div><div class="t2"><ul class="page2"><li>'+html[value]['feat']+'</li></ul></div><div class="t3"><ul class="page1"><li></li></ul></div>');
 									}
 									
+									//вкладки товара
 									$('ul.tabs.first_tab li').click(function(){
 										var thisClass = this.className.slice(0,2);
 										$('div.t1').hide();
@@ -597,7 +597,6 @@
 			success: function(dataSrch2){
 				$("#tovar").empty();
 				
-				
 					if(dataSrch2 > ''){
 						$(".sort").css('display','block');
 
@@ -624,7 +623,7 @@
 	
 	
 	
-	//вход в корзину
+	//просмотр корзины
 	$('.cart').click(function(){
 
 		$.ajax({
@@ -642,12 +641,10 @@
 				$('input[type=checkbox]').removeAttr("checked");
 				idBrand = [];
 				
-			//if(data != null){
 				for(value in data){
 					$("#tovar").append('<li class="wrap_postn clearfix" id="wrap_postn'+data[value]['id_prod']+'"><div class="img_cart"><img src="uploads_images/'+data[value]['img']+'" alt="no-foto"></div><div class="wrap_desc_cart clearfix"><div class="titl_cart"><p>'+data[value]['title']+'</p></div><div class="desc_cart"><p>'+data[value]['mini_feat']+'</p></div></div><div class="cnt_cart clearfix"><div class="cnt_max" id="cp'+data[value]['id_prod']+'"><p>+</p></div><div id="inp_un'+data[value]['id_prod']+'"><span>'+data[value]['count_cart']+'</span></div><div class="cnt_min" id="cm'+data[value]['id_prod']+'"><p>-</p></div></div><div class="amount_wrap clearfix"><div class="cnt_un" id="cnt_un'+data[value]['id_prod']+'"><p>грн.</p><span prc="'+data[value]['price']+'">'+data[value]['price']+'</span><p>x</p><span id="qan'+data[value]['id_prod']+'">'+data[value]['count_cart']+'</span></div><div class="total" id="ttl'+data[value]['id_prod']+'"><p>грн.</p><span>'+data[value]['count_cart'] * data[value]['price']+'</span></div></div><div class="del_pos_cart" id="del'+data[value]['id_prod']+'"><img src="img/del.png" alt="no-img"></div></li>');
 				}
 
-				
 				//удаление товара в корзине
 				$('.cnt_min').click(function(){
 					var id = $(this).attr('id');
@@ -737,7 +734,7 @@
 				itog_price();
 				
 				
-				//удаление объявления
+				//удаление позиции в корзине
 				$(".del_pos_cart").click(function(){
 					var idDel = $(this).attr('id');
 					idDel = idDel.substr(3);
@@ -757,7 +754,7 @@
 								itog_price();					
 							}else{
 								$('#tovar').empty();
-								$('#tovar').append('<li><p>Корзина пуста!</p></li>')
+								$('#tovar').append('<li><p class="notification">Корзина пуста!</p></li>')
 							}
 							
 						}

@@ -12,13 +12,13 @@
 	$('#show_per_page').val(show_per_page);
 			
 	//now when we got all we need for the navigation let's make it '
-	var navigation_html = '<a class="previous_link" href="javascript:previous();">Назад</a>';
+	var navigation_html = '<a class="previous_link" href="javascript:previous();">&#9668;</a>';
 	var current_link = 0;
 	while(number_of_pages > current_link){
 		navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link +')" longdesc="' + current_link +'">'+ (current_link + 1) +'</a>';
 		current_link++;
 	}
-	navigation_html += '<a class="next_link" href="javascript:next();">Вперед</a>';
+	navigation_html += '<a class="next_link" href="javascript:next();">&#9658;</a>';
 			
 	$('#page_navigation').html(navigation_html);
 			
