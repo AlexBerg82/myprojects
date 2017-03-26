@@ -375,12 +375,9 @@ ul#menu li ul li label:hover{
 
 
 
-input[type=checkbox]{
+ul#menu li ul li input[type=checkbox]{
 	display: none;
 }
-
-
-
 ul#menu li ul li input:checked + label {
    color: blue;
 }
@@ -578,6 +575,7 @@ ul#menu li ul li input + label > p{
 	font-weight: 600;
 	color:#fff;
 	text-decoration:none;
+	position:relative;
 }
 .grad .tovar_right .tovar_desc .tovar_price a:hover{
 	background-color:#FF4500;
@@ -895,6 +893,7 @@ div.t1 div > p{
 	font-weight: 600;
 	color:#fff;
 	text-decoration:none;
+	position:relative;
 }
 .wrap_buy a:hover{
 	background-color:#FF4500;
@@ -1127,14 +1126,52 @@ div.t1 div > p{
 
 
 
-
-.ddd{
-	width: 100px;
-	height: 100px;
-	background-color:red;
+.filter{
+	padding: 10px 20px;
 }
-.aaa{
-	width: 100px;
-	height: 100px;
-	background-color:green;
+.filter > p{
+	background-color:#B5B5B5;
+	margin-left: 10px;
+	color:blue;
+	padding-top: 4px;
+	padding-bottom: 2px;
+}
+
+.submenu{
+	background-color:#696969;
+	font-size:12px;
+	text-align: center;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.filter label{
+	font-size: 11px;
+}
+.cores,.ram,.diag,.os,.nfc,.mpx,.diagtv{
+		-ms-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		-o-transform: scale(1.2);
+}
+
+
+
+
+
+.residue{
+	position:absolute;
+	top: -8px;
+	right: -8px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-khtml-border-radius: 50%;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	background-color: #00CD66;
+	font-size:10px;
+	color:#000;
+	border: 1px solid #fff;
+	text-align:center;
+	line-height:15px;
 }

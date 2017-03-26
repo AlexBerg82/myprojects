@@ -3,7 +3,7 @@ include "db_connect.php";
 
 function retUnit($link){
 
-	$result = mysql_query("SELECT * FROM product", $link);
+	$result = mysql_query("SELECT * FROM category", $link);
 	
 	if (mysql_num_rows($result) > 0){
 		$row = mysql_fetch_array($result);

@@ -18,18 +18,7 @@
 		$(".sorts strong:nth-child(5)").replaceWith('<strong>ціна</strong>');
 		
 		$("#mobile").replaceWith('<p id="mobile">Мобільні телефони</p>');
-		$("#photo").replaceWith('<p id="photo">Фото</p>');
-		$("#tv").replaceWith('<p id="tv">TВ</p>');
-		$("#note").replaceWith('<p id="note">Ноутбуки</p>');
-		$("#tabs").replaceWith('<p id="tabs">Планшети</p>');
-		$("#zp_pc").replaceWith('<p id="zp_pc">Комплектуючі до ПК</p>');
-		$("#zp_nt").replaceWith('<p id="zp_nt">Комплектуючі до ноутбуків</p>');
-		$("#pc").replaceWith('<p id="pc">Ком\'пьютери</p>');
-		$("#perif").replaceWith('<p id="perif">Периферія</p>');
-		$("#bat").replaceWith('<p id="bat">Акумулятори</p>');
-		$("#card").replaceWith('<p id="card">Картки пам\'яті</p>');
-		$("#head_ph").replaceWith('<p id="head_ph">Навушники</p>');
-		$("#chard").replaceWith('<p id="chard">Зарядні пристрої</p>');
+		$("#notebook").replaceWith('<p id="notebook">Ноутбуки</p>');
 		
 		$(".footer_menu_wrapper:nth-child(1) .titl_footer_menu").replaceWith('<p class="titl_footer_menu">СОЦМЕРЕЖІ</p>');
 		$(".footer_menu_wrapper:nth-child(2) .titl_footer_menu").replaceWith('<p class="titl_footer_menu">ПОСИЛАННЯ</p>');
@@ -64,18 +53,7 @@
 		$(".sorts strong:nth-child(5)").replaceWith('<strong>price</strong>');
 		
 		$("#mobile").replaceWith('<p id="mobile">Mobile</p>');
-		$("#photo").replaceWith('<p id="photo">Photo</p>');
-		$("#tv").replaceWith('<p id="tv">TV</p>');
-		$("#note").replaceWith('<p id="note">Notebook</p>');
-		$("#tabs").replaceWith('<p id="tabs">Tabs</p>');
-		$("#zp_pc").replaceWith('<p id="zp_pc">ZP for PC</p>');
-		$("#zp_nt").replaceWith('<p id="zp_nt">ZP for Notebook</p>');
-		$("#pc").replaceWith('<p id="pc">PC</p>');
-		$("#perif").replaceWith('<p id="perif">Periferia</p>');
-		$("#bat").replaceWith('<p id="bat">Battery</p>');
-		$("#card").replaceWith('<p id="card">Cards</p>');
-		$("#head_ph").replaceWith('<p id="head_ph">Headphone</p>');
-		$("#chard").replaceWith('<p id="chard">Chardger</p>');
+		$("#notebook").replaceWith('<p id="notebook">Notebook</p>');
 		
 		$(".footer_menu_wrapper:nth-child(1) .titl_footer_menu").replaceWith('<p class="titl_footer_menu">SOCIAL</p>');
 		$(".footer_menu_wrapper:nth-child(2) .titl_footer_menu").replaceWith('<p class="titl_footer_menu">LINKS</p>');
@@ -110,18 +88,8 @@
 		$(".sorts strong:nth-child(5)").replaceWith('<strong>цена</strong>');
 		
 		$("#mobile").replaceWith('<p id="mobile">Мобильные телефоны</p>');
-		$("#photo").replaceWith('<p id="photo">Фото</p>');
-		$("#tv").replaceWith('<p id="tv">TВ</p>');
-		$("#note").replaceWith('<p id="note">Ноутбуки</p>');
-		$("#tabs").replaceWith('<p id="tabs">Планшеты</p>');
-		$("#zp_pc").replaceWith('<p id="zp_pc">Комплектующие для ПК</p>');
-		$("#zp_nt").replaceWith('<p id="zp_nt">Комплектующие для ноутбуков</p>');
-		$("#pc").replaceWith('<p id="pc">Компьютеры</p>');
-		$("#perif").replaceWith('<p id="perif">Периферия</p>');
-		$("#bat").replaceWith('<p id="bat">Аккумуляторы</p>');
-		$("#card").replaceWith('<p id="card">Карты памяти</p>');
-		$("#head_ph").replaceWith('<p id="head_ph">Наушники</p>');
-		$("#chard").replaceWith('<p id="chard">Зарядные устройства</p>');
+		$("#notebook").replaceWith('<p id="notebook">Ноутбуки</p>');
+
 		
 		$(".footer_menu_wrapper:nth-child(1) .titl_footer_menu").replaceWith('<p class="titl_footer_menu">СОЦСЕТИ</p>');
 		$(".footer_menu_wrapper:nth-child(2) .titl_footer_menu").replaceWith('<p class="titl_footer_menu">ПОСЫЛКИ</p>');
@@ -162,18 +130,7 @@
 		$(".sorts strong:nth-child(5)").replaceWith('<strong>ціна</strong>');
 		
 		$("#mobile").replaceWith('<p id="mobile">Мобільні телефони</p>');
-		$("#photo").replaceWith('<p id="photo">Фото</p>');
-		$("#tv").replaceWith('<p id="tv">TВ</p>');
-		$("#note").replaceWith('<p id="note">Ноутбуки</p>');
-		$("#tabs").replaceWith('<p id="tabs">Планшети</p>');
-		$("#zp_pc").replaceWith('<p id="zp_pc">Комплектуючі до ПК</p>');
-		$("#zp_nt").replaceWith('<p id="zp_nt">Комплектуючі до ноутбуків</p>');
-		$("#pc").replaceWith('<p id="pc">Ком\'пьютери</p>');
-		$("#perif").replaceWith('<p id="perif">Периферія</p>');
-		$("#bat").replaceWith('<p id="bat">Акумулятори</p>');
-		$("#card").replaceWith('<p id="card">Картки пам\'яті</p>');
-		$("#head_ph").replaceWith('<p id="head_ph">Навушники</p>');
-		$("#chard").replaceWith('<p id="chard">Зарядні пристрої</p>');
+		$("#notebook").replaceWith('<p id="notebook">Ноутбуки</p>');
 		
 		$(".footer_menu_wrapper:nth-child(1) .titl_footer_menu").replaceWith('<p class="titl_footer_menu">СОЦМЕРЕЖІ</p>');
 		$(".footer_menu_wrapper:nth-child(2) .titl_footer_menu").replaceWith('<p class="titl_footer_menu">ПОСИЛАННЯ</p>');
@@ -210,18 +167,7 @@
 		$(".sorts strong:nth-child(5)").replaceWith('<strong>цена</strong>');
 		
 		$("#mobile").replaceWith('<p id="mobile">Мобильные телефоны</p>');
-		$("#photo").replaceWith('<p id="photo">Фото</p>');
-		$("#tv").replaceWith('<p id="tv">TВ</p>');
-		$("#note").replaceWith('<p id="note">Ноутбуки</p>');
-		$("#tabs").replaceWith('<p id="tabs">Планшеты</p>');
-		$("#zp_pc").replaceWith('<p id="zp_pc">Комплектующие для ПК</p>');
-		$("#zp_nt").replaceWith('<p id="zp_nt">Комплектующие для ноутбуков</p>');
-		$("#pc").replaceWith('<p id="pc">Компьютеры</p>');
-		$("#perif").replaceWith('<p id="perif">Периферия</p>');
-		$("#bat").replaceWith('<p id="bat">Аккумуляторы</p>');
-		$("#card").replaceWith('<p id="card">Карты памяти</p>');
-		$("#head_ph").replaceWith('<p id="head_ph">Наушники</p>');
-		$("#chard").replaceWith('<p id="chard">Зарядные устройства</p>');
+		$("#notebook").replaceWith('<p id="notebook">Ноутбуки</p>');
 		
 		$(".footer_menu_wrapper:nth-child(1) .titl_footer_menu").replaceWith('<p class="titl_footer_menu">СОЦСЕТИ</p>');
 		$(".footer_menu_wrapper:nth-child(2) .titl_footer_menu").replaceWith('<p class="titl_footer_menu">ПОСЫЛКИ</p>');
@@ -258,18 +204,7 @@
 		$(".sorts strong:nth-child(5)").replaceWith('<strong>price</strong>');
 		
 		$("#mobile").replaceWith('<p id="mobile">Mobile</p>');
-		$("#photo").replaceWith('<p id="photo">Photo</p>');
-		$("#tv").replaceWith('<p id="tv">TV</p>');
-		$("#note").replaceWith('<p id="note">Notebook</p>');
-		$("#tabs").replaceWith('<p id="tabs">Tabs</p>');
-		$("#zp_pc").replaceWith('<p id="zp_pc">ZP for PC</p>');
-		$("#zp_nt").replaceWith('<p id="zp_nt">ZP for Notebook</p>');
-		$("#pc").replaceWith('<p id="pc">PC</p>');
-		$("#perif").replaceWith('<p id="perif">Periferia</p>');
-		$("#bat").replaceWith('<p id="bat">Battery</p>');
-		$("#card").replaceWith('<p id="card">Cards</p>');
-		$("#head_ph").replaceWith('<p id="head_ph">Headphone</p>');
-		$("#chard").replaceWith('<p id="chard">Chardger</p>');
+		$("#notebook").replaceWith('<p id="notebook">Notebook</p>');
 		
 		$(".footer_menu_wrapper:nth-child(1) .titl_footer_menu").replaceWith('<p class="titl_footer_menu">SOCIAL</p>');
 		$(".footer_menu_wrapper:nth-child(2) .titl_footer_menu").replaceWith('<p class="titl_footer_menu">LINKS</p>');
