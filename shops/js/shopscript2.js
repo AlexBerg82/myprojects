@@ -27,23 +27,9 @@
 	}
 	loadcart();
 	
+
 	
-	//добавление в корзину товара
-	function carts(){
-		$('.buyBtn').click(function(){
-		var buyId = $(this).attr("id");
-			$.ajax({
-				type: "POST",
-				url: "./include/addtocart.php",
-				data: "id="+buyId,
-				dataType: "html",
-				cache: false,
-				success: function(){
-					loadcart();
-				}
-			});
-		});
-	}
+
 	
 	
 		//загрузка категорий и подготовка к выводу
@@ -85,7 +71,11 @@
 						}
 					});
 				
-
+					//фильтр по параметрам
+					//$(".submenu").click(function(){
+					//	$(".filter").slideToggle(200);
+					//});
+					
 
 				//подсчет категории товаров
 				$.ajax({
@@ -107,7 +97,7 @@
 
 		if(this.checked){
 			idBrand.push("'"+$(this).val()+"'");
-			
+			//console.log(idBrand);
 			//функция сортировки
 			var sort = '';
 			
@@ -201,7 +191,20 @@
 										$(this).addClass('tab_active');
 									});
 									
-									carts();
+									//добавление в корзину товара
+									$('.buyBtn').click(function(){
+										var buyId = $(this).attr("id");
+										$.ajax({
+											type: "POST",
+											url: "./include/addtocart.php",
+											data: "id="+buyId,
+											dataType: "html",
+											cache: false,
+											success: function(){
+												loadcart();
+											}
+										});
+									});
 									
 									//модалка (дополнительные фото товара)
 									$(".img_small").click(function(){
@@ -217,7 +220,20 @@
 							});
 						});
 						
-						carts();
+						//добавление в корзину
+						$('.buyBtn').click(function(){
+							var buyId = $(this).attr("id");
+							$.ajax({
+								type: "POST",
+								url: "./include/addtocart.php",
+								data: "id="+buyId,
+								dataType: "html",
+								cache: false,
+								success: function(){
+									loadcart();
+								}
+							});
+						});
 
 					}
 				});
@@ -288,7 +304,7 @@
 								success:function(html){
 									$("#tovar").empty();
 									$(".sort").css('display','none');
-									$(".title_cart").hide();
+									//$(".title_cart").hide();
 									$(".title_cart").css('display','block');
 									$(".title_cart p").replaceWith("<p>Все о товаре</p>");
 									$('.nav_bottom').hide();
@@ -316,7 +332,20 @@
 										$(this).addClass('tab_active');
 									});
 									
-									carts();
+									//добавление в корзину
+									$('.buyBtn').click(function(){
+										var buyId = $(this).attr("id");
+										$.ajax({
+											type: "POST",
+											url: "./include/addtocart.php",
+											data: "id="+buyId,
+											dataType: "html",
+											cache: false,
+											success: function(){
+												loadcart();
+											}
+										});
+									});
 									
 									//модалка (дополнительные фото товара)
 									$(".img_small").click(function(){
@@ -333,7 +362,19 @@
 						});
 						
 						//добавление в корзину
-						carts();
+						$('.buyBtn').click(function(){
+							var buyId = $(this).attr("id");
+							$.ajax({
+								type: "POST",
+								url: "./include/addtocart.php",
+								data: "id="+buyId,
+								dataType: "html",
+								cache: false,
+								success: function(){
+									loadcart();
+								}
+							});
+						});
 
 					}
 				});
@@ -499,7 +540,19 @@
 									});
 									
 									//добавление в корзину
-									carts();
+									$('.buyBtn').click(function(){
+										var buyId = $(this).attr("id");
+										$.ajax({
+											type: "POST",
+											url: "./include/addtocart.php",
+											data: "id="+buyId,
+											dataType: "html",
+											cache: false,
+											success: function(){
+												loadcart();
+											}
+										});
+									});
 
 								}
 							});
@@ -507,7 +560,19 @@
 						
 						
 						//добавление в корзину
-						carts();
+						$('.buyBtn').click(function(){
+							var buyId = $(this).attr("id");
+							$.ajax({
+								type: "POST",
+								url: "./include/addtocart.php",
+								data: "id="+buyId,
+								dataType: "html",
+								cache: false,
+								success: function(){
+									loadcart();
+								}
+							});
+						});
 						
 						
 						}
