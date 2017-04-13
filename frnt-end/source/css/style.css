@@ -9,8 +9,9 @@ body{
 }
 
 .wrapper{
-	width: 97%;
+	width: 98%;
 	margin: 0 auto;
+	position:relative;
 }
 #titl{
 	color:#fff;
@@ -91,20 +92,15 @@ body{
 	-moz-box-shadow: 0px 0px 30px #363636;
 }
 
-
-
-
-
 #container{
 	margin: 0 auto;
 }
-
 #gallery{
 	display: none;
 }
 .wrap_slid{
 	float: left;
-	width: 900px;
+	width: 69%;
 }
 .desc_country{
 	display: none;
@@ -117,7 +113,6 @@ body{
 	color:#696969;
 	text-align:justify;
 	padding-left: 5px;
-	margin-left: 10px;
 }
 .desc_place{
 	display: none;
@@ -147,32 +142,15 @@ body{
 }
 
 /*responsive*/
-@media (min-width: 1300px) and (max-width: 1355px){
-	.desc_country{
-		max-width: 320px;
-	}
+@media (max-width: 1355px){
+.wrap_slid{
+	width: 98%;
+	margin-bottom: 20px;
 }
-
-@media (min-width: 1280px) and (max-width: 1299px){
-	.desc_country{
-		max-width: 300px;
-	}
+.desc_country{
+	float: none;
+	clear: both;
+	max-width: 895px;
+	height: auto;
 }
-
-@media (min-width: 1024px) and (max-width: 1279px){
-	.desc_country{
-		max-width: 100%;
-		height: 125px;
-		float: none;
-		clear: both;
-		margin-top: 10px;
-		margin-left: 0;
-	}
-	.desc_place{
-		max-width: 100%;
-		margin-bottom: 10px;
-	}
-	.wrapper{
-		width: 74%;
-	}
 }
