@@ -7,6 +7,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.session.js"></script>
 	<script type="text/javascript" src="js/jcarousellite.js"></script>
 	<script type="text/javascript" src="js/jquery.cookie.js"></script>
 	<script type="text/javascript" src="js/jquery.form.js"></script>

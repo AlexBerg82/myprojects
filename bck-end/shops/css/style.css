@@ -65,9 +65,7 @@ body{
 	text-shadow: 3px 3px 2px rgba(54, 54, 54, 0.7);
 	padding-left: 5px;
 }
-.logo_text p:nth-child(2){
-	
-}
+
 .category{
 	width: 25%;
 	background-color:#B5B5B5;
@@ -78,12 +76,8 @@ body{
 	width: 75%;
 	min-height: 630px;
 	float: left;
-	/*padding-left: 10px;*/
 	position:relative;
 	background-color:#F8F8F8;
-}
-.wrap_content{
-	
 }
 .random{
 	clear: both;
@@ -179,11 +173,11 @@ body{
 
 
 
-
+/*меню категорий*/
 ul#menu, ul#menu ul {
+	width: 100%;
 	margin: 0;
 	padding: 0;
-	width: 100%;
 }
 ul#menu span {
 	display: block;
@@ -191,41 +185,72 @@ ul#menu span {
 }
 ul#menu li {
 	margin-top: 1px;
-	cursor:pointer;
+	cursor: pointer;
 }
-ul#menu li img{
+/*ul#menu li img{
 	width: 25px;
 	height: 25px;
 	margin-top: 3px;
 	margin-left: 3px;
 	float: left;
-}
+}*/
 ul#menu li span p{
 	padding-left: 30px;
 }
 ul#menu li ul li{
-	background: #CCCCCC;
+	background-color: #cccccc;
 	overflow: hidden;
 }
-ul#menu li span, ul#menu li ul li label{
-	background: #333333;
-	color: #FFFFFF;
-	padding: 7px;
+ul#menu li span{
 	display: block;
-}
-ul#menu li span:hover {
-	background: #000000;
+	color: #ffffff;
+	padding: 7px;
+	background-color: #333333;
+	background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#333333),color-stop(100%,#696969));
+    background-image: -webkit-linear-gradient(#333333,#696969);
+    background-image: -moz-linear-gradient(#333333,#696969);
+    background-image: -o-linear-gradient(#333333,#696969);
+    background-image: linear-gradient(#333333,#696969);
+	cursor: pointer;
 }
 ul#menu li ul li label{
-  background: #CCCCCC;
-  color: #000000;
-  padding-left: 20px;
+	display: block;
+	color: #ffffff;
+	padding: 7px;
+	background-color: #333333;
+		cursor: pointer;
+}
+ul#menu li span:hover {
+	background-color: #000000;
+}
+ul#menu li ul li label{
+	background-color: #cccccc;
+	color: #000000;
+	padding-left: 20px;
 }
 ul#menu li ul li label:hover{
-  background: #AAAAAA;
-  border-left: 5px solid #000000;
-  padding-left: 15px;
+	background-color: #aaa;
+	border-left: 5px solid #000000;
+	padding-left: 15px;
 }
+/*скрытие checkbox и окрас выделенных*/
+ul#menu li ul li input[type=checkbox]{
+	display: none;
+}
+ul#menu li ul li input:checked + label {
+	color: blue;
+}
+ul#menu li ul li input + label > p{
+	color: #9C9C9C;
+	width: 40px;
+	float: right;
+	font-size: 11px;
+	text-align: right;
+}
+
+
+
+
 
 
 .register{
@@ -377,20 +402,8 @@ ul#menu li ul li label:hover{
 
 
 
-ul#menu li ul li input[type=checkbox]{
-	display: none;
-}
-ul#menu li ul li input:checked + label {
-   color: blue;
-}
-ul#menu li ul li input + label > p{
-   color: #9C9C9C;
-   width: 40px;
-   float: right;
-   font-size: 11px;
-   text-align:right;
-} 
-   
+
+
    
    
    
