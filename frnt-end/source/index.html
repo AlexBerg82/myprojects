@@ -58,9 +58,9 @@
 				for(var i = 0; i < datas.length; i++){
 					for(var j = 0; j < datas[i].iwas.length; j++){
 						if(datas[i].iwas[j].number == 3 || datas[i].iwas[j].number == 6 || datas[i].iwas[j].number == 8 || datas[i].iwas[j].number == 11 || datas[i].iwas[j].number == 14 || datas[i].iwas[j].number == 16 || datas[i].iwas[j].number == 19 || datas[i].iwas[j].number == 22 || datas[i].iwas[j].number == 24 || datas[i].iwas[j].number == 27 || datas[i].iwas[j].number == 30 || datas[i].iwas[j].number == 32 || datas[i].iwas[j].number == 35 || datas[i].iwas[j].number == 38 || datas[i].iwas[j].number == 40 || datas[i].iwas[j].number == 43 || datas[i].iwas[j].number == 46 || datas[i].iwas[j].number == 48 || datas[i].iwas[j].number == 52){
-							$('#container').append('<div class="item w3"><a href="#" id="newPage'+datas[i].iwas[j].number+'"><p>'+datas[i].iwas[j].title+'</p><img src="./images/img_wrap/'+datas[i].iwas[j].title+'.jpg" alt="no-foto"/></a></div>');
+							$('#container').append('<div class="item w3"><a href="#" id="newPage'+datas[i].iwas[j].number+'" class="'+datas[i].iwas[j].title+'"><p>'+datas[i].iwas[j].title+'</p><img src="./images/img_wrap/'+datas[i].iwas[j].title+'.jpg" alt="no-foto"/></a></div>');
 						}else{
-							$('#container').append('<div class="item"><a href="#" id="newPage'+datas[i].iwas[j].number+'"><p>'+datas[i].iwas[j].title+'</p><img src="./images/img_wrap/'+datas[i].iwas[j].title+'.jpg" alt="no-foto"/></a></div>');
+							$('#container').append('<div class="item"><a href="#" id="newPage'+datas[i].iwas[j].number+'" class="'+datas[i].iwas[j].title+'"><p>'+datas[i].iwas[j].title+'</p><img src="./images/img_wrap/'+datas[i].iwas[j].title+'.jpg" alt="no-foto"/></a></div>');
 						}
 					}
 				}
@@ -74,7 +74,9 @@
 				
 				
 				
-				$(".item a").click(function(){
+				$(".item > a").click(function(){
+				//var titleName = $(this).attr("class");
+				
 					$("#container").empty().hide();
 					$("#titl").replaceWith("<h2 id='toMain'>To Main</h2>");
 					
@@ -136,11 +138,13 @@
 						case '51': patObg = 0; break
 					}
 					
-					for(i = 0; i < datas[patObg].iwas[getId].pictures.length; i++){
-						$('#gallery').append('<img alt="no-foto" src="./images/'+datas[patObg].land+'/'+datas[patObg].iwas[getId].title+'/thumbs/'+datas[patObg].iwas[getId].pictures[i].name+'.jpg" data-image="./images/'+datas[patObg].land+'/'+datas[patObg].iwas[getId].title+'/'+datas[patObg].iwas[getId].pictures[i].name+'.jpg" data-description="'+datas[patObg].iwas[getId].title+'" />');
-						$('.desc_country').append(datas[patObg].description);
-						$('.desc_place').append(datas[patObg].iwas[getId].describe);
+					for(k = 0; k < datas[patObg].iwas[getId].pictures.length; k++){
+						$('#gallery').append('<img alt="no-foto" src="./images/'+datas[patObg].land+'/'+datas[patObg].iwas[getId].title+'/thumbs/'+datas[patObg].iwas[getId].pictures[k].name+'.jpg" data-image="./images/'+datas[patObg].land+'/'+datas[patObg].iwas[getId].title+'/'+datas[patObg].iwas[getId].pictures[k].name+'.jpg" data-description="'+datas[patObg].iwas[getId].title+'" />');
 					}
+					
+					$('.desc_country').append(datas[patObg].description);
+					$('.desc_place').append(datas[patObg].iwas[getId].describe);
+					
 
 					$("#gallery").unitegallery();
 					
@@ -263,9 +267,9 @@
 				 data-description="Preview Image 11 Description"-->			 
 		</div>
 		<div class="desc_place"></div>
-		
+		<div class="desc_country"></div>
 	</div>
-	<div class="desc_country"></div>
+	
 </div>
 </body>
 </html>

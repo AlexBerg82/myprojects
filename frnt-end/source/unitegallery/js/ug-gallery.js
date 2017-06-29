@@ -69,7 +69,7 @@ function UniteGalleryMain(){
 	
 	//set the default gallery options
 	var g_options = {				
-			gallery_width:900,							//gallery width		
+			gallery_width:1355,							//gallery width		
 			gallery_height:500,							//gallery height
 			
 			gallery_min_width: 150,						//gallery minimal width when resizing
@@ -1381,6 +1381,8 @@ function UniteGalleryMain(){
 		objWrapper.removeClass("ug-under-480");
 		objWrapper.removeClass("ug-under-780");
 		objWrapper.removeClass("ug-under-960");
+		objWrapper.removeClass("ug-under-1140");
+		objWrapper.removeClass("ug-under-1280");
 	}
 	
 	
@@ -1771,7 +1773,14 @@ function UniteGalleryMain(){
 		}else
 		if(width < 960){
 			addClass = "ug-under-960";
+		}else
+		if(width <= 1140){
+			addClass = "ug-under-1140";			
+		}else
+		if(width < 1280){
+			addClass = "ug-under-1280";
 		}
+		
 		
 		removeAllSizeClasses(objWrapper);
 		if(addClass != "")
