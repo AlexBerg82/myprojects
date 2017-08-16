@@ -430,3 +430,66 @@ nav{
 #top:hover{
 	border-bottom: 50px solid #CFCFCF;
 }
+
+
+@media (max-width: 719px){
+.left_about,.right_about,.right_exp,.left_exp{
+	width: 100%;
+	float: none;
+}
+/*exp*/
+.exp{
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.top_about,.bot_about{
+	display: block;
+}
+.grid{
+	width: 100%;
+	border: 1px solid #fff;
+	background-color: #E8E8E8;
+	opacity: 0;
+}
+.wrp_grd_content{
+	width: 90%;
+	margin: 2% auto;
+}
+/*mini catalog*/
+.about{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+/*mini catalog*/
+.works{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+/*masonry*/
+.left_works,.right_works{
+	width: 100%;
+	float: none;
+}
+.mas_grd_800,.mas_grd_600,.mas_grd_400{
+	max-width: 635px;
+}
+.mas_grd_600 img,.mas_grd_400 img,.mas_grd_800 img{
+	width: 100%;
+}
+/*footer*/
+.left_footer,.right_footer{
+	width: 100%;
+	float: none;
+}
+.right_footer{
+	display: block;
+}
+/*footer*/
+.footer{
+	padding-top: 10px;
+}
+/*top*/
+#top{
+	visibility: hidden;
+}
+}
