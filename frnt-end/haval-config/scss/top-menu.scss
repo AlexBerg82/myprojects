@@ -1,0 +1,208 @@
+//menu
+.top-menu,.bottom-menu{
+	width:calc(100% - 135px);
+	float:right;
+	@include clearfix;
+
+	.wrapper-mobile-menu{
+		@include clearfix;
+		display: none;
+		
+		p{
+			float: right;
+			padding: 13px 0;
+			font-weight: 600;
+			color: #c3010e;
+		}
+		
+		.mobile-menu{
+			display: block;
+			float: right;
+			padding: 5px 3px;
+			margin: 5px 10px;
+			cursor: pointer;
+		
+			.icon_bar{
+				width: 15px;
+				height: 1px;
+				margin: 3px;
+				border-radius: 4px;
+				background-color: #c3010e;
+				
+				@include respond-to(wide-handhelds){
+					width: 25px;
+					height: 5px;
+					margin: 2px;
+				}
+				@include respond-to(handhelds){
+					width: 25px;
+					height: 5px;
+					margin: 2px;
+				}
+			}
+		}
+
+		@include respond-to(wide-handhelds){
+			display: block;
+		}
+		@include respond-to(handhelds){
+			display: block;
+		}
+	}
+}
+.top-menu ul.menu{
+	@include respond-to(wide-handhelds){
+		display: none;
+	}
+ 	@include respond-to(handhelds){
+		display: none;
+	}
+}
+
+
+
+
+ul.menu{
+ 	display: block;
+	font-size: 0;
+}
+.top-menu ul.menu{
+	float: right;
+}
+ul.menu > li{
+	float: left;
+	list-style: none;
+	position: relative;
+	padding: 0 25px;
+	background: url(../img/navLine.png) no-repeat right center;
+	
+	@include respond-to(small-tablets){
+		padding: 0 15px;
+	}
+}
+/* ul.menu > li:last-child{
+	background: url('');
+} */
+ul.menu > li:hover .sub, ul.menu > li:hover .sub-menu{
+	display: block;
+	
+	@include respond-to(small-tablets){
+		display: none;
+	}	
+	@include respond-to(wide-handhelds){
+		display: none;
+	}	
+	@include respond-to(handhelds){
+		display: none;
+	}
+}
+
+ul.menu > li > a:hover{
+	color: #E8E8E8;
+	border-bottom: 5px solid #C3010E;
+}
+ul.menu .active > a{
+	border-bottom: 5px solid #C3010E;
+	color: #E8E8E8;
+}
+ul.menu > li > a{
+	display: block;
+	padding: 12px 5px;
+	font-size: 13px;
+	color: #9C9C9C;
+	font-weight: 600;
+	border-bottom: 5px solid transparent;
+	text-decoration: none;
+}
+
+//submenu cars
+ul.sub{
+	display: none;
+}
+
+//mobile-menu
+.menu-mobile{
+	display: none;
+	width: 100%;
+	position: absolute;
+	@include clearfix;
+
+	li{
+		position: relative;
+		float: none;
+		width: 100%;
+		margin: 0;
+		background: linear-gradient(to top, #363636, #4F4F4F);
+		z-index: 100;
+		border-bottom: 1px solid #9C9C9C;
+	}
+	li a{
+		display: block;
+		padding: 8px 10px;
+		font-size: 16px;
+		text-decoration: none;
+		color: #CFCFCF;
+	}
+	li:last-child{
+		border: none;
+	}
+	li a:hover{
+		color: #E8E8E8;
+		background-color: #4F4F4F;
+		transition: 0.5s;
+		text-shadow: 1px 1.2px 0 #aaa;
+	}
+	.activ-top a{
+		color: #D81F23;
+		text-shadow: none;
+	}
+}
+
+
+
+.bottom-menu{
+	float: left;
+	
+	ul.menu > li{
+		//padding: 0 5px;
+		//background: url('');
+		
+		@include respond-to(small-tablets){
+			padding: 0 5px;
+			background: url('');
+		}
+		@include respond-to(wide-handhelds){
+			padding: 0 5px;
+			background: url('');
+		}	
+		@include respond-to(handhelds){
+			padding: 0 2px;
+			background: url('');
+		}
+	}
+	ul.menu > li > a{
+		border-bottom: none;
+		
+		@include respond-to(small-tablets){
+			padding: 12px 5px;
+			border-bottom: none;
+		}
+		@include respond-to(wide-handhelds){
+			padding: 12px 5px;
+			border-bottom: none;
+		}	
+		@include respond-to(handhelds){
+			padding: 12px 2px;
+			border-bottom: none;
+		}
+	}
+	
+	@include respond-to(wide-handhelds){
+		width: 100%;
+		clear: both;
+	}	
+	@include respond-to(handhelds){
+		width: 100%;
+		clear: both;
+	}
+}

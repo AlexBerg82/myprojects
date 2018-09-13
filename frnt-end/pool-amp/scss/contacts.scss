@@ -1,0 +1,263 @@
+.contact{
+	@include width1000;
+	padding:40px 10px 10px 10px;
+	@import "text-default";
+	top: -60px;
+	background-color: #fff;
+	z-index: 9999;
+	
+	.title{
+		padding: 10px 0;
+		text-transform: uppercase;
+	}
+	.maps{
+		//background-color: red;
+		clear: both;
+		@include clearfix;
+		
+		iframe{
+			width:45%;
+			height:200px;
+			margin: 10px 0;
+			
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				height: auto;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				height: auto;
+			}
+		}
+		iframe:first-child{
+			float: left;
+			
+			@include respond-to(wide-handhelds){
+				float: none;
+			}
+			@include respond-to(handhelds){
+				float: none;
+			}
+		}
+		iframe:last-child{
+			float: right;
+			
+			@include respond-to(wide-handhelds){
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+			}
+		}
+	}
+	
+	.left-side-contact{
+		width: 100%;
+		float: none;
+		font-size: 0;
+		box-sizing: border-box;
+		//background-color: #fff;
+		
+		.left-contact{
+			width: 33.33%;
+			padding: 50px 10px 10px 10px;
+			box-sizing: border-box;
+			display: inline-block;
+			vertical-align: top;
+			
+			.text-contact{
+				min-height: 80px;
+				
+				@include respond-to(wide-handhelds){
+					min-height: auto;
+				}
+				@include respond-to(handhelds){
+					min-height: auto;
+				}
+			}
+			.phone-list{
+				padding: 10px 0;
+				margin: 0;
+				min-height: 70px;
+				//background-color: red;
+				
+				li{
+					list-style: none;
+				}
+				
+				@include respond-to(wide-handhelds){
+					min-height: auto;
+				}
+				@include respond-to(handhelds){
+					min-height: auto;
+				}
+			}
+			.post-list{
+				padding: 10px 0;
+				margin: 0;
+				
+				li{
+					list-style: none;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				display: block;
+				padding: 10px;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				display: block;
+				padding: 10px;
+			}
+		}
+		.center-contact{
+			width: 33.33%;
+			padding: 50px 10px 10px 10px;
+			display: inline-block;
+			box-sizing: border-box;
+			vertical-align: top;
+			
+			.text-contact{
+				min-height: 80px;
+				
+				@include respond-to(wide-handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+				@include respond-to(handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+			}
+			.phone-list{
+				padding: 10px 0;
+				margin: 0;
+				min-height: 70px;
+				//background-color: red;
+				
+				li{
+					list-style: none;
+				}
+				
+				@include respond-to(wide-handhelds){
+					min-height: auto;
+				}
+				@include respond-to(handhelds){
+					min-height: auto;
+				}
+			}
+			.post-list{
+				padding: 10px 0;
+				margin: 0;
+				
+				li{
+					list-style: none;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				padding: 10px;
+				width: 100%;
+				display: block;
+			}
+			@include respond-to(handhelds){
+				padding: 10px;
+				width: 100%;
+				display: block;
+			}
+		}
+		.right-contact{
+			width: 33.33%;
+			padding: 50px 10px 10px 10px;
+			display: inline-block;
+			box-sizing: border-box;
+			vertical-align: top;
+			
+			.text-contact{
+				min-height: 80px;
+				
+				@include respond-to(wide-handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+				@include respond-to(handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+			}
+			.phone-list{
+				padding: 10px 0;
+				margin: 0;
+				min-height: 70px;
+				//background-color: red;
+				
+				li{
+					list-style: none;
+				}
+				
+				@include respond-to(wide-handhelds){
+					min-height: auto;
+				}
+				@include respond-to(handhelds){
+					min-height: auto;
+				}
+			}
+			.post-list{
+				padding: 10px 0;
+				margin: 0;
+				
+				li{
+					list-style: none;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				display: block;
+				padding: 10px;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				display: block;
+				padding: 10px;
+			}
+		}
+		
+		@include respond-to(wide-handhelds){
+			width: 100%;
+			float: none;
+		}
+		@include respond-to(handhelds){
+			width: 100%;
+			float: none;
+		}
+	}
+	.right-side-contact{
+		width: 100%;
+		float: none;
+		margin: 20px 0;
+		padding: 20px;
+		box-sizing: border-box;
+		box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+		//background-color: yellow;
+		
+		.workers{
+			margin: 0;
+			
+			li{
+				list-style: none;
+				margin-bottom: 10px;
+				border-bottom: 1px solid #aaa;
+				
+				p{
+					margin-bottom: 10px;
+				}
+			}
+			li:last-child{
+				border-bottom: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,265 @@
+//slider
+.baner{
+	margin-bottom: 20px;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	
+	//baner
+ 	.slider-foto{
+		height: 400px;
+		
+		@include respond-to(small-tablets){
+			height: 300px;
+		}
+		@include respond-to(wide-handhelds){
+			height: 300px;
+		}
+		@include respond-to(handhelds){
+			height: 300px;
+		}
+	}
+ 	.foto{
+		height: 400px;
+		
+		@include respond-to(small-tablets){
+			height: 300px;
+		}
+		@include respond-to(wide-handhelds){
+			height: 300px;
+		}
+		@include respond-to(handhelds){
+			height: 300px;
+		}
+	}
+	
+	.title-block{
+		position: absolute;
+		width: 60%;
+		top: 10%;
+		left: 20%;
+		right: 20%;
+		text-align: center;
+		padding: 10px;
+		box-sizing: border-box;
+		//border: 1px solid red;
+		
+		h1,h2,h3,h4{
+			color: #fff;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			
+			@include respond-to(small-tablets){
+				margin-bottom: 10px;
+			}
+			@include respond-to(wide-handhelds){
+				margin-bottom: 10px;
+			}
+			@include respond-to(handhelds){
+				margin-bottom: 10px;
+			}
+		}
+		h1{
+			text-transform: uppercase;
+			font-size: 50px;
+			font-weight: 500;
+			
+			@include respond-to(small-tablets){
+				font-size: 40px;
+			}
+			@include respond-to(wide-handhelds){
+				font-size: 35px;
+				font-weight: 600;
+			}
+			@include respond-to(handhelds){
+				font-size: 30px;
+				font-weight: 600;
+			}
+		}
+		p{
+			color: #fff;
+			line-height: 160%;
+			margin: 0 120px;
+			font-size: 16px;
+			
+			@include respond-to(display-middle){
+				margin: 0;
+			}
+			@include respond-to(display){
+				margin: 0;
+			}
+			@include respond-to(tablets){
+				margin: 0;
+			}
+			@include respond-to(small-tablets){
+				margin: 0 20px;
+				font-size: 15px;
+				line-height: 130%;
+			}
+			@include respond-to(wide-handhelds){
+				margin: 0;
+				font-size: 14px;
+				line-height: 100%;
+			}
+			@include respond-to(handhelds){
+				margin: 0 20px;
+				font-size: 14px;
+				line-height: 100%;
+			}
+		}
+		
+		@include respond-to(display-middle){
+			width: 50%;
+			top: 6%;
+			left: 25%;
+			right: 25%;
+			padding: 10px;
+		}
+		@include respond-to(display){
+			width: 50%;
+			top: 6%;
+			left: 25%;
+			right: 25%;
+			padding: 10px;
+		}
+ 		@include respond-to(tablets){
+			width: 70%;
+			top: 6%;
+			left: 15%;
+			right: 15%;
+			padding: 10px;
+		}
+		@include respond-to(small-tablets){
+			width: 90%;
+			top: 10%;
+			left: 5%;
+			right: 5%;
+			padding: 5px;
+		}
+		@include respond-to(wide-handhelds){
+			width: 90%;
+			top: 10%;
+			left: 5%;
+			right: 5%;
+			padding: 5px;
+		}
+		@include respond-to(handhelds){
+			width: 100%;
+			top: 8%;
+			left: 0;
+			right: 0;
+			padding: 5px;
+		}
+	}
+	.button-block{
+		position: absolute;
+		width: 100%;
+		bottom: 20%;
+		left: 0;
+		text-align: center;
+		
+		button{
+			padding: 10px 25px;
+			background-color: #446A73;
+			border: 2px solid #fff;
+			color: #fff;
+			font-weight: 600;
+			cursor: pointer;
+			
+			&:hover{
+				color: #000;
+				background-color: #B5B5B5;
+				border: 2px solid #fff;
+			}
+		}
+		
+		@include respond-to(display-big){
+			bottom: 24%;
+		}
+		@include respond-to(display-middle){
+			bottom: 18%;
+		}
+		@include respond-to(display){
+			bottom: 18%;
+		}
+		@include respond-to(small-tablets){
+			bottom: 18%;
+		}
+		@include respond-to(wide-handhelds){
+			bottom: 22%;
+		}
+		@include respond-to(handhelds){
+			bottom: 20%;
+		}
+	}
+}
+
+
+.prev-btn{
+	position: absolute;
+	top: 43%;
+	left: 0;
+	z-index: 9999;
+	width: 25px;
+	height: 50px;
+	background: url('../img/pr.png');
+	background-size: cover;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.next-btn{
+	position: absolute;
+	top: 43%;
+	right: 0;
+	width: 25px;
+	height: 50px;
+	z-index: 9999;
+	background: url('../img/nx.png');
+	background-size: cover;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.slick-dots{
+	bottom: 30px;
+	
+	@include respond-to(small-tablets){
+		bottom: 15px;
+	}
+ 	@include respond-to(wide-handhelds){
+		bottom: 20px;
+	}
+ 	@include respond-to(handhelds){
+		bottom: 20px;
+	}
+}
+
+.slick-dots li{
+	border-radius: 50%;
+	width: 8px;
+	height: 8px;
+	border: 2px solid #fff;
+	background-color:#aaa;
+}
+.slick-dots li:before{
+	content: '';
+}
+.slick-dots li button:before{
+	content: '';
+}
+.slick-dots .slick-active:before{
+	font-family: 'slick';
+	font-size: 10px;
+	line-height: 20px;
+	position: absolute;
+	top: -5px;
+	left: -6px;
+	width: 20px;
+	height: 20px;
+	content: '•';
+	text-align: center;
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

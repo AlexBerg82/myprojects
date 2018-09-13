@@ -1,0 +1,447 @@
+.wrapper-content{
+	background: url('../img/bg.jpg') no-repeat, #E8ECEF;
+	background-position: top left;
+	background-size: contain;
+	@include clearfix;
+	
+	.wrapper-new-history{
+		@include width1000;
+		
+		.path{
+			padding: 15px 5px;
+			@include width1000;
+
+			ul{
+				li{
+					display: inline-block;
+					padding: 5px 3px;
+					color: #000;
+					
+					a{
+						color: #3E3E3E;
+						text-decoration: none;
+						
+						&:hover{
+							color: #696969;
+						}
+					}
+				}
+				li:after{
+					content: '>';
+					margin-left: 10px;
+					color: #3E3E3E;
+				}
+				li:last-child:after{
+					content: '';
+				}
+				
+				.place{
+					color: #000;
+					font-weight: 600;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				padding: 30px 0 20px 0;
+			}
+			@include respond-to(handhelds){
+				padding: 20px 0 10px 0;
+			}
+		}
+		
+		.title-news-history{
+			background: url('../img/g_title1.jpg');
+			background-size: cover;
+			background-position: center center;
+			top: 0;
+			left: 0;
+			padding: 10px 20px;
+			box-sizing: border-box;
+		}
+		
+		.right-block{
+			width: 100%;
+			float: right;
+			box-sizing: border-box;
+			background-color:#F4F4F5;
+			box-shadow: rgba(221,221,221,1) 0px 0px 10px;
+			
+			.title-small{
+				width: 80%;
+				padding: 20px 0 0 0;
+				margin: 0 auto;
+				@include clearfix;
+				
+				h5{
+					padding: 20px 0;
+				}
+				
+				@include respond-to(tablets){
+					padding: 10px 0 0 10px;
+					width: 100%;
+					box-sizing: border-box;
+				}	
+				@include respond-to(small-tablets){
+					padding: 10px 0 0 10px;
+					width: 100%;
+					box-sizing: border-box;
+				}	
+				@include respond-to(wide-handhelds){
+					padding: 10px 0 0 0;
+					width: 100%;
+					box-sizing: border-box;
+				}	
+				@include respond-to(handhelds){
+					padding: 10px 0 0 0;
+					width: 100%;
+					box-sizing: border-box;
+				}
+			}
+			
+			.title-news-block{
+				text-align: center;
+				padding: 20px;
+				border-bottom: 1px solid #C9C9C7;
+				
+				h2{
+					color: #404040;
+				}
+				p{
+					color: #ACA5AC;
+					margin: 10px 0 0 0;
+					font-size: 13px;
+					
+					span{
+						margin-left: 15px;
+					}
+				}
+				
+				@include respond-to(wide-handhelds){
+					padding: 10px;
+				}	
+				@include respond-to(handhelds){
+					padding: 10px 5px;
+				}
+			}
+
+			.news-list-wrapper{
+				width: 80%;
+				padding: 20px 0;
+				margin: 0 auto;
+				@include clearfix;
+				
+				p{
+					line-height: 160%;
+					clear: both;
+					text-align: left;
+					color: #aaa;
+					margin-bottom: 5px;
+					
+					span{
+						a{
+							color: red;
+							
+							&:hover{
+								text-decoration: none;
+							}
+						}
+					}
+					
+					@include respond-to(small-tablets){
+						line-height: 130%;
+					}	
+					@include respond-to(wide-handhelds){
+						line-height: 130%;
+					}
+					@include respond-to(handhelds){
+						line-height: 130%;
+					}
+				}
+				.news-list-block{
+					width: 100%;
+					padding: 20px 0 20px 100px;
+					box-sizing: border-box;
+					
+					li{
+						list-style: none;
+						position: relative;
+						@include clearfix;
+						padding: 0 0 20px 20px;
+						margin: 0;
+						border: none;
+						border-left: 2px solid #CFCFCF;
+
+						.year{
+							position: absolute;
+							left: -85px;
+							top: -2px;
+							
+							p{
+								font-size: 30px;
+								color: #CFCFCF;
+								
+								@include respond-to(handhelds){
+									font-size: 19px;
+								}
+							}
+							
+							@include respond-to(small-tablets){
+								top: 0;
+							}
+							@include respond-to(handhelds){
+								left: -57px;
+								top: 7px;
+							}
+						}
+						.left-img-cell{
+							display: block;
+							float: left;
+							width: calc(25% - 20px);
+							margin: 0 10px;
+							line-height: 100%;
+							overflow: hidden;
+							
+							img{
+								width: 100%;
+								padding: 0;
+								margin: 0;
+								
+								@include respond-to(small-tablets){
+									margin: 15px auto;
+								}
+								@include respond-to(wide-handhelds){
+									margin: 15px auto;
+								}
+								@include respond-to(handhelds){
+									margin: 15px auto;
+								}
+							}
+
+							@include respond-to(small-tablets){
+								width: 100%;
+							}
+							@include respond-to(wide-handhelds){
+								width: 100%;
+							}
+							@include respond-to(handhelds){
+								width: 100%;
+							}
+						}
+						
+						.text-block-left{
+							float: left;
+							width: 75%;
+							padding: 0 10px;
+							box-sizing: border-box;
+						
+							h3{
+								float: left;
+								font-size: 18px;
+								margin-bottom: 5px;
+								
+								a{
+									color: #404040;
+									text-decoration: none;
+								}
+								a:hover{
+									color: #9C9C9C;
+									transition: 0.5s;
+									text-decoration: none;
+								}
+								
+								@include respond-to(handhelds){
+									float: none;
+								}
+							}
+							p{
+								line-height: 160%;
+								clear: both;
+								text-align: left;
+								color: #aaa;
+								margin-bottom: 5px;
+								
+								span{
+									a{
+										color: red;
+										
+										&:hover{
+											text-decoration: none;
+										}
+									}
+								}
+								
+								@include respond-to(small-tablets){
+									line-height: 130%;
+								}	
+								@include respond-to(wide-handhelds){
+									line-height: 130%;
+								}
+								@include respond-to(handhelds){
+									line-height: 130%;
+								}
+							}
+							.history-detail{
+								padding: 0;
+								margin: 0;
+								
+								li{
+									padding: 0;
+									margin: 0 0 10px 10px;
+									font-size: 13px;
+									color: #595959;
+									border: none;
+									list-style-type: square;
+									
+									@include respond-to(small-tablets){
+										margin: 0 0 5px 10px;
+									}
+									@include respond-to(wide-handhelds){
+										margin: 0 0 5px 10px;
+									}
+									@include respond-to(handhelds){
+										margin: 0 0 5px 10px;
+									}
+								}
+								li:before{
+									content: '';
+								}
+							}
+					
+							@include respond-to(small-tablets){
+								width: 100%;
+								padding: 0;
+							}
+							@include respond-to(wide-handhelds){
+								width: 100%;
+								padding: 0;
+							}
+							@include respond-to(handhelds){
+								width: 100%;
+								padding: 0;
+							}
+						}
+						
+						&:last-child{
+							border-bottom: none;
+						}
+					}
+					li:before{
+						content: '--';
+						font-size: 30px;
+						color: #CFCFCF;
+						position: absolute;
+						left: -11px;
+					}
+					
+					@include respond-to(wide-handhelds){
+						padding: 20px 0 20px 80px;
+					}
+					@include respond-to(handhelds){
+						padding: 20px 0 20px 50px;
+					}
+				}
+				.news-list-block:after{
+					content: '';
+					display: table;
+					clear: both;
+				}
+				
+				@include respond-to(tablets){
+					padding: 10px;
+					width: 100%;
+					box-sizing: border-box;
+				}	
+				@include respond-to(small-tablets){
+					padding: 10px;
+					width: 100%;
+					box-sizing: border-box;
+				}	
+				@include respond-to(wide-handhelds){
+					padding: 10px 0;
+					width: 100%;
+				}	
+				@include respond-to(handhelds){
+					width: 100%;
+				}
+			}
+			
+			.foto-list-block{
+				font-size: 0;
+				padding: 20px;
+			
+				li{
+					margin: 5px;
+					width: calc(33.33% - 10px);
+					display: inline-block;
+					vertical-align: bottom;
+					list-style: none;
+					
+					a{
+						display: block;
+						position: relative;
+						
+						img{
+							width: 100%;
+							margin: 0;
+							padding: 0;
+						}
+						
+						span{
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							width: 100%;
+							font-size: 13px;
+							padding: 10px 5px;
+							color: #fff;
+							box-sizing: border-box;
+							background-color: rgba(0,0,0,0.8);
+							min-height: 50px;
+							
+							@include respond-to(tablets){
+								font-size: 12px;
+							}
+						}
+					}
+					
+					@include respond-to(small-tablets){
+						width: calc(50% - 10px);
+					}
+					@include respond-to(wide-handhelds){
+						width: calc(50% - 10px);
+					}	
+					@include respond-to(handhelds){
+						width: calc(100% - 10px);
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					padding: 10px;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 0;
+				}	
+				@include respond-to(handhelds){
+					padding: 0;
+				}
+			}
+
+			@include respond-to(small-tablets){
+				float: none;
+				width: 100%;
+			}	
+			@include respond-to(wide-handhelds){
+				float: none;
+				width: 100%;
+				padding: 5px;
+				box-sizing: border-box;
+			}	
+			@include respond-to(handhelds){
+				float: none;
+				width: 100%;
+				padding: 5px;
+				box-sizing: border-box;
+			}
+		}
+	}
+}

@@ -1,0 +1,203 @@
+.left-content-block{
+	float: left;
+	width: 27%;
+
+	@include common-text-default;
+	
+	.left-menu{
+		@include clearfix;
+
+		//h1,h2,h3,h4,p,a,ul,ol
+		.title-left-menu{
+			float: right;
+			width: 68%;
+			padding: 9px 14px;
+			font-size: 19px;
+			color: #fff;
+			background: url('../img/menu3_top.png') no-repeat;
+			background-size:contain;
+			margin-bottom: 0;
+			
+			@include respond-to(small-tablets){
+				width: calc(100% - 28px);
+				font-size: 18px;
+			}
+		}
+		
+		.klub-menu{
+			float: right;
+			width: 75%;
+			padding: 5px 0;
+			@include clearfix;
+			margin-bottom: 0;
+			
+			li{
+				padding: 5px 0 5px 30px;
+				margin: 0;
+				background: url(../img/kwiatek.gif) no-repeat 0px 6px;
+				@include clearfix;
+				
+				a{
+					width: 90%;
+					font-size: 20px;
+					color:#04A2A3;
+				}
+				a:hover{
+					color: #E46E9C;
+					transition: 0.5s;
+					text-shadow: 1px 1.2px 0 #aaa;
+				}
+			}
+
+			li .submenu-klub{
+				width: 100%;
+				padding: 6px 0 0 0;
+				margin-bottom: 0;
+				margin-left: -10px;
+				@include clearfix;
+				
+				li{
+					padding: 2px 0;
+					background-color:yellow;
+					background: url(../img/kwiatuszek.gif) no-repeat 0px 6px;
+					
+					a{
+						display: block;
+						padding: 6px 0 0 18px;
+						font-size: 13px;
+						line-height: 100%;
+						margin-bottom: 2px;
+					}
+					a:hover{
+						color: #E46E9C;
+						transition: 0.5s;
+						text-shadow: 1px 1.2px 0 #aaa;
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					margin-left: -15px;
+				}
+			}
+
+			
+			@include respond-to(display){
+				margin-left: 10%;
+				width: 85%;
+			}
+			@include respond-to(tablets){
+				margin-left: 10%;
+				width: 85%;
+			}
+			@include respond-to(small-tablets){
+				margin-left: 2%;
+				width: 96%;
+			}
+			
+			.activ-top > a{
+				color: #E46E9C;
+				text-shadow: none;
+			}
+		}
+	}
+
+	.gallery-block{
+		float: right;
+		width:65%;
+		margin: 30px 5% 10px 0;
+		@include clearfix;
+		margin-bottom: 0;
+
+		@include respond-to(display){
+			float: none;
+			width: 70%;
+			margin: 20px auto;
+			padding-top: 30px;
+			clear: both;
+		}
+		@include respond-to(tablets){
+			float: none;
+			width: 70%;
+			margin: 20px auto;
+			padding-top: 30px;
+			clear: both;
+		}
+		@include respond-to(small-tablets){
+			float: none;
+			width: 70%;
+			margin: 20px auto;
+			padding-top: 30px;
+			clear: both;
+		}
+	}
+	
+	.fcb-block{
+		float: right;
+		width:65%;
+		padding: 20px;
+		margin-right: 5%;
+		@include clearfix;
+		clear: both;
+		box-sizing: border-box;
+		
+		ul{
+			li:first-child{
+				margin-bottom: 30px;
+				text-align: center;
+				
+				a{
+					width: 100%;
+				
+					img{
+						width: 100%;
+						
+						@include respond-to(display-big){
+							width: 100%;
+						}
+						@include respond-to(display){
+							width: 100%;
+						}
+						@include respond-to(tablets){
+							width: 100%;
+						}
+						@include respond-to(small-tablets){
+							width: 100%;
+						}
+					}
+				}
+			}
+			li:last-child{
+				text-align: center;
+				
+				a{
+					img{
+						width: 50%;
+					}
+				}
+			}
+		}
+		@include respond-to(display){
+			float: none;
+			margin: 0 auto;
+		}
+		@include respond-to(tablets){
+			float: none;
+			width: 70%;
+			padding: 15px;
+			margin: 0 auto;
+		}
+		@include respond-to(small-tablets){
+			float: none;
+			width: 90%;
+			padding: 15px;
+			margin: 0 auto;
+		}
+	}
+	
+	@include respond-to(wide-handhelds){
+		display: none;
+	}			
+	@include respond-to(handhelds){
+		display: none;
+	}
+}

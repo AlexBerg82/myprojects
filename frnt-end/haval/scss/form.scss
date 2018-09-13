@@ -1,0 +1,73 @@
+form{
+	width: 500px;
+	margin: 0 auto;
+	@include clearfix;
+	
+	label{
+		color: #696969;
+		width: 40%;
+		text-align: right;
+		padding: 10px;
+		display: inline-block;
+		vertical-align: middle;
+		box-sizing: border-box;
+		
+		span{
+			color: red;
+			font-size: 16px;
+		}
+	}
+	input,select{
+		border: 1px solid #C9C9C9;
+		width: 58%;
+		margin: 10px 0;
+		padding: 6px;
+		box-sizing: border-box;
+		display: inline-block;
+		vertical-align: middle;
+		outline:0;
+	}
+	select{
+		width: 58%;
+	}
+	textarea{
+		width: 97%;
+		resize: none;
+		outline:0;
+	}
+	.gend{
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+		margin-bottom: 20px;
+		@include clearfix;
+		box-sizing: border-box;
+		margin: 10px 0;
+		
+		input{
+			display: inline-block;
+			width: 40px;
+			background-color: blue;
+			outline:0;
+		}
+	}
+	.text{
+		label{
+			text-align: left;
+		}
+	}
+	button{
+		background-color: #C20106;
+		padding: 8px 20px;
+		font-weight: 600;
+		margin: 15px 0;
+		color: #fff;
+		border: 1px solid #000;
+		cursor: pointer;
+		
+		&:hover{
+			background-color: #CD5B45;
+			border: 1px solid #363636;
+		}
+	}
+}

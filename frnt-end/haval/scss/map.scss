@@ -1,0 +1,220 @@
+.map-block{
+	.title{
+		padding: 5px 5px 5px 10px;
+	}
+	
+	.wrapper-map{
+		background-color: #E8E8E8;
+		position: relative;
+		@include clearfix;
+		
+		#map{
+			width: 80%;
+			height: 650px;
+			float: left;
+			
+			@include respond-to(tablets){
+				width: 75%;
+			}
+			@include respond-to(small-tablets){
+				height: 500px;
+				width: 70%;
+			}
+			@include respond-to(wide-handhelds){
+				display: none;
+			}
+			@include respond-to(handhelds){
+				display: none;
+			}
+		}
+		#maps{
+			width: 100%;
+			height: 650px;
+			
+ 			@include respond-to(small-tablets){
+				height: 500px;
+			}
+			@include respond-to(wide-handhelds){
+				height: 600px;
+			}
+			@include respond-to(handhelds){
+				height: 600px;
+			}
+		}
+		.links{
+			box-sizing: border-box;
+			float: right;
+			width: 20%;
+			height: 100%;
+			padding: 10px;
+			//background: rgba(0,0,0,0.5);
+			background-color: #E8E8E8;
+			
+			.selected{
+				width: 100%;
+				padding: 5px;
+				margin-bottom: 20px;
+				
+				option{
+					color: #4F4F4F;
+				}
+			}
+			.wrapper-links{
+				height: 580px;
+				list-style: none;
+				
+				li{
+					padding: 5px;
+					margin-bottom: 5px;
+					background-color: #fff;
+					
+					a{
+						display: block;
+						text-decoration: none;
+						font-weight: 600;
+						font-size: 13px;
+						color: #000;
+						line-height: 100%;
+						margin-bottom: 10px;
+						
+						&:hover{
+							color: #4F4F4F;
+						}
+						
+						@include respond-to(wide-handhelds){
+							display: none;
+						}
+						@include respond-to(handhelds){
+							display: none;
+						}
+					}
+					.hide{
+						display: none;
+						
+						@include respond-to(wide-handhelds){
+							display: block;
+						}
+						@include respond-to(handhelds){
+							display: block;
+						}
+					}
+					p{
+						font-size: 12px;
+						color: #4F4F4F;
+						line-height: 100%;
+					}
+					ul{
+						list-style: none;
+						padding: 5px 0;
+						
+						li{
+							font-size: 12px;
+							padding: 0;
+							margin-bottom: 0;
+						}
+					}
+				}
+
+				.mCSB_scrollTools .mCSB_draggerRail{
+					width: 4px;
+					background-color: transparent; 
+				}
+				
+				@include respond-to(small-tablets){
+					height: 440px;
+				}
+				@include respond-to(wide-handhelds){
+					height: 100%;
+				}
+				@include respond-to(handhelds){
+					height: 100%;
+				}
+			}
+			
+			@include respond-to(tablets){
+				width: 25%;
+			}
+			@include respond-to(small-tablets){
+				width: 30%;
+			}
+			@include respond-to(wide-handhelds){
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+			}
+		}
+		.link-block{
+			width: 200px;
+			padding: 20px;
+			position: absolute;
+			bottom: 25px;
+			left: 25px;
+			background: rgba(0,0,0,0.7);
+			
+			a{
+				display: block;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 13px;
+				color: #fff;
+				line-height: 100%;
+				margin-bottom: 10px;
+				
+				&:hover{
+					color: #4F4F4F;
+				}
+			}
+			p{
+				font-size: 12px;
+				color: #CFCFCF;
+				line-height: 100%;
+			}
+			ul{
+				list-style: none;
+				padding: 5px 0;
+				
+				li{
+					font-size: 12px;
+					color: #CFCFCF;
+				}
+			}
+			
+ 			@include respond-to(small-tablets){
+				bottom: 25px;
+				left: 15px;
+			}
+			@include respond-to(wide-handhelds){
+				bottom: 25px;
+				left: 15px;
+			}
+			@include respond-to(handhelds){
+				bottom: 25px;
+				left: 10px;
+			}
+		}
+	}
+	.contact-block{
+		display: none;
+
+		ul{
+			padding: 20px;
+		
+			li{
+				list-style: none;
+				margin-bottom: 10px;
+				
+				h3{
+					margin-bottom: 5px;
+				}
+			}
+		}
+		
+		@include respond-to(wide-handhelds){
+			display: block;
+		}
+		@include respond-to(handhelds){
+			display: block;
+		}
+	}
+}

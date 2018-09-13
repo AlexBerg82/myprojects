@@ -1,0 +1,122 @@
+.footer-block{
+	@include width1000;
+	margin: 0 auto 30px;
+	padding: 20px 0;
+	background: rgba(0, 0, 0, 0.7);
+	@include clearfix;
+
+	.bottom-menu-block{
+		float: left;
+		padding: 2px 20px;
+		@include clearfix;
+		
+		.bottom-menu{
+			width: 65%;
+			float: left;
+			
+			li{
+				display: inline-block;
+				margin: 3px;
+				
+				a{
+					text-decoration: underline;
+					color: #fff;
+					font-size: 12px;
+				}
+				
+				@include respond-to(handhelds){
+					display: block;
+					padding: 5px;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				margin-left: 10px;
+			}
+			@include respond-to(handhelds){
+				width: 45%;
+				margin-left: 20px;
+			}
+		}
+		.iua{
+			float: left;
+			width: 100px;
+			height: 40px;
+			
+			@include respond-to(small-tablets ){
+				margin-left: 20px;
+			}
+			@include respond-to(wide-handhelds){
+				margin-left: 20px;
+			}
+			@include respond-to(handhelds){
+				margin-left: 20px;
+				margin-top: 10px;
+			}
+		}
+		
+		@include respond-to(small-tablets ){
+			float: none;
+			padding: 10px 0;
+		}
+		@include respond-to(wide-handhelds){
+			float: none;
+			padding: 10px 0;
+		}
+		@include respond-to(handhelds){
+			float: none;
+			padding: 10px 5px;
+		}
+	}
+	.phone{
+		float: right;
+		
+		li{
+			margin-right: 20px;
+			font-size: 22px;
+			color: #fff;
+			font-family: 'roboto_condensedbold', sans-serif;
+			text-align: right;
+			line-height: 100%;
+			
+			@include respond-to(small-tablets ){
+				text-align: left;
+				margin-left: 10px;
+			}
+			@include respond-to(wide-handhelds){
+				text-align: left;
+				margin-left: 10px;
+			}
+			@include respond-to(handhelds){
+				text-align: left;
+				margin-left: 20px;
+			}
+		}
+		
+		@include respond-to(small-tablets ){
+			float: none;
+			padding: 10px 0;
+		}
+		@include respond-to(wide-handhelds){
+			float: none;
+			padding: 10px 0;
+		}
+		@include respond-to(handhelds){
+			float: none;
+			padding: 10px 0;
+		}
+	}
+	
+	@include respond-to(tablets){
+		margin: 0 auto;
+	}
+	@include respond-to(small-tablets){
+		margin: 0 auto;
+	}
+	@include respond-to(wide-handhelds){
+		margin: 0 auto;
+	}
+	@include respond-to(handhelds){
+		margin: 0 auto;
+	}
+}

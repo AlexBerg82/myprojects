@@ -1,0 +1,152 @@
+.bottom-content-cart-block{
+	@include width1000;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+
+	.card-grid-bottom{
+		font-size: 0;
+		margin: 15px 0;
+		padding: 0;
+		
+		li{
+			display: inline-block;
+			position: relative;
+			margin: 10px;
+			z-index: 10;
+			vertical-align:top;
+			
+			a{
+				display: block;
+				
+				.shad{
+					position: relative;
+					padding-bottom: 70%;
+					overflow: hidden;
+					z-index: 10;
+					box-shadow: 0 0 10px rgba(0,0,0,0.5);
+					
+					img{
+						position: absolute;
+						width:100%;
+						max-height: 100%;
+						margin: auto;
+					}
+					.blik{
+						position: absolute;
+						min-width: 70%;
+						height: 100%;
+						top: 0;
+						right: 0;
+						background: url(../img/blik.png) top right no-repeat;
+						background-size: cover;
+						z-index: 20;
+						opacity: 0.8;
+					}
+					
+					@include respond-to(small-tablets){
+						box-shadow: none;
+					}
+					@include respond-to(wide-handhelds){
+						box-shadow: none;
+					}
+					@include respond-to(handhelds){
+						box-shadow: none;
+					}
+				}
+				h3{
+					color: #DE511C;
+					text-align: center;
+					margin: 0;
+					padding: 8px 0 0 0;
+					line-height: 100%;
+					font-size: 12px;
+					//background-color:red;
+				}
+			}
+			
+			@include respond-to(display-big){
+				width: calc(12.5% - 20px);
+			}
+			@include respond-to(display){
+				width: calc(12.5% - 20px);
+			}
+			@include respond-to(tablets){
+				width: calc(16.66% - 20px);
+			}
+			@include respond-to(small-tablets ){
+				width: calc(20% - 20px);
+			}
+			@include respond-to(wide-handhelds){
+				width: calc(33.3% - 20px);
+			}
+			@include respond-to(handhelds){
+				width: calc(50% - 20px);
+			}
+
+			.mirror{
+				display: inline-block;
+				position: absolute;
+				width:100%;
+				right: -10px;
+				top: -10px;
+				margin: 0;
+				z-index: 5;
+				opacity: 0.2;
+				vertical-align:top;
+				
+				.card{
+					display: block;
+					
+					.shad{
+						position: relative;
+						padding-bottom: 70%;
+						overflow: hidden;
+						box-shadow: 0 0 5px rgba(0,0,0,0.5);
+						
+						img{
+							position: absolute;
+							width:100%;
+							max-height: 100%;
+							margin: auto;
+						}
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					display: none;
+				}
+				@include respond-to(wide-handhelds){
+					display: none;
+				}
+				@include respond-to(handhelds){
+					display: none;
+				}
+			}				
+		}
+		li:hover{
+			a{
+				.blik{
+					opacity: 0.5;
+				}
+			}
+		}
+		li:hover .mirror{
+			opacity:0.1;
+		}
+	}
+	.card-grid-bottom:after{
+		content: '';
+		display: table;
+		clear: both;
+	}
+	
+	@include respond-to(wide-handhelds){
+		padding: 20px 10px;
+		width: 100%;
+	}
+	@include respond-to(handhelds){
+		padding: 20px 10px;
+		width: 100%;
+	}
+}

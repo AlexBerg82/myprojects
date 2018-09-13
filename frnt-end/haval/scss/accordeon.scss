@@ -1,0 +1,44 @@
+ul.accordion, ol.accordion{
+	line-height: 100%;
+}
+ul.accordion li{
+    list-style-type: none;
+}
+ul.accordion li:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    *zoom: 1;
+}
+.loading{
+	display: none;
+}
+ul.accordion li h3 a{
+	cursor:pointer;
+	color: #fff;
+	background: #252525;
+	border-bottom: 1px solid #aaa;
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	padding: 10px;
+	text-decoration: none;
+	
+	@include respond-to(tablets){
+		font-size: 13px;
+		padding: 8px 5px;
+	}
+	@include respond-to(small-tablets){
+		font-size: 13px;
+		padding: 5px;
+	}
+}
+ul.accordion li:last-child h3 a{
+	border-bottom: none;
+}
+ul.accordion li.active h3 a{
+	background: #BA0C2F;
+	border-bottom: 1px solid #aaa;
+}

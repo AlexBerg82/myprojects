@@ -1,0 +1,108 @@
+@import "reset";
+@import "fonts";
+
+
+body{
+	background: #fff;
+	background: url('../img/wall-17-18.jpg') no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	font-family: sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+  @else if $media == wide-handhelds {
+    @media only screen and (min-width: 480px) and (max-width: 599px) { @content; }
+  }
+  @else if $media == small-tablets {
+    @media only screen and (min-width: 600px) and (max-width: 767px) { @content; }
+  }  
+  @else if $media == tablets {
+    @media only screen and (min-width: 768px) and (max-width: 979px) { @content; }
+  }
+  @else if $media == display {
+    @media only screen and (min-width: 980px) and (max-width: 1199px) { @content; }
+  }  
+  @else if $media == display-big {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+}
+
+
+@mixin clearfix { &:after {  content: ".";  display: block;  clear: both;  visibility: hidden;  line-height: 0;  height: 0;} }
+// @include clearfix;
+
+
+@mixin width1000 { max-width: 1000px; margin: 0 auto; position: relative; box-sizing: border-box;}
+// @include width1000;
+@mixin width100pr { width: 100%; margin: 0 auto; position: relative; box-sizing: border-box;}
+// @include width1000;
+
+
+
+@mixin common-text-default{
+	h1,h2,h3,h4{
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+	p{
+		margin-bottom: 5px;
+	}
+	a{
+		text-decoration: none;
+		font-size: 14px;
+		color: #000;
+		margin-bottom: 5px;
+	}
+	table{
+		margin-bottom: 10px;
+		tr{
+			padding: 0;
+			vertical-align: top;
+		}
+		td{
+			padding: 10px 0;
+			vertical-align: top;
+		}
+	}
+	ul, ol{
+		padding: 0 10px;
+		margin-bottom: 5px;
+		li{
+			padding: 0;
+			font-size: 14px;
+		}
+	}
+	img{
+		max-width: 100%;
+	}
+}
+//text styles @include common-text-default;
+
+
+
+
+
+@import "wrapper";
+
+@import "header";
+
+@import "top-menu";
+
+@import "left-block";
+
+@import "content";
+
+@import "slider-owl";
+
+@import "price-block";
+
+@import "bottom-block";
+
+@import "footer";

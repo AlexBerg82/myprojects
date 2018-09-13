@@ -1,0 +1,20 @@
+.wrapper-main-block{
+	position: relative;
+	@include width1000;
+	margin: 20px auto 0;
+	background: url(../img/fon-osn.png) bottom left repeat;
+	@include clearfix;
+	
+ 	@include respond-to(tablets){
+		margin: 0 auto;
+	}
+	@include respond-to(small-tablets){
+		margin: 0 auto;
+	}
+	@include respond-to(wide-handhelds){
+		margin: 0 auto;
+	}
+	@include respond-to(handhelds){
+		margin: 0 auto;
+	}
+}

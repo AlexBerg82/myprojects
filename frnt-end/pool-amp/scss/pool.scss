@@ -1,0 +1,162 @@
+.pool{
+	@include clearfix;
+
+	.pool-cell{
+		@include width1300;
+		float: left;
+		font-size: 0;
+		
+		.left-cell{
+			width: 50%;
+			display: inline-block;
+			vertical-align: middle;
+			
+			img{
+				width: 100%;
+				line-height: 0;
+				padding: 0;
+				margin: 0;
+			}
+
+			@include respond-to(wide-handhelds){
+				display: block;
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				display: block;
+				width: 100%;
+			}
+		}
+		
+		.right-cell{
+			width: 50%;
+			display: inline-block;
+			vertical-align: middle;
+			
+			ul.card-pool{
+				@include clearfix;
+				width: 100%;
+				font-size: 0;
+				padding:15px;
+				margin: 0;
+				box-sizing: border-box;
+				text-align: center;
+				
+				li{
+					display: inline-block;
+					vertical-align:top;
+					margin: 0;
+					padding: 5px;
+					@include clearfix;
+					position: relative;
+					text-align: center;
+					box-sizing: border-box;
+						
+					.wrp-img{
+						overflow: hidden;
+						width: 70px;
+						height: 70px;
+						border-radius: 50%;
+						margin: 0 auto;
+						
+						img{
+							width: 100%;
+							margin: 0;
+							padding: 0;
+						}
+
+						@include respond-to(wide-handhelds){
+							width: 80px;
+							height: 80px;
+						}
+					}
+
+					p{
+						font-size: 14px;
+						margin-top: 10px;
+						min-height: 40px;
+						color: #424242;
+						line-height: 130%;
+
+						@include respond-to(wide-handhelds){
+							font-size: 16px;
+						}
+					}
+
+					button{
+						display: none;
+					}
+					
+					@include respond-to(display-big){
+						width:calc(50% - 10px);
+						padding: 5px;
+					}					
+					@include respond-to(display-middle){
+						width:calc(50% - 10px);
+						padding: 5px;
+					}
+					@include respond-to(display){
+						width:calc(50% - 10px);
+						padding: 5px;
+					}
+					@include respond-to(tablets){
+						width:calc(50% - 10px);
+						padding: 5px;
+					}
+					@include respond-to(small-tablets ){
+						width:calc(50% - 10px);
+						padding: 5px;
+					}
+					@include respond-to(wide-handhelds){
+						width:calc(50% - 20px);
+						padding: 10px;
+					}
+					@include respond-to(handhelds){
+						width:calc(50% - 20px);
+						padding: 10px;
+					}
+				}
+				li:first-child{
+					border-right: 1px solid #E8E8E8;
+					border-bottom: 1px solid #E8E8E8;
+				}
+				li:nth-child(2){
+					border-bottom: 1px solid #E8E8E8;
+				}
+				li:nth-child(3){
+					border-right: 1px solid #E8E8E8;
+				}
+
+				li:hover .text-card a{
+					color: #fff;
+					border: none;
+				}
+
+				@include respond-to(wide-handhelds){
+					padding:20px 60px;
+				}
+				@include respond-to(handhelds){
+					padding:5px;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				display: block;
+				width: 100%;
+				padding: 20px 0;
+			}
+			@include respond-to(handhelds){
+				display: block;
+				width: 100%;
+				padding: 20px 0;
+			}
+		}
+	}
+	
+	@include respond-to(wide-handhelds){
+		padding: 20px 0;
+	}
+	@include respond-to(handhelds){
+		padding: 20px 0;
+	}
+}

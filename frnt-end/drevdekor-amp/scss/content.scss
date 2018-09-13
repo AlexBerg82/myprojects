@@ -1,0 +1,530 @@
+.wrapper-block-content{
+	float: right;
+	width: 75%;
+	padding: 10px 0 0 0;
+	
+	.content{
+		margin-bottom: 10px;
+		padding: 10px;
+		background-color: #fff;
+		border: 1px solid #aaa;
+		
+		.general_slider{
+			padding: 10px 20px;
+			
+			@include respond-to(wide-handhelds){
+				padding: 10px 0;
+			}
+			@include respond-to(handhelds){
+				padding: 10px 0;
+			}
+		}
+
+		.path-block{
+			margin: 0 0 10px 0;
+			padding: 7px 10px;
+			@include clearfix;
+			
+			.path{
+				float: right;
+				width: 65%;
+				text-align: right;
+				@include clearfix;
+				
+				li{
+					display: inline-block;
+					padding: 0 2px;
+					color: #828282;
+					
+					a{
+						font-size: 12px;
+						color: #828282;
+					}
+					a:hover{
+						color: blue;
+					}
+				}
+				.place{
+					color: orange;
+					font-size: 12px;
+				}
+				
+				
+				@include respond-to(wide-handhelds){
+					float:none;
+					width: 100%;
+					padding: 8px 0px;
+					margin-bottom: 10px;
+					border-bottom: 1px solid #aaa;
+					box-sizing: border-box;
+				}
+				@include respond-to(handhelds){
+					float:none;
+					width: 100%;
+					padding: 8px 0px;
+					margin-bottom: 10px;
+					border-bottom: 1px solid #aaa;
+					box-sizing: border-box;
+				}
+			}
+
+			.title-text-path-block{
+				width: 35%;
+				
+				@include respond-to(wide-handhelds){
+					width: 100%;
+				}
+				@include respond-to(handhelds){
+					width: 100%;
+				}
+			}
+		
+			
+			@include respond-to(display-big){
+				border-bottom: 1px solid #E8E8E8;
+			}
+			@include respond-to(display){
+				border-bottom: 1px solid #E8E8E8;
+			}
+			@include respond-to(tablets){
+				border-bottom: 1px solid #E8E8E8;
+			}
+			@include respond-to(small-tablets ){
+				border-bottom: 1px solid #E8E8E8;
+			}
+			@include respond-to(wide-handhelds){
+				padding: 0;
+			}
+			@include respond-to(handhelds){
+				padding: 0
+			}
+		}
+
+
+		.card-grid-big{
+			font-size: 0;
+			margin: 15px 0;
+			padding: 0;
+			text-align: center;
+			
+			li{
+				display: inline-block;
+				position: relative;
+				margin: 10px;
+				z-index: 10;
+				vertical-align:top;
+				
+				a{
+					display: block;
+					line-height: 0;
+					
+					.shad{
+						position: relative;
+						
+						img{
+							width:100%;
+						}
+					}
+					h3{
+						margin: 0;
+						padding: 15px 0 0 0;
+						text-align: center;
+						font-size: 14px;
+						color: #DE511C;
+						line-height: 100%;
+
+						@include respond-to(handhelds){
+							font-size: 13px;
+						}
+					}
+				}
+					
+
+				@include respond-to(display-big){
+					width:calc(25% - 20px);
+				}
+				@include respond-to(display){
+					width:calc(25% - 20px);
+				}
+				@include respond-to(tablets){
+					width:calc(25% - 20px);
+				}
+				@include respond-to(small-tablets ){
+					width:calc(25% - 20px);
+				}
+				@include respond-to(wide-handhelds){
+					width:calc(33.3% - 20px);
+				}
+				@include respond-to(handhelds){
+					width:calc(50% - 20px);
+				}
+			}
+		}
+	
+
+		.small-card-grid{
+			font-size: 0;
+			margin: 15px 0;
+			padding: 0;
+			
+			li{
+				display: inline-block;
+				position: relative;
+				margin: 10px;
+				vertical-align:top;
+				z-index: 10;
+				
+				a{
+					display: block;
+					line-height: 0;
+					
+					.shad{
+						position: relative;
+						overflow: hidden;
+						box-shadow: 0 0 5px rgba(0,0,0,0.5);
+						z-index: 10;
+						
+						img{
+							position: absolute;
+							width: 100%;
+							max-height: 100%;
+							margin: auto;
+						}
+
+						@include respond-to(wide-handhelds){
+							box-shadow: none;
+						}
+						@include respond-to(handhelds){
+							box-shadow: none;
+						}
+					}
+					h3{
+						min-height: 20px;
+						margin: 8px 0;
+						font-size: 12px;
+						color: #DE511C;
+						line-height: 100%;
+						text-align: center;
+						word-wrap: break-word;
+						
+						@include respond-to(handhelds){
+							margin: 8px 0 0 0;
+						}
+					}
+				}
+
+				@include respond-to(display-big){
+					width:calc(20% - 20px);
+				}
+				@include respond-to(display){
+					width:calc(20% - 20px);
+				}
+				@include respond-to(tablets){
+					width:calc(20% - 20px);
+				}
+				@include respond-to(small-tablets ){
+					width:calc(20% - 20px);
+				}
+				
+				@include respond-to(wide-handhelds){
+					width:calc(33.33% - 20px);
+				}
+				@include respond-to(handhelds){
+					width:calc(50% - 20px);
+				}
+			}
+		}
+		
+
+		.big-cart-units{
+			font-size: 0;
+			margin-bottom: 10px;
+			padding: 0;
+			
+			li{
+				display: inline-block;
+				position: relative;
+				margin: 4px;
+				border: 1px solid #aaa;
+				z-index: 10;
+				vertical-align:top;
+
+				a{
+					display: block;
+					position: relative;
+					line-height: 0;
+
+					.shad{
+						position: relative;
+						overflow: hidden;
+						
+						img{
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							margin: auto;
+						}
+						
+						.price-unit-block{
+							position: absolute;
+							width: 100%;
+							max-height: 45px;
+							padding: 0;
+							bottom: 5px;
+							left: 0;
+							@include clearfix;
+
+							.number-unit{
+								padding: 2px 0 0 5px;
+								font-size: 13px;
+								color: #fff;
+								font-weight: 600;
+								line-height: 130%;
+								text-shadow: 1px 1px #000;
+							}
+							.price-unit{
+								padding: 0 0 0 5px;
+								font-size: 13px;
+								color:yellow;
+								font-weight: 700;
+								line-height: 120%;
+								text-shadow: 1px 1px #000;
+							}
+						}
+					}
+				}
+
+				@include respond-to(display-big){
+					width:calc(25% - 10px);
+				}
+				@include respond-to(display){
+					width:calc(25% - 10px);
+				}
+				@include respond-to(tablets){
+					width:calc(25% - 10px);
+				}
+				@include respond-to(small-tablets ){
+					width:calc(25% - 10px);
+				}
+				
+				@include respond-to(wide-handhelds){
+					width:calc(50% - 10px);
+				}
+				@include respond-to(handhelds){
+					width:calc(100% - 10px);
+				}
+			}
+			li:hover{
+				box-shadow: 3px 4px 10px #363636;
+					
+				a{
+					transform: scale(1.02);
+				}
+			}
+		}
+		.card-grid-big:after, .small-card-grid:after, .big-cart-units:after{
+			content: '';
+			display: table;
+			clear: both;
+		}
+
+
+		.units-link-block{
+			margin: 0;
+			
+			li{
+				display: inline-block;
+				margin: 3px 6px;
+				
+				p{
+					margin: 0;
+					color: #9C9C9C;
+					font-weight: 600;
+				}
+				a{
+					color: #9C9C9C;
+					font-weight: 500;
+					text-decoration: underline;
+				}
+				a:hover{
+					text-decoration: none;
+				}
+			}
+		}
+
+		@include respond-to(wide-handhelds){
+			padding: 10px 5px;
+		}
+		@include respond-to(handhelds){
+			padding: 10px 5px;
+		}
+	}
+
+	
+	.text-block{
+		padding: 0 10px;
+		overflow: hidden;
+
+		@include common-text-default;
+		
+		h1,h2,h3,h4,p,a{
+			margin-bottom: 10px;
+		}
+		p{
+			text-align: justify;
+			line-height: 130%;
+		}
+		ul, ol{
+			margin-bottom: 10px;
+			padding: 0 20px;
+			list-style-type: disc;
+			
+			li{
+				margin: 4px 0;
+			}
+		}
+		
+		.hr-top,.hr-bottom{
+			height: 56px;
+			margin: 5px 0;
+			background: url(../img/hr-pletenka-dekor-top.jpg) no-repeat 50% 50%;
+			border: none;
+			
+			@include respond-to(handhelds){
+				background: url(../img/hr-pletenka-dekor-top.jpg) no-repeat;
+				background-size: contain;
+			}
+		}
+		.hr-bottom{
+			transform: rotate(180deg);
+		}
+
+
+		.img-wide{
+			width: 100%;
+			margin: 5px 0;
+			
+			&-left{
+				width: 30%;
+				margin: 5px 0;
+				float: left;
+			}
+			&-right{
+				width: 30%;
+				margin: 5px 0;
+				float: right;
+			}
+
+			@include respond-to(wide-handhelds){
+				width: 180%;
+				margin-left: -20%;
+			}
+			@include respond-to(handhelds){
+				width: 208%;
+				margin-left: -25%;
+			}
+		}
+		
+		iframe{
+			margin: 10px 0;
+		}
+		
+		.table{
+			table{
+				width: 400px;
+
+				td{
+					text-align: center;
+					font-size: 18px;
+					font-style: italic;
+					background-color: #fff;
+					border: 1px solid #9D9F9E;
+
+					.card-img-80{
+						width: 60px;
+						height:60px;
+						margin: 0 auto;
+					}
+					.card-img-100{
+						width: 80px;
+						height:80px;
+						margin: 0 auto;
+					}
+					.card-img-120{
+						width: 90px;
+						height:90px;
+						margin: 0 auto;
+					}
+					.card-img-140{
+						width: 100px;
+						height:100px;
+						margin: 0 auto;
+					}
+					
+					p{
+						text-align: center;
+					}
+				}
+			}
+	
+			@include respond-to(handhelds){
+				overflow-y: scroll;
+				max-width: 775px;
+			}
+		}
+		
+		.plitka{
+			padding: 5px 0;
+			margin-bottom: 10px;
+			@include clearfix;
+			
+			.left-plitka{
+				float: left;
+				width: 150px;
+				margin: 5px 15px 0 0;
+
+				@include respond-to(handhelds){
+					float: none;
+				}
+			}
+			.right-plitka{
+				float: right;
+				width: 150px;
+				margin: 5px 15px 0 0;
+
+				@include respond-to(handhelds){
+					float: none;
+				}
+			}
+			p{
+				text-align: left;
+			}
+			
+			@include respond-to(handhelds){
+				text-align: center;
+			}
+		}
+
+		.sotrud-block{
+			margin: 30px 0 10px 0;
+			padding: 5px;
+			background-color: #F8F8FF;
+		}
+
+		@include respond-to(wide-handhelds){
+			padding: 0;
+		}
+		@include respond-to(handhelds){
+			padding: 0;
+		}
+	}
+
+	@include respond-to(wide-handhelds){
+		width: 100%;
+		padding: 10px 0 0 0;
+	}
+	@include respond-to(handhelds){
+		width: 100%;
+		padding: 10px 0 0 0;
+	}
+}

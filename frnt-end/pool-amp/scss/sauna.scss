@@ -1,0 +1,141 @@
+.sauna{
+	@include clearfix;
+
+	.sauna-cell{
+		@include width1300;
+		font-size: 0;
+		
+		.right-cell{
+			width: 50%;
+			display: inline-block;
+			vertical-align: middle;
+			
+			img{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				line-height: 0;
+			}
+			
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				display: block;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				display: block;
+			}
+		}
+		.left-cell{
+			width: 50%;
+			display: inline-block;
+			vertical-align: middle;
+			
+				ul.card-sauna{
+					@include clearfix;
+					font-size: 0;
+					padding: 20px 10px;
+					margin: 0;
+
+					li{
+						margin: 6px;
+						@include clearfix;
+						position: relative;
+						display: inline-block;
+						font-size: 14px;
+						list-style: none;
+						box-sizing: border-box;
+						
+						.text-mozaic{
+							padding: 5px 0;
+							@include clearfix;
+							text-align: center;
+							
+							h3{
+								margin: 5px 0;
+								color:#626262;
+								width: 100%;
+								font-weight: 500;
+								font-size: 12px;
+								display: block;
+							}
+						}
+					
+						a{
+							width: 100%;
+							background-color: #fff;
+							margin: 0 auto;
+							box-sizing: border-box;
+							display: block;
+							padding: 0 5px;
+							text-decoration: none;
+							
+							img{
+								width: 100%;
+								margin: 0;
+								padding: 0;
+								line-height: 0;
+							}
+						}
+
+						.button-card{
+							visibility: hidden;
+							text-align: center;
+							font-size: 12px;
+							padding: 10px 0;
+							margin: 0;
+							color: #626262;
+							font-weight: 600;
+							background-color: #fff;
+							width: 100%;
+							border: none;
+							text-decoration: none;
+						}
+						
+						@include respond-to(display-middle){
+							width:calc(50% - 12px);
+						}
+						@include respond-to(display-big){
+							width:calc(50% - 12px);
+						}
+						@include respond-to(display){
+							width:calc(50% - 12px);
+						}
+						@include respond-to(tablets){
+							width:calc(50% - 12px);
+						}
+						@include respond-to(small-tablets ){
+							width:calc(50% - 12px);
+						}
+						@include respond-to(wide-handhelds){
+							width:calc(50% - 6px);
+							margin: 3px;
+						}
+						@include respond-to(handhelds){
+							width:calc(50% - 12px);
+						}
+					}
+					li:hover {
+						box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+					}
+					li:hover .button-card{
+						visibility: visible;
+					}
+
+					@include respond-to(handhelds){
+						padding: 10px 5px;
+						text-align: center;
+					}
+				}
+				
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				display: block;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+}

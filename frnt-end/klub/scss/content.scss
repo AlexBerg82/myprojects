@@ -1,0 +1,193 @@
+.content{
+	@include width1000;
+	background: url('../img/wrapper.jpg') repeat-y top center;
+	@include clearfix;
+	padding: 20px 0;
+	
+	.right-content-block{
+		float: left;
+		width: 67%;
+		padding-left: 20px;
+		box-sizing: border-box;
+ 
+		.path{
+			margin: 0 0 10px 0;
+			padding: 0 10px 0 0;
+			text-align: right;
+			@include clearfix;
+			
+			li{
+				display: inline-block;
+				padding: 6px 2px;
+				font-size: 12px;
+				color: #828282;
+				
+				a{
+					font-size: 12px;
+					color: #828282;
+				}
+				a:hover{
+					color: blue;
+				}
+			}
+			.place{
+				color: orange;
+			}
+			
+			
+			@include respond-to(display-big){
+				border-bottom: 1px solid #E8E8E8;
+			}
+			@include respond-to(display){
+				border-bottom: 1px solid #E8E8E8;
+			}
+			@include respond-to(tablets){
+				border-bottom: 1px solid #E8E8E8;
+			}
+			@include respond-to(small-tablets ){
+				border-bottom: 1px solid #E8E8E8;
+			}
+			@include respond-to(wide-handhelds){
+				padding: 5px 0;
+				border-bottom: 1px solid #E8E8E8;
+			}
+			@include respond-to(handhelds){
+				padding: 5px 0;
+				border-bottom: 1px solid #E8E8E8;
+			}
+		}
+		
+		.nav-block{
+			padding: 10px;
+			@include clearfix;
+			
+			li{
+				float: right;
+				margin-right: 20px;
+				
+				a{
+					color: #04A2A3;
+					text-decoration: underline;
+				}
+				a:hover{
+					color: #fff;
+					text-decoration: none;
+					text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7), -1px -1px 5px rgba(0, 0, 0, 0.7);
+					transition: 0.5s;
+				}
+			}
+		}
+
+		.fcbs-block{
+			padding: 10px 0;
+			text-align: center;
+			@include clearfix;
+			display: none;
+			
+			ul{
+				.fbs{
+					float: right;
+					width: 100px;
+					margin: 0 10px;
+
+					a{
+						display: block;
+
+						img{
+							width: 100%;
+						}
+					}
+				}
+				.stats{
+					float: right;
+					width: 100px;
+					margin: 0 10px;
+
+					a{
+						img{
+							width: 100%;
+						}
+					}
+				}
+			}
+			@include respond-to(wide-handhelds){
+				display: block;
+			}
+			@include respond-to(handhelds){
+				display: block;
+			}
+		}
+
+		
+		.gallery-block-offer{
+			margin-bottom: 10px;
+			padding: 0 20px;
+			text-align: center;
+			
+			@include respond-to(wide-handhelds){
+				padding: 0;
+			}
+			@include respond-to(handhelds){
+				padding: 0;
+			}
+		}
+		
+		@include respond-to(display){
+			width: 70%;
+		}
+		@include respond-to(tablets){
+			width: 73%;
+			padding: 0 10px;
+		}
+		@include respond-to(small-tablets){
+			width: 73%;
+			padding: 0 10px;
+		}
+		@include respond-to(wide-handhelds){
+			width: 100%;
+			float: none;
+			padding: 10px;
+		}
+		@include respond-to(handhelds){
+			width: 100%;
+			padding: 10px;
+			float: none;
+		}
+	}
+
+	
+	.gallery-block-bottom{
+		width: 100%;
+		
+		@include respond-to(display-big){
+			display: none;
+		}
+		@include respond-to(display){
+			display: none;
+		}
+		@include respond-to(tablets){
+			display: none;
+		}
+		@include respond-to(small-tablets){
+			display: none;
+		}
+	}
+
+	@include respond-to(display){
+		width: 100%;
+	}
+	@include respond-to(tablets){
+		width: 100%;
+	}
+	@include respond-to(small-tablets){
+		width: 100%;
+	}
+	@include respond-to(wide-handhelds){
+		width: 100%;
+		padding: 0;
+	}
+	@include respond-to(handhelds){
+		width: 100%;
+		padding: 0;
+	}
+}

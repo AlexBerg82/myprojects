@@ -1,0 +1,42 @@
+.wrapper-footer{
+	background: #1E1E1E;
+	@include clearfix;
+	
+	.footer{
+		@include width1000;
+		@include clearfix;
+		padding: 10px 5px;
+		
+		.logo{
+			width: 135px;
+			padding: 5px 0;
+			float: right;
+			
+			img{
+				width: 100%;
+			}
+			
+			@include respond-to(wide-handhelds){
+				padding: 10px 0;
+				float: left;
+			}		
+			@include respond-to(handhelds){
+				padding: 15px 0 10px 0;
+				float: left;
+			}
+		}
+		
+		@include respond-to(tablets){
+			width: 100%;
+		}		
+		@include respond-to(small-tablets){
+			width: 100%;
+		}		
+		@include respond-to(wide-handhelds){
+			width: 100%;
+		}		
+		@include respond-to(handhelds){
+			width: 100%;
+		}
+	}
+}

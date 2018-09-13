@@ -1,0 +1,101 @@
+.order{
+	width: 100%;
+	min-height: 180px;
+	padding: 10px 0;
+	margin: 10px 0;
+	background: url('../img/1.png');
+	background-size: cover;
+	
+	.title{
+		width: 60%;
+		margin: 0 auto;
+		padding: 20px 0;
+		text-align: center;
+		
+		h1,h2,h3{
+			text-transform: uppercase;
+			line-height: 130%;
+			font-size: 18px;
+
+			@include respond-to(wide-handhelds){
+				padding: 10px 0 0 0;
+			}
+			@include respond-to(handhelds){
+				padding: 10px 0 0 0;
+			}
+		}
+		
+		@include respond-to(wide-handhelds){
+			width: 80%;
+		}
+		@include respond-to(handhelds){
+			width: 90%;
+		}
+	}
+	
+	form{
+		text-align: center;
+		
+		input{
+			width: 180px;
+			padding: 15px 10px;
+			margin-right: 17px;
+			border: none;
+
+			@include respond-to(wide-handhelds){
+				margin-right: 0;
+			}
+			@include respond-to(handhelds){
+				width: 40%;
+				padding: 10px;
+				margin-right: 0;
+			}
+		}
+		input[type="text"]::-webkit-input-placeholder {
+			color: #CFCFCF;
+		}
+		
+		.button-block{
+			padding: 0;
+			display: inline-block;
+			
+			button{
+				padding: 15px 20px;
+				border: none;
+				text-transform: uppercase;
+				color: #fff;
+				background-color: #000;
+				
+				&:hover{
+					background-color: #aaa;
+					color: #000;
+				}
+				
+				@include respond-to(handhelds){
+					padding: 10px 20px;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				padding: 15px 0 0 0;
+				display: block;
+			}
+			@include respond-to(handhelds){
+				padding: 15px 0 0 0;
+				display: block;
+			}
+		}
+	}
+
+	@include respond-to(wide-handhelds){
+		margin: 20px 0;
+		padding: 10px 0 20px 0;
+	}
+	@include respond-to(handhelds){
+		margin: 20px 0;
+		padding: 0 0 20px 0;
+	}
+}
+.ord-m{
+	margin: 40px 0 0 0;
+}

@@ -1,0 +1,134 @@
+.title-cell{
+	@include clearfix;
+	padding: 30px 0;
+	max-width: 1000px;
+	margin: 0 auto;
+
+	.left-cell{
+		float: left;
+		width: 30%;
+		line-height: 0;
+		line-height: 0;
+		padding: 0 30px;
+		box-sizing: border-box;
+		
+		h1,h2,h3,h4{
+			color: #303030;
+			line-height: 130%;
+			text-transform: uppercase;
+			
+			@include respond-to(wide-handhelds){
+				color: #46A2ED;
+			}
+			@include respond-to(handhelds){
+				color: #46A2ED;
+			}
+		}
+		span{
+			margin: 10px 0;
+			line-height: 130%;
+			font-size: 18px;
+			color:#46A2ED;
+			
+			@include respond-to(wide-handhelds){
+				display: none;
+			}
+			@include respond-to(handhelds){
+				display: none;
+			}
+		}
+		
+		.line{
+			width: 25px;
+			height: 1px;
+			margin-top: 10px;
+			background-color: #46A2ED;
+			border: 1px solid #46A2ED;
+			
+			@include respond-to(wide-handhelds){
+				display: none;
+			}
+			@include respond-to(handhelds){
+				display: none;
+			}
+		}
+		
+		@include respond-to(small-tablets){
+			padding: 0 10px;
+		}
+		@include respond-to(wide-handhelds){
+			float: none;
+			width: 100%;
+			text-align: center;
+			background-size: contain;
+			padding: 0;
+		}
+		@include respond-to(handhelds){
+			float: none;
+			width: 100%;
+			text-align: center;
+			padding: 0;
+		}
+	}
+	.text-cell{
+		width: 70%;
+		float: left;
+		padding: 0 40px;
+		box-sizing: border-box;
+		
+		p{
+			line-height: 160%;
+			color: #424242;
+			
+			@include respond-to(small-tablets){
+				line-height: 130%;
+			}
+			@include respond-to(wide-handhelds){
+				line-height: 130%;
+			}
+			@include respond-to(handhelds){
+				line-height: 130%;
+			}
+		}
+		
+		@include respond-to(wide-handhelds){
+			padding: 10px;
+			width: 100%;
+		}
+		@include respond-to(handhelds){
+			padding: 10px;
+			width: 100%;
+		}
+	}
+		
+	@include respond-to(wide-handhelds){
+		padding: 0;
+	}
+	@include respond-to(handhelds){
+		padding: 0;
+	}
+}
+
+.button-block{
+	text-align: center;
+	padding: 40px 0 20px 0;
+	
+	button{
+		padding: 10px;
+		background-color: #fff;
+		border: 2px solid #7DBDF5;
+		color: #7DBDF5;
+		font-weight: 600;
+		cursor: pointer;
+		
+		&:hover{
+			color: #fff;
+			background-color: #B5B5B5;
+			border: 2px solid #000;
+		}
+	}
+}
+
+.color-bl{
+	color: #4BA1EB;
+}

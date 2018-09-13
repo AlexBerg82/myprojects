@@ -1,0 +1,603 @@
+.footer-block{
+	@include width1000;
+	position: relative;
+	margin: 2px auto 0;
+	opacity:0;
+		
+		img{
+			width: 100%;
+			
+			@include respond-to(wide-handhelds){
+				width: 200%;
+				margin-left: -10%;
+			}
+			@include respond-to(handhelds){
+				width: 200%;
+				margin-left: -20%;
+				margin-top: -8%;
+			}
+		}
+		
+		p{
+			margin-bottom: 30px;
+			text-align: center;
+			font-size: 13px;
+			
+			span{
+				color: #04A2A3;
+				text-transform: uppercase;
+			}
+			
+			@include respond-to(wide-handhelds){
+				margin-bottom:20px;
+			}
+			@include respond-to(handhelds){
+				margin-bottom: 20px;
+			} 
+		}
+
+		.dog{
+			position: absolute;
+			left: 1%;
+			top: 15%;
+			width: 25%;
+			height: 60%;
+			background: url('../img/foot/dog.png') no-repeat;
+			background-size: cover;
+
+			@include respond-to(wide-handhelds){
+				position: absolute;
+				left:10%;
+				top: 0;
+				width: 47%;
+				height: 52%;
+				background: url('../img/foot/dog.png') no-repeat;
+				background-size: cover;
+			}
+			@include respond-to(handhelds){
+				display: none;
+			}
+		}
+		
+		.dog-eff{
+			animation:
+				godog 3s linear,
+				dogj 0.6s 5,
+				dogr 0.3s 10,
+				opasdog 0.8s linear;
+		}
+		
+		@include respond-to(wide-handhelds){
+			@keyframes godog{
+				from{ left: 0%; }
+				to{ left: 10%; }
+			}
+			@keyframes godj{
+				from{ top: 0%; }
+				to{ top: 1%; }
+			}
+			@keyframes dogr{
+				from{ transform: rotate(0deg); }
+				to{ transform: rotate(1deg); }
+			}
+			@keyframes opasdog{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+		}
+
+		.hover-stop-dog:hover{
+			left: 1%;
+			top: 15%;
+			
+			@include respond-to(wide-handhelds){
+				left:10%;
+				top: 0;
+			}
+			
+			animation:
+				godog 0,
+				dogj 0,
+				dogr 0,
+				opasdog 0,
+				dogh 0.3s infinite alternate;
+		}
+
+		@keyframes dogh{
+			from{ top: 15%; }
+			to{ top: 14%; }
+		}
+		@include respond-to(wide-handhelds){
+			@keyframes dogh{
+				from{ top: 0%; }
+				to{ top: 1%; }
+			}
+		}
+
+		.rabbl{
+			position: absolute;
+			right: 53%;
+			bottom: 35%;
+			width: 15%;
+			height: 60%;
+			background: url('../img/foot/rabbl.png') no-repeat;
+			background-size: cover;
+			z-index: 999;
+
+			@include respond-to(wide-handhelds){
+				right: 80%;
+				top: 33%;
+				width: 20%;
+				height: 35%;
+			}
+			@include respond-to(handhelds){
+				right: 70%;
+				top: 16%;
+				width: 22%;
+				height: 50%;
+			}
+		}
+		
+		.rabbl-eff{
+			animation:
+				gorabbl 2.5s linear,
+				rabblt 0.41s 6,
+				rabblj 0.41s 6,
+				opasrabbl 0.8s linear;
+		}
+
+		@keyframes gorabbl{
+			from{ right: 0%; }
+			to{ right: 53%; }
+		}
+		@keyframes rabblt{
+			from{ bottom: 35%; }
+			to{ bottom: 51%; }
+		}
+		@keyframes rabblj{
+			from{ transform: rotate(0deg); }
+			to{ transform: rotate(6deg); }
+		}
+		@keyframes opasrabbl{
+			from{ opacity: 0; }
+			to{ opacity: 1; }
+		}
+
+		@include respond-to(wide-handhelds){
+			@keyframes gorabbl{
+			  from{ right: 0%; }
+			  to{ right: 80%; }
+			}
+			@keyframes rabblt{
+				from{ top: 33%; }
+				to{ top: 27%; }
+			}
+			@keyframes rabblj{
+				from{ transform: rotate(0deg); }
+				to{ transform: rotate(6deg); }
+			}
+			@keyframes opasrabbl{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+		}
+		@include respond-to(handhelds){
+			@keyframes gorabbl{
+				from{ right: 0%; }
+				to{ right: 70%; }
+			}
+			@keyframes rabblt{
+				from{ top: 16%; }
+				to{ top: 10%; }
+			}
+			@keyframes rabblj{
+				from{ transform: rotate(0deg); }
+				to{ transform: rotate(6deg); }
+			}
+			@keyframes opasrabbl{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+		}
+
+		.hover-stop-rabbl:hover{
+			right: 53%;
+			bottom: 35%;
+			
+			@include respond-to(wide-handhelds){
+				right: 80%;
+				top: 33%;
+			}
+			@include respond-to(handhelds){
+				right: 70%;
+				top: 16%;
+			}
+				
+			animation:
+				gorabbl 0,
+				rabblt 0,
+				rabblj 0,
+				opasrabbl 0,
+				rabblh 0.3s infinite alternate;
+		}
+
+		@keyframes rabblh{
+			from{ bottom: 35%; }
+			to{ bottom: 42%; }
+		}
+		
+		@include respond-to(wide-handhelds){
+			@keyframes rabblh{
+				from{ top: 33%; }
+				to{ top: 27%; }
+			}
+		}
+		@include respond-to(handhelds){
+			@keyframes rabblh{
+				from{ top: 16%; }
+				to{ top: 10%; }
+			}
+		}
+
+		.turt{
+			position: absolute;
+			right: 30%;
+			bottom: 25%;
+			width: 16%;
+			height: 67%;
+			background: url('../img/foot/turt.png') no-repeat;
+			background-size: cover;
+
+			@include respond-to(wide-handhelds){
+				right: 28%;
+				bottom: 35%;
+				width: 26%;
+				height: 50%;
+			}
+			@include respond-to(handhelds){
+				right: 43%;
+				bottom: 35%;
+				width: 19%;
+				height: 45%;
+			}
+		}
+
+		.turt-eff{
+			animation:
+				opas0 1.8s linear,
+				goturt 3s linear 1.8s,
+				turtj 0.5s 6 1.8s,
+				turtr 0.5s 6 1.8s,
+				opasturt 0.8s linear 1.8s;
+		}
+
+		@keyframes goturt{
+			from{ bottom: 0%; }
+			to{ bottom: 25%; }
+		}
+		@keyframes turtr{
+			from{ transform: rotate(0deg); }
+			to{ transform: rotate(1deg); }
+		}
+		@keyframes opasturt{
+			from{ opacity: 0; }
+			to{ opacity: 1; }
+		}
+		@keyframes opas0{		  
+			0%, 100% { opacity: 0; }		   
+		}
+			
+		@include respond-to(wide-handhelds){
+			@keyframes goturt{
+				from{ bottom: 0%; }
+				to{ bottom: 35%; }
+			}
+			@keyframes turtr{
+				from{ transform: rotate(0deg); }
+				to{ transform: rotate(1deg); }
+			}
+			@keyframes opasturt{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+			@keyframes opas0{		  
+				0%, 100% { opacity: 0; }		   
+			}
+		}
+		@include respond-to(handhelds){
+			@keyframes goturt{
+				from{ bottom: 0%; }
+				to{ bottom: 35%; }
+			}
+			@keyframes turtr{
+				from{ transform: rotate(0deg); }
+				to{ transform: rotate(1deg); }
+			}
+			@keyframes opasturt{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+			@keyframes opas0{		  
+				0%, 100% { opacity: 0; }		   
+			}
+		}
+		
+		.hover-stop-turt:hover{
+			right: 30%;
+			bottom: 25%;
+			
+			@include respond-to(wide-handhelds){
+				right: 28%;
+				bottom: 35%;
+			}
+			@include respond-to(handhelds){
+				right: 43%;
+				bottom: 35%;
+			}
+			
+			animation:
+				opas0 0,
+				goturt 0,
+				turtj 0,
+				turtr 0,
+				opasturt 0,
+				turth 1s infinite alternate;
+		}
+
+		@keyframes turth{
+			from{ transform: rotate(0deg); }
+			to{ transform: rotate(2deg); }
+		}
+		
+		@include respond-to(wide-handhelds){
+			@keyframes turth{
+				from{ transform: rotate(0deg); }
+				to{ transform: rotate(2deg); }
+			}
+		}
+		@include respond-to(handhelds){
+			@keyframes turth{
+				from{ transform: rotate(0deg); }
+				to{ transform: rotate(2deg); }
+			}
+		}
+
+		.flobtm{
+			position: absolute;
+			right: 12%;
+			top: 42%;
+			width: 10%;
+			height: 28%;
+			background: url('../img/foot/flo-btm.png') no-repeat;
+			background-size: cover;
+			z-index: 20;
+
+			@include respond-to(wide-handhelds){
+				right: 11%;
+				top: 43%;
+				width: 15%;
+				height: 20%;
+			}
+			@include respond-to(handhelds){
+				right: 19%;
+				top: 46%;
+				width: 16%;
+				height: 24%;
+			}
+		}
+
+		.fox{
+			position: absolute;
+			right: 5%;
+			top: 0;
+			width: 10%;
+			height: 65%;
+			background: url('../img/foot/fox.png') no-repeat;
+			background-size: cover;
+			z-index: 10;
+
+			@include respond-to(small-tablets){
+				right: 5%;
+				top: 0;
+				width: 10%;
+				height: 62%;
+			}
+			@include respond-to(wide-handhelds){
+				right: 0;
+				top: 15%;
+				width: 15%;
+				height: 45%;
+			}
+			@include respond-to(handhelds){
+				right: 6%;
+				top: 13%;
+				width: 17%;
+				height: 54%;
+				background-size: 100% 100%;
+			}
+		}
+
+		.fox-eff{
+			animation:
+				opas0 0.6s linear,
+				gofox 2s linear 0.6s,
+				foxj 0.4s 5 0.6s,
+				foxr 0.4s 5 0.6s,
+				opasfox 0.8s linear 0.6s,
+				opasfoxs 3s linear 0.6s;
+		}
+		
+		@include respond-to(display-big){
+			@keyframes gofox{
+				from{ right: 0%; }
+				to{ right: 5%; }
+			}
+			@keyframes foxj{
+				from{ top: 0%; }
+				to{ top: 1%; }
+			}
+			@keyframes foxr{
+				from{ transform: rotate(0deg); }
+				to{ transform: rotate(1deg); }
+			}
+			@keyframes opasfox{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+			@keyframes opas0{		  
+				0%, 100% { opacity: 0; }		   
+			}
+		}
+		@include respond-to(display){
+			@keyframes gofox{
+				from{ right: 0%; }
+				to{ right: 5%; }
+			}
+			@keyframes foxj{
+				from{ top: 0%; }
+				to{ top: 1%; }
+			}
+			@keyframes foxr{
+				from{ transform: rotate(0deg); }
+				to{ transform: rotate(1deg); }
+			}
+			@keyframes opasfox{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+			@keyframes opas0{		  
+				0%, 100% { opacity: 0; }		   
+			}
+		}
+		@include respond-to(tablets){
+			@keyframes gofox{
+				from{ right: 0%; }
+				to{ right: 5%; }
+			}
+			@keyframes foxj{
+				from{ top: 0%; }
+				to{ top: 1%; }
+			}
+			@keyframes foxr{
+				from{ transform: rotate(0deg); }
+				to{ transform: rotate(1deg); }
+			}
+			@keyframes opasfox{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+			@keyframes opas0{		  
+				0%, 100% { opacity: 0; }		   
+			}
+		}
+		@include respond-to(small-tablets){
+			@keyframes gofox{
+				from{ right: 0%; }
+				to{ right: 5%; }
+			}
+			@keyframes foxj{
+				from{ top: 0%; }
+				to{ top: 1%; }
+			}
+			@keyframes foxr{
+				from{ transform: rotate(0deg); }
+				to{ transform: rotate(1deg); }
+			}
+			@keyframes opasfox{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+			@keyframes opas0{		  
+				0%, 100% { opacity: 0; }		   
+			}
+		}
+		@include respond-to(wide-handhelds){
+			@keyframes opasfoxs{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+			@keyframes opas0{		  
+				0%, 100% { opacity: 0; }		   
+			}
+		}
+		@include respond-to(handhelds){
+			@keyframes opasfoxs{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+			@keyframes opas0{		  
+				0%, 100% { opacity: 0; }		   
+			}
+		}
+
+		.hover-stop-fox:hover{
+			right: 5%;
+			top: 0;
+			
+			@include respond-to(small-tablets){
+				right: 5%;
+				top: 0;
+				width: 10%;
+				height: 62%;
+			}
+			@include respond-to(wide-handhelds){
+				right: 0;
+				top: 15%;
+				width: 15%;
+				height: 45%;
+			}
+			@include respond-to(handhelds){
+				right: 6%;
+				top: 13%;
+				width: 17%;
+				height: 54%;
+				background-size: 100% 100%;
+			}
+			
+			animation:
+				opas0 0,
+				gofox 0,
+				foxj 0,
+				foxr 0,
+				opasfox 0,
+				opasfoxs 0,
+				foxh 2s infinite alternate;
+		}
+
+		@keyframes foxh{
+			from{ opacity: 1; }
+			to{ opacity: 0; }
+		}
+
+		@include respond-to(small-tablets){
+			from{ opacity: 1; }
+			to{ opacity: 0; }
+		}
+		@include respond-to(wide-handhelds){
+			from{ opacity: 1; }
+			to{ opacity: 0; }
+		}
+		@include respond-to(handhelds){
+			from{ opacity: 1; }
+			to{ opacity: 0; }
+		}
+
+
+	@include respond-to(display){
+		width: 100%;
+	}
+	@include respond-to(tablets){
+		width: 100%;
+	}
+	@include respond-to(small-tablets){
+		width: 100%;
+	}
+	@include respond-to(wide-handhelds){
+		width: 100%;
+		overflow: hidden;
+	}
+	@include respond-to(handhelds){
+		width: 100%;
+		overflow: hidden;
+	}
+}

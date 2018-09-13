@@ -1,0 +1,344 @@
+.wrapper-new{
+	@include width1000;
+
+	.title-news{
+		background: url('../img/g_title1.jpg');
+		background-size: cover;
+		background-position: center center;
+		top: 0;
+		left: 0;
+		padding: 10px 20px;
+		box-sizing: border-box;
+	}
+}
+
+.right-block{
+	width: 100%;
+	float: right;
+	box-sizing: border-box;
+	background-color:#F4F4F5;
+	box-shadow: rgba(221,221,221,1) 0px 0px 10px;
+	
+	.title-news-block{
+		text-align: center;
+		padding: 20px;
+		border-bottom: 1px solid #C9C9C7;
+		
+		h2{
+			color: #404040;
+		}
+		p{
+			color: #ACA5AC;
+			margin: 10px 0 0 0;
+			font-size: 13px;
+			
+			span{
+				margin-left: 15px;
+			}
+		}
+		
+		@include respond-to(wide-handhelds){
+			padding: 10px;
+		}	
+		@include respond-to(handhelds){
+			padding: 10px 5px;
+		}
+	}
+
+	.search-news-block{
+		padding: 20px;
+		text-align: right;
+
+		.search_input{
+			padding: 4px 5px 5px 5px;
+			border: none;
+			background-color: #EFEFED;
+			color: #363636;
+			outline: none;
+			border: 1px solid #AAAAA9;
+		}
+		.search_input::-moz-placeholder{
+			color: #737373;
+		}
+		.search_input::-webkit-input-placeholder{
+			color: #737373;
+		}
+		.search_input:-moz-placeholder{
+			color: #737373;
+		}
+		.search_input:-ms-input-placeholder{
+			color: #737373;
+		}
+		.search_input:focus::-webkit-input-placeholder{
+			color: transparent;
+		}
+		.search_input:focus::-moz-placeholder{
+			color: transparent;
+		}
+		.search_input:focus:-moz-placeholder{
+			color: transparent;
+		}
+		.search_input:focus:-ms-input-placeholder{
+			color: transparent;
+		}
+		.btn_search{
+			padding: 6px 10px;
+			background: #6D6D6D;
+			background: linear-gradient(to top, #6E6E6E, #6D6D6D);
+			text-align: center;
+			cursor: pointer;
+			text-decoration: none;
+			font-size: 12px;
+			font-weight: 600;
+			color: #fff;
+			
+			&:hover{
+				background: #4F4F4F;
+			}
+		}
+		
+		@include respond-to(handhelds){
+			padding: 20px 0 0 0;
+			text-align: center;
+		}
+	}
+
+	.news-list-block{
+		padding: 20px;
+		@include clearfix;
+		
+		li{
+			list-style: none;
+			position: relative;
+			@include clearfix;
+			padding: 10px 0;
+			margin-bottom: 15px;
+			border-bottom: 1px solid #E2E2E2;
+
+			.left-img-cell{
+				display: block;
+				float: left;
+				width: calc(30% - 20px);
+				margin: 10px;
+				line-height: 100%;
+				box-sizing: border-box;
+				overflow: hidden;
+				
+				img{
+					width: 100%;
+					padding: 0;
+					margin: 0;
+				}
+
+				@include respond-to(handhelds){
+					float: none;
+					width: 90%;
+					margin: 15px auto;
+				}
+			}
+			
+			a:hover img{
+				transform: scale(1.02);
+				transition-duration: 0.5s;
+			}
+			.text-block-left{
+				float: left;
+				width: 70%;
+				padding: 10px;
+				box-sizing: border-box;
+			
+				h3{
+					float: left;
+					font-size: 18px;
+					margin-bottom: 5px;
+					
+					a{
+						color: #404040;
+						text-decoration: none;
+					}
+					
+					a:hover{
+						color: #9C9C9C;
+						transition: 0.5s;
+						text-decoration: none;
+					}
+					
+					@include respond-to(handhelds){
+						float: none;
+					}
+				}
+				p{
+					line-height: 160%;
+					clear: both;
+					text-align: left;
+					color: #aaa;
+					margin-bottom: 5px;
+					
+					span{
+						a{
+							color: red;
+							
+							&:hover{
+								text-decoration: none;
+							}
+						}
+					}
+					
+					@include respond-to(small-tablets){
+						line-height: 130%;
+					}	
+					@include respond-to(wide-handhelds){
+						line-height: 130%;
+					}
+					@include respond-to(handhelds){
+						line-height: 130%;
+					}
+				}
+				
+				@include respond-to(handhelds){
+					width: 100%;
+					padding: 0;
+				}
+			}
+			
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+		
+		@include respond-to(tablets){
+			padding: 10px;
+		}	
+		@include respond-to(small-tablets){
+			padding: 10px 0;
+		}	
+		@include respond-to(wide-handhelds){
+			padding: 10px 0;
+		}	
+		@include respond-to(handhelds){
+			padding: 10px 0;
+		}
+	}
+	.news-list-block:after{
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	.text-block{
+		@import "text-default";
+		
+		padding: 10px 100px;
+		
+		p{
+			line-height: 160%;
+			font-size: 15px;
+		}
+
+		img{
+			max-width: 100%;
+			display: block;
+			margin: 20px auto;
+			padding: 0;
+		}
+		h1,h2,h3,h4{
+			margin: 20px 0;
+		}
+		
+		@include respond-to(tablets){
+			padding: 10px;
+		}
+		@include respond-to(small-tablets){
+			padding: 10px;
+		}
+		@include respond-to(wide-handhelds){
+			padding: 10px;
+		}	
+		@include respond-to(handhelds){
+			padding: 10px 5px;
+		}
+	}
+	.to-back{
+		float: right;
+		color: #D2134D;
+		display: block;
+		margin: 40px 100px 20px 0;
+		text-decoration: none;
+		
+		&:hover{
+			text-decoration: underline;
+		}
+		
+		@include respond-to(wide-handhelds){
+			margin: 40px 10px 20px 0;
+		}	
+		@include respond-to(handhelds){
+			margin: 30px 10px 20px 0;
+		}
+	}
+	.label{
+		padding: 20px 100px 40px 100px;
+		clear: both;
+		
+		p{
+			margin-bottom: 10px;
+		}
+		.label-line{
+			position: relative;
+			
+			h3{
+				display: inline;
+				z-index: 100;
+			}
+			.line{
+				position: absolute;
+				top: 50%;
+				right: 0;
+				height: 1px;
+				background-color: #aaa;
+				width: 83%;
+				
+				@include respond-to(tablets){
+					display: none;
+				}
+				@include respond-to(small-tablets){
+					display: none;
+				}
+				@include respond-to(wide-handhelds){
+					display: none;
+				}	
+				@include respond-to(handhelds){
+					display: none;
+				}
+			}
+		}
+		
+		@include respond-to(tablets){
+			padding: 20px 10px;
+		}
+		@include respond-to(small-tablets){
+			padding: 20px 10px;
+		}
+		@include respond-to(wide-handhelds){
+			padding: 20px 10px;
+		}	
+		@include respond-to(handhelds){
+			padding: 20px 10px;
+		}
+	}
+	
+	@include respond-to(small-tablets){
+		float: none;
+		width: 100%;
+	}	
+	@include respond-to(wide-handhelds){
+		float: none;
+		width: 100%;
+		padding: 10px;
+	}	
+	@include respond-to(handhelds){
+		float: none;
+		width: 100%;
+		padding: 10px;
+	}
+}

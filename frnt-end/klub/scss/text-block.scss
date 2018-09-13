@@ -1,0 +1,414 @@
+.text-block{
+	padding: 0 10px;
+	@include clearfix;
+	
+	@include common-text-default;
+	
+	h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover{
+		text-shadow: 1px 1px 5px rgba(230, 125, 166, 0.7), -1px -1px 5px rgba(230, 125, 166, 0.7);
+		transition: 0.5s;
+		color: #E46E9C;
+	}
+	
+	//title h2 with butterfly
+	.title-text-block{
+		padding: 8px 0;
+		color: #E46E9C;
+		background: url('../img/menu1_bg_hover.png') no-repeat left top;
+		
+		span{
+			margin-left: 25px;
+		}
+		
+		&:hover{
+			color: #E46E9C;
+			text-shadow: none;
+		}
+	}
+
+	p{
+		line-height: 160%;
+		text-align: justify;
+		color: #003366;
+		
+		@include respond-to(tablets){
+			line-height: 130%;
+		}
+		@include respond-to(small-tablets){
+			line-height: 130%;
+		}
+		@include respond-to(wide-handhelds){
+			line-height: 130%;
+		}
+		@include respond-to(handhelds){
+			line-height: 130%;
+		}
+	}
+	
+	
+	//vertical one image-link (right)
+	.image-link-bord-right{
+		float: right;
+		width: calc(32% - 28px);
+		margin: 10px 0 10px 10px;
+		font-size: 0;
+		padding: 8px;
+		@include clearfix;
+		border: 1px solid #04A2A3;
+
+		a{
+			img{
+				width: 100%;
+			}
+		}
+		
+		&:hover{
+			border: 1px solid #E4719C;
+		}
+		
+		@include respond-to(wide-handhelds){
+			width: calc(50% - 18px);
+			margin: 10px 0 10px 0;
+		}
+		@include respond-to(handhelds){
+			width: calc(100% - 18px);
+			margin: 10px 0 10px 0;
+		}
+	}
+	//vertical one image-link (left)
+	.image-link-bord-left{
+		@extend .image-link-bord-right;
+		
+		float: left;
+		margin: 10px 10px 10px 0;
+		
+		&:hover{
+			border: 1px solid #E4719C;
+		}
+	}
+
+	
+	
+	//one image to left
+	.image-block-left{
+		@extend .image-link-bord-right;
+		
+		border: none;
+		width: calc(25% - 10px);
+		float: left;
+		
+		&:hover{
+			border: none;
+		}
+		
+		@include respond-to(small-tablets ){
+			width: calc(40% - 10px);
+		}
+		@include respond-to(wide-handhelds){
+			width: calc(30% - 10px);
+		}
+		@include respond-to(handhelds){
+			width: calc(50% - 10px);
+		}
+	}
+	//one image to center
+	.image-block-center{
+		@extend .image-block-left;
+		
+		border: none;
+		float: none;
+		margin: 0 auto;
+	}
+	//one image to right
+	.image-block-right{
+		float: right;
+	}
+
+	
+	//vertical list of images (right)
+	.image-list-block-right{
+		float: right;
+		width: 30%;
+		margin: 5px 0 5px 5px;
+		font-size: 0;
+		@include clearfix;
+		
+		li{
+			position: relative;
+			margin: 0 auto 10px;
+			border: 1px solid #aaa;
+			vertical-align:top;
+			//box-sizing: border-box;
+			
+			.card{
+				padding: 5px;
+				display: block;
+				
+				img{
+					width: 100%;
+				}
+			}
+
+			@include respond-to(display-big){
+				width: 100%;
+			}
+			@include respond-to(display){
+				width: 100%;
+			}
+			@include respond-to(tablets){
+				width: 100%;
+			}
+			@include respond-to(small-tablets ){
+				width: 100%;
+			}
+			@include respond-to(wide-handhelds){
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+			}
+		}
+		
+		@include respond-to(wide-handhelds){
+			text-align: center;
+			width: 50%;
+		}
+		@include respond-to(handhelds){
+			text-align: center;
+			width: 50%;
+		}
+	}
+	
+	//vertical list of images (left)
+	.image-list-block-left{
+		@extend .image-list-block-right;
+		
+		float: left;
+		margin: 0 5px 5px 0;
+	}
+	.image-list-block-right:after, .image-list-block-left:after, .list-cell-block:after{
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	
+	//galeria and spivpraca
+	.cell-block{
+		padding: 0;
+		font-size: 0;
+		@include clearfix;
+		
+		li{
+			position: relative;
+			@include clearfix;
+
+			//plitka with left image
+			.left-img-cell{
+				display: block;
+				float: left;
+				width: calc(30% - 20px);
+				margin: 10px;
+				padding: 6px;
+				line-height: 100%;
+				border: 1px solid #04A2A3;
+				box-sizing: border-box;
+				
+				img{
+					width: 100%;
+				}
+				
+				&:hover{
+					border: 1px solid #E4719C;
+				}
+				
+				@include respond-to(handhelds){
+					float: none;
+					width: 90%;
+				}
+			}
+			
+			//plitka with right image
+			.right-img-cell{
+				@extend .left-img-cell;
+				
+				float: right;
+			}
+			
+			a:hover img{
+				transform: scale(1.02);
+				transition-duration: 0.5s;
+			}
+			
+			//plitka with left text-block
+			.text-block-left{
+				float: left;
+				width: 70%;
+				padding: 10px;
+				box-sizing: border-box;
+			
+				h3{
+					float: left;
+					font-size: 18px;
+					margin-bottom: 5px;
+					
+					a:hover{
+						color: #E46E9C;
+						text-shadow: 1px 1px 5px rgba(230, 125, 166, 0.7), -1px -1px 5px rgba(230, 125, 166, 0.7);
+						transition: 0.5s;
+					}
+					
+					@include respond-to(handhelds){
+						float: none;
+						text-align: center;
+					}
+				}
+				p{
+					font-size: 14px;
+					line-height: 130%;
+					clear: both;
+					text-align: left;
+					
+					@include respond-to(handhelds){
+						text-align: justify;
+					}
+				}
+				
+				@include respond-to(handhelds){
+					width: 100%;
+				}
+			}
+			
+			//plitka with right text-block
+			.text-block-right{
+				@extend .text-block-left;
+			
+				float: right;
+			}
+			
+			@include respond-to(handhelds){
+				margin-bottom: 20px;
+				padding: 0;
+			}
+		}
+	}
+	.cell-block:after{
+		content: '';
+		display: table;
+		clear: both;
+	}
+	
+	
+
+	
+	//fotogaleria
+	.list-cell-block{
+		font-size: 0;
+		padding: 0;
+		@include clearfix;
+		
+		li{
+			display: inline-block;
+			position: relative;
+			margin: 10px;
+			vertical-align:top;
+			border: 1px solid #aaa;
+			box-sizing: border-box;
+			
+			.card{
+				display: block;
+				padding: 6px;
+				margin: 0;
+
+				img{
+					width: 100%;
+				}
+				
+				@include respond-to(wide-handhelds){
+					padding: 4px;
+				}
+				@include respond-to(handhelds){
+					padding: 2px;
+				}
+			}
+			
+			@include respond-to(display-big){
+				width:calc(33.33% - 20px);
+			}
+			@include respond-to(display){
+				width:calc(33.33% - 20px);
+			}
+			@include respond-to(tablets){
+				width:calc(33.33% - 20px);
+			}
+			@include respond-to(small-tablets){
+				width:calc(33.33% - 20px);
+			}
+			@include respond-to(wide-handhelds){
+				width:calc(33.33% - 10px);
+				margin: 5px;
+			}
+			@include respond-to(handhelds){
+				width:calc(50% - 4px);
+				margin: 2px;
+			}
+		}
+		li:hover{
+			border: 1px solid #E46E9C;
+		}
+		li:hover img{
+			transform: scale(1.02);
+			transition-duration: 0.5s;
+		}
+	}
+
+	
+	//download normativ document
+	.normativ-document-block{
+		margin: 20px 10px;
+		padding: 2px 15px;
+		border-left: 1px solid brown;
+		
+		li{
+			margin: 5px 0;
+			padding: 0 0 0 20px;
+			font-size: 13px;
+			font-style: italic;
+			color: #aaa;
+			background: url(../img/ico_pdf.gif) no-repeat;
+			line-height:130%;
+			
+			a{
+				font-style: normal;
+				color: brown;
+				text-decoration: underline;
+			}
+			a:hover{
+				color: #7FFFD4;
+				text-decoration: none;
+				text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7), -1px -1px 5px rgba(0, 0, 0, 0.7);
+				transition: 0.5s;
+			}
+		}
+		
+		@include respond-to(wide-handhelds){
+			padding: 2px 10px;
+		}
+		@include respond-to(handhelds){
+			padding: 2px 10px;
+		}
+	}
+
+	@include respond-to(small-tablets){
+		width: 100%;
+		padding: 10px 0;
+	}
+	@include respond-to(wide-handhelds){
+		width: 100%;
+		padding: 10px 0;
+	}
+	@include respond-to(handhelds){
+		width: 100%;
+		padding: 10px 0;
+	}
+}

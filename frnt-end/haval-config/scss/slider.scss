@@ -1,0 +1,610 @@
+/*news-slider*/
+.mini-slider,.mini-slider2,.mini-slider3,.mini-slider4{
+	.owl-carousel{
+		li{
+			img{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+}
+
+
+.mini-slider2,.mini-slider3,.mini-slider4{
+	.owl-carousel{
+		li{
+			text-align: center;
+			
+			img{
+				width: auto;
+				max-height: 400px;
+				padding: 0;
+				margin: 0 auto;
+				
+				@include respond-to(tablets){
+					width: 100%;
+					max-height: auto;
+				}
+				@include respond-to(small-tablets){
+					width: 100%;
+					max-height: auto;
+				}
+				@include respond-to(wide-handhelds){
+					width: 100%;
+					max-height: auto;
+				}
+				@include respond-to(handhelds){
+					width: 100%;
+					max-height: auto;
+				}
+			}
+		}
+	}
+}
+
+
+//navigation
+.owl-prev{
+	top: 40%;
+	left: 0;
+	color: #fff;
+	padding: 10px 20px 12px 18px;
+	border-radius: 50%;
+	z-index: 9999;
+	background-color: #aaa;
+	opacity: 0.8;
+	
+	i{
+		font-size: 22px;
+		font-weight: 600;
+	}
+}
+.owl-next{
+	top: 40%;
+	right: 0;
+	color: #fff;
+	padding: 10px 18px 12px 20px;
+	border-radius: 50%;
+	z-index: 9999;
+	background-color: #aaa;
+	opacity: 0.8;
+	
+	i{
+		font-size: 22px;
+		font-weight: 600;
+	}
+}
+
+
+.owl-dots{
+	width: 100%;
+	height: 20px;
+	padding: 10px 100px;
+	box-sizing: border-box;
+	//text-align: center;
+
+	.owl-dot{
+		display: inline-block;
+		width: 20%;
+		height: 10px;
+		//background-color:#aaa;
+		border-top: 4px solid #aaa;
+	}
+	.active{
+		width: 20%;
+		height: 10px;
+		//background-color:#000;
+		border-top: 4px solid #000;
+		margin: 0;
+	}
+	
+	@include respond-to(tablets){
+		padding: 10px 50px;
+	}
+	@include respond-to(small-tablets){
+		padding: 10px 30px;
+	}
+	@include respond-to(wide-handhelds){
+		padding: 10px 30px;
+	}
+	@include respond-to(handhelds){
+		display: none;
+	}
+}
+
+
+.mini-slider{
+	.owl-carousel{
+		.owl-prev{
+			display: none;
+		}
+		.owl-next{
+			display: none;
+		}
+	}	
+}
+.mini-slider3{
+	background-color: #fff;
+	box-shadow: 0 0 5px 0 #aaa;
+	
+	.owl-carousel{
+		.owl-prev{
+			left: 3%;
+			top: 43%;
+		}
+		.owl-next{
+			right: 3%;
+			top: 43%;
+		}
+	}	
+}
+
+
+//gallery index, view
+.sliders{
+	background: url('../img/fon-big.png') no-repeat;
+	background-position: center center;
+	background-size: cover;
+
+	.wrapper{
+		@include width1000;
+		min-height: 830px;
+		padding: 50px 5px;
+		//background-color: pink;
+		
+		.title{
+			margin-bottom: 10px;
+			
+			h1{
+				text-transform: uppercase;
+				font-size: 40px;
+				text-align: center;
+				
+				span{
+					color: #FF312B;
+				}
+				
+				@include respond-to(tablets){
+					font-size: 35px;
+				}
+				@include respond-to(small-tablets){
+					font-size: 30px;
+				}
+				@include respond-to(wide-handhelds){
+					font-size: 25px;
+				}
+				@include respond-to(handhelds){
+					font-size: 25px;
+				}
+			}
+			h2{
+				font-size: 30px;
+				font-weight: 500;
+				text-align: center;
+				
+				span{
+					color: #FF312B;
+				}
+				
+				@include respond-to(tablets){
+					font-size: 27px;
+				}
+				@include respond-to(small-tablets){
+					font-size: 23px;
+				}
+				@include respond-to(wide-handhelds){
+					font-size: 20px;
+				}
+				@include respond-to(handhelds){
+					font-size: 20px;
+				}
+			}
+			
+			@include respond-to(handhelds){
+				margin-bottom: 30px;
+			}
+		}
+		
+		.left{
+			display: block;
+			position: absolute;
+			left: 0;
+			padding: 0 5px;
+			width: 40%;
+			box-sizing: border-box;
+			//background-color: yellow;
+			
+			.remain{
+				margin: 30px 0 0 80px;
+				float: left;
+			
+				h3{
+					font-size: 18px;
+					text-transform: uppercase;
+					color: #000;
+					margin-bottom: 15px;
+					
+					span{
+						text-transform: none;
+					}
+				}
+				p{
+					font-size: 15px;
+					color: #000;
+					
+					span{
+						border: 2px solid #000;
+						border-radius: 50%;
+						padding: 5px 10px;
+						font-size: 18px;
+						margin-right: 5px;
+					}
+				}
+				
+				@include respond-to(tablets){
+					margin: 30px auto 0;
+					float: none;
+					text-align: center;
+				}
+				@include respond-to(small-tablets){
+					margin: 20px auto 0;
+					float: none;
+					text-align: center;
+				}
+				@include respond-to(wide-handhelds){
+					margin: 20px auto 0;
+					float: none;
+					text-align: center;
+				}
+				@include respond-to(handhelds){
+					margin: 20px auto 0;
+					float: none;
+					text-align: center;
+				}
+			}
+			.mini-slider{
+				position: relative;
+				margin: 20px 0;
+				clear: both;
+				
+				ul{
+					list-style: none;
+				}
+			}
+			.button{
+				.btn{
+					display: inline-block;
+					padding: 8px 20px;
+					margin: 0 0 30px 80px;
+					border-bottom: 2px solid #FF312B;
+					font-weight: 600;
+					font-size: 18px;
+					text-decoration: none;
+					color: #000;
+					
+/* 					&:hover{
+						color: #FF312B;
+						border-bottom: 2px solid transparent;
+					} */
+					
+					@include respond-to(tablets){
+						margin: 0;
+					}
+					@include respond-to(small-tablets){
+						margin: 0;
+					}
+					@include respond-to(wide-handhelds){
+						margin: 0 auto 30px;
+					}
+					@include respond-to(handhelds){
+						margin: 0 auto 30px;
+					}
+				}
+				
+				@include respond-to(tablets){
+					text-align: center;
+				}
+				@include respond-to(small-tablets){
+					text-align: center;
+				}
+				@include respond-to(wide-handhelds){
+					text-align: center;
+				}
+				@include respond-to(handhelds){
+					text-align: center;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				position: relative;
+				width: 50%;
+				float: left;
+			}
+			@include respond-to(handhelds){
+				position: relative;
+				width: 100%;
+				float: none;
+			}
+		}
+		.right{
+			display: block;
+			position: absolute;
+			right: 0;
+			width: 40%;
+			padding: 0 5px;
+			box-sizing: border-box;
+			//background-color: green;
+			
+			.remain{
+				margin: 30px 80px 0 0;
+				float: right;
+			
+				h3{
+					font-size: 18px;
+					text-transform: uppercase;
+					color: #354058;
+					margin-bottom: 15px;
+					
+					span{
+						text-transform: none;
+					}
+				}
+				p{
+					font-size: 15px;
+					color: #000;
+					
+					span{
+						border: 2px solid #000;
+						border-radius: 50%;
+						padding: 5px 10px;
+						font-size: 18px;
+						margin-right: 5px;
+					}
+				}
+				
+				@include respond-to(tablets){
+					margin: 30px auto 0;
+					float: none;
+					text-align: center;
+				}
+				@include respond-to(small-tablets){
+					margin: 20px auto 0;
+					float: none;
+					text-align: center;
+				}
+				@include respond-to(wide-handhelds){
+					margin: 20px auto 0;
+					float: none;
+					text-align: center;
+				}
+				@include respond-to(handhelds){
+					margin: 20px auto 0;
+					float: none;
+					text-align: center;
+				}
+			}
+			.mini-slider{
+				position: relative;
+				margin: 20px 0;
+				clear: both;
+				
+				ul{
+					list-style: none;
+				}
+			}
+			.button{
+				text-align: right;
+				
+				.btn{
+					display: inline-block;
+					padding: 8px 20px;
+					margin: 0 80px 30px 0;
+					border-bottom: 2px solid #FF312B;
+					font-weight: 600;
+					font-size: 18px;
+					text-decoration: none;
+					color: #000;
+					
+/* 					&:hover{
+						color: #FF312B;
+						border-bottom: 2px solid transparent;
+					} */
+					
+					@include respond-to(tablets){
+						margin: 0;
+					}
+					@include respond-to(small-tablets){
+						margin: 0;
+					}
+					@include respond-to(wide-handhelds){
+						margin: 0 auto 30px;
+					}
+					@include respond-to(handhelds){
+						margin: 0 auto 30px;
+					}
+				}
+				
+				@include respond-to(tablets){
+					text-align: center;
+				}
+				@include respond-to(small-tablets){
+					text-align: center;
+				}
+				@include respond-to(wide-handhelds){
+					text-align: center;
+				}
+				@include respond-to(handhelds){
+					text-align: center;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				position: relative;
+				width: 50%;
+				float: right;
+			}
+			@include respond-to(handhelds){
+				position: relative;
+				width: 100%;
+				float: none;
+			}
+		}
+		.center{
+			display: block;
+			width: 40%;
+			position: absolute;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%, -50%);
+			box-sizing: border-box;
+			top: 65%;
+			padding: 0 5px;
+			//background-color: #FF312B;
+			
+			.remain{
+				text-align: center;
+
+				h3{
+					font-size: 18px;
+					text-transform: uppercase;
+					color: red;
+					margin-bottom: 15px;
+					
+					span{
+						text-transform: none;
+					}
+				}
+				p{
+					font-size: 15px;
+					color: #000;
+					
+					span{
+						border: 2px solid #000;
+						border-radius: 50%;
+						padding: 5px 10px;
+						font-size: 18px;
+						margin-right: 5px;
+					}
+				}
+			}
+			.mini-slider{
+				position: relative;
+				margin: 20px 0;
+				clear: both;
+				
+				ul{
+					list-style: none;
+				}
+			}
+			.button{
+				text-align: center;
+				
+				.btn{
+					display: inline-block;
+					padding: 8px 20px;
+					margin: 10px 0 30px 0;
+					border-bottom: 2px solid #FF312B;
+					font-weight: 600;
+					font-size: 18px;
+					text-decoration: none;
+					color: #000;
+					
+/* 					&:hover{
+						color: #FF312B;
+						border-bottom: 2px solid transparent;
+					} */
+					
+					@include respond-to(tablets){
+						margin: 0;
+					}
+					@include respond-to(small-tablets){
+						margin: 0;
+					}
+					@include respond-to(wide-handhelds){
+						margin: 0;
+					}
+					@include respond-to(handhelds){
+						margin: 0;
+					}
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				width: 50%;
+				position: relative;
+				left: 0;
+				margin-right: 0;
+				transform: none;
+				box-sizing: border-box;
+				top:0;
+				margin: 0 auto;
+				padding: 0 5px;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				position: relative;
+				left: 0;
+				margin-right: 0;
+				transform: none;
+				box-sizing: border-box;
+				top:0;
+				margin: 0 auto;
+				padding: 0 5px;
+			}
+		}
+  		.left:hover,.right:hover,.center:hover{
+			z-index: 9999;
+			
+			.remain{
+				h3{
+					color: #FF312B;
+				}
+				p{
+					color: #000;
+					
+					span{
+						border: 2px solid #FF312B;
+						color: #FF312B;
+					}
+				}
+			}
+			.mini-slider{
+				.owl-carousel{
+					.owl-prev{
+						display: block;
+					}
+					.owl-next{
+						display: block;
+					}
+				}	
+			}
+			.button{
+				.btn{
+					color: #FF312B;
+					border-bottom: 2px solid transparent;
+				}
+			}
+		}
+		
+		@include respond-to(tablets){
+			min-height: 700px;
+			padding: 40px 0;
+		}
+		@include respond-to(small-tablets){
+			min-height: 650px;
+			padding: 20px 0;
+		}
+		@include respond-to(wide-handhelds){
+			min-height: auto;
+			padding: 20px 0;
+			@include clearfix;
+		}
+		@include respond-to(handhelds){
+			min-height: auto;
+			padding: 20px 0;
+			@include clearfix;
+		}
+	}
+}

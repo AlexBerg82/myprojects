@@ -1,0 +1,327 @@
+.top-menu{
+	position: relative;
+	@include width1000;
+	line-height: 130%;
+	
+	.bcg-block{
+		nav{
+			position: relative;
+			width: calc(97% - 20px);
+			margin-left: 20px;
+			border: 1px solid rgba(255, 255, 255, 0);
+			background: url('../img/bcg-menu.png') repeat-x;
+			//background-size: contain;
+			@include clearfix;
+			box-sizing: border-box;
+			
+			
+			//left and right mobile menus
+			//right
+			.wrapper-mobile-menu{
+				float: right;
+				@include clearfix;
+				width: 50%;
+				
+				p{
+					float: right;
+					padding: 14px 0;
+					font-weight: 600;
+					color: #F06514;
+				}
+				.mobile-menu{
+					display: block;
+					float: right;
+					padding: 5px 3px;
+					margin: 9px 10px;
+					margin-right: 120px;
+					cursor: pointer;
+					
+					.icon_bar{
+						width: 15px;
+						height: 1px;
+						margin: 3px;
+						border-radius: 4px;
+						background-color: #F06514;
+						
+						@include respond-to(wide-handhelds){
+							width: 25px;
+							height: 5px;
+							margin: 2px;
+						}
+						@include respond-to(handhelds){
+							width: 25px;
+							height: 5px;
+							margin: 2px;
+						}
+					}
+
+					@include respond-to(wide-handhelds){
+						padding: 2px 3px;
+						margin-right: 110px;
+					}
+					@include respond-to(handhelds){
+						padding: 2px 3px;
+						margin-right: 10px;
+						margin-left: 5px;
+					}
+				}
+				.mobile-menu:hover .icon_bar{
+					background-color: #aaa;
+					transition: 1s;
+				}
+				
+				@include respond-to(display-big){
+					display: none;
+				}
+				@include respond-to(display){
+					display: none;
+				}
+				@include respond-to(tablets){
+					display: none;
+				}
+				@include respond-to(small-tablets){
+					display: none;
+				}
+				@include respond-to(handhelds){
+					width: 40%;
+				}
+			}
+			//left
+			.wrapper-mobile-menu-left{
+				@extend .wrapper-mobile-menu;
+				
+				float: left;
+				
+				p{
+					float: left;
+					padding: 14.5px 0;
+					color: #833E33;
+				}
+				.mobile-menu{
+					float: left;
+					margin-right: 0;
+					margin-left: 50px;
+					
+					.icon_bar{
+						background-color: #A54A75;
+					}
+
+					@include respond-to(wide-handhelds){
+						margin-right: 10px;
+						margin-left: 40px;
+					}
+					@include respond-to(handhelds){
+						margin-left: 10px;
+						margin-right: 5px;
+					}
+				}
+				.mobile-menu:hover .icon_bar{
+					background-color: #aaa;
+					transition: 1s;
+				}
+				
+				@include respond-to(handhelds){
+					width: 60%;
+				}
+			}
+
+			//normal top-menu
+			//and mobile left view
+			.menu{
+				margin-left: 30px;
+				@include clearfix;
+
+				@include respond-to(small-tablets){
+					margin-left: 20px;
+				}
+				@include respond-to(wide-handhelds){
+					display: none;
+					width: 100%;
+					margin-top: 45px;
+					margin-left: 0;
+				}					
+				@include respond-to(handhelds){
+					display: none;
+					width: 100%;
+					margin-top: 45px;
+					margin-left: 0;
+				}
+
+				li{
+					float: left;
+					position: relative;
+					z-index: 100;
+
+					@include respond-to(wide-handhelds){
+						float: none;
+						width: 100%;
+						margin: 0;
+						background-color:#FFF8DC;
+						text-align: right;
+					}
+					@include respond-to(handhelds){
+						float: none;
+						width: 100%;
+						margin: 0;
+						background-color:#FFF8DC;
+						text-align: right;
+					}
+				}
+				li:hover{
+					background: url('../img/menu1_bg_hover.png') no-repeat right top;
+				}
+				li a{
+					display: block;
+					padding: 12px 20px;
+					font-size: 20px;
+					text-decoration: none;
+					color: #04A2A3;
+					
+					@include respond-to(small-tablets){
+						padding: 9px;
+					}
+					@include respond-to(wide-handhelds){
+						padding-right: 30px;
+					}
+					@include respond-to(handhelds){
+						padding-right: 30px;
+					}
+				}
+				li a:hover{
+					color: #E46E9C;
+					text-shadow: 1px 1px 5px rgba(230, 125, 166, 0.7), -1px -1px 5px rgba(230, 125, 166, 0.7);
+					transition: 0.5s;
+					
+					@include respond-to(wide-handhelds){
+						background-color: #E8E8E8;
+					}
+					@include respond-to(handhelds){
+						background-color: #E8E8E8;
+					}
+				}
+				.activ-top a{
+					color: #E46E9C;
+					text-shadow: none;
+				}
+				.activ-top{
+					background: url('../img/motyl3.gif') no-repeat right top;
+				}
+				.activ-top:hover{
+					background: url('../img/motyl3.gif') no-repeat right top;
+				}
+				.activ-top:hover a{
+					text-shadow: none;
+				}
+			}
+			//mobile right view
+			.menu-klub{
+				display: none;
+				width: 100%;
+				margin-top: 45px;
+				@include clearfix;
+
+				li{
+					position: relative;
+					float: none;
+					width: 100%;
+					margin: 0;
+					background-color:#FDF5E6;
+					z-index: 100;
+					
+					.submenu-klub{
+						li a{
+							@include respond-to(wide-handhelds){
+								padding: 12px 30px;
+								font-size: 12px;
+								background-color: #FFFFE0;
+							}
+							@include respond-to(handhelds){
+								padding: 12px 30px;
+								font-size: 12px;
+								background-color: #FFFFE0;
+							}
+						}
+						li:hover a{
+							@include respond-to(wide-handhelds){
+								background-color: #EEEED1;
+							}
+							@include respond-to(handhelds){
+								background-color: #EEEED1;
+							}
+						}
+					}
+				}
+				li a{
+					display: block;
+					padding: 12px 20px;
+					font-size: 20px;
+					text-decoration: none;
+					color: #04A2A3;
+					//background-color:#aaa;
+				}
+
+				li a:hover{
+					color: #E46E9C;
+					background-color: #E8E8E8;
+					transition: 0.5s;
+					text-shadow: 1px 1.2px 0 #aaa;
+				}
+				.activ-top a{
+					color: #E46E9C;
+					text-shadow: none;
+				}
+			}
+
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				margin-left: 0;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+	}
+	//images on both sides of top-menu
+	.image-left{
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		top: 0;
+		left: 0;
+		background: url('../img/bird.png') no-repeat;
+		z-index: 999;
+		opacity:0;
+		
+		@include respond-to(handhelds){
+			display: none;
+		}
+	}
+	.image-right{
+		@extend .image-left;
+		
+		width: 115px;
+		left: calc(100% - 115px);
+		right: 0;
+		background: url('../img/flower.png') no-repeat;
+	}
+	
+	@include respond-to(display){
+		width: 100%;
+	}
+	@include respond-to(tablets){
+		width: 100%;
+	}
+	@include respond-to(small-tablets){
+		width: 100%;
+		line-height: 130%;
+	}
+	@include respond-to(wide-handhelds){
+		width: 100%;
+		line-height: 100%;
+	}
+	@include respond-to(handhelds){
+		width: 100%;
+		line-height: 100%;
+	}
+}

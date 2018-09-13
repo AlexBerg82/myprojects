@@ -1,0 +1,395 @@
+//top-menu
+.wrapper-menu{
+	@include clearfix;
+	padding: 1px 0;
+
+ 	@include respond-to(handhelds){
+		padding:0 0 10px 0;
+	}
+}
+
+.top-menu{
+	margin-top:10px; 
+	width:100%;
+	float:right;
+	@include clearfix;
+	
+	//fixed mobile-menu
+	.wrapper-mobile-menu{
+		@include clearfix;
+		display: none;
+		
+		p{
+			float: right;
+			padding: 13px 0;
+			font-weight: 600;
+			color: #c3010e;
+		}
+		
+		.mobile-menu{
+			display: block;
+			float: right;
+			padding: 5px 3px;
+			margin: 5px 10px;
+			cursor: pointer;
+		
+			.icon_bar{
+				width: 15px;
+				height: 1px;
+				margin: 3px;
+				border-radius: 4px;
+				background-color: #c3010e;
+				
+				@include respond-to(wide-handhelds){
+					width: 25px;
+					height: 5px;
+					margin: 2px;
+				}
+				@include respond-to(handhelds){
+					width: 25px;
+					height: 5px;
+					margin: 2px;
+				}
+			}
+		}
+
+		@include respond-to(wide-handhelds){
+			display: block;
+		}
+		@include respond-to(handhelds){
+			display: block;
+		}
+	}
+
+	@include respond-to(tablets){
+		width:calc(100%-220px); 
+		padding:0 5px;
+	}	
+	@include respond-to(small-tablets){
+		width:calc(100%-220px); 
+		padding:0 5px;
+	}	
+	@include respond-to(wide-handhelds){
+		width:100%; 
+		padding:0;
+	}	
+ 	@include respond-to(handhelds){
+		width:100%; 
+		padding:0;
+	}
+}
+ul.menu{
+ 	display: block;
+	float: right;
+	font-size: 0;
+	
+	@include respond-to(wide-handhelds){
+		display: none;
+	}
+ 	@include respond-to(handhelds){
+		display: none;
+	}
+}
+ul.menu > li{
+	float: left;
+	list-style: none;
+	position: relative;
+	padding: 0 15px;
+	background: url(../img/navLine.png) no-repeat right center;
+	
+	@include respond-to(tablets){
+		padding: 0 10px;
+	}
+	@include respond-to(small-tablets){
+		padding: 0 2px;
+		background: url('');
+	}
+}
+ul.menu > li:last-child{
+	background: url('');
+}
+ul.menu > li:hover .sub, ul.menu > li:hover .sub-menu{
+	display: block;
+	
+	@include respond-to(small-tablets){
+		display: none;
+	}	
+	@include respond-to(wide-handhelds){
+		display: none;
+	}	
+	@include respond-to(handhelds){
+		display: none;
+	}
+}
+ul.menu > li:hover{
+	background: #000;
+    background: linear-gradient(to top, #000, #2B2B2B);
+}
+ul.menu > li > a:hover{
+	color: #E8E8E8;
+	border-bottom: 5px solid #C3010E;
+}
+ul.menu .active > a{
+	border-bottom: 5px solid #C3010E;
+	color: #E8E8E8;
+}
+ul.menu > li > a{
+	display: block;
+	padding: 12px 5px;
+	font-size: 13px;
+	color: #9C9C9C;
+	font-weight: 600;
+	border-bottom: 5px solid transparent;
+	text-decoration: none;
+	
+	@include respond-to(small-tablets){
+		padding: 0 3px;
+		font-size: 13px;
+	}
+}
+ul.menu > li:first-child{
+	@include respond-to(small-tablets){
+		padding: 0 3px 0 0;
+	}
+}
+ul.menu > li:first-child a{
+	@include respond-to(small-tablets){
+		padding: 0 3px 0 0;
+	}
+}
+ul.menu > li:last-child{
+	@include respond-to(small-tablets){
+		padding: 0 0 3px 0;
+	}
+}
+ul.menu > li:last-child a{
+	@include respond-to(small-tablets){
+		padding: 0 0 3px 0;
+	}
+}
+
+
+
+//submenu cars
+ul.sub{
+	padding: 0;
+	background-color: #F6F6F6;
+	position: absolute;
+	display: none;
+	z-index: 9999;
+	box-shadow: rgba(156,156,156,0.7) 0px 2px 7px;
+}
+//submenu
+ul.sub-menu > li{
+	padding: 0;
+}
+ul.sub-menu{
+	background-color: #F6F6F6;
+	box-shadow: rgba(156,156,156,0.7) 0px 2px 7px;
+	position: absolute;
+	z-index: 9999;
+	display: none;
+	right: 0;
+}
+ul.sub-menu > li > a{
+	color: #000;
+	padding: 10px 20px;
+	font-size: 12px;
+	background: linear-gradient(to top, #E8E8E8, #fff);
+	margin: 0;
+	display: block;
+	
+	&:hover{
+		color: #C3010E;
+	}
+}
+
+.sub li{
+	//submenu cars
+	.wrapper-tabs{
+		width: 598px;
+		padding: 5px;
+		@include clearfix;
+		z-index: 9999;
+		background-color: #DADBDD;
+	}
+	//left part submenu with cars
+	.wrapper-tabs .tabs__caption{
+		width: 165px;
+		display: inline-block;
+		vertical-align: top;
+
+		li{
+			width: 100%;
+			cursor: pointer;
+			position: relative;
+			z-index: 10;
+			margin: 0;
+			border-bottom: 1px solid #DADBDD;
+			
+			.wrp-tab{
+				padding: 5px;
+				text-align: center;
+				background-color: #F9F9F9;
+				
+				img{
+					width: 100px;
+				}
+				p{
+					font-size: 13px;
+					color: #C10106;
+					margin: 5px 0;
+					font-weight: 600;
+				}
+			}
+		}
+		li:last-child{
+			border-bottom: none;
+		}
+		.active{
+			.wrp-tab{
+				background-color: #DADBDD;
+			}
+		}
+		
+		@include respond-to(tablets){
+			width: 155px;
+		}
+	}
+
+	.tabs__content{
+		display: none;
+	}
+
+	.tabs__content.active{
+		display: inline-block;
+		max-width: 433px;
+
+		.card-grid{
+			@include clearfix;
+			font-size: 0;
+			margin: 0 2px;
+
+			li{
+				display: inline-block;
+				vertical-align:top;
+				margin: 1px;
+				@include clearfix;
+				position: relative;
+				background-color: #F9F9F9;
+				padding: 0;
+
+				a{
+					padding: 5px;
+					display: block;
+					text-align: center;
+					
+					img{
+						width: calc(100% - 10px);
+					}
+				}
+				
+				.title{
+					padding: 5px;
+					
+					h2{
+						color: #CD2626;
+						font-size: 16px;
+					}
+					a{
+						font-size: 12px;
+						padding: 5px;
+						color: #aaa;
+						text-align: left;
+						
+						&:hover{
+							color: #4F4F4F;
+						}
+						
+						i{
+							color: #FF0000;
+							font-size: 10px;
+						}
+					}
+				}
+
+				@include respond-to(display-full){
+					width:calc(50% - 2px);
+				}
+				@include respond-to(display-middle){
+					width:calc(50% - 2px);
+				}
+				@include respond-to(display-big){
+					width:calc(50% - 2px);
+				}
+				@include respond-to(display){
+					width:calc(50% - 2px);
+				}
+				@include respond-to(tablets){
+					width:calc(50% - 2px);
+				}
+				@include respond-to(small-tablets ){
+					width:calc(50% - 2px);
+				}
+				@include respond-to(wide-handhelds){
+					display: none;
+				}
+				@include respond-to(handhelds){
+					display: none;
+				}
+			}
+		}
+	}
+
+	.tabs__caption li a {
+		color: #aaa;
+		display: block;
+		cursor: pointer;
+		font-size: 13px;
+		padding: 15px 25px;
+		margin: 0;
+	}
+	.tabs__caption li.tab_active a{
+		color: #C3010E;
+	}
+}
+
+
+
+//mobile-menu
+.menu-mobile{
+	display: none;
+	width: 100%;
+	position: absolute;
+	@include clearfix;
+
+	li{
+		position: relative;
+		float: none;
+		width: 100%;
+		margin: 0;
+		background: linear-gradient(to top, #363636, #4F4F4F);
+		z-index: 100;
+		border-bottom: 1px solid #9C9C9C;
+	}
+	li a{
+		display: block;
+		padding: 8px 10px;
+		font-size: 16px;
+		text-decoration: none;
+		color: #CFCFCF;
+	}
+	li:last-child{
+		border: none;
+	}
+	li a:hover{
+		color: #E8E8E8;
+		background-color: #4F4F4F;
+		transition: 0.5s;
+		text-shadow: 1px 1.2px 0 #aaa;
+	}
+	.activ-top a{
+		color: #D81F23;
+		text-shadow: none;
+	}
+}

@@ -1,0 +1,153 @@
+.wrapper-header{
+	background: #1E1E1E;
+    background: linear-gradient(to top, #1E1E1E, #3B3B3B);
+	@include clearfix;
+	box-shadow: 0 29px 11px #000;
+	
+	.header{
+		@include width1000;
+		@include clearfix;
+		padding: 5px;
+		
+		.logo{
+			width: 135px;
+			padding: 10px 0;
+			float: left;
+			
+			img{
+				width: 100%;
+			}
+		}
+		
+		@include respond-to(tablets){
+			width: 100%;
+		}		
+		@include respond-to(small-tablets){
+			width: 100%;
+		}		
+		@include respond-to(wide-handhelds){
+			width: 100%;
+		}		
+		@include respond-to(handhelds){
+			width: 100%;
+		}
+	}
+}
+
+
+
+.language_search{
+	float: right;
+	padding: 10px 0;
+			
+	.language_menu{
+		display: inline-block;
+		vertical-align: middle;
+		@include clearfix;
+		margin: 0 15px;
+		
+		img{
+			margin: 2px 3px 0 3px;
+		}
+	}
+
+	ul.language_menu > li:hover > ul.language_submenu{
+		display: block;
+	}
+	ul.language_menu > li > a:hover, ul.language_submenu > li > a:hover{
+		color: #C3010E;
+	}
+
+	.search{
+		width: 173px;
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		
+		.wrap_search{
+			border: 1px solid #737373;
+			background-color: #fff;
+		}
+		.search_input{
+			height: 17px;
+			padding: 3px 0px 3px 5px;
+			border: none;
+			background-color: #161415;
+			color: #E8E8E8;
+			outline: none;
+
+			@include respond-to(handhelds){
+				width: 100%;
+				padding: 7px 0 7px 5px;
+			}
+		}
+		.search_input::-moz-placeholder{
+			color: #737373;
+		}
+		.search_input::-webkit-input-placeholder{
+			color: #737373;
+		}
+		.search_input:-moz-placeholder{
+			color: #737373;
+		}
+		.search_input:-ms-input-placeholder{
+			color: #737373;
+		}
+		.search_input:focus::-webkit-input-placeholder{
+			color: transparent;
+		}
+		.search_input:focus::-moz-placeholder{
+			color: transparent;
+		}
+		.search_input:focus:-moz-placeholder{
+			color: transparent;
+		}
+		.search_input:focus:-ms-input-placeholder{
+			color: transparent;
+		}
+		.btn_search{
+			position: absolute;
+			width: 30px;
+			height: 25px;
+			top: 0;
+			right: 0;
+			background: #ff3019;
+			background: -moz-linear-gradient(top, #ff3019 50%, #cf0404 50%);
+			background: -webkit-linear-gradient(top, #ff3019 50%,#cf0404 50%);
+			background: linear-gradient(to bottom, #ff3019 50%,#cf0404 50%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 );
+
+			text-align: center;
+			cursor: pointer;
+			
+			i{
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 16px;
+				color: #fff;
+				padding: 3px;
+				
+				@include respond-to(handhelds){
+					font-size: 20px;
+					padding: 6px;
+				}
+			}
+
+			@include respond-to(handhelds){
+				width: 35px;
+				height: 33px;
+			}
+		}
+		
+		@include respond-to(handhelds){
+			width: 100%;
+			margin: 0 auto;
+			float: none;
+		}
+	}
+	
+	@include respond-to(handhelds){
+		float: none;
+		text-align: right;
+	}
+}

@@ -1,0 +1,1224 @@
+﻿<!Doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Haval</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+	
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+	<script type="text/javascript" src="js/jquery.textchange.js"></script>
+	
+	<script type="text/javascript" src="owlcarousel/initial.js"></script>
+	<script type="text/javascript" src="owlcarousel/owl.carousel.js"></script>
+
+	
+    <link rel="stylesheet" href="js/jplist/jquery-ui.css" />
+	<link href="js/jplist/jplist.demo-pages.min.css?v=1" rel="stylesheet" type="text/css" />
+    <link href="js/jplist/jplist.core.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/jplist/jplist.filter-toggle-bundle.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/jplist/jplist.pagination-bundle.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/jplist/jplist.history-bundle.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/jplist/jplist.textbox-filter.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/jplist/jplist.jquery-ui-bundle.min.css" rel="stylesheet" type="text/css" />
+
+	<script src="js/jplist/jquery-ui.js"></script>
+    <script src="js/jplist/jplist.core.min.js"></script>
+    <script src="js/jplist/jplist.filter-dropdown-bundle.min.js"></script>
+    <script src="js/jplist/jplist.filter-toggle-bundle.min.js"></script>
+    <script src="js/jplist/jplist.history-bundle.min.js"></script>
+    <script src="js/jplist/jplist.jquery-ui-bundle.min.js"></script>
+    <script src="js/jplist/jplist.pagination-bundle.min.js"></script>
+    <script src="js/jplist/jplist.sort-bundle.min.js"></script>
+    <script src="js/jplist/jplist.textbox-filter.min.js"></script>
+	
+	
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css"/>
+	<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="wrapper-header">
+		<div class="header">
+			<div class="logo">
+				<a href="#"><img src="img/logo.png"></a>
+			</div>
+
+			<div class="top-menu" id="top_menu">
+				<ul class="menu">
+					<li class="active"><a href="#">Главная</a></li>
+					<li><a href="#">Автомобили</a></li>
+					<li><a href="#">Дилеры</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+					
+				<div class="wrapper-mobile-menu">
+					<div id="touch-menu" class="mobile-menu">
+						<div class="icon_bar"></div>
+						<div class="icon_bar"></div>
+						<div class="icon_bar"></div>
+					</div>
+					<p>Меню</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<ul class="menu-mobile">
+		<li class="activ-top"><a href="#">Главная</a></li>
+		<li><a href="#">Автомобили</a></li>
+		<li><a href="#">Дилеры</a></li>
+		<li><a href="#">Контакты</a></li>
+	</ul>
+	
+	
+	<div class="wrp">
+		<div class="cell-price" id="demo">
+			<div class="filters-block">
+				<div class="filter">
+					<div class="box jplist">	
+						<!-- panel -->
+						<div class="jplist-panel box panel-top">						
+							
+							<!-- reset button -->
+							<button 
+								type="button" 
+								class="jplist-reset-btn"
+								data-control-type="reset" 
+								data-control-name="reset" 
+								data-control-action="reset">
+								Сброс<!--  &nbsp;<i class="fa fa-share"></i> -->
+							</button>
+
+							<!-- items per page dropdown -->
+							<div
+								class="jplist-drop-down" 
+								id="jplist-drop-down" 
+								data-control-type="items-per-page-drop-down" 
+								data-control-name="paging" 
+								data-control-action="paging"
+								data-control-animate-to-top="true">
+										
+								<ul>
+									<li><span data-number="4" data-default="true"> 4 на страницу </span></li>
+									<li><span data-number="8"> 8 на страницу </span></li>
+									<li><span data-number="16"> 16 на страницу </span></li>
+									<li><span data-number="24"> 24 на страницу </span></li>
+									<li><span data-number="all"> Показать все </span></li>
+								</ul>
+							</div>		
+							
+							<!-- sort dropdown -->
+							<div 
+								class="jplist-drop-down" 
+								data-control-type="sort-drop-down"
+								data-control-name="sort" 
+								data-control-action="sort"
+								data-datetime-format="{month}/{day}/{year}"> <!-- {year}, {month}, {day}, {hour}, {min}, {sec} -->
+										
+								<ul>
+									<li><span data-path="default">Двигатель</span></li>
+									<li><span data-path=".model" data-order="asc" data-type="text">Model A-Z</span></li>
+									<li><span data-path=".model" data-order="desc" data-type="text">Model Z-A</span></li>
+									<li><span data-path=".manufacturer" data-order="asc" data-type="text">Manufacturer A-Z</span></li>
+									<li><span data-path=".manufacturer" data-order="desc" data-type="text">Manufacturer Z-A</span></li>
+								</ul>
+							</div>
+
+							<!-- filter by title -->
+							<div class="text-filter-box">
+								<i class="fa fa-search jplist-icon"></i>
+										
+								<!--[if lt IE 10]>
+								<div class="jplist-label">Filter by Model:</div>
+								<![endif]-->
+										
+								<input 
+									data-path=".model" 
+									type="text" 
+									id="dlr" 
+									value="" 
+									placeholder="Сортировка по Дилеру" 
+									data-control-type="textbox" 
+									data-control-name="model-text-filter" 
+									data-control-action="filter"
+								/>
+							</div>
+
+							
+							<!-- filter by Manufacturer -->
+							<div class="text-filter-box">
+								<i class="fa fa-search  jplist-icon"></i>
+										
+								<!--[if lt IE 10]>
+								<div class="jplist-label">Filter by Manufacturer:</div>
+								<![endif]-->
+										
+								<input 
+									data-path=".manufacturer" 
+									type="text" 
+									id="twn" 
+									value="" 
+									placeholder="Сортировка по Городу" 
+									data-control-type="textbox" 
+									data-control-name="manufacturer-text-filter" 
+									data-control-action="filter"
+								/>
+							</div>
+
+							<!-- jQuery UI range slider -->
+							<!-- lengthSlider and lengthValues are user function defined in jQuery.fn.jplist.settings -->
+							
+							<div 
+								class="jplist-range-slider"
+								data-control-type="range-slider"
+								data-control-name="range-slider-prices"
+								data-control-action="filter"
+								data-path=".price-c"
+								data-slider-func="pricesSlider"
+								data-setvalues-func="priesValues" style="clear:both;">
+								
+								<div class="value" id="value1" data-type="prev-value"></div>
+								<div class="ui-slider" data-type="ui-slider"></div>
+								<div class="value" id="value2" data-type="next-value"></div>
+							</div>
+							
+							
+							<div class="jplist-group" data-control-type="checkbox-group-filter" data-control-action="filter" data-control-name="colors">
+								<input data-path=".blue" id="blue-color" type="checkbox">
+								<label for="blue-color">Blue and White</label>						
+							
+								<input data-path=".brown" id="brown-color" type="checkbox">
+								<label for="brown-color">Brown and White</label>
+
+								<input data-path=".red" id="red-color" type="checkbox">
+								<label for="red-color">Mars Red</label>							
+								
+								<input data-path=".green" id="green-color" type="checkbox">
+								<label for="green-color">Pittsburg Silver</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="switchers">
+						<div class="view-switch">
+							<p>Вид: </p>
+						
+							<div class="grid-line">
+								<a id="chck_card" href="#"></a>
+								<a id="chck_line" href="#"></a>
+							</div>
+						</div>
+					
+						<div class="line-switch">
+							<input type="checkbox" class="checkbox" id="chckln" />
+							<label for="chckln">Авто</label>
+						</div>
+						
+						<div class="map-switch">
+							<input type="checkbox" class="checkbox" id="checkbox" />
+							<label for="checkbox">На карте</label>
+						</div>
+					</div>
+				</div><!-- filter -->
+			</div><!-- filters-block -->
+		
+		
+			<ul class="list-block lists list">
+				<li class="list-item">
+					<a href="" class="left-img-cell">
+						<img src="images/car/1.png" alt="x">
+					</a>
+					
+					<div class="text-block-left">
+						<div class="left">
+							<h3><a href="#" class="red" clr="50.444843, 30.636279">HAVAL H2 Mars red</a></h3>
+							<p>On February 1, 2018, Brand Finance, an internationally authoritative brand valuation brand valuation</p>
+							
+							<ul class="option">
+								<li><a href="#">Фото</a></li>
+								<li><a href="#">Комплектация</a></li>
+							</ul>
+							
+							<p><span class="manufacturer" twn="50.444843, 30.636279">г. Киев</span> <span class="model">000 "ТЕХНОБУД"</span></p>
+						</div>
+						
+						<div class="right">
+							<div class="line-buttons">
+								<ul>
+									<li><a href="" title="Print"><i class="fa fa-print" aria-hidden="true"></i></a></li>
+									<li><a href="" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
+									<li><a href="" title="Download"><i class="fa fa-cloud-download" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+							
+							<div class="price">
+								<p class="price-c" prc="50.444843, 30.636279">105 560 <span>грн.</span></p>
+								
+								<div class="btn-price">
+									<a href="">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li><!-- list-item -->
+				
+				<li class="list-item">
+					<a href="" class="left-img-cell">
+						<img src="images/car/2.png" alt="x">
+					</a>
+					
+					<div class="text-block-left">
+						<div class="left">
+							<h3><a href="#" class="blue" clr="50.365769, 30.849477">HAVAL H2 Mars red</a></h3>
+							<p>On February 1, 2018, Brand Finance, an internationally authoritative brand valuation brand valuation</p>
+							
+							<ul class="option">
+								<li><a href="#">Фото</a></li>
+								<li><a href="#">Комплектация</a></li>
+							</ul>
+							
+							<p><span class="manufacturer" twn="50.365769, 30.849477">г. Львов</span> <span class="model">000 "АВТОПАК"</span></p>
+						</div>
+						
+						<div class="right">
+							<div class="line-buttons">
+								<ul>
+									<li><a href="" title="Print"><i class="fa fa-print" aria-hidden="true"></i></a></li>
+									<li><a href="" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
+									<li><a href="" title="Download"><i class="fa fa-cloud-download" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+							
+							<div class="price">
+								<p class="price-c" prc="50.365769, 30.849477">115 560 <span>грн.</span></p>
+								
+								<div class="btn-price">
+									<a href="">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li><!-- list-item -->
+				
+				<li class="list-item">
+					<a href="" class="left-img-cell">
+						<img src="images/car/3.png" alt="x">
+					</a>
+					
+					<div class="text-block-left">
+						<div class="left">
+							<h3><a href="#" class="brown" clr="50.264683, 28.681269">HAVAL H2 Mars red</a></h3>
+							<p>On February 1, 2018, Brand Finance, an internationally authoritative brand valuation brand valuation</p>
+							
+							<ul class="option">
+								<li><a href="#">Фото</a></li>
+								<li><a href="#">Комплектация</a></li>
+							</ul>
+							
+							<p><span class="manufacturer" twn="50.264683, 28.681269">г. Житомир</span> <span class="model">ФОП ВАСИЛЕНКО</span></p>
+						</div>
+						
+						<div class="right">
+							<div class="line-buttons">
+								<ul>
+									<li><a href="" title="Print"><i class="fa fa-print" aria-hidden="true"></i></a></li>
+									<li><a href="" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
+									<li><a href="" title="Download"><i class="fa fa-cloud-download" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+							
+							<div class="price">
+								<p class="price-c" prc="50.264683, 28.681269">125 560 <span>грн.</span></p>
+								
+								<div class="btn-price">
+									<a href="">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li><!-- list-item -->
+			</ul><!-- list-block list -->
+			
+			<div class="wrapper-map">
+				<div id="map"></div>
+				
+				<div class="map-card">
+					<ul class="list-small-block listsm">
+						<li class="list-item">
+							<a href="" class="left-img-cell">
+								<img src="images/car/1.png" alt="x">
+							</a>
+							
+							<div class="text-block-left">
+								<div class="left">
+									<h3><a href="#" class="red" clr="50.444843, 30.636279">HAVAL H2 Mars red</a></h3>
+									<p>On February 1, 2018, Brand Finance, an internationally authoritative brand valuation brand valuation</p>
+									<p><span class="manufacturer" twn="50.444843, 30.636279">г. Киев</span> <span class="model">000 "ТЕХНОБУД"</span></p>
+								</div>
+								
+								<div class="right">
+									<div class="price">
+										<p class="price-c" prc="50.444843, 30.636279">105 560 <span>грн.</span></p>
+										
+										<div class="btn-price">
+											<a href="">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						
+						<li class="list-item">
+							<a href="" class="left-img-cell">
+								<img src="images/car/2.png" alt="x">
+							</a>
+							
+							<div class="text-block-left">
+								<div class="left">
+									<h3><a href="#" class="blue" clr="50.365769, 30.849477">HAVAL H2 Mars red</a></h3>
+									<p>On February 1, 2018, Brand Finance, an internationally authoritative brand valuation brand valuation</p>
+									<p><span class="manufacturer" twn="50.365769, 30.849477">г. Львов</span> <span class="model">000 "АВТОПАК"</span></p>
+								</div>
+								
+								<div class="right">
+									<div class="price">
+										<p class="price-c" prc="50.365769, 30.849477">115 560 <span>грн.</span></p>
+										
+										<div class="btn-price">
+											<a href="">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						
+						<li class="list-item">
+							<a href="" class="left-img-cell">
+								<img src="images/car/3.png" alt="x">
+							</a>
+							
+							<div class="text-block-left">
+								<div class="left">
+									<h3><a href="#" class="brown" clr="50.264683, 28.681269">HAVAL H2 Mars red</a></h3>
+									<p>On February 1, 2018, Brand Finance, an internationally authoritative brand valuation brand valuation</p>
+									<p><span class="manufacturer" twn="50.264683, 28.681269">г. Житомир</span> <span class="model">ФОП ВАСИЛЕНКО</span></p>
+								</div>
+								
+								<div class="right">
+									<div class="price">
+										<p class="price-c" prc="50.264683, 28.681269">125 560 <span>грн.</span></p>
+										
+										<div class="btn-price">
+											<a href="">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- cell-price -->
+	</div><!-- wrp -->
+	
+
+	<div class="wrapper-footer">
+		<div class="footer">
+			<div class="bottom-menu">
+				<ul class="menu">
+					<li class="active"><a href="#">Главная</a></li>
+					<li><a href="#">Автомобили</a></li>
+					<li><a href="#">Дилеры</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</div>
+			
+			<div class="logo">
+				<a href="#"><img src="img/logo.png"></a>
+			</div>
+		</div><!-- footer -->
+	</div><!-- wrapper-footer -->
+</div><!-- wrapper -->
+
+
+<script>
+//scroll bar
+$(".map-card").mCustomScrollbar({
+	axis:"y",
+	theme: 'inset-dark'
+});
+
+
+$('document').ready(function () {
+	var arr = [];
+
+	$(".price-c").each(function(indx){
+		//arr.push( parseInt( $(this).attr('data-pice-car') ));
+		arr.push( parseInt( $(this).html().replace(/\D+/g,"") ));
+		//console.log($(this).html().replace(/\D+/g,""));
+	});
+	
+	var maxel = arr[0];
+	var minel = arr[0];
+
+	for (var i = 0; i < arr.length; i++) {
+		if (maxel < arr[i]) {
+			maxel = arr[i];
+		};
+		if (minel > arr[i]) {
+			minel = arr[i];
+		};
+	};
+	
+	maxel = parseInt(maxel);
+	minel = parseInt(minel);
+	
+	jQuery.fn.jplist.settings = {
+		pricesSlider: function ($slider, $prev, $next){
+			$slider.slider({
+				min: minel
+				,max: maxel
+				,range: true
+				,values: [minel,maxel]
+				,step: 10
+				,slide: function (event, ui){
+					$prev.text('Цена: ' + ui.values[0]);
+					$next.text(ui.values[1]);
+				}
+			});
+		}
+		,priesValues: function ($slider, $prev, $next){
+			$prev.text('Цена: ' + $slider.slider('values', 0));
+			$next.text($slider.slider('values', 1));
+		}
+		/* LENGTH: jquery ui range slider*/
+		,lengthSlider: function ($slider, $prev, $next) {
+			$slider.slider({
+				min: 10000
+				,max: 800000
+				,range: true
+				,values: [10000, 800000]
+				,slide: function (event, ui) {
+					$prev.text('Length: ' + ui.values[0]);
+					$next.text(ui.values[1]);
+				}
+			});
+		}
+		/*LENGTH: jquery ui set values
+		,lengthValues: function ($slider, $prev, $next) {
+			$prev.text('Цена: ' + $slider.slider('values', 0));
+			$next.text($slider.slider('values', 1));
+		}*/
+		/*WIDTH: jquery ui range slider*/
+		,widthSlider: function ($slider, $prev, $next) {
+			$slider.slider({
+				min: 0
+				,max: 10000
+				,range: true
+				,values: [0, 10000]
+				,slide: function (event, ui) {
+					$prev.text('Width: ' + ui.values[0]);
+					$next.text(ui.values[1]);
+				}
+			});
+		}
+		/*WIDTH: jquery ui set values*/
+		,widthValues: function ($slider, $prev, $next) {
+			$prev.text('Width: ' + $slider.slider('values', 0));
+			$next.text($slider.slider('values', 1));
+		}
+		/*WEIGHT: jquery ui range slider*/
+		,weightSlider: function ($slider, $prev, $next) {
+			$slider.slider({
+				min: 0
+				,max: 10000
+				,range: true
+				,values: [0, 10000]
+				,slide: function (event, ui) {
+					$prev.text('Weight: ' + ui.values[0]);
+					$next.text(ui.values[1]);
+				}
+			});
+		}
+		/*WEIGHT: jquery ui set values*/
+		,weightValues: function ($slider, $prev, $next) {
+			$prev.text('Weight: ' + $slider.slider('values', 0));
+			$next.text($slider.slider('values', 1));
+		}
+	};
+	
+	$('#demo').jplist({
+		itemsBox: '.list'
+		,itemPath: '.list-item'
+		,panelPath: '.jplist-panel'
+	});
+	$('#demo').jplist({
+		itemsBox: '.listsm'
+		,itemPath: '.list-item'
+		,panelPath: '.jplist-panel'
+	});
+});
+
+
+(function (i, s, o, g, r, a, m) {
+	i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+		(i[r].q = i[r].q || []).push(arguments)
+	}, i[r].l = 1 * new Date(); a = s.createElement(o),
+m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	ga('create', 'UA-36006444-3', 'jplist.com');
+	ga('send', 'pageview');
+	
+	
+	
+	
+//switch from cell to map
+var map = $('.wrapper-map');
+var list = $('.lists');
+
+$("#checkbox").change(function(){
+	if(this.checked){
+		$(list).css('display','none');
+		$(map).css('display','block');
+		
+		$('#jplist-drop-down').css('display','none');
+		$('.view-switch').css('display','none');
+		$('.line-switch').css('display','block');
+		
+		$.cookie('select-check','check');
+	}else{
+		$(list).css('display','block');
+		$(map).css('display','none');
+		
+		$('#jplist-drop-down').css('display','block');
+		$('.view-switch').css('display','block');
+		$('.line-switch').css('display','none');
+		
+		$.cookie('select-check','');
+	}
+});
+
+if($.cookie('select-check') == 'check'){
+	$(list).css('display','none');
+	$(map).css('display','block');
+	
+	$('#jplist-drop-down').css('display','none');
+	$('.view-switch').css('display','none');
+	$('.line-switch').css('display','block');
+	
+	$('#checkbox').prop('checked', true);
+}else{
+	$(list).css('display','block');
+	$(map).css('display','none');
+	
+	$('#jplist-drop-down').css('display','block');
+	$('.view-switch').css('display','block');
+	$('.line-switch').css('display','none');
+	
+	$('#checkbox').prop('checked', false);
+}
+
+
+
+
+//map & card
+var mp = $('#map');
+
+$("#chckln").change(function(){
+	if(this.checked){
+		$(mp).addClass('map-sm');
+		$('.map-card').css('display','block');
+
+		$.cookie('select-chckln','check');
+	}else{
+		$(mp).removeClass('map-sm');
+		$('.map-card').css('display','none');
+
+		$.cookie('select-chckln','');
+	}
+});
+
+if($.cookie('select-chckln') == 'check'){
+	$(mp).addClass('map-sm');
+	$('.map-card').css('display','block');
+	
+	$('#chckln').prop('checked', true);
+}else{
+	$(mp).removeClass('map-sm');
+	$('.map-card').css('display','none');
+
+	$('#chckln').prop('checked', false);
+}
+
+
+var w = $(window).width();
+
+if(w < 768) {
+	$('#chckln').removeAttr('checked');
+	$('.line-switch').css('display','none');
+	$('.map-card').css('display','none');
+}
+$(window).resize(function(){
+	var w = $(window).width();
+
+	if(w < 768) {
+		$('.map-card').css('display','none');
+		$('.line-switch').css('display','none');
+		$('#chckln').removeAttr('checked');
+	} else {
+		$('.line-switch').css('display','block');
+		
+		if($.cookie('select-chckln') == 'check'){
+			$('#chckln').attr('checked','checked');
+			$('.map-card').css('display','block');
+		}
+	}
+});
+	
+	
+
+//map
+function initMap(){
+	var element = document.getElementById('map');
+	var options = {
+		zoom: 7,
+		center: {lat: 48.628539, lng: 31.062069}
+	};
+	
+	var myMap = new google.maps.Map(element, options);
+	var markers = [
+		{
+			coordinates: {lat: 50.45466, lng: 30.5238},
+			image: 'images/car-map/1.png',
+			info: '<div class="popup-wnd"><h2><a href="" class="link-car">HAVAL H2 Elite</a></h2><a href="" class="img-car"><img src="images/car/1.png" alt="car"></a><ul class="map-opt"><li>1.5i 150 л.с.бензиновый</li><li>2WD</li><li>6 ст. М/Т</li><li>Comfort</li></ul></div>',
+			color: 'red',
+			price: 110000,
+			town: 'Киев',
+			diler: 'Богдан-Индустрия'
+			
+		},
+		{
+			coordinates: {lat: 50.444843, lng: 30.636279},
+			image: 'images/car-map/3.png',
+			info: '<div class="popup-wnd"><h2><a href="" class="link-car">HAVAL H2 Elite</a></h2><a href="" class="img-car"><img src="images/car/3.png" alt="car"></a><ul class="map-opt"><li>1.5i 150 л.с.бензиновый</li><li>2WD</li><li>6 ст. М/Т</li><li>Comfort</li></ul></div>',
+			color: 'brown',
+			price: 113000,
+			town: 'Киев',
+			diler: 'Богдан-Авто'
+		},
+		{
+			coordinates: {lat: 50.264683, lng: 28.681269},
+			image: 'images/car-map/2.png',
+			info: '<div class="popup-wnd"><h2><a href="" class="link-car">HAVAL H2 Elite</a></h2><a href="" class="img-car"><img src="images/car/2.png" alt="car"></a><ul class="map-opt"><li>1.5i 150 л.с.бензиновый</li><li>2WD</li><li>6 ст. М/Т</li><li>Comfort</li></ul></div>',
+			color: 'blue',
+			price: 115000,
+			town: 'Житомир',
+			diler: 'Карат-Авто'
+		},
+		{
+			coordinates: {lat: 50.27, lng: 28.69},
+			image: 'img/sto.png',
+			info: '<h2>ООО "Авто"</h2><p>г. Житомир, ул. Оранжерейная, 1</p><ul><li>(050) 311-99-07</li><li>(063) 237-32-38</li></ul>',
+			town: 'Житомир'
+		}
+	];
+	
+	function addMarker(props){
+		var marker = new google.maps.Marker({
+			position: props.coordinates,
+			map: myMap
+		});
+		marks.push(marker);
+		
+		if(props.image){
+			marker.setIcon(props.image);
+		}
+		if(props.info){
+			var infoWindow = new google.maps.InfoWindow({
+				content: props.info
+			});
+			marker.addListener('click', function(){
+				infoWindow.open(myMap, marker);
+				//style popap
+				//mount (shadow)
+				$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(2)').css('border-radius','5px');
+				//border - outer DIV (background, border)
+				$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div').css('border-radius','5px');
+				//color of main window - inner DIV
+				$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(4)').css('border-radius','5px');
+				//close - container
+				$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(3)').css('width','22px').css('height','22px').css('background','url("img/close.png") no-repeat').css('background-size','cover');
+				//.append('<i class="fa fa-times" aria-hidden="true"></i>')
+				//close i (color,size)
+				//$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(3) > i').css('font-size','23px').css('color','#aaa');
+				//close img (delete default img)
+				$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(3) > img').css('display','none');
+				//color title
+				//$('.popup-wnd .link-car').css('color',props.color);
+			});
+		}
+	}
+
+	var arr = [];
+	var marks = [];
+	
+	function delMarker(){
+		for (var i = 0; i < marks.length; i++) {
+			marks[i].setMap(null);
+		}
+	}
+	
+
+	$('.jplist-group input').on('click', function(){
+		var color = $(this).attr('id').split('-');
+
+		if(this.checked){
+			arr.push(color[0]);
+			
+			fun();
+		} else {
+			arr.splice(arr.indexOf(color[0]),1);
+			
+			fun();
+		}
+	});
+
+	
+	var valPrice;
+	var valPrice2;
+	var inputDlr = '';
+	var inputTwn = '';
+	
+	document.getElementById('value1').addEventListener("DOMSubtreeModified", function(){
+		valPrice = $(this).html().substring(6);
+
+		fun();
+	});
+	document.getElementById('value2').addEventListener("DOMSubtreeModified", function(){
+		valPrice2 = $(this).html();
+		
+		fun();
+	});
+	
+	$('#dlr').bind('textchange', function(){
+		inputDlr = $(this).val();
+
+		fun();
+	});
+	$('#twn').bind('textchange', function(){
+		inputTwn = $(this).val();
+
+		fun();
+	});
+
+	
+	function fun(){
+		delMarker();
+
+		for(var i = 0; i < markers.length; i++){
+			//color
+			for(var j = 0; j < arr.length; j++){
+				if(markers[i].color == arr[j] && valPrice == 105560 && valPrice2 == 125560 && inputDlr == '' && inputTwn == ''){
+					addMarker(markers[i]);
+				}
+				
+			}
+			//price
+			if(markers[i].price > valPrice && valPrice2 == 125560 && arr == '' && inputDlr == '' && inputTwn == ''){
+				addMarker(markers[i]);
+			}
+			//price2
+			if(valPrice == 105560 && markers[i].price < valPrice2 && arr == '' && inputDlr == '' && inputTwn == ''){
+				addMarker(markers[i]);
+			}
+			
+			//price / price2
+			if(markers[i].price > valPrice && valPrice > 105560 && markers[i].price < valPrice2 && valPrice2 < 125560 && arr == '' && inputDlr == '' && inputTwn == ''){
+				addMarker(markers[i]);
+			}
+		}
+		//diler
+		if(valPrice == 105560 && valPrice2 == 125560 && arr == '' && inputDlr != '' && inputTwn == ''){
+			for(var i = 0; i < markers.length; i++){
+				var pos = -1;
+				while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1) {
+					addMarker(markers[i]);
+				}
+			}
+		}
+		//town
+		if(valPrice == 105560 && valPrice2 == 125560 && arr == '' && inputDlr == '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				var pos = -1;
+				while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1) {
+					addMarker(markers[i]);
+				}
+			}
+		}
+
+		//color / price
+		if(valPrice > 105560 && valPrice2 == 125560 && arr != '' && inputDlr == '' && inputTwn == ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					if(markers[i].color == arr[j] && markers[i].price > valPrice){
+						addMarker(markers[i]);
+					}
+				}
+			}
+		}
+		//color / price2
+		if(valPrice == 105560 && valPrice2 < 125560 && arr != '' && inputDlr == '' && inputTwn == ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					if(markers[i].color == arr[j] && markers[i].price < valPrice2){
+						addMarker(markers[i]);
+					}
+				}
+			}
+		}
+		//color / price / price2
+		if(valPrice > 105560 && valPrice2 < 125560 && arr != '' && inputDlr == '' && inputTwn == ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					if(markers[i].color == arr[j] && markers[i].price > valPrice && markers[i].price < valPrice2){
+						addMarker(markers[i]);
+					}
+				}
+			}
+		}
+		//color / diler
+		if(valPrice == 105560 && valPrice2 == 125560 && arr != '' && inputDlr != '' && inputTwn == ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					var pos = -1;
+					while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
+						if(markers[i].color == arr[j] && pos == 0){
+							addMarker(markers[i]);
+						}
+					}
+				}
+			}
+		}
+		//price / diler
+		if(valPrice > 105560 && valPrice2 == 125560 && arr == '' && inputDlr != '' && inputTwn == ''){
+			for(var i = 0; i < markers.length; i++){
+				var pos = -1;
+				while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
+					if(markers[i].price < valPrice && pos == 0){
+						addMarker(markers[i]);
+					}
+				}
+			}
+		}
+		//price2 / diler
+		if(valPrice == 105560 && valPrice2 < 125560 && arr == '' && inputDlr != '' && inputTwn == ''){
+			for(var i = 0; i < markers.length; i++){
+				var pos = -1;
+				while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
+					if(markers[i].price < valPrice2 && pos == 0){
+						addMarker(markers[i]);
+					}
+				}
+			}
+		}
+		//price / price2 / diler
+		if(valPrice > 105560 && valPrice2 < 125560 && arr == '' && inputDlr != '' && inputTwn == ''){
+			for(var i = 0; i < markers.length; i++){
+				var pos = -1;
+				while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
+					if(markers[i].price > valPrice && markers[i].price < valPrice2 && pos == 0){
+						addMarker(markers[i]);
+					}
+				}
+			}
+		}
+		//color / town
+		if(valPrice == 105560 && valPrice2 == 125560 && arr != '' && inputDlr == '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					var pos = -1;
+					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
+						if(markers[i].color == arr[j] && pos == 0){
+							addMarker(markers[i]);
+						}
+					}
+				}
+			}
+		}
+		//price / town
+		if(valPrice > 105560 && valPrice2 == 125560 && arr == '' && inputDlr == '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				var pos = -1;
+				while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
+					if(markers[i].price < valPrice && pos == 0){
+						addMarker(markers[i]);
+					}
+				}
+			}
+		}
+		//price2 / town
+		if(valPrice == 105560 && valPrice2 < 125560 && arr == '' && inputDlr == '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				var pos = -1;
+				while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
+					if(markers[i].price < valPrice2 && pos == 0){
+						addMarker(markers[i]);
+					}
+				}
+			}
+		}
+		//price / price2 / town
+		if(valPrice > 105560 && valPrice2 < 125560 && arr == '' && inputDlr == '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				var pos = -1;
+				while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
+					if(markers[i].price > valPrice && markers[i].price < valPrice2 && pos == 0){
+						addMarker(markers[i]);
+					}
+				}
+			}
+		}
+		//diler / town
+		if(valPrice == 105560 && valPrice2 == 125560 && arr == '' && inputDlr != '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				var pos = -1;
+				var pos2 = -1;
+				while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
+					while ((pos2 = markers[i].diler.toLowerCase().indexOf(inputDlr, pos2 + 1)) != -1) {
+						if(pos2 == 0 && pos == 0){
+							addMarker(markers[i]);
+						}
+					}
+				}
+			}
+		}
+		//color / price / diler
+		if(valPrice > 105560 && valPrice2 == 125560 && arr != '' && inputDlr != '' && inputTwn == ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					var pos = -1;
+					while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
+						if(markers[i].color == arr[j] && markers[i].price < valPrice && pos == 0){
+							addMarker(markers[i]);
+						}
+					}
+				}
+			}
+		}
+		//color / price2 / diler
+		if(valPrice == 105560 && valPrice2 < 125560 && arr != '' && inputDlr != '' && inputTwn == ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					var pos = -1;
+					while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
+						if(markers[i].color == arr[j] && markers[i].price < valPrice2 && pos == 0){
+							addMarker(markers[i]);
+						}
+					}
+				}
+			}
+		}
+		//color / price / price2 / diler
+		if(valPrice > 105560 && valPrice2 < 125560 && arr != '' && inputDlr != '' && inputTwn == ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					var pos = -1;
+					while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
+						if(markers[i].color == arr[j] && markers[i].price > valPrice && markers[i].price < valPrice2 && pos == 0){
+							addMarker(markers[i]);
+						}
+					}
+				}
+			}
+		}
+		//color / diler / town
+		if(valPrice == 105560 && valPrice2 == 125560 && arr != '' && inputDlr != '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					var pos = -1;
+					var pos2 = -1;
+					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
+						while ((pos2 = markers[i].diler.toLowerCase().indexOf(inputDlr, pos2 + 1)) != -1) {
+							if(markers[i].color == arr[j] && pos2 == 0 && pos == 0){
+								addMarker(markers[i]);
+							}
+						}
+					}
+				}
+			}
+		}
+		//color / price / town
+		if(valPrice > 105560 && valPrice2 == 125560 && arr != '' && inputDlr == '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					var pos = -1;
+					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
+						if(markers[i].color == arr[j] && markers[i].price < valPrice && pos == 0){
+							addMarker(markers[i]);
+						}
+					}
+				}
+			}
+		}
+		//color / price2 / town
+		if(valPrice == 105560 && valPrice2 < 125560 && arr != '' && inputDlr == '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					var pos = -1;
+					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
+						if(markers[i].color == arr[j] && markers[i].price < valPrice2 && pos == 0){
+							addMarker(markers[i]);
+						}
+					}
+				}
+			}
+		}
+		//color / price / price2 / town
+		if(valPrice > 105560 && valPrice2 < 125560 && arr != '' && inputDlr == '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					var pos = -1;
+					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
+						if(markers[i].color == arr[j] && markers[i].price > valPrice && markers[i].price < valPrice2 && pos == 0){
+							addMarker(markers[i]);
+						}
+					}
+				}
+			}
+		}
+		//color / diler / town / price
+		if(valPrice > 105560 && valPrice2 == 125560 && arr != '' && inputDlr != '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					var pos = -1;
+					var pos2 = -1;
+					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
+						while ((pos2 = markers[i].diler.toLowerCase().indexOf(inputDlr, pos2 + 1)) != -1) {
+							if(markers[i].color == arr[j] && pos2 == 0 && pos == 0 && markers[i].price < valPrice){
+								addMarker(markers[i]);
+							}
+						}
+					}
+				}
+			}
+		}
+		//color / diler / town / price2
+		if(valPrice == 105560 && valPrice2 < 125560 && arr != '' && inputDlr != '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					var pos = -1;
+					var pos2 = -1;
+					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
+						while ((pos2 = markers[i].diler.toLowerCase().indexOf(inputDlr, pos2 + 1)) != -1) {
+							if(markers[i].color == arr[j] && pos2 == 0 && pos == 0 && markers[i].price < valPrice2){
+								addMarker(markers[i]);
+							}
+						}
+					}
+				}
+			}
+		}
+		//color / diler / town / price
+		if(valPrice > 105560 && valPrice2 < 125560 && arr != '' && inputDlr != '' && inputTwn != ''){
+			for(var i = 0; i < markers.length; i++){
+				for(var j = 0; j < arr.length; j++){
+					var pos = -1;
+					var pos2 = -1;
+					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
+						while ((pos2 = markers[i].diler.toLowerCase().indexOf(inputDlr, pos2 + 1)) != -1) {
+							if(markers[i].color == arr[j] && pos2 == 0 && pos == 0 && markers[i].price > valPrice && markers[i].price < valPrice2){
+								addMarker(markers[i]);
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		//default value
+		if(valPrice === undefined && valPrice2 === undefined && arr == '' && inputDlr == '' && inputTwn == '' || valPrice == 105560 && valPrice2 == 125560 && arr.length == 0 && inputDlr == '' && inputTwn == ''){
+			for(var i = 0; i < markers.length; i++){
+				addMarker(markers[i]);
+			}
+		}
+	}
+	
+	//default value
+	if(valPrice === undefined && valPrice2 === undefined && arr == '' && inputDlr == '' && inputTwn == '' || valPrice == 105560 && valPrice2 == 125560 && arr.length == 0 && inputDlr == '' && inputTwn == ''){
+		for(var i = 0; i < markers.length; i++){
+			addMarker(markers[i]);
+		}
+	}
+	
+	//reset button
+	$('.jplist-reset-btn').on('click', function(){
+		$('#dlr').val('');
+		$('#twn').val('');
+			
+		var arr = [];
+		var marks = [];
+		var valPrice;
+		var inputDlr = '';
+		var inputTwn = '';
+		
+		for(var i = 0; i < markers.length; i++){
+			addMarker(markers[i]);
+		}
+	});	
+}
+
+
+//switch view
+if($.cookie('select_style') == 'line'){
+	$('.list-block .list-item').removeClass('grid');
+	$('.list-block .list-item').addClass('line');
+	
+	$('#chck_card').css('background','url("img/grade.png")').css('background-size','cover');
+	$('#chck_line').css('background','url("img/line_na.png")').css('background-size','cover');
+} else {
+	$('.list-block .list-item').addClass('grid');
+	$('.list-block .list-item').removeClass('line');
+	
+	$('#chck_card').css('background','url("img/grade_na.png")').css('background-size','cover');
+	$('#chck_line').css('background','url("img/line.png")').css('background-size','cover');
+}
+
+$('#chck_card').click(function(){
+	$('.list-block .list-item').addClass('grid');
+	$('.list-block .list-item').removeClass('line');
+	
+	$('#chck_card').css('background','url("img/grade_na.png")').css('background-size','cover');
+	$('#chck_line').css('background','url("img/line.png")').css('background-size','cover');
+	
+	$.cookie('select_style','grid');
+});
+$('#chck_line').click(function(){
+	$('.list-block .list-item').addClass('line');
+	$('.list-block .list-item').removeClass('grid');
+	
+	$('#chck_line').css('background','url("img/line_na.png")').css('background-size','cover');
+	$('#chck_card').css('background','url("img/grade.png")').css('background-size','cover');
+	
+	$.cookie('select_style','line');
+});
+
+
+
+//$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div').css('background-color','red');
+//$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(2)').css('background-color','red');
+//$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(4)').css('background-color','red');
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCweNlWEzszWNdx4dwC59DUwAYUo3o08R0&callback=initMap"></script>
+
+</body>
+</html>

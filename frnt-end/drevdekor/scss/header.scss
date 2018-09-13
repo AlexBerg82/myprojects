@@ -1,0 +1,104 @@
+.block-header-top{
+	position: relative;
+	padding: 15px;
+	@include clearfix;
+	
+	@include common-text-default;
+	
+	.logo{
+		display: inline-block;
+		//background-color: yellow;
+		
+		a{
+			p:first-child{
+				font-size: 35px;
+				font-weight: 600;
+			}
+			p:last-child{
+				font-weight: 600;
+			}
+			
+			@include respond-to(handhelds){
+				text-align: center;
+			}
+		}
+
+ 		@include respond-to(handhelds){
+			float: none;
+			width: 100%;
+			padding: 20px 0 5px 0;
+		}
+	}
+
+	.contact-block{
+		//background-color: green;
+		position: absolute;
+		top: 0;
+		right: 0;
+		
+		li{
+			display: inline-block;
+			padding: 2px 5px;
+
+			a{
+				font-size: 13px;
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+			a:hover{
+				color: #DE511C;
+			}
+		}
+		
+		@include respond-to(handhelds){
+			left: 0;
+		}
+	}
+
+	.phones{
+		display: inline-block;
+		float: right;
+		padding: 0;
+		margin-top: 10px;
+		//background-color:red;
+		@include clearfix;
+
+		li{
+			font-size: 21px;
+			font-weight: 600;
+		}
+
+		@include respond-to(handhelds){
+			margin-top: 0px;
+			float: none;
+		}
+	}
+	
+	@include respond-to(wide-handhelds){
+		padding: 10px;
+	}
+	@include respond-to(handhelds){
+		padding: 5px;
+	}
+}
+
+.block-header-slider{
+	overflow: hidden;
+
+	.imag-sl{
+		width: 100%;
+		
+		@include respond-to(small-tablets){
+			width: 140%;
+			margin-left: -20%;
+		}
+		@include respond-to(wide-handhelds){
+			width: 180%;
+			margin-left: -20%;
+		}
+		@include respond-to(handhelds){
+			width: 208%;
+			margin-left: -20%;
+		}			
+	}
+}

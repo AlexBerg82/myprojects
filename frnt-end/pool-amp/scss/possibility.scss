@@ -1,0 +1,193 @@
+.possibility{
+	padding: 20px 0;
+	@include clearfix;
+	
+	.wrapper-possibility{
+		@include width1000;
+		@include clearfix;
+		
+		.left-possibility-block{
+			float: left;
+			width: 33.33%;
+			padding: 5px 10px;
+			position: relative;
+			box-sizing: border-box;
+			
+			.line1{
+				position: absolute;
+				top: 70px;
+				left: 20px;
+				z-index: 100;
+				display: none;
+			}
+			
+			h3{
+				margin: 15px 0;
+			}
+			p{
+				line-height: 130%;
+				color: #949494;
+				
+				a{
+					color: #74C0F4;
+					
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				padding: 5px;
+			}
+			@include respond-to(handhelds){
+				float: none;
+				width: 100%;
+			}
+		}
+		.center-possibility-block{
+			float: left;
+			width: 33.33%;
+			padding: 5px 10px;
+			position: relative;
+			box-sizing: border-box;
+			
+			.line2{
+				position: absolute;
+				top: 70px;
+				left: 20px;
+				z-index: 100;
+				display: none;
+			}
+			
+			h3{
+				margin: 15px 0;
+				
+				@include respond-to(display){
+					font-size: 14px;
+				}
+			}
+			p{
+				line-height: 130%;
+				color: #949494;
+				
+				a{
+					color: #74C0F4;
+					
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+
+			@include respond-to(wide-handhelds){
+				padding: 5px;
+			}
+			@include respond-to(handhelds){
+				float: none;
+				width: 100%;
+			}
+		}
+		.right-possibility-block{
+			float: left;
+			width: 33.33%;
+			padding: 5px 10px;
+			position: relative;
+			box-sizing: border-box;
+			
+			.line3{
+				position: absolute;
+				top: 70px;
+				left: 20px;
+				z-index: 100;
+				display: none;
+			}
+			
+			h3{
+				margin: 15px 0;
+			}
+			p{
+				line-height: 130%;
+				color: #949494;
+				
+				a{
+					color: #74C0F4;
+					
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+
+			@include respond-to(wide-handhelds){
+				padding: 5px;
+			}
+			@include respond-to(handhelds){
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+	
+	
+	.wrapper-example{
+		padding: 20px 0;
+		max-width: 1300px;
+		margin: 0 auto;
+		@include clearfix;
+		
+		.pool-example-one{
+			float: left;
+			width: 50%;
+			text-align: center;
+			padding: 10px;
+			box-sizing: border-box;
+
+			img{
+				width: 100%;
+			}
+			h3{
+				text-transform: uppercase;
+			}
+
+			@include respond-to(wide-handhelds){
+				float: none;
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				float: none;
+				width: 100%;
+			}
+		}
+		.pool-example-two{
+			float: right;
+			width: 50%;
+			text-align: center;
+			padding: 10px;
+			box-sizing: border-box;
+
+			img{
+				width: 100%;
+			}
+			h3{
+				text-transform: uppercase;
+			}
+
+			@include respond-to(wide-handhelds){
+				float: none;
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+	
+	@include respond-to(wide-handhelds){
+		padding: 20px 0;
+	}
+	@include respond-to(handhelds){
+		padding: 20px 0;
+	}
+}

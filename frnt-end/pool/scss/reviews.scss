@@ -1,0 +1,140 @@
+.slider-after{
+	@include width1000;
+}
+
+.slider-after{
+	.item-sl{
+		padding: 10px;
+		
+		.title-item{
+			padding: 15px;
+			background-color: #46A1F0;
+			
+			p{
+				font-weight: 600;
+				color: #fff;
+				font-size: 16px;
+				
+				@include respond-to(small-tablets){
+					font-size: 13px;
+				}
+				@include respond-to(wide-handhelds){
+					font-size: 13px;
+				}
+			}
+			
+			@include respond-to(small-tablets){
+				padding: 10px 5px;
+			}
+			@include respond-to(wide-handhelds){
+				padding: 10px 5px;
+			}
+		}
+		
+		.text-review{
+			h4{
+				text-align: right;
+				margin: 5px 20px;
+			}
+			span{
+				font-size: 50px;
+				color: #46A1F0;
+				font-weight: 800;
+				margin: 10px;
+			}
+			
+			.review-text{
+				padding: 20px;
+				
+				h3{
+					color: #46A1F0;
+					margin-bottom: 10px;
+				}
+				p{
+					line-height: 160%;
+					font-size: 14px;
+					color: #929292;
+					
+					@include respond-to(small-tablets){
+						font-size: 13px;
+						line-height: 120%;
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					padding: 20px 5px;
+				}
+			}
+		}
+	}
+}
+
+
+//review main slider
+.slide-two{
+	li{
+		list-style: none;
+	
+		a{
+			display: block;
+			padding: 0;
+			text-decoration: none;
+			
+			img{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+}
+.prv-btn{
+	position: absolute;
+	top: 25%;
+	left: 10px;
+	z-index: 9999;
+	width: 30px;
+	height: 30px;
+	background: url('../img/11.png');
+	background-size: cover;
+	cursor: pointer;
+	box-sizing: border-box;
+	
+	@include respond-to(tablets){
+		top: 20%;
+	}
+	@include respond-to(small-tablets){
+		top: 15%;
+	}
+	@include respond-to(wide-handhelds){
+		top: 14%;
+	}
+	@include respond-to(handhelds){
+		top: 21%;
+	}
+}
+.nxt-btn{
+	position: absolute;
+	top: 25%;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	z-index: 9999;
+	background: url('../img/22.png');
+	background-size: cover;
+	cursor: pointer;
+	box-sizing: border-box;
+	
+	@include respond-to(tablets){
+		top: 20%;
+	}
+	@include respond-to(small-tablets){
+		top: 15%;
+	}
+	@include respond-to(wide-handhelds){
+		top: 14%;
+	}
+	@include respond-to(handhelds){
+		top: 21%;
+	}
+}

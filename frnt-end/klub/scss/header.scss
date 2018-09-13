@@ -1,0 +1,645 @@
+.block-header{
+	position: relative;
+	@include width1000;
+	line-height: 0;
+	@include clearfix;
+	
+	img{
+		width: 100%;
+	
+		@include respond-to(wide-handhelds){
+			width: 180%;
+			margin-left: -20%;
+			margin-top: -10%;
+		}
+		@include respond-to(handhelds){
+			width: 200%;
+			margin-left: -20%;
+			margin-top: -8%;
+		}
+	}
+	
+	.sov{
+		position: absolute;
+		right: 13%;
+		top: 22%;
+		width: 10%;
+		height: 35%;
+		background: url('../img/head/sov.png') no-repeat;
+		background-size: cover;
+		opacity: 0;
+
+		@include respond-to(wide-handhelds){
+			right: 10%;
+			top: 27%;
+			width: 13%;
+			height: 31%;
+		}
+		@include respond-to(handhelds){
+			display: none;
+		}
+	}
+
+	.hover-stop-sov:hover{
+		animation:
+			sova 0.5s infinite alternate;
+	}
+
+	@keyframes sova{
+		from{ transform: rotate(0deg); }
+		to{ transform: rotate(2deg); }
+	}
+
+	.bee{
+		position: absolute;
+		right: 29%;
+		top: 42%;
+		width: 6%;
+		height: 18%;
+		background: url('../img/head/bee.png') no-repeat;
+		background-size: cover;
+		z-index: 999;
+
+		@include respond-to(wide-handhelds){
+			right: 27%;
+			top: 47%;
+			width: 9%;
+			height: 18%;
+		}
+		@include respond-to(handhelds){
+			right: 5%;
+			top: 43%;
+			width: 10%;
+			height: 18%;
+		}
+	}
+	
+	.bee{
+		animation:
+			gobee 1.5s ease-out,
+			gobeet 1.5s ease-in,
+			opas 1s linear;
+	}
+
+	@keyframes gobee{
+		from{ right: 0%; }
+		to{ right: 29%; }
+	}
+	@keyframes gobeet{
+		from{ top: 0%; }
+		to{ top: 42%; }
+	} 
+	@keyframes opab{
+		from{ opacity: 0; }
+		to{ opacity: 1; }
+	}
+
+	@include respond-to(wide-handhelds){
+		@keyframes gobee{
+			from{ right: 0%; }
+			to{ right: 27%; }
+		}
+		@keyframes gobeet{
+			from{ top: 0%; }
+			to{ top: 47%; }
+		} 
+		@keyframes opab{
+			from{ opacity: 0; }
+			to{ opacity: 1; }
+		}
+	}
+	@include respond-to(handhelds){
+		@keyframes gobee{
+			from{ right: 0%; }
+			to{ right: 5%; }
+		}
+		@keyframes gobeet{
+			from{ top: 0%; }
+			to{ top: 43%; }
+		} 
+		@keyframes opab{
+			from{ opacity: 0; }
+			to{ opacity: 1; }
+		}
+	}
+	
+	.hover-stop-bee:hover{
+		right: 29%;
+		top: 42%;
+		
+		@include respond-to(wide-handhelds){
+			right: 27%;
+			top: 47%;
+		}
+		@include respond-to(handhelds){
+			right: 5%;
+			top: 43%;
+		}
+			
+		animation:
+			gobee 0 ease-out,
+			gobeet 0 ease-in,
+			opas 0 linear,
+			beeh 0.1s infinite alternate;
+	}
+
+	@keyframes beeh{
+		from{ transform: rotate(0deg); }
+		to{ transform: rotate(2deg); }
+	}
+	
+	@include respond-to(wide-handhelds){
+		@keyframes beeh{
+			from{ transform: rotate(0deg); }
+			to{ transform: rotate(2deg); }
+		}
+	}
+	@include respond-to(handhelds){
+		@keyframes beeh{
+			from{ transform: rotate(0deg); }
+			to{ transform: rotate(2deg); }
+		}
+	}
+
+	.gip{
+		position: absolute;
+		bottom: 2%;
+		right: 32%;
+		width: 20%;
+		height: 45%;
+		background: url('../img/head/bigi.png') no-repeat;
+		background-size: cover;
+		opacity: 1;
+
+		@include respond-to(wide-handhelds){
+			bottom: 2%;
+			right: 29%;
+			width: 26%;
+			height: 40%;
+		}
+		@include respond-to(handhelds){
+			bottom: 2%;
+			right: 9%;
+			width: 33%;
+			height: 42%;
+		}
+	}
+	
+	.gip{
+		animation:
+			opas0 1s linear,
+			gogip 3.5s linear 1s,
+			gogipt 0.35s 10 1s,
+			giprot 0.35s 10 1s,
+			opas 1s linear 1s;
+	}
+
+	@keyframes gogip{
+		from{ right: 0%; }
+		to{ right: 32%; }
+	}
+	@keyframes gogipt{
+		from{ bottom: 0%; }
+		to{ bottom: 2%; }
+	}
+	@keyframes giprot{
+		from{ transform: rotate(1.5deg); }
+		to{ transform: rotate(0deg); }
+	}
+	@keyframes opas{
+		from{ opacity: 0; }
+		to{ opacity: 1; }
+	}
+	@keyframes opas0{		  
+		0%, 100% { opacity: 0; }		   
+	}
+
+	@include respond-to(wide-handhelds){
+		@keyframes gogip{
+			from{ right: 0%; }
+			to{ right: 29%; }
+		}
+		@keyframes gogipt{
+			from{ bottom: 0%; }
+			to{ bottom: 2%; }
+		}
+		@keyframes giprot{
+			from{ transform: rotate(1.5deg); }
+			to{ transform: rotate(0deg); }
+		}
+		@keyframes opas{
+			from{ opacity: 0; }
+			to{ opacity: 1; }
+		}
+		@keyframes opas0{		  
+			0%, 100% { opacity: 0; }		   
+		}
+	}
+	@include respond-to(handhelds){
+		@keyframes gogip{
+			from{ right: 0%; }
+			to{ right: 9%; }
+		}
+		@keyframes gogipt{
+			from{ bottom: 0%; }
+			to{ bottom: 2%; }
+		}
+		@keyframes giprot{
+			from{ transform: rotate(1.5deg); }
+			to{ transform: rotate(0deg); }
+		}
+		@keyframes opas{
+			from{ opacity: 0; }
+			to{ opacity: 1; }
+		}
+		@keyframes opas0{		  
+			0%, 100% { opacity: 0; }		   
+		}
+	}
+
+	.hover-stop-gip:hover{
+		bottom: 2%;
+		right: 32%;
+		
+		@include respond-to(wide-handhelds){
+			bottom: 2%;
+			right: 29%;
+		}
+		@include respond-to(handhelds){
+			bottom: 2%;
+			right: 9%;
+		}
+		
+		animation:
+			opas0 0,
+			gogip 0,
+			gogipt 0,
+			giprot 0,
+			opas 0,
+			giph 0.5s infinite alternate;
+	}
+
+	@keyframes giph{
+		from{ bottom: 2%; }
+		to{ bottom: 1%; }
+	}
+	
+	@include respond-to(wide-handhelds){
+		@keyframes giph{
+			from{ bottom: 2%; }
+			to{ bottom: 1%; }
+		}
+	}
+	@include respond-to(handhelds){
+		@keyframes giph{
+			from{ bottom: 2%; }
+			to{ bottom: 1%; }
+		}
+	}
+
+	.flo{
+		position: absolute;
+		left: 40%;
+		bottom: 2%;
+		width: 5%;
+		height: 23%;
+		background: url('../img/head/flowers.png') no-repeat;
+		background-size: cover;
+		opacity: 0;
+
+		@include respond-to(wide-handhelds){
+			left: 35%;
+			bottom: 2%;
+			width: 8%;
+			height: 23%;
+		}
+		@include respond-to(handhelds){
+			left: 48%;
+			bottom: 2%;
+			width: 8%;
+			height: 23%;
+		}
+	}
+
+	.rab{
+		position: absolute;
+		right: 65%;
+		bottom: 2%;
+		width: 12%;
+		height: 25%;
+		background: url('../img/head/rabbit.png') no-repeat;
+		background-size: cover;
+		z-index: 999;
+
+		@include respond-to(wide-handhelds){
+			right: 70%;
+			bottom: 3%;
+			width: 15%;
+			height: 20%;
+			z-index: 0;
+		}
+		@include respond-to(handhelds){
+			right: 65%;
+			bottom: 3%;
+			width: 20%;
+			height: 22%;
+			z-index: 0;
+		}
+	}
+	
+	.rab{
+		animation:
+			gorab 2.5s linear,
+			rabt 0.41s 6,
+			rabj 0.41s 6,
+			opasra 0.8s linear;
+	}
+
+	@keyframes gorab{
+		from{ right: 0%; }
+		to{ right: 65%; }
+	}
+	@keyframes rabt{
+		from{ bottom: 0%; }
+		to{ bottom: 6%; }
+	}
+	@keyframes rabj{
+		from{ transform: rotate(0deg); }
+		to{ transform: rotate(6deg); }
+	}
+	@keyframes opasra{
+		from{ opacity: 0; }
+		to{ opacity: 1; }
+	}
+
+	@include respond-to(wide-handhelds){
+		@keyframes gorab{
+			from{ right: 0%; }
+			to{ right: 70%; }
+		}
+		@keyframes rabt{
+			from{ bottom: 3%; }
+			to{ bottom: 9%; }
+		}
+		@keyframes rabj{
+			from{ transform: rotate(0deg); }
+			to{ transform: rotate(6deg); }
+		}
+		@keyframes opasra{
+			from{ opacity: 0; }
+			to{ opacity: 1; }
+		}
+	}
+	@include respond-to(handhelds){
+		@keyframes gorab{
+			from{ right: 0%; }
+			to{ right: 65%; }
+		}
+		@keyframes rabt{
+			from{ bottom: 3%; }
+			to{ bottom: 9%; }
+		}
+		@keyframes rabj{
+			from{ transform: rotate(0deg); }
+			to{ transform: rotate(6deg); }
+		}
+		@keyframes opasra{
+			from{ opacity: 0; }
+			to{ opacity: 1; }
+		}
+	}
+
+	.hover-stop-rab:hover{
+		right: 65%;
+		bottom: 2%;
+		
+		@include respond-to(wide-handhelds){
+			right: 70%;
+			bottom: 3%;
+		}
+		@include respond-to(handhelds){
+			right: 65%;
+			bottom: 3%;
+		}
+		
+		animation:
+			gorab 0,
+			rabt 0,
+			rabj 0,
+			opasra 0,
+			rabh 0.5s infinite alternate;
+	}
+
+	@keyframes rabh{
+		from{ bottom: 3%; }
+		to{ bottom: 9%; }
+	}
+	
+	@include respond-to(wide-handhelds){
+		@keyframes rabh{
+			from{ bottom: 3%; }
+			to{ bottom: 9%; }
+		}
+	}
+	@include respond-to(handhelds){
+		@keyframes rabh{
+			from{ bottom: 3%; }
+			to{ bottom: 9%; }
+		}
+	}
+
+	.ele{
+		position: absolute;
+		left: 5%;
+		bottom: 2%;
+		width: 17%;
+		height: 75%;
+		background: url('../img/head/elefant.png') no-repeat;
+		background-size: cover;
+
+		@include respond-to(wide-handhelds){
+			display: none;
+		}
+		@include respond-to(handhelds){
+			display: none;
+		}
+	}
+	
+	.ele{
+		animation:
+			goele 3s linear,
+			elet 0.75s 4,
+			elerot 0.75s 4,
+			opase 2s linear;
+	}
+
+	@keyframes goele{
+		from{ left: 0%; }
+		to{ left: 5%; }
+	}
+	@keyframes elet{
+		from{ bottom: 0%; }
+		to{ bottom: 2%; }
+	}
+	@keyframes elerot{
+		from{ transform: rotate(1deg); }
+		to{ transform: rotate(0deg); }
+	}
+	@keyframes opase{
+		from{ opacity: 0; }
+		to{ opacity: 1; }
+	}
+
+	.hover-stop-ele:hover{
+		left: 5%;
+		bottom: 2%;
+			
+		animation:
+			goele 0,
+			elet 0,
+			elerot 0,
+			opase 0,
+			eleh 1s infinite alternate;
+	}
+
+	@keyframes eleh{
+		from{ transform: rotate(0deg); }
+		to{ transform: rotate(2deg); }
+	}
+
+	.brd{
+		position: absolute;
+		right: 68%;
+		top: 3%;
+		width: 10%;
+		height: 21%;
+		background: url('../img/head/brd2.png') no-repeat;
+		background-size: cover;
+		opacity: 1;
+
+		@include respond-to(wide-handhelds){
+			right: 67%;
+			top: 3%;
+			width: 11%;
+			height: 16%;
+		}
+		@include respond-to(handhelds){
+			right: 66%;
+			top: 3%;
+			width: 13%;
+			height: 16%;
+		}
+	}
+	
+	.brd{
+		animation:
+			opas0 2s linear,
+			gobrd 2s linear 2s,
+			brdt  1s linear alternate 2 2s,
+			brdt  1.5s ease-in infinite alternate 4s,
+			opasb 0.8s linear 2s;
+	}
+
+	@keyframes gobrd{
+		from{ right: 0%; }
+		to{ right: 68%; }
+	}
+	@keyframes brdt{
+		from{ top: -2%; }
+		to{ top: 3.5%; }
+	}
+	@keyframes opasb{
+		from{ opacity: 0; }
+		to{ opacity: 1; }
+	}
+
+	.three{
+		position: absolute;
+		right: 6%;
+		bottom: 2%;
+		width: 21%;
+		height: 59%;
+		background: url('../img/head/three.png') no-repeat;
+		background-size: cover;
+		opacity: 0;
+
+		@include respond-to(wide-handhelds){
+			right: 0;
+			bottom: 1%;
+			width: 30%;
+			height: 58%;
+		}
+		@include respond-to(handhelds){
+			right: 6%;
+			bottom: 2%;
+			width: 21%;
+			height: 59%;
+			display: none;
+		}
+	}
+
+	.zlob{
+		position: absolute;
+		left: 22%;
+		top: 22%;
+		width: 55%;
+		height: 18%;
+		background: url('../img/head/zlobek.png') no-repeat;
+		background-size: cover;
+		opacity:0;
+		
+		@include respond-to(wide-handhelds){
+			width: 100%;
+			height: 22%;
+			left: 0;
+			top: 7%;
+		}
+		@include respond-to(handhelds){
+			width: 100%;
+			height: 19%;
+			left: 0;
+			top: 10%;
+		}
+	}
+	.opik{
+		position: absolute;
+		left: 22%;
+		top: 40%;
+		width: 40%;
+		height: 35%;
+		background: url('../img/head/opieka.png') no-repeat;
+		background-size: 100% 100%;
+		opacity: 0;
+
+		@include respond-to(wide-handhelds){
+			width: 75%;
+			height: 45%;
+			left: 2%;
+			top: 32%;
+		}
+		@include respond-to(handhelds){
+			width: 80%;
+			height: 45%;
+			left: 2%;
+			top: 32%;
+		}
+	}
+
+	@include respond-to(display){
+		width: 100%;
+	}
+	@include respond-to(tablets){
+		width: 100%;
+	}
+	@include respond-to(small-tablets){
+		width: 100%;
+	}
+	@include respond-to(wide-handhelds){
+		width: 100%;
+		overflow: hidden;
+	}
+	@include respond-to(handhelds){
+		width: 100%;
+		overflow: hidden;
+	}
+}

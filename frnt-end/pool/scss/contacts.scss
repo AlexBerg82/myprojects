@@ -1,0 +1,379 @@
+.contact{
+	@include width1000;
+	padding:40px 40px 10px 40px;
+	@import "text-default";
+	top: -60px;
+	background-color: #fff;
+	z-index: 9999;
+	
+	.title{
+		padding: 10px 0 30px 0;
+		text-transform: uppercase;
+		
+		@include respond-to(small-tablets){
+			padding: 10px 0;
+		}
+		@include respond-to(wide-handhelds){
+			padding: 10px 0;
+		}
+		@include respond-to(handhelds){
+			padding: 10px 0;
+		}
+	}
+	.maps{
+		//background-color: red;
+		clear: both;
+		@include clearfix;
+		
+		iframe{
+			width:45%;
+			height:250px;
+			
+			@include respond-to(small-tablets){
+				height:200px;
+				margin: 10px 0;
+			}
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				height: auto;
+				margin: 10px 0;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				height: auto;
+				margin: 10px 0;
+			}
+		}
+		iframe:first-child{
+			float: left;
+			
+			@include respond-to(wide-handhelds){
+				float: none;
+			}
+			@include respond-to(handhelds){
+				float: none;
+			}
+		}
+		iframe:last-child{
+			float: right;
+			
+			@include respond-to(wide-handhelds){
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+			}
+		}
+	}
+	
+	.left-side-contact{
+		width: 70%;
+		float: left;
+		font-size: 0;
+		box-sizing: border-box;
+		//background-color: #fff;
+		
+		.left-contact{
+			width: 40%;
+			padding: 50px 50px 10px 50px;
+			box-sizing: border-box;
+			display: inline-block;
+			vertical-align: top;
+			
+			.text-contact{
+				min-height: 80px;
+				
+				@include respond-to(display){
+					min-height: 100px;
+				}
+				@include respond-to(tablets){
+					min-height: 110px;
+				}
+				@include respond-to(wide-handhelds){
+					min-height: auto;
+				}
+				@include respond-to(handhelds){
+					min-height: auto;
+				}
+			}
+			.phone-list{
+				padding: 40px 0;
+				margin: 0;
+				min-height: 70px;
+				//background-color: red;
+				
+				li{
+					list-style: none;
+				}
+				
+				@include respond-to(tablets){
+					padding: 10px 0;
+				}
+				@include respond-to(small-tablets){
+					padding: 10px 0;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+				@include respond-to(handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+			}
+			.post-list{
+				padding: 10px 0;
+				margin: 0;
+				
+				li{
+					list-style: none;
+				}
+			}
+			
+			@include respond-to(display){
+				padding: 50px 30px 10px 30px;
+			}
+			@include respond-to(tablets){
+				width: 33.33%;
+				padding: 50px 10px 10px 10px;
+			}
+			@include respond-to(small-tablets){
+				width: 33.33%;
+				padding: 50px 10px 10px 10px;
+			}
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				display: block;
+				padding: 10px;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				display: block;
+				padding: 10px;
+			}
+		}
+		.center-contact{
+			width: 30%;
+			padding: 50px 10px 10px 10px;
+			display: inline-block;
+			box-sizing: border-box;
+			vertical-align: top;
+			
+			.text-contact{
+				min-height: 80px;
+				
+				@include respond-to(display){
+					min-height: 100px;
+				}
+				@include respond-to(tablets){
+					min-height: 110px;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+				@include respond-to(handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+			}
+			.phone-list{
+				padding: 40px 0;
+				margin: 0;
+				min-height: 70px;
+				//background-color: red;
+				
+				li{
+					list-style: none;
+				}
+				
+				@include respond-to(tablets){
+					padding: 10px 0;
+				}
+				@include respond-to(small-tablets){
+					padding: 10px 0;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+				@include respond-to(handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+			}
+			.post-list{
+				padding: 10px 0;
+				margin: 0;
+				
+				li{
+					list-style: none;
+				}
+			}
+			
+			@include respond-to(tablets){
+				width: 33.33%;
+			}
+			@include respond-to(small-tablets){
+				width: 33.33%;
+			}
+			@include respond-to(wide-handhelds){
+				padding: 10px;
+				width: 100%;
+				display: block;
+			}
+			@include respond-to(handhelds){
+				padding: 10px;
+				width: 100%;
+				display: block;
+			}
+		}
+		.right-contact{
+			width: 30%;
+			padding: 50px 10px 10px 10px;
+			display: inline-block;
+			box-sizing: border-box;
+			vertical-align: top;
+			
+			.text-contact{
+				min-height: 80px;
+				
+				@include respond-to(display){
+					min-height: 100px;
+				}
+				@include respond-to(tablets){
+					min-height: 110px;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+				@include respond-to(handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+			}
+			.phone-list{
+				padding: 40px 0;
+				margin: 0;
+				min-height: 70px;
+				//background-color: red;
+				
+				li{
+					list-style: none;
+				}
+				
+				@include respond-to(tablets){
+					padding: 10px 0;
+				}
+				@include respond-to(small-tablets){
+					padding: 10px 0;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+				@include respond-to(handhelds){
+					padding: 10px 0;
+					min-height: auto;
+				}
+			}
+			.post-list{
+				padding: 10px 0;
+				margin: 0;
+				
+				li{
+					list-style: none;
+				}
+			}
+			
+			@include respond-to(tablets){
+				width: 33.33%;
+			}
+			@include respond-to(small-tablets){
+				width: 33.33%;
+			}
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				display: block;
+				padding: 10px;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				display: block;
+				padding: 10px;
+			}
+		}
+		
+		@include respond-to(small-tablets){
+			width: 100%;
+			float: none;
+		}
+		@include respond-to(wide-handhelds){
+			width: 100%;
+			float: none;
+		}
+		@include respond-to(handhelds){
+			width: 100%;
+			float: none;
+		}
+	}
+	.right-side-contact{
+		width: calc(30% - 20px);
+		float: right;
+		margin: 20px 0 20px 20px;
+		padding: 20px;
+		box-sizing: border-box;
+		box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+		//background-color: yellow;
+		
+		.workers{
+			margin: 0;
+			
+			li{
+				list-style: none;
+				margin-bottom: 10px;
+				border-bottom: 1px solid #aaa;
+				
+				p{
+					margin-bottom: 10px;
+				}
+			}
+			li:last-child{
+				border-bottom: none;
+			}
+		}
+		
+		@include respond-to(small-tablets){
+			width: 100%;
+			margin: 20px 0 20px 0;
+			float: none;
+		}
+		@include respond-to(wide-handhelds){
+			width: 100%;
+			margin: 20px 0 20px 0;
+			float: none;
+		}
+		@include respond-to(handhelds){
+			width: 100%;
+			margin: 20px 0 20px 0;
+			float: none;
+		}
+	}
+	
+	@include respond-to(display){
+		padding:40px 10px 10px 10px;
+	}
+	@include respond-to(tablets){
+		padding:40px 10px 10px 10px;
+	}
+	@include respond-to(small-tablets){
+		padding:40px 10px 10px 10px;
+	}
+	@include respond-to(wide-handhelds){
+		padding:40px 10px 10px 10px;
+	}
+	@include respond-to(handhelds){
+		padding:40px 10px 10px 10px;
+	}
+}
