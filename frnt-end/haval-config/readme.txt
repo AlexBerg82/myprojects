@@ -1,0 +1,1 @@
+list.html - карта google с фильтрами
