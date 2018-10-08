@@ -112,28 +112,78 @@ table a:hover{
 	background-color:#fff;
 }
 
+
+
+
+
+.filtersBlock{
+	padding: 15px 15px 20px 15px;
+	background-color: #000;
+}
+
+.btnFlrt{
+	width: 200px;
+	padding: 1px 0;
+	background-color: #fff;
+	position: relative;
+}
+.crn{
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 10px solid #fff;
+	cursor: pointer;
+}
+
 .filtr{
-	width: 300px;
-	height: 1px;
-	background-color:rgba(181,181,181,0.8);
+	/*width: 300px;
+	height: 120px;*/
+	background-color:rgba(181,181,181,1);
 	position:absolute;
 	z-index:9999;
-	top:0;
+	top:50px;
+	/*box-shadow: 4px 4px 10px 3px #000;
+	display: none;*/
 }
 .filters{
-	display: none;
+	padding: 15px;
 }
-.corner{
-	width: 30px;
-	height: 13px;
-	background-color:rgba(181,181,181,0.8);
-	position:absolute;
-	bottom:-13px;
-	border-radius: 0 0 5px 0;
-	-wedkit-border-radius: 0 0 5px 0;
-	-moz-border-radius: 0 0 5px 0;
+
+
+
+
+
+
+
+/*
+.listPlace label{
+	color: #363636;
+	margin-right: 10px;
+	padding: 3px 0;
 }
-.corner p,.corner2 p{
+
+
+.timePeriod label,.departament label{
+	color: #363636;
+	margin-right: 10px;
+	padding: 3px 0;
+}
+.timePeriod input{
+	padding: 10px 0;
+}
+
+.departament select,.listPlace select{
+	padding: 3px 5px;
+	float: right;
+}
+*/
+
+
+
+/*
+.corner2 p{
 	font-size: 10px;
 	text-align:center;
 	line-height:15px;
@@ -142,17 +192,20 @@ table a:hover{
 .corner2 p{
 	line-height:30px;
 }
-
-.filtr:hover{
-	top:0;
-	height: 120px;
-}
-.filtr:hover .filters{
-	display: block;
-}
+*/
 #fltr{
 	float: right;
+	padding: 5px 15px;
 }
+
+
+
+/*#time,#pros,#spis,#prod{
+	width: 15px;
+	height: 15px;
+}*/
+
+
 
 
 .panel{
@@ -163,6 +216,7 @@ table a:hover{
 	z-index:9999;
 	top:0;
 	right:0;
+	display: none;
 }
 .corner2{
 	width: 13px;
@@ -223,13 +277,8 @@ table a:hover{
 	background: url(../img/printon.png) no-repeat;
 	background-size: 100% 100%;
 }
-.filters{
-	padding: 5px 10px;
-}
-.filters label{
-	color: #363636;
-}
-.listPlace label,.departament label{
+
+/*.listPlace label,.departament label{
 	float:left;
 	line-height:20px;
 }
@@ -246,7 +295,7 @@ table a:hover{
 	padding-bottom: 2px;
 }
 
-
+*/
 
 
 
@@ -274,11 +323,13 @@ table a:hover{
 }
 .redacter{
 	z-index: 10;
-	top: 10%;
-	left: 5%;
 	padding: 20px;
-	position: fixed;
 	background: rgba(5, 5, 5, 0.6);
+	position: absolute;
+    top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
 }
 .redPos{
 	color:red;

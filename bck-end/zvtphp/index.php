@@ -1,19 +1,20 @@
 ﻿<?php
-include "include/tozip.php"
+	include "include/tozip.php"
 ?>
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>ЗВТ</title>
-	<link rel="stylesheet" media="screen" href="css/style.css" />
-	<link rel="stylesheet" type="text/css" href="css/tcal.css" />
+	<link rel="stylesheet" media="screen" href="css/main.css" />
+	<!--<link rel="stylesheet" type="text/css" href="css/tcal.css" />-->
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 	
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/tab.js"></script>
 	<script type="text/javascript" src="js/jquery.session.js"></script>
-	<script type="text/javascript" src="js/tcal.js"></script>
+	<!--<script type="text/javascript" src="js/tcal.js"></script>-->
 	
 	<script>
 		//информация о загружаемом файле
@@ -29,13 +30,17 @@ include "include/tozip.php"
 		}
 	</script>
 </head>
+
 <body>
 <div class="wrapper">
-	<div class="filtr clearfix">
-		<div class="corner"><p>&#9660;</p></div>
-		
-		<div class="filters">
-			<p class="listPlace clearfix">
+
+	<div class="filtersBlock">
+		<div class="btnFlrt">
+			<div class="crn"></div>
+		</div>
+
+		<div class="filtr">
+			<p>
 				<label for="town">Место нахождения</label>
 				<select required id="town">
 					<option value="" selected> Все </option>
@@ -43,15 +48,14 @@ include "include/tozip.php"
 					<option value="Днепропетровск"> Днепропетровск </option>
 				</select>
 			</p>
-			
-			<p class="timePeriod">
+			<p>
 				<label for="mans">45</label>
 				<input type=checkbox name="45" id="time" />
+				<br>
 				<label for="pros">Просроченные</label>
 				<input type=checkbox name="pros" id="pros" />
 			</p>
-
-			<p class="departament clearfix">
+			<p>
 				<label for="department">Отдел</label>
 				<select required id="depart">
 					<option value="" selected> Все </option>
@@ -60,29 +64,26 @@ include "include/tozip.php"
 					<option value="Лаб_сч_т"> ЛабораторияТ </option>
 				</select>
 			</p>
-
-			<p class="listSale">
+			<p>
 				<label for="spis">Списаны</label>
 				<input type=checkbox name="spis" id="spis" />
+				<br>
 				<label for="prod">Проданы</label>
 				<input type=checkbox name="prod" id="prod" />
 			</p>
 			
 			<button id="fltr">Фильтр</button>
 		</div>
-		
-	</div>
 
-	
-	<div class="panel clearfix">
-		<div class="corner2"><p>&#9668;</p></div>
-		<div class="cp">
+		
+		<div class="panel">
 			<a href="template.php" target="_blank" class="csm" id="csm"></a>
 			<a href="#" class="print"></a>
 		</div>
 	</div>
-	
 
+	
+	
 	<table border="1" class="spc">
 		<tr class="hid">
 			<th><p>№ п/п</p></th>
@@ -99,8 +100,11 @@ include "include/tozip.php"
 			<th><p>Примечание</p></td>
 		</tr>
 	</table>
-	<p id="addUnit">+</p>
+	
+	<div class="add">
+		<a href="#" id="addUnit" onclick="return false;">+</a>
+		<p>Добавить новую позицию</p>
+	</div>
 </div>
-
 </body>
 </html>

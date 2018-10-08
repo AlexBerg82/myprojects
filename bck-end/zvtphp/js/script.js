@@ -1,5 +1,13 @@
-﻿$(document).ready(function(){
+﻿//open window of filters
+$(document).ready(function(){
+	$('.crn').on('click', function(e) {
+		e.preventDefault();
+		$('.filtr').slideToggle(600);
+	});
+});
 
+
+$(document).ready(function(){
 	$.session.remove("town");
 	$.session.remove("depart");
 	$.session.remove("time");
@@ -90,24 +98,26 @@ function viewData(town,depart,time,pros,spis,prod){
 						
 							//показывать архив если он есть
 							if(html[value]['zip'] > ''){
-
+								
 								if(html[value]['path_pdf'] > ''){
-									$("table").append('<tr class="delt"><td><p class="mst"><a href="#" class="rdct" id="redact'+ html[value]['id'] +'"></a></p></td><td><p class="mst">'+ html[value]['place'] +'</p></td><td><p class="mst">'+ html[value]['name'] +'</p></td><td class="marker"><p class="mst" id="zipp"><a href="./base/'+ html[value]['place'] +'/'+ html[value]['department'] +'/'+ html[value]['name'] +'/'+ html[value]['symbol'] +'/'+ html[value]['path_pdf'] +'" target="_blank">'+ html[value]['symbol'] +'</a><div class="zipp"><ul class="zipList" id="zipList'+ html[value]['id'] +'"></ul></div></p></td><td><p class="mst">'+ html[value]['period'] +'</p></td><td><p class="mst" id="timeRun">'+ dayBegin + '-' + monthBegin + '-' + yearBegin +'</p></td><td><p class="mst">'+ dayEnd + '-' + monthEnd + '-' + yearEnd +'</p></td><td><p class="mst">'+ html[value]['number_serial'] +'</p></td><td><p class="mst">'+ html[value]['number_factory'] +'</p></td><td><p class="mst">'+ html[value]['department'] +'</p></td><td><p class="mst" style="color:'+color+';">'+ dateResid +'</p></td><td><p class="mst">'+ html[value]['note'] +'</p></td></tr>');
+									$("table").append('<tr class="delt"><td><p class="mst"><a href="#" onclick="return false;" class="rdct" id="redact'+ html[value]['id'] +'"></a></p></td><td><p class="mst">'+ html[value]['place'] +'</p></td><td><p class="mst">'+ html[value]['name'] +'</p></td><td class="marker"><p class="mst" id="zipp"><a href="./base/'+ html[value]['place'] +'/'+ html[value]['department'] +'/'+ html[value]['name'] +'/'+ html[value]['symbol'] +'/'+ html[value]['path_pdf'] +'" target="_blank">'+ html[value]['symbol'] +'</a><div class="zipp"><ul class="zipList" id="zipList'+ html[value]['id'] +'"></ul></div></p></td><td><p class="mst">'+ html[value]['period'] +'</p></td><td><p class="mst" id="timeRun">'+ dayBegin + '-' + monthBegin + '-' + yearBegin +'</p></td><td><p class="mst">'+ dayEnd + '-' + monthEnd + '-' + yearEnd +'</p></td><td><p class="mst">'+ html[value]['number_serial'] +'</p></td><td><p class="mst">'+ html[value]['number_factory'] +'</p></td><td><p class="mst">'+ html[value]['department'] +'</p></td><td><p class="mst" style="color:'+color+';">'+ dateResid +'</p></td><td><p class="mst">'+ html[value]['note'] +'</p></td></tr>');
 								} else {
-									$("table").append('<tr class="delt"><td><p class="mst"><a href="#" class="rdct" id="redact'+ html[value]['id'] +'"></a></p></td><td><p class="mst">'+ html[value]['place'] +'</p></td><td><p class="mst">'+ html[value]['name'] +'</p></td><td class="marker"><p class="mst" id="zipp"><p>'+ html[value]['symbol'] +'</p><div class="zipp"><ul class="zipList" id="zipList'+ html[value]['id'] +'"></ul></div></p></td><td><p class="mst">'+ html[value]['period'] +'</p></td><td><p class="mst" id="timeRun">'+ dayBegin + '-' + monthBegin + '-' + yearBegin +'</p></td><td><p class="mst">'+ dayEnd + '-' + monthEnd + '-' + yearEnd +'</p></td><td><p class="mst">'+ html[value]['number_serial'] +'</p></td><td><p class="mst">'+ html[value]['number_factory'] +'</p></td><td><p class="mst">'+ html[value]['department'] +'</p></td><td><p class="mst" style="color:'+color+';">'+ dateResid +'</p></td><td><p class="mst">'+ html[value]['note'] +'</p></td></tr>');
+									$("table").append('<tr class="delt"><td><p class="mst"><a href="#" onclick="return false;" class="rdct" id="redact'+ html[value]['id'] +'"></a></p></td><td><p class="mst">'+ html[value]['place'] +'</p></td><td><p class="mst">'+ html[value]['name'] +'</p></td><td class="marker"><p class="mst" id="zipp"><p>'+ html[value]['symbol'] +'</p><div class="zipp"><ul class="zipList" id="zipList'+ html[value]['id'] +'"></ul></div></p></td><td><p class="mst">'+ html[value]['period'] +'</p></td><td><p class="mst" id="timeRun">'+ dayBegin + '-' + monthBegin + '-' + yearBegin +'</p></td><td><p class="mst">'+ dayEnd + '-' + monthEnd + '-' + yearEnd +'</p></td><td><p class="mst">'+ html[value]['number_serial'] +'</p></td><td><p class="mst">'+ html[value]['number_factory'] +'</p></td><td><p class="mst">'+ html[value]['department'] +'</p></td><td><p class="mst" style="color:'+color+';">'+ dateResid +'</p></td><td><p class="mst">'+ html[value]['note'] +'</p></td></tr>');
 								}
 
 								var arr = [];
 								arr = html[value]['zip'].split(',');
 								for(var i = 0; i < arr.length; i++){
-									$("#zipList"+ html[value]['id']).append('<li><a href="./base/'+ html[value]['place'] +'/'+ html[value]['department'] +'/'+ html[value]['name'] +'/'+ html[value]['symbol'] +'/Архив/'+ arr[i] +'" target="_blank">'+ arr[i] +'</a></li>');
+									if(arr[i] > ''){
+										$("#zipList"+ html[value]['id']).append('<li><a href="./base/'+ html[value]['place'] +'/'+ html[value]['department'] +'/'+ html[value]['name'] +'/'+ html[value]['symbol'] +'/Архив/'+ arr[i] +'" target="_blank">'+ arr[i] +'</a></li>');
+									}
 								}
 							
 							} else {
 								if(html[value]['path_pdf'] > ''){
-									$("table").append('<tr class="delt"><td><p class="mst"><a href="#" class="rdct" id="redact'+ html[value]['id'] +'"> </a></p></td><td><p class="mst">'+ html[value]['place'] +'</p></td><td><p class="mst">'+ html[value]['name'] +'</p></td><td class="marker"><p class="mst" id="zipp"><a href="./base/'+ html[value]['place'] +'/'+ html[value]['department'] +'/'+ html[value]['name'] +'/'+ html[value]['symbol'] +'/'+ html[value]['path_pdf'] +'" target="_blank">'+ html[value]['symbol'] +'</a></p></td><td><p class="mst">'+ html[value]['period'] +'</p></td><td><p class="mst" id="timeRun">'+ dayBegin + '-' + monthBegin + '-' + yearBegin +'</p></td><td><p class="mst">'+ dayEnd + '-' + monthEnd + '-' + yearEnd +'</p></td><td><p class="mst">'+ html[value]['number_serial'] +'</p></td><td><p class="mst">'+ html[value]['number_factory'] +'</p></td><td><p class="mst">'+ html[value]['department'] +'</p></td><td><p class="mst" style="color:'+color+';">'+ dateResid +'</p></td><td><p class="mst">'+ html[value]['note'] +'</p></td></tr>');
+									$("table").append('<tr class="delt"><td><p class="mst"><a href="#" onclick="return false;" class="rdct" id="redact'+ html[value]['id'] +'"> </a></p></td><td><p class="mst">'+ html[value]['place'] +'</p></td><td><p class="mst">'+ html[value]['name'] +'</p></td><td class="marker"><p class="mst" id="zipp"><a href="./base/'+ html[value]['place'] +'/'+ html[value]['department'] +'/'+ html[value]['name'] +'/'+ html[value]['symbol'] +'/'+ html[value]['path_pdf'] +'" target="_blank">'+ html[value]['symbol'] +'</a></p></td><td><p class="mst">'+ html[value]['period'] +'</p></td><td><p class="mst" id="timeRun">'+ dayBegin + '-' + monthBegin + '-' + yearBegin +'</p></td><td><p class="mst">'+ dayEnd + '-' + monthEnd + '-' + yearEnd +'</p></td><td><p class="mst">'+ html[value]['number_serial'] +'</p></td><td><p class="mst">'+ html[value]['number_factory'] +'</p></td><td><p class="mst">'+ html[value]['department'] +'</p></td><td><p class="mst" style="color:'+color+';">'+ dateResid +'</p></td><td><p class="mst">'+ html[value]['note'] +'</p></td></tr>');
 								} else {
-									$("table").append('<tr class="delt"><td><p class="mst"><a href="#" class="rdct" id="redact'+ html[value]['id'] +'"> </a></p></td><td><p class="mst">'+ html[value]['place'] +'</p></td><td><p class="mst">'+ html[value]['name'] +'</p></td><td class="marker"><p class="mst" id="zipp"><p>'+ html[value]['symbol'] +'</p></p></td><td><p class="mst">'+ html[value]['period'] +'</p></td><td><p class="mst" id="timeRun">'+ dayBegin + '-' + monthBegin + '-' + yearBegin +'</p></td><td><p class="mst">'+ dayEnd + '-' + monthEnd + '-' + yearEnd +'</p></td><td><p class="mst">'+ html[value]['number_serial'] +'</p></td><td><p class="mst">'+ html[value]['number_factory'] +'</p></td><td><p class="mst">'+ html[value]['department'] +'</p></td><td><p class="mst" style="color:'+color+';">'+ dateResid +'</p></td><td><p class="mst">'+ html[value]['note'] +'</p></td></tr>');
+									$("table").append('<tr class="delt"><td><p class="mst"><a href="#" onclick="return false;" class="rdct" id="redact'+ html[value]['id'] +'"> </a></p></td><td><p class="mst">'+ html[value]['place'] +'</p></td><td><p class="mst">'+ html[value]['name'] +'</p></td><td class="marker"><p class="mst" id="zipp"><p>'+ html[value]['symbol'] +'</p></p></td><td><p class="mst">'+ html[value]['period'] +'</p></td><td><p class="mst" id="timeRun">'+ dayBegin + '-' + monthBegin + '-' + yearBegin +'</p></td><td><p class="mst">'+ dayEnd + '-' + monthEnd + '-' + yearEnd +'</p></td><td><p class="mst">'+ html[value]['number_serial'] +'</p></td><td><p class="mst">'+ html[value]['number_factory'] +'</p></td><td><p class="mst">'+ html[value]['department'] +'</p></td><td><p class="mst" style="color:'+color+';">'+ dateResid +'</p></td><td><p class="mst">'+ html[value]['note'] +'</p></td></tr>');
 								}
 							}
 						
@@ -125,7 +135,7 @@ function viewData(town,depart,time,pros,spis,prod){
 						$("#redact"+ html[value]['id']).click(function(){
 							$('body').append('<div class="modal" id="modal_out"></div>');
 							$('.modal').fadeIn(500);
-							$('body').append('<div class="redacter"></div>');
+							$('body').append('<div class="redacter"><div class="close"><i class="fa fa-times" aria-hidden="true"></i></div></div>');
 							
 							//передача порядкового номера
 							var numPos = $(this).html();
@@ -133,8 +143,12 @@ function viewData(town,depart,time,pros,spis,prod){
 							var idPos = $(this).attr('id');
 							redager(idPos,numPos);
 							
-							//выход из режима регистрации по нажатию на фон
+							//выход из режима регистрации
 							$("#modal_out").click(function(){
+								$('.redacter').empty().remove();
+								$('.modal').empty().remove();
+							});
+							$(".close").click(function(){
 								$('.redacter').empty().remove();
 								$('.modal').empty().remove();
 							});
@@ -267,12 +281,16 @@ function viewData(town,depart,time,pros,spis,prod){
 	$("#addUnit").click(function(){
 		$('body').append('<div class="modal" id="modal_out"></div>');
 		$('.modal').fadeIn(500);
-		$('body').append('<div class="redacter"></div>');
+		$('body').append('<div class="redacter"><div class="close"><i class="fa fa-times" aria-hidden="true"></i></div></div>');
 		
 		addUnits();
 									
-		//выход из режима добавления по нажатию на фон
+		//выход из режима добавления
 		$("#modal_out").click(function(){
+			$('.redacter').empty().remove();
+			$('.modal').empty().remove();
+		});
+		$(".close").click(function(){
 			$('.redacter').empty().remove();
 			$('.modal').empty().remove();
 		});
@@ -306,7 +324,7 @@ function viewData(town,depart,time,pros,spis,prod){
 						var montshEnd = html[value]['date_end'].substr(5,2);
 						var yearsEnd = html[value]['date_end'].substr(0,4);
 
-						$('.redacter').append('<h2 class="redPos"> Редактировать позицию </h2><table><tr><td><p class="mst">'+ numPos +'</p></td><td><p class="mst"><select required id="redTown"><option value="'+ html[value]['place'] +'" selected>'+ html[value]['place'] +'</option><option value="Вышгород"> Вышгород </option><option value="Днепропетровск"> Днепропетровск </option></select></p></td><td><p class="mst"><input type="text" id="redName" value="'+ html[value]['name'] +'"></p></td><td class="marker"><p class="mst" id="zipp"><a href="#"><input type="text" id="redSymbol" class="inpt_link" value="'+ html[value]['symbol'] +'"></a></p></td><td><p class="mst"><select required id="redPeriod"><option value="'+ html[value]['period'] +'" selected>'+ html[value]['period'] +'</option><option value="12"> 12 </option><option value="24"> 24 </option><option value="48"> 48 </option></select></p></td><td><p class="mst_date_from"><input type="text" name="date_to_day" size="2" class="tcal" id="redBegin" maxlength="2" value="'+ daysBegin + '" /><input type="text" name="date_to_month" size="2" maxlength="2" id="redBegin2" class="tcal" value="'+ montshBegin + '" /><input type="text" name="date_to_year" size="4" maxlength="4" id="redBegin3" class="tcal" value="'+ yearsBegin + '" /></p></td><td><p class="mst_date_to"><input type="text" name="date_to_day" size="2" class="tcal" id="redEnd" maxlength="2" value="'+ daysEnd + '" /><input type="text" name="date_to_month" size="2" maxlength="2" id="redEnd2" class="tcal" value="'+ montshEnd + '" /><input type="text" name="date_to_year" size="4" maxlength="4" class="tcal" id="redEnd3" value="'+ yearsEnd + '" /></p></td><td><p class="mst"><input type="text" id="redSerial" class="sinum" value="'+ html[value]['number_serial'] +'"></p></td><td><p class="mst"><input type="text" id="redFactory" class="sinum" value="'+ html[value]['number_factory'] +'"></p></td><td><p class="mst"><select required id="redDepart"><option value="'+ html[value]['department'] +'" selected>'+ html[value]['department'] +'</option><option value="Лаб_сч_э.э"> ЛабораторияЭЭ </option><option value="Лаб_т"> ЛабораторияТ </option><option value="Лаб_сч_в"> ЛабораторияВ </option><option value="Лаб_сч_г"> ЛабораторияГ </option><option value="Пр_сч_э.э"> ПроизводствоЭЭ </option><option value="Пр_с_п"> ПроизводствоСП </option><option value="КБ"> КБ </option><option value="ВТВ"> ВТВ </option><option value="ОТК"> ОТК </option><option value="Тех"> Технолог </option></select></p></td><td><p class="mst"><textarea name="" id="redNote" cols="15" rows="10">'+ html[value]['note'] +'</textarea></p></td></tr></table><textarea id="redAboutPos">'+ html[value]['extra'] +'</textarea><div class="fileform"><div id="fileformlabel"></div><form enctype="multipart/form-data"><input type="file" id="somename" name="uploadfile" onchange="getName(this.value);"><div class="selectbutton"> Выбор </div></form></div><button class="submit_form" id="redactPos"> Внести изменения </button><div class="deletePosition"><input type=checkbox name="delete" id="deletePosition'+ html[value]['id'] +'" /><label for="deletePosition"> Удалить позицию </label></div>');
+						$('.redacter').append('<h2 class="redPos"> Редактировать позицию </h2><table><tr><td><p class="mst">'+ numPos +'</p></td><td><p class="mst"><select required id="redTown"><option value="'+ html[value]['place'] +'" selected>'+ html[value]['place'] +'</option><option value="Вышгород"> Вышгород </option><option value="Днепропетровск"> Днепропетровск </option></select></p></td><td><p class="mst"><input type="text" id="redName" value="'+ html[value]['name'] +'"></p></td><td class="marker"><p class="mst" id="zipp"><a href="#" onclick="return false;"><input type="text" id="redSymbol" class="inpt_link" value="'+ html[value]['symbol'] +'"></a></p></td><td><p class="mst"><select required id="redPeriod"><option value="'+ html[value]['period'] +'" selected>'+ html[value]['period'] +'</option><option value="12"> 12 </option><option value="24"> 24 </option><option value="48"> 48 </option></select></p></td><td><p class="mst_date_from"><input type="text" name="date_to_day" size="2" class="tcal" id="redBegin" maxlength="2" value="'+ daysBegin + '" /><input type="text" name="date_to_month" size="2" maxlength="2" id="redBegin2" class="tcal" value="'+ montshBegin + '" /><input type="text" name="date_to_year" size="4" maxlength="4" id="redBegin3" class="tcal" value="'+ yearsBegin + '" /></p></td><td><p class="mst_date_to"><input type="text" name="date_to_day" size="2" class="tcal" id="redEnd" maxlength="2" value="'+ daysEnd + '" /><input type="text" name="date_to_month" size="2" maxlength="2" id="redEnd2" class="tcal" value="'+ montshEnd + '" /><input type="text" name="date_to_year" size="4" maxlength="4" class="tcal" id="redEnd3" value="'+ yearsEnd + '" /></p></td><td><p class="mst"><input type="text" id="redSerial" class="sinum" value="'+ html[value]['number_serial'] +'"></p></td><td><p class="mst"><input type="text" id="redFactory" class="sinum" value="'+ html[value]['number_factory'] +'"></p></td><td><p class="mst"><select required id="redDepart"><option value="'+ html[value]['department'] +'" selected>'+ html[value]['department'] +'</option><option value="Лаб_сч_э.э"> ЛабораторияЭЭ </option><option value="Лаб_т"> ЛабораторияТ </option><option value="Лаб_сч_в"> ЛабораторияВ </option><option value="Лаб_сч_г"> ЛабораторияГ </option><option value="Пр_сч_э.э"> ПроизводствоЭЭ </option><option value="Пр_с_п"> ПроизводствоСП </option><option value="КБ"> КБ </option><option value="ВТВ"> ВТВ </option><option value="ОТК"> ОТК </option><option value="Тех"> Технолог </option></select></p></td><td><p class="mst"><textarea name="" id="redNote" cols="15" rows="10">'+ html[value]['note'] +'</textarea></p></td></tr></table><textarea id="redAboutPos">'+ html[value]['extra'] +'</textarea><div class="fileform"><div id="fileformlabel"></div><form enctype="multipart/form-data"><input type="file" id="somename" name="uploadfile" onchange="getName(this.value);"><div class="selectbutton"> Выбор </div></form></div><button class="submit_form" id="redactPos"> Внести изменения </button><div class="deletePosition"><input type=checkbox name="delete" id="deletePosition'+ html[value]['id'] +'" /><label for="deletePosition"> Удалить позицию </label></div>');
 
 						var usrImg;
 						var usrImgType;

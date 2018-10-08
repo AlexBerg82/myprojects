@@ -18,10 +18,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	$usrImg = $_POST['usrImg'];
 	$usrImgType = $_POST['usrImgType'];
 	$redAboutPos = $_POST['redAboutPos'];
-	
-	
-	
 
+	
 	$healthy = array("/");
 	$yummy   = array("-");
 	$redName = str_replace($healthy, $yummy, $redName);
@@ -29,9 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	$healthy2 = array("/");
 	$yummy2   = array("-");
 	$redSymbol = str_replace($healthy2, $yummy2, $redSymbol);
-	
-	
-	
+
 	
 	$dateBegin = date_create($redBegin);
 	$dateBegin = date_format($dateBegin, 'Y-m-d');
@@ -39,58 +35,45 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	$dateEnd = date_create($redEnd);
 	$dateEnd = date_format($dateEnd, 'Y-m-d');
 
+	if(isset($_POST['redName'])){
+		//создаем путь если несуществует
+		$path = '../base';
+		if(!is_dir($path)) mkdir($path, 0777);
+		
+		$path = '../base/'.iconv("UTF-8", "cp1251",$redPlace);
+		if(!is_dir($path)) mkdir($path, 0777);
+		
+		$path = '../base/'.iconv("UTF-8", "cp1251",$redPlace).'/'.iconv("UTF-8", "cp1251",$redDepart);
+		if(!is_dir($path)) mkdir($path, 0777);
+		
+		$path = '../base/'.iconv("UTF-8", "cp1251",$redPlace).'/'.iconv("UTF-8", "cp1251",$redDepart).'/'.iconv("UTF-8", "cp1251",$redName);
+		if(!is_dir($path)) mkdir($path, 0777);
+		
+		$path = '../base/'.iconv("UTF-8", "cp1251",$redPlace).'/'.iconv("UTF-8", "cp1251",$redDepart).'/'.iconv("UTF-8", "cp1251",$redName).'/'.iconv("UTF-8", "cp1251",$redSymbol);
+		if(!is_dir($path)) mkdir($path, 0777);
 		
 		
-if(isset($_POST['redName'])){
+		$zpr = iconv("UTF-8", "cp1251", '/Архив');
+		if(!is_dir($path.$zpr)) mkdir($path.$zpr, 0777);
 
-	//создаем путь если несуществует
-	$path = '../base';
-	if(!is_dir($path)) mkdir($path, 0777);
-	
-	$path = '../base/'.iconv("UTF-8", "cp1251",$redPlace);
-	if(!is_dir($path)) mkdir($path, 0777);
-	
-	$path = '../base/'.iconv("UTF-8", "cp1251",$redPlace).'/'.iconv("UTF-8", "cp1251",$redDepart);
-	if(!is_dir($path)) mkdir($path, 0777);
-	
-	$path = '../base/'.iconv("UTF-8", "cp1251",$redPlace).'/'.iconv("UTF-8", "cp1251",$redDepart).'/'.iconv("UTF-8", "cp1251",$redName);
-	if(!is_dir($path)) mkdir($path, 0777);
-	
-	$path = '../base/'.iconv("UTF-8", "cp1251",$redPlace).'/'.iconv("UTF-8", "cp1251",$redDepart).'/'.iconv("UTF-8", "cp1251",$redName).'/'.iconv("UTF-8", "cp1251",$redSymbol);
-	if(!is_dir($path)) mkdir($path, 0777);
-	
-	
-	$zpr = iconv("UTF-8", "cp1251", '/Архив');
-	if(!is_dir($path.$zpr)) mkdir($path.$zpr, 0777);
+		
+		$path = '../base/'.$redPlace.'/'.$redDepart.'/'.$redName.'/'.$redSymbol.'/';
 
-	
-	$path = '../base/'.$redPlace.'/'.$redDepart.'/'.$redName.'/'.$redSymbol.'/';
+		
+		//вставка в БД
+		mysql_query("INSERT INTO oborudovanie(place,name,symbol,period,date_begin,date_end,number_factory,number_serial,department,note,vise,path_full,extra)
+		VALUES('".$redPlace."','".$redName."','".$redSymbol."','".$redPeriod."','".$dateBegin."','".$dateEnd."','".$redSerial."','".$redFactory."','".$redDepart."','".$redNote."','1','".$path."','".$redAboutPos."')
+		",$link);
 
-
-
-	
-	//вставка в БД
-	mysql_query("INSERT INTO oborudovanie(place,name,symbol,period,date_begin,date_end,number_factory,number_serial,department,note,vise,path_full,extra)
-	VALUES('".$redPlace."','".$redName."','".$redSymbol."','".$redPeriod."','".$dateBegin."','".$dateEnd."','".$redSerial."','".$redFactory."','".$redDepart."','".$redNote."','1','".$path."','".$redAboutPos."')
-	",$link);
-	
-
-	
-	//получение ID текущей вставки
-	$id = mysql_insert_id();
-	
-	echo $path.'*'.$id.'*'.$redBegin.'*'.$redEnd;
-	
+		
+		//получение ID текущей вставки
+		$id = mysql_insert_id();
+		
+		echo $path.'*'.$id.'*'.$redBegin.'*'.$redEnd;
+	}
 }
-	
-}
-	
-	
-	
-	
-	
+
 if(isset($_GET['temper'])){
-	
 	foreach( $_FILES as $file ){
 		if($file['type'] == 'image/jpeg' || $file['type'] == 'image/jpg' || $file['type'] == 'image/gif' || $file['type'] == 'image/png' || $file['type'] == 'application/pdf' || $file['type'] == 'application/x-pdf' || $file['type'] == 'application/acrobat' || $file['type'] == 'applications/vnd.pdf' || $file['type'] == 'text/pdf' || $file['type'] == 'text/x-pdf'){
 		
@@ -105,8 +88,5 @@ if(isset($_GET['temper'])){
 
 		}
 	}
-	
-
 }
-
 ?>
