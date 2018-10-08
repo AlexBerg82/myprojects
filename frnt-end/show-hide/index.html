@@ -1,0 +1,200 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Interstuhl</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="sh.js"></script>
+</head>
+<body>
+
+<style>
+.card-c2 li{
+	display: inline-block;
+	width: 100px;
+	height: 80px;
+}
+.card-c2 li a img{
+	width: 100px;
+	height: 80px;
+}
+
+.card-c1 li{
+	display: inline-block;
+	width: 100px;
+	height: 80px;
+}
+.card-c1 li a img{
+	width: 100px;
+	height: 80px;
+}
+</style>
+
+
+<div class="wrapper">
+
+	<div class="tabs__content">
+		<ul class="card card-c1">
+			<li>
+				<a href="">
+					<img src="images/portfolio/1.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/2.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/3.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/4.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/5.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/6.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/7.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/8.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/9.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/7.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/8.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/9.jpg" alt="">
+				</a>
+			</li>
+		</ul>
+		
+		<div class="button">
+			<a href="#" class="btn all-card">Показать больше</a>
+		</div>
+	</div>
+
+	
+	<div class="tabs__content">
+		<ul class="card card-c2">
+			<li>
+				<a href="">
+					<img src="images/portfolio/1.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/2.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/3.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/4.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/5.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/6.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/7.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/8.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/9.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/7.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/8.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/portfolio/9.jpg" alt="">
+				</a>
+			</li>
+		</ul>
+		
+		<div class="button">
+			<a href="#" class="btn all-card2">Показать больше</a>
+		</div>
+	</div>
+
+</div>
+
+
+
+<script>
+//отображение / скрытие дополнительных элементов
+$('.card-c1').showAll({//контейнер элементов
+	quantity: 8,//количество отображаемых элементов по умолчанию
+	button: '.all-card',//кнопка
+	buttonTextShow: 'Показать больше',//возврат текста кнопки на умолчание
+	buttonTextHide: 'Скрыть'//смена текста кнопки
+});
+
+$('.card-c2').showAll({
+	quantity: 9,
+	button: '.all-card2',
+	buttonTextShow: 'Показать больше',
+	buttonTextHide: 'Скрыть'
+});
+</script>
+
+</body>
+</html>
