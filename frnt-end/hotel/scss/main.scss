@@ -1,0 +1,173 @@
+@import "reset";
+
+@import "fonts";
+
+
+body{
+	background: #000;
+	background: url('../img/bg.jpg') repeat;
+	background-attachment: fixed;
+	font-family: sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+
+
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+  @else if $media == wide-handhelds {
+    @media only screen and (min-width: 480px) and (max-width: 599px) { @content; }
+  }
+  @else if $media == small-tablets {
+    @media only screen and (min-width: 600px) and (max-width: 767px) { @content; }
+  }  
+  @else if $media == tablets {
+    @media only screen and (min-width: 768px) and (max-width: 979px) { @content; }
+  }
+  @else if $media == display {
+    @media only screen and (min-width: 980px) and (max-width: 1199px) { @content; }
+  }  
+  @else if $media == display-big {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+}
+
+
+@mixin clearfix { &:after {  content: ".";  display: block;  clear: both;  visibility: hidden;  line-height: 0;  height: 0;} }
+// @include clearfix;
+
+
+@mixin width1000 { max-width: 1100px; margin: 0 auto; position: relative; box-sizing: border-box;}
+// @include width1000;
+@mixin width100pr { width: 100%; margin: 0 auto; position: relative; box-sizing: border-box;}
+// @include width100pr;
+
+
+
+@mixin text-default{
+	h1,h2,h3,h4{
+		margin-bottom: 10px;
+	}
+	p{
+		margin-bottom: 5px;
+		line-height: 130%;
+		text-align: justify;
+		font-size: 14px;
+	}
+	a{
+		text-decoration: none;
+		color: darkblue;
+		font-size: 14px;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+	table{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border: 1px solid #000;
+		border-collapse: collapse;
+	}
+	table tr{
+		padding: 0;
+		vertical-align: center;
+		
+	}
+	table td{
+		padding: 10px 15px;
+		vertical-align: top;
+		border: 1px solid #000;
+		font-size: 14px;
+	}
+	ul, ol{
+		margin-top:10px;
+		margin-left: 20px;
+		margin-bottom: 10px;
+	}
+	ul{
+		list-style-type: disc;
+	}
+	ol{
+		list-style-type: decimal;
+	}
+	ul li, ol li{
+		padding: 0;
+		margin-bottom: 5px;
+		line-height: 130%;
+		font-size: 14px;
+	}
+	ul li h1,ul li h2,ul li h3,ul li h4,
+	ol li h1,ol li h2,ol li h3,ol li h4{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	img{
+		width: 100%;
+		margin: 10px 0;
+	}
+}
+//text styles @include text-default;
+
+
+
+@import "header";
+
+@import "top-menu";
+
+@import "slider";
+
+@import "content";
+
+@import "text-block";
+
+@import "card";
+
+@import "cell";
+
+@import "path-block";
+
+@import "footer";
+
+
+
+
+.clears{
+	padding: 0;
+	margin: 0 auto;
+	
+	&-tb{
+		padding: 20px 0;
+		margin: 0 auto;
+	}
+	&-rl{
+		padding: 0 20px;
+		margin: 0 auto;
+	}
+	&-tbm{
+		padding: 0;
+		margin: 0 auto 20px;
+	}
+	&-brdn{
+		background: none;
+		border: none;
+		box-shadow: rgba(221,221,221,0) 0px 0px 4px;
+	}
+}
+
+.bord{
+	border: 1px solid #9C9C9C;
+	
+	&-lr{
+		border-left: 1px solid #9C9C9C;
+		border-right: 1px solid #9C9C9C;
+	}
+	&-t{
+		border-top: 1px solid #9C9C9C;
+	}
+	&-b{
+		border-bottom: 1px solid #9C9C9C;
+	}
+}

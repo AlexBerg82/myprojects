@@ -1,0 +1,120 @@
+.baner{
+	@include width1000;
+	padding: 10px 0;
+	background: linear-gradient(to top, #010101, #4B4D50);
+	
+	.ban-block{
+		background: url('../img/ban.png') no-repeat;
+		background-position: top right;
+		background-size: contain;
+		
+		.text-block{
+			width: 54%;
+			padding: 40px;
+			
+			h1{
+				font-weight: bold;
+				font-size: 32px;
+				letter-spacing: -1px;
+				color: #fff;
+				font-family: Tahoma,Arial,helvetica,sans-serif;
+				
+				@include respond-to(tablets){
+					font-size: 28px;
+				}
+				@include respond-to(small-tablets){
+					font-size: 28px;
+				}
+			}
+			h1{
+				animation:
+					opasra 2s linear;
+			}
+			
+			@keyframes opasra{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+			
+			ul{
+				text-align: center;
+				padding: 10px;
+				
+				li{
+					font-weight: 500;
+					padding: 5px;
+					font-size: 40px;
+					list-style: none;
+					color: #2C89D7;
+					opacity: 0;
+					
+					@include respond-to(tablets){
+						font-size: 35px;
+					}
+					@include respond-to(small-tablets){
+						font-size:32px;
+					}
+					@include respond-to(wide-handhelds){
+						font-size:32px;
+						color: #87CEFF;
+					}
+					@include respond-to(handhelds){
+						font-size:30px;
+						color: #87CEFF;
+					}
+				}
+
+				
+				@include respond-to(small-tablets){
+					padding: 5px;
+				}
+			}
+			p{
+				line-height: 130%;
+				color: #fff;
+			}
+			p{
+				animation:
+					opasra 2s linear;
+			}
+			
+			@keyframes opasra{
+				from{ opacity: 0; }
+				to{ opacity: 1; }
+			}
+
+			
+			@include respond-to(tablets){
+				padding: 20px;
+			}
+			@include respond-to(small-tablets){
+				padding: 10px;
+				width: 52%;
+			}
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				padding: 20px;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.4);
+				box-sizing: border-box;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				padding: 20px;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.4);
+				box-sizing: border-box;
+			}
+		}
+	}
+	
+	@include respond-to(small-tablets){
+		padding: 10px 0;
+	}
+	@include respond-to(wide-handhelds){
+		background: #010101;
+	}
+	@include respond-to(handhelds){
+		background: #010101;
+	}
+}

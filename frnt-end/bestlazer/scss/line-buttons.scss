@@ -1,0 +1,24 @@
+.line-buttons{
+	@include width1000;
+	
+	ul{
+		text-align: right;
+		
+		li{
+			display: inline-block;
+			margin: 5px;
+			
+			a{
+				i{
+					font-size: 18px;
+					color: #FF312B;
+				}
+			}
+			a:hover{
+				i{
+					color: #aaa;
+				}
+			}
+		}
+	}
+}

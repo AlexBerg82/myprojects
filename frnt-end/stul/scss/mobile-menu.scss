@@ -1,0 +1,44 @@
+.menu{
+	.top-menu{
+		.mobile-menu{
+			clear: both;
+			background-color: #000;
+			
+			.sm{
+				display: none;
+				width: 100%;
+				padding: 10px 0;
+				background-color: #000;
+				
+				li{
+					opacity: 1;
+					
+					ul{
+						li{
+							a{
+								color: #000;
+								
+								&:hover{
+									color: #fff;
+								}
+							}					
+						}
+					}
+					
+					a{
+						&:hover{
+							color: #aaa;
+						}
+					}
+				}
+				li:last-child{
+					border-bottom: none;
+				}
+			}
+			.accordeon{
+				display: none;
+				padding: 10px 0 0 0;
+			}
+		}
+	}
+}

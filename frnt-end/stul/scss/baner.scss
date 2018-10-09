@@ -1,0 +1,246 @@
+//main baner
+.gallery-slider-main{
+	width: 100%;
+	padding: 20px 0;
+	position: relative;
+
+	.slider-for-main{
+		margin: 0 auto;
+		
+		//baner foto
+		.slider-foto{
+			height: 680px;
+			
+			@include respond-to(tablets){
+				height: 500px;
+			}
+			@include respond-to(small-tablets){
+				height: 300px;
+			}
+			@include respond-to(wide-handhelds){
+				height: 300px;
+			}
+			@include respond-to(handhelds){
+				height: 300px;
+			}
+		}
+	}
+
+	.more{
+		width: 500px;
+		position: absolute;
+		left: 10%;
+		bottom: 12%;
+		padding: 30px;
+		opacity: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		
+		.title-more{
+			margin-bottom: 20px;
+		
+			h1{
+				text-transform: uppercase;
+				color:#fff;
+				margin: 0;
+				padding: 0;
+				line-height: 120%;
+				
+				@include respond-to(display){
+					font-size: 22px;
+				}
+				@include respond-to(tablets){
+					font-size: 20px;
+				}
+				@include respond-to(small-tablets){
+					font-size: 18px;
+				}
+				@include respond-to(wide-handhelds){
+					font-size: 18px;
+				}
+				@include respond-to(handhelds){
+					font-size: 16px;
+				}
+			}
+			
+			@include respond-to(display){
+				margin-bottom: 10px;
+			}
+			@include respond-to(tablets){
+				margin-bottom: 10px;
+			}
+			@include respond-to(small-tablets){
+				margin-bottom: 10px;
+			}
+			@include respond-to(wide-handhelds){
+				margin-bottom: 10px;
+			}
+			@include respond-to(handhelds){
+				margin-bottom: 10px;
+			}
+		}
+		.text{
+			margin-bottom: 30px;
+			
+			p{
+				font-size: 15px;
+				color:#C5C5C7;
+				line-height: 130%;
+				
+				@include respond-to(tablets){
+					font-size: 14px;
+					line-height: 120%;
+				}
+				@include respond-to(small-tablets){
+					font-size: 13px;
+					line-height: 120%;
+				}
+				@include respond-to(wide-handhelds){
+					font-size: 13px;
+					line-height: 120%;
+				}
+				@include respond-to(handhelds){
+					font-size: 13px;
+					line-height: 120%;
+				}
+			}
+			
+			@include respond-to(display){
+				margin-bottom: 15px;
+			}
+			@include respond-to(tablets){
+				margin-bottom: 15px;
+			}
+			@include respond-to(small-tablets){
+				margin-bottom: 15px;
+			}
+			@include respond-to(wide-handhelds){
+				margin-bottom: 15px;
+			}
+			@include respond-to(handhelds){
+				margin-bottom: 15px;
+			}
+		}
+		
+		@include respond-to(display){
+			padding: 20px;
+			width: 450px;
+			left: 8%;
+		}
+		@include respond-to(tablets){
+			padding: 20px;
+			width: 400px;
+			left: 14%;
+			bottom: 14%;
+		}
+		@include respond-to(small-tablets){
+			padding: 20px;
+			width: 380px;
+			left: 14%;
+			bottom: 20%;
+		}
+		@include respond-to(wide-handhelds){
+			padding: 20px;
+			width: 70%;
+			left: 15%;
+			right: 15%;
+			top: 10%;
+			bottom: auto;
+			box-sizing: border-box;
+		}
+		@include respond-to(handhelds){
+			padding: 20px;
+			width: 90%;
+			left: 5%;
+			right: 5%;
+			top: 10%;
+			bottom: auto;
+			box-sizing: border-box;
+		}
+	}
+}
+
+.slick-dots{
+	bottom: 20px;
+	position: absolute;
+
+	li{
+		width: 80px;
+		height: 1px;
+		background-color:#000;
+		//opacity:0;
+		
+		button{
+			width: 80px;
+			height: 3px;
+		}
+	}
+	li:before{
+		content: '';
+	}
+ 	li button:before{
+		content: '';
+	}
+	.slick-active{
+		width: 80px;
+		height: 1px;
+		border: 1px solid red;
+		background-color: red;
+	}
+	
+	@include respond-to(small-tablets){
+		bottom: 15px;
+	}
+ 	@include respond-to(wide-handhelds){
+		bottom: 20px;
+	}
+ 	@include respond-to(handhelds){
+		bottom: 20px;
+	}
+}
+
+.prev-btn{
+	position: absolute;
+	top: 43%;
+	left: 4%;
+	padding: 5px 21px 7px 18px;
+	z-index: 9999;
+	background-color: rgba(255, 255, 255, 0.6);
+	cursor: pointer;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 50%;
+	border: 2px solid #BC0D2E;
+	//opacity: 0;
+	
+	i{
+		color:#BC0D2E;
+		font-size: 40px;
+	}
+	
+	@include respond-to(small-tablets){
+		left: 2%;
+	}
+}
+.next-btn{
+	position: absolute;
+	top: 43%;
+	right: 4%;
+	padding: 5px 18px 7px 21px;
+	z-index: 9999;
+	background-color: rgba(255, 255, 255, 0.6);
+	cursor: pointer;
+	text-align: center;
+	border-radius: 50%;
+	border: 2px solid #BC0D2E;
+	box-sizing: border-box;
+	//opacity: 0;
+	
+	i{
+		color:#BC0D2E;
+		font-size: 40px;
+	}
+	
+	@include respond-to(small-tablets){
+		right: 2%;
+	}
+}

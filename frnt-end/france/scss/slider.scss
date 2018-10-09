@@ -1,0 +1,285 @@
+.slider-one{
+	padding: 20px 0;
+	
+	.item{
+		padding: 10px;
+		
+		.title-item{
+			padding: 15px;
+			background-color: #46A1F0;
+			
+			p{
+				font-weight: 600;
+				color: #fff;
+				font-size: 16px;
+			}
+		}
+		
+		a{
+			img{
+				width: 100%;
+			}
+		}
+		
+		.text-review{
+			h4{
+				text-align: right;
+				margin: 5px 20px;
+			}
+			span{
+				font-size: 50px;
+				color: #46A1F0;
+				font-weight: 800;
+				margin: 10px;
+			}
+			
+			.review-text{
+				padding: 20px;
+				
+				h3{
+					color: #46A1F0;
+					margin-bottom: 10px;
+				}
+				p{
+					line-height: 160%;
+					font-size: 14px;
+					color: #929292;
+					
+					@include respond-to(small-tablets){
+						font-size: 13px;
+						line-height: 120%;
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					padding: 20px 5px;
+				}
+			}
+		}
+	}
+}
+
+
+
+.owl-carousel{
+	li{
+		margin: 10px;
+		list-style: none;
+		
+		a{
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.vid{
+		background-color: #000;
+
+		a{
+			img{
+				opacity: 0.41;
+			}
+		}
+		.play-button{
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			
+			button{
+				border-radius: 50%;
+				background-color: #000;
+				border: 4px solid #fff;
+				padding: 6px 6px 6px 12px;
+				outline: none;
+				cursor:pointer;
+				
+				i{
+					font-size: 30px;
+					color: #fff;
+				}
+			}
+
+			
+			@include respond-to(wide-handhelds){
+				margin-top: 30px;
+			}
+			@include respond-to(handhelds){
+				margin-top: 30px;
+			}
+		}
+	}
+	.vid:hover a img{
+		opacity: 0.6;
+	}
+}
+
+
+
+
+.slider-after{
+	@include width1000;
+	padding: 20px 0;
+
+	.item{
+		padding: 15px;
+		box-sizing: border-box;
+		outline: none;
+		
+		.top-side{
+			img{
+				width: 100%;
+			}
+		}
+		.bottom-side{
+			@import "text-default";
+			
+			background-color: #fff;
+			padding: 0 20px;
+			@include clearfix;
+			box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+			
+			.title-card{
+				padding: 20px 0;
+				@include clearfix;
+				
+				p:first-child{
+					float: left;
+				}
+				p:last-child{
+					float: right;
+				}
+				
+				@include respond-to(tablets){
+					padding: 10px 0;
+				}
+				@include respond-to(small-tablets){
+					padding: 10px 0;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 10px 0;
+				}
+			}
+			h1,h2,h3,h4{
+				margin-top: 0;
+				margin-bottom: 20px;
+				
+				@include respond-to(tablets){
+					font-size: 18px;
+					margin-bottom: 10px;
+				}
+				@include respond-to(small-tablets){
+					font-size: 16px;
+					margin-bottom: 10px;
+				}
+				@include respond-to(wide-handhelds){
+					font-size: 20px;
+					margin-bottom: 10px;
+				}
+			}
+			p{
+				line-height: 160%;
+				
+				@include respond-to(tablets){
+					line-height: 130%;
+				}
+				@include respond-to(small-tablets){
+					line-height: 130%;
+					font-size: 12px;
+				}
+				@include respond-to(wide-handhelds){
+					line-height: 130%;
+					font-size: 13px;
+				}
+			}
+			a{
+				font-size: 14px;
+				font-weight: 600;
+				margin: 20px 0;
+				display: block;
+				float: right;
+				text-transform: uppercase;
+				color: #000;
+				visibility: hidden;
+				
+				@include respond-to(small-tablets){
+					margin: 10px 0;
+				}
+			}
+			
+			@include respond-to(small-tablets){
+				padding: 5px;
+			}
+			@include respond-to(wide-handhelds){
+				padding: 0 10px;
+			}
+		}
+		
+		&:hover{
+			cursor: pointer;
+			
+			.bottom-side a{
+				visibility: visible;
+			}
+		}
+		
+		@include respond-to(tablets){
+			padding: 5px;
+		}
+		@include respond-to(small-tablets){
+			padding: 5px;
+		}
+		@include respond-to(wide-handhelds){
+			padding: 10px;
+		}
+	}
+}
+
+
+
+
+
+.slick-dots{
+	bottom: -40px;
+	padding: 20px 0;
+	
+	@include respond-to(small-tablets){
+		bottom: -55px;
+	}
+ 	@include respond-to(wide-handhelds){
+		bottom: -55px;
+	}
+ 	@include respond-to(handhelds){
+		bottom: -55px;
+	}
+}
+.slick-dots li{
+	width: 60px;
+	height: 4px;
+	margin: 0;
+	background-color:#aaa;
+}
+.slick-dots li button{
+	width: 60px;
+}
+.slick-dots li:before{
+	content: '';
+}
+.slick-dots li button:before{
+	content: '';
+}
+.slick-dots .slick-active:before{
+	font-family: 'slick';
+	font-size: 10px;
+	line-height: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 4px;
+	text-align: center;
+	background-color:#000;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

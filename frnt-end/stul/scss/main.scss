@@ -1,0 +1,96 @@
+@import "reset";
+@import "fonts";
+
+body{
+	font-family: sans-serif;
+	font-size: 13px;
+	color: #000;
+	line-height: 1;
+	background-color: #fff;
+}
+
+
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+  @else if $media == wide-handhelds {
+    @media only screen and (min-width: 480px) and (max-width: 599px) { @content; }
+  }
+  @else if $media == small-tablets {
+    @media only screen and (min-width: 600px) and (max-width: 767px) { @content; }
+  }  
+  @else if $media == tablets {
+    @media only screen and (min-width: 768px) and (max-width: 979px) { @content; }
+  }
+  @else if $media == display {
+    @media only screen and (min-width: 980px) and (max-width: 1199px) { @content; }
+  }
+  @else if $media == display-big {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+}
+
+
+@mixin clearfix { &:after {  content: ".";  display: block;  clear: both;  visibility: hidden;  line-height: 0;  height: 0;} }
+// @include clearfix;
+
+
+@mixin width1000 { max-width: 1200px; margin: 0 auto; position: relative; box-sizing: border-box;}
+// @include width1000;
+@mixin width1300 { max-width: 1400px; margin: 0 auto; position: relative; box-sizing: border-box;}
+// @include width1300;
+@mixin width100pr { width: 100%; margin: 0 auto; position: relative; box-sizing: border-box;}
+// @include width100pr;
+
+
+
+
+.wrapper{
+	max-width: 1920px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+
+@import "all";
+
+@import "header-top-menu";
+
+@import "mobile-menu";
+
+@import "baner";
+
+@import "card";
+ 
+@import "path";
+
+@import "cell";
+
+@import "order";
+
+@import "ergonomic";
+
+@import "chears";
+
+@import "sertificates";
+
+@import "portfolio";
+
+@import "katalog";
+
+@import "accordeon";
+
+@import "left-right-side";
+
+@import "slider";
+
+@import "all-foto";
+
+@import "footer";
+
+@import "modal";
+
+
+@import "landing";

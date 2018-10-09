@@ -1,0 +1,155 @@
+.text-block{
+	@include text-default;
+	padding: 20px;
+	background-color: #FCF4CE;
+	@include clearfix;
+	
+	hr{
+		height: 3px;
+		border: none;
+		background: url('../img/line-hr.png') repeat-x bottom left;
+		overflow: hidden;
+	}
+
+	.cell{
+		width: 100%;
+		padding: 20px;
+		margin: 0 auto;
+		
+		.text-cell{
+			h1,h2,h3,h4,h5{
+				color: #4F4F4F;
+				margin: 0 0 10px 0;
+			}
+			p{
+				color: #000;
+			}
+		}
+		
+		@include respond-to(wide-handhelds){
+			padding: 5px;
+		}
+		@include respond-to(handhelds){
+			padding: 5px;
+		}
+	}
+
+	.picture{
+		margin: 10px 0;
+		
+		img{
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			line-height: 0;
+		}
+		
+		@include respond-to(small-tablets){
+			display: none;
+		}
+		@include respond-to(wide-handhelds){
+			display: none;
+		}
+		@include respond-to(handhelds){
+			display: none;
+		}
+	}
+	.picture-sm-l{
+		padding: 10px 0;
+		
+		img{
+			width: 50%;
+			margin: 0;
+			padding: 0;
+			line-height: 0;
+			
+			@include respond-to(wide-handhelds){
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+			}
+		}
+	}
+	.picture-sm-r{
+		padding: 10px 0;
+		float: right;
+		
+		img{
+			width: 50%;
+			margin: 0;
+			padding: 0;
+			line-height: 0;
+			
+			@include respond-to(wide-handhelds){
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+			}
+		}
+	}
+	.pictures{
+		margin: 10px 0;
+		display: none;
+		
+		img{
+			margin: 0;
+			padding: 0;
+			line-height: 0;
+		}
+
+		@include respond-to(small-tablets){
+			display: block;
+		}
+		@include respond-to(wide-handhelds){
+			display: block;
+		}
+		@include respond-to(handhelds){
+			display: none;
+		}
+	}
+	
+	h2{
+		@include respond-to(wide-handhelds){
+			font-size: 18px;
+		}
+		@include respond-to(handhelds){
+			font-size: 18px;
+		}
+	}
+	p{
+		@include respond-to(wide-handhelds){
+			font-size: 13px;
+		}
+		@include respond-to(handhelds){
+			font-size: 13px;
+		}
+	}
+
+	@include respond-to(wide-handhelds){
+		padding: 5px;
+	}
+	@include respond-to(handhelds){
+		padding: 5px 10px;
+	}
+}
+
+
+//in map
+//boss
+.note{
+	padding: 5px;
+
+	h2{
+		color:#aaa;
+		margin-bottom: 10px;
+	}
+	ul{
+		color:#fff;
+		
+		li{
+			margin-bottom: 2px;
+		}
+	}
+}

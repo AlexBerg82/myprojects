@@ -1,0 +1,101 @@
+.wrapper-header{
+	width: 100%;
+	background: linear-gradient(to bottom, #F0F0F0, #fff);
+	
+	.header{
+		@include width1000;
+		padding: 20px 20px 0 20px;
+		@include clearfix;
+		
+		.logo{
+			width: 300px;
+			float: left;
+			
+			img{
+				max-width: 100%;
+			}
+			
+			@include respond-to(wide-handhelds){
+				width: 280px;
+			}
+			@include respond-to(handhelds){
+				width: 280px;
+				float: none;
+				margin: 0 auto;
+			}
+		}
+		
+		.button-block{
+			float: right;
+			
+			ul{
+				li{
+					list-style: none;
+					display: inline-block;
+					margin: 10px;
+					vertical-align: top;
+					
+					a{
+						display: block;
+						padding: 10px 16px;
+						border-radius: 5px;
+						
+						i{
+							font-size: 14px;
+						}
+						
+						&:hover i{
+							color: #aaa;
+						}
+					}
+					
+					@include respond-to(small-tablets){
+						margin: 15px 5px;
+					}
+					@include respond-to(wide-handhelds){
+						margin: 15px 5px;
+					}
+					@include respond-to(handhelds){
+						margin: 2px;
+					}
+				}
+				.active{
+					a{
+						padding: 8px 14px;
+						
+						background: #2867cc;
+						background: -moz-linear-gradient(bottom, #2867cc 49%, #1e5799 49%, #2989d8 50%, #207cca 50%, #3096e5 50%);
+						background: -webkit-linear-gradient(bottom, #2867cc 49%,#1e5799 49%,#2989d8 50%,#207cca 50%,#3096e5 50%);
+						background: linear-gradient(to top, #2867cc 49%,#1e5799 49%,#2989d8 50%,#207cca 50%,#3096e5 50%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2867cc', endColorstr='#3096e5',GradientType=0 );
+						
+						i{
+							color: #fff;
+							font-size: 18px;
+						}
+						
+						&:hover i{
+							color: #fff;
+						}
+					}
+				}
+			}
+			
+			@include respond-to(handhelds){
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+		
+		@include respond-to(small-tablets){
+			padding: 10px 20px;
+		}
+		@include respond-to(wide-handhelds){
+			padding: 10px 0;
+		}
+		@include respond-to(handhelds){
+			padding: 30px 0 10px 0;
+		}
+	}
+}

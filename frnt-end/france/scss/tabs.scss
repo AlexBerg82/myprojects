@@ -1,0 +1,286 @@
+﻿.wrapper-tabs{
+	.tabs__caption{
+		font-size: 0;
+		list-style: none;
+		position: relative;
+		padding: 0;
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+
+		li{
+			position: relative;
+			display: inline-block;
+			padding: 10px 40px;
+			vertical-align:top;
+			border: 1px solid #aaa;
+			border-bottom: none;
+			
+			.wrp-tab{
+				cursor: pointer;
+				width: 100%;
+				padding: 5px 0;
+				
+				p{
+					font-size: 14px;
+					color: #000;
+					text-transform: uppercase;
+				}
+			}
+			.wrp-tab:hover p{
+				color: #41A0E4;
+			}
+			
+			
+			@include respond-to(display){
+				padding: 10px;
+			}
+			@include respond-to(tablets){
+				flex: 1 0 auto;
+				width: auto;
+				min-width: auto;
+				padding: 10px;
+			}
+			@include respond-to(small-tablets){
+				flex: 1 0 auto;
+				width: auto;
+				min-width: auto;
+				padding: 10px;
+			}
+			@include respond-to(wide-handhelds){
+				flex: 1 0 auto;
+				width: auto;
+				min-width: auto;
+				padding: 10px;
+			}
+			@include respond-to(handhelds){
+				flex: 1 0 auto;
+				width: auto;
+				min-width: auto;
+				padding: 10px;
+			}
+		}
+
+		.active{
+			color: #000;
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			padding: 10px 40px;
+			vertical-align:top;
+			background-color: #114594;
+			border: 1px solid #000;
+			border-bottom: none;
+			
+			.wrp-tab{
+				width: 100%;
+				
+				p{
+					font-size: 14px;
+					text-transform: uppercase;
+					font-weight: 600;
+					color: #fff;
+				}
+			}
+			
+			@include respond-to(tablets){
+				width: 30%;
+				padding: 10px 0;
+			}
+			@include respond-to(small-tablets){
+				width: 30%;
+				padding: 10px 0;
+			}
+			@include respond-to(wide-handhelds){
+				width: 30%;
+				padding: 10px 0;
+			}
+			@include respond-to(handhelds){
+				flex: 1 0 auto;
+				width: auto;
+				min-width: auto;
+			}
+		}
+		
+
+		@include respond-to(tablets){
+			width: auto;
+			min-width: auto;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+			list-style: none;
+			position: relative;
+			margin: -1px 0 0 0;
+		}
+		@include respond-to(small-tablets){
+			width: auto;
+			min-width: auto;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+			list-style: none;
+			position: relative;
+			margin: -1px 0 0 0;
+		}
+		@include respond-to(wide-handhelds){
+			width: auto;
+			min-width: auto;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+			list-style: none;
+			position: relative;
+			margin: -1px 0 0 0;
+		}
+		@include respond-to(handhelds){
+			width: auto;
+			min-width: auto;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+			list-style: none;
+			position: relative;
+			margin: -1px 0 0 0;
+		}
+	}
+	.tabs__caption:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+	.tabs__content{
+		display: none;
+	}
+	.tabs__content.active{
+		display: block;
+		background-color: #EBEBEB;
+		padding: 20px 0;
+		
+		.all-foto{
+			display: none;
+			
+			.card-grid{
+				@include clearfix;
+				font-size: 0;
+				padding: 30px;
+				width: 80%;
+				box-sizing: border-box;
+				margin: 0 auto;
+
+				li{
+					display: inline-block;
+					vertical-align:top;
+					margin: 5px;
+					@include clearfix;
+					position: relative;
+					
+					a{
+						overflow: hidden;
+						display: block;
+						margin: 5px;
+						padding: 0;
+						line-height: 0;
+						border: 2px solid #7C7C7C;
+						
+						img{
+							width: 100%;
+							padding: 0;
+							margin: 0;
+							line-height: 0;
+						}
+						
+						@include respond-to(display){
+							margin: 2px;
+						}
+						@include respond-to(tablets){
+							margin: 2px;
+						}
+						@include respond-to(small-tablets){
+							margin: 2px;
+						}
+						@include respond-to(wide-handhelds){
+							margin: 2px;
+						}
+						@include respond-to(handhelds){
+							margin: 2px;
+						}
+					}
+					
+					@include respond-to(display-full){
+						width:calc(25% - 10px);
+					}
+					@include respond-to(display-big){
+						width:calc(25% - 10px);
+					}
+					@include respond-to(display-middle){
+						width:calc(25% - 10px);
+					}
+					@include respond-to(display){
+						width:calc(25% - 4px);
+						margin: 2px;
+					}
+					@include respond-to(tablets){
+						width:calc(25% - 4px);
+						margin: 2px;
+					}
+					@include respond-to(small-tablets ){
+						width:calc(33.33% - 4px);
+						margin: 2px;
+					}
+					@include respond-to(wide-handhelds){
+						width:calc(33.33% - 4px);
+						margin: 2px;
+					}
+					@include respond-to(handhelds){
+						width:calc(50% - 4px);
+						margin: 2px;
+					}
+				}
+				
+				@include respond-to(display){
+					width:100%;
+					padding: 20px;
+				}
+				@include respond-to(tablets){
+					width:100%;
+					padding: 20px;
+				}
+				@include respond-to(small-tablets ){
+					width:100%;
+					padding: 10px;
+					text-align: center;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 10px;
+					width:100%;
+					text-align: center;
+					box-sizing: border-box;
+				}
+				@include respond-to(handhelds){
+					padding: 5px;
+					width:100%;
+					box-sizing: border-box;
+				}
+			}
+		}
+		
+		.button{
+			.close-all{
+				display: none;
+			}
+		}
+	}
+}

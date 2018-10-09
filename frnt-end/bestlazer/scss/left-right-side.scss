@@ -1,0 +1,56 @@
+.left-side{
+	width: 25%;
+	float: left;
+	padding: 0 30px 0 5px;
+	box-sizing: border-box;
+	
+	@include respond-to(tablets){
+		width: 100%;
+		float: none;
+		padding: 5px;
+	}
+	@include respond-to(small-tablets){
+		width: 100%;
+		float: none;
+		padding: 20px 5px;
+	}
+	@include respond-to(wide-handhelds){
+		width: 100%;
+		float: none;
+		padding: 20px 5px;
+	}
+	@include respond-to(handhelds){
+		width: 100%;
+		float: none;
+		padding: 20px 5px;
+	}
+}
+.right-side{
+	width: 75%;
+	float: right;
+	
+	@include respond-to(tablets){
+		width: 100%;
+		float: none;
+		padding: 20px 5px;
+		box-sizing: border-box;
+	}
+	@include respond-to(small-tablets){
+		width: 100%;
+		float: none;
+		padding: 20px 5px;
+		box-sizing: border-box;
+	}
+	@include respond-to(wide-handhelds){
+		width: 100%;
+		float: none;
+		padding: 20px 5px;
+		box-sizing: border-box;
+	}
+	@include respond-to(handhelds){
+		width: 100%;
+		float: none;
+		padding: 20px 5px;
+		box-sizing: border-box;
+	}
+}

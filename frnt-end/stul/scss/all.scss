@@ -1,0 +1,131 @@
+.buttons{
+	.button{
+		background-color: #BA0C2F;
+		border: 1px solid #BA0C2F;
+		padding: 12px 34px;
+		display: inline-block;
+		color:#fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		
+		&:hover{
+			background-color: #fff;
+			color:#BA0C2F;
+		}
+	}
+}
+.button-block{
+	@include width1000;
+	padding: 40px 0;
+	text-align: center;
+	
+	.button{
+		background-color: #BA0C2F;
+		border: 1px solid #BA0C2F;
+		padding: 12px 34px;
+		min-width: 110px;
+		margin: 5px;
+		display: inline-block;
+		color:#fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		
+		&:hover{
+			background-color: #fff;
+			color:#BA0C2F;
+		}
+	}
+	.btn-fff{
+		background-color: #fff;
+		color:#000;
+		
+		&:hover{
+			background-color: #BA0C2F;
+			color:#fff;
+		}
+	}
+}
+
+
+.title, .title-noline{
+	@include width1000;
+	padding: 40px 5px;
+	@include clearfix;
+	box-sizing: border-box;
+	
+	h1,h2,h3,h4{
+		float: right;
+		line-height: 100%;
+		text-transform: uppercase;
+		color: #000;
+		font-size: 28px;
+		line-height: 130%;
+		width: calc(100% - 120px);
+		margin-left: 40px;
+		
+		@include respond-to(tablets){
+			width: calc(100% - 90px);
+			margin-left: 30px;
+			font-size: 24px;
+		}	
+		@include respond-to(small-tablets){
+			width: calc(100% - 60px);
+			margin-left: 20px;
+			font-size: 24px;
+		}
+		@include respond-to(wide-handhelds){
+			width: calc(100% - 60px);
+			margin-left: 20px;
+			font-size: 24px;
+		}
+		@include respond-to(handhelds){
+			width: calc(100% - 45px);
+			margin-left: 15px;
+			font-size: 20px;
+		}
+	}
+	.line{
+		float: left;
+		width: 80px;
+		height: 3px;
+		background-color: #BA0C2F;
+		margin-right: 10px;
+		margin: 15px 0;
+		
+		@include respond-to(tablets){
+			width: 60px;
+		}
+		@include respond-to(small-tablets){
+			width: 40px;
+		}
+		@include respond-to(wide-handhelds){
+			width: 40px;
+		}
+		@include respond-to(handhelds){
+			width: 30px;
+			margin: 11px 0;
+		}
+	}
+	
+	@include respond-to(tablets){
+		padding: 25px 5px;
+	}
+	@include respond-to(small-tablets){
+		padding: 20px 5px;
+	}
+	@include respond-to(wide-handhelds){
+		padding: 20px 5px;
+	}
+	@include respond-to(handhelds){
+		padding: 20px 5px;
+	}
+}
+.title-noline{
+	width: 100%;
+	margin-left: 0;
+}
+
+
+.bg-aaa{
+	background-color: #F4F4F4;
+}

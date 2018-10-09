@@ -1,0 +1,837 @@
+.header{
+	.wrp-top-head{
+		background-color: #393939;
+	
+		.top-header{
+			@include width1000;
+			font-size: 0;
+			padding: 15px 0;
+			background-color: #393939;
+			
+			.menu{
+				width: 20%;
+				display: inline-block;
+				font-size: 13px;
+				vertical-align: middle;
+				
+				.icon{
+					float: left;
+					
+					p{
+						float: left;
+						padding: 14px 0;
+						font-weight: 600;
+						color: #46A2ED;
+						text-transform: uppercase;
+					}
+					
+					.icons{
+						display: block;
+						float: left;
+						padding: 5px 2px;
+						margin: 5px 5px;
+						cursor: pointer;
+						
+						.ico{
+							width: 20px;
+							height: 2px;
+							margin: 3px;
+							border-radius: 4px;
+							background-color: #46A2ED;
+						}
+						.ico:first-child{
+							width: 25px;
+						}
+						.ico:last-child{
+							width: 15px;
+						}
+						
+						&:hover .ico{
+							background-color: #fff;
+						}
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					width: 33.33%;
+				}
+				@include respond-to(wide-handhelds){
+					width: 33.33%;
+				}
+				@include respond-to(handhelds){
+					width: 40%;
+				}
+			}
+			.logo{
+				width: 60%;
+				display: inline-block;
+				font-size: 13px;
+				vertical-align: middle;
+				text-align: center;
+				
+				a{
+					width: 100px;
+					
+					img{
+						max-width: 250px;
+						
+						@include respond-to(small-tablets){
+							max-width: 160px;
+						}
+						@include respond-to(wide-handhelds){
+							max-width: 160px;
+						}
+						@include respond-to(handhelds){
+							max-width: 160px;
+						}
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					width: 33.33%;
+				}
+				@include respond-to(wide-handhelds){
+					width: 33.33%;
+				}
+				@include respond-to(handhelds){
+					width: 60%;
+				}
+			}
+			.contact{
+				width: 20%;
+				display: inline-block;
+				font-size: 13px;
+				vertical-align: middle;
+				
+				.phone{
+					text-align: center;
+					color: #fff;
+					
+					li{
+						padding: 3px 5px;
+						list-style: none;
+						
+						span{
+							display: inline-block;
+							width: 16px;
+							height: 16px;
+							font-size: 16px;
+							margin-right: 10px;
+							text-align: center;
+							
+							i{
+								color: #41A0E4;
+							}
+							
+							@include respond-to(small-tablets){
+								width: 12px;
+								height: 12px;
+								font-size: 12px;
+							}
+							@include respond-to(wide-handhelds){
+								width: 12px;
+								height: 12px;
+								font-size: 12px;
+							}
+						}
+						
+						@include respond-to(small-tablets){
+							font-size: 11px;
+						}
+						@include respond-to(wide-handhelds){
+							font-size: 11px;
+						}
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					width: 33.33%;
+				}
+				@include respond-to(wide-handhelds){
+					width: 33.33%;
+				}
+				@include respond-to(handhelds){
+					width: 100%;
+					display: block;
+					clear: both;
+					padding: 15px 0 5px 0;
+				}
+			}
+		}
+	}
+	
+	
+	.baner-header{
+		position: relative;
+
+		.video{
+			width: 100%;
+			height: 587px;
+			display: none;
+			background-color: #000;
+			
+			iframe{
+				width: 100%;
+				height: 500px;
+				
+				@include respond-to(small-tablets){
+					height: 400px;
+				}
+				@include respond-to(wide-handhelds){
+					height: 300px;
+				}
+				@include respond-to(handhelds){
+					height: 300px;
+				}
+			}
+			
+			@include respond-to(display){
+				height: 580px;
+			}
+			@include respond-to(tablets){
+				height: 580px;
+			}
+			@include respond-to(small-tablets){
+				height: 475px;
+			}
+			@include respond-to(wide-handhelds){
+				height: 580px;
+			}
+			@include respond-to(handhelds){
+				height: 450px;
+			}
+		}
+		
+		.baner-img{
+			width: 100%;
+			height: 710px;
+		}
+		.baner-img-small{
+			width: 100%;
+			height: 350px;
+			
+			@include respond-to(handhelds){
+				height: 500px;
+			}
+		}
+		.baner-img-medium{
+			width: 100%;
+			height: 400px;
+			
+			@include respond-to(handhelds){
+				height: 500px;
+			}
+		}
+		
+		.title-baner{
+			@include width1000;
+			font-size: 13px;
+			position: absolute;
+			top: 25%;
+			left: 5%;
+			right: 5%;
+			padding: 10px 0;
+			
+			.left-title-baner{
+				float: left;
+				width: 40%;
+				text-align: center;
+				
+				h1,h2,h3,h4{
+					color: #fff;
+					font-family: Georgia, sans-serif, Verdana, Arial, Georgia;
+					text-align: left;
+					
+					@include respond-to(small-tablets){
+						font-size: 18px;
+					}
+					@include respond-to(wide-handhelds){
+						font-size: 18px;
+					}
+					@include respond-to(handhelds){
+						font-size: 18px;
+					}
+				}
+				
+				@include respond-to(wide-handhelds){
+					width: 100%;
+					float: none;
+				}
+				@include respond-to(handhelds){
+					width: 100%;
+					float: none;
+				}
+			}
+			.right-title-baner{
+				width: 50%;
+				float: right;
+				text-align: center;
+			
+				.play-button{
+					text-align: center;
+					
+					p{
+						color: #fff;
+						font-weight: 600;
+					}
+					button{
+						border-radius: 50%;
+						background-color: #000;
+						border: 4px solid #fff;
+						padding: 6px 6px 6px 12px;
+						margin-bottom: 10px;
+						outline: none;
+						cursor:pointer;
+						
+						i{
+							font-size: 30px;
+							color: #fff;
+						}
+					}
+					button:hover i{
+						color: #aaa;
+					}
+					
+					@include respond-to(wide-handhelds){
+						margin-top: 30px;
+					}
+					@include respond-to(handhelds){
+						margin-top: 30px;
+					}
+				}
+				.button{
+					padding: 15px 0;
+					
+					button{
+						padding: 15px 50px;
+						
+						&:hover{
+							//padding: 15px 47px;
+							color: #000;
+							
+/* 							@include respond-to(tablets){
+								padding: 10px 17px;
+							}
+							@include respond-to(small-tablets){
+								padding: 10px 17px;
+							}
+							@include respond-to(wide-handhelds){
+								padding: 10px 17px;
+							}
+							@include respond-to(handhelds){
+								padding: 10px 17px;
+							} */
+						}
+						
+ 						@include respond-to(display){
+							margin: 10px;
+						}
+						@include respond-to(tablets){
+							margin: 10px;
+						}
+						@include respond-to(small-tablets){
+							margin: 10px;
+						}
+						@include respond-to(wide-handhelds){
+							margin: 10px;
+							min-width: 150px;
+						}
+						@include respond-to(handhelds){
+							margin: 10px;
+							min-width: 200px;
+						}
+					}
+				}
+				
+				@include respond-to(wide-handhelds){
+					width: 100%;
+					float: none;
+					margin-top: 0;
+				}
+				@include respond-to(handhelds){
+					width: 100%;
+					float: none;
+					margin-top: 0;
+				}
+			}
+			
+			@include respond-to(handhelds){
+				top: 5%;
+			}
+		}
+		
+		
+		
+		
+		
+		.title-baner-btn{
+			@include width1000;
+			font-size: 13px;
+			position: absolute;
+			top: 20%;
+			left: 5%;
+			right: 5%;
+			padding: 10px 0;
+			
+			.left-title-baner{
+				text-align: center;
+				
+				h1,h2,h3,h4{
+					color: #fff;
+					//font-family: Georgia, sans-serif, Verdana, Arial, Georgia;
+					
+					@include respond-to(small-tablets){
+						font-size: 18px;
+					}
+					@include respond-to(wide-handhelds){
+						font-size: 18px;
+					}
+					@include respond-to(handhelds){
+						font-size: 18px;
+					}
+				}
+				
+				@include respond-to(wide-handhelds){
+					width: 100%;
+					float: none;
+				}
+				@include respond-to(handhelds){
+					width: 100%;
+					float: none;
+				}
+			}
+			.right-title-baner{
+				margin: 40px 0;
+				text-align: center;
+			
+				.play-button{
+					text-align: center;
+					
+					p{
+						color: #fff;
+						font-weight: 600;
+					}
+					button{
+						border-radius: 50%;
+						background-color: #000;
+						border: 4px solid #fff;
+						padding: 6px 6px 6px 12px;
+						margin-bottom: 10px;
+						outline: none;
+						cursor:pointer;
+						
+						i{
+							font-size: 30px;
+							color: #fff;
+						}
+					}
+					button:hover i{
+						color: #aaa;
+					}
+					
+					@include respond-to(wide-handhelds){
+						margin-top: 30px;
+					}
+					@include respond-to(handhelds){
+						margin-top: 30px;
+					}
+				}
+				.button{
+					padding: 15px 0;
+					
+					button{
+						padding: 15px 50px;
+						
+						&:hover{
+							//padding: 15px 50px;
+							color: #000;
+							//background-color: orange;
+							
+/* 							@include respond-to(tablets){
+								padding: 10px 17px;
+							}
+							@include respond-to(small-tablets){
+								padding: 10px 17px;
+							}
+							@include respond-to(wide-handhelds){
+								padding: 10px 17px;
+							}
+							@include respond-to(handhelds){
+								padding: 10px 17px;
+							} */
+						}
+						
+ 						@include respond-to(display){
+							margin: 10px;
+						}
+						@include respond-to(tablets){
+							margin: 10px;
+						}
+						@include respond-to(small-tablets){
+							margin: 10px;
+						}
+						@include respond-to(wide-handhelds){
+							margin: 10px;
+							min-width: 150px;
+						}
+						@include respond-to(handhelds){
+							margin: 10px;
+							min-width: 200px;
+						}
+					}
+				}
+				.btn-a{
+					button{
+						background-color: rgba(0,0,0,0.4);
+						border: 1px solid #363636;
+						color: #fff;
+						
+						&:hover{
+							background-color: rgba(18,69,148,1);
+							color: #fff;
+							border: 1px solid #363636;
+						}
+					}
+				}
+
+				@include respond-to(wide-handhelds){
+					width: 100%;
+					float: none;
+					margin-top: 0;
+				}
+				@include respond-to(handhelds){
+					width: 100%;
+					float: none;
+					margin-top: 0;
+				}
+			}
+			
+			@include respond-to(small-tablets){
+				top: 15%;
+			}
+			@include respond-to(wide-handhelds){
+				top: 10%;
+			}
+			@include respond-to(handhelds){
+				top: 5%;
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		.menu-card{
+			@include width1000;
+			font-size: 0;
+			position: relative;
+			bottom: 87px;
+			left: 0;
+			right:0;
+			
+			li{
+				width: 20%;
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				//background-color: #1C1C1C;
+				
+				.title-item{
+					position: absolute;
+					z-index: 999;
+					top: 0;
+					width: 100%;
+					
+					a{
+						color: #fff;
+						font-size: 14px;
+						text-decoration: none;
+						display: block;
+					padding: 30px 20px 20px 30px;
+					text-align: left;
+					text-transform: uppercase;
+					line-height: 130%;
+					min-height: 37px;
+						background-color: rgba(0, 0, 0, 0.7);
+						
+						@include respond-to(display){
+							font-size: 13px;
+							padding: 20px 5px 20px 5px;
+						}
+						@include respond-to(tablets){
+							font-size: 13px;
+							min-height: 48px;
+							padding: 20px 5px 20px 5px;
+						}
+						@include respond-to(small-tablets){
+							font-size: 12px;
+							min-height: 45px;
+							padding: 10px;
+						}
+						@include respond-to(wide-handhelds){
+							font-size: 12px;
+							min-height: 15px;
+						}
+						@include respond-to(handhelds){
+							font-size: 12px;
+							min-height: 15px;
+							padding: 15px 5px;
+						}
+					}
+					
+					@include respond-to(wide-handhelds){
+						position: static;
+						z-index: 9999;
+						top: auto;
+						width: auto;
+					}
+					@include respond-to(handhelds){
+						position: static;
+						z-index: 9999;
+						top: auto;
+						width: auto;
+					}
+				}
+				.img-item{
+					position: relative;
+					background-color: #959595;
+					
+					img{
+						width: 100%;
+						padding: 0;
+						margin: 0;
+						    opacity: 0.41;
+					}
+					
+					@include respond-to(small-tablets){
+						display: none;
+					}
+					@include respond-to(wide-handhelds){
+						display: none;
+					}
+					@include respond-to(handhelds){
+						display: none;
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					margin: 0 1px;
+					width: calc(20% - 2px);
+					bottom: 10px;
+				}
+				@include respond-to(wide-handhelds){
+					flex: 1 0 auto;
+					width: auto;
+					min-width: auto;
+					padding: 1px;
+				}
+				@include respond-to(handhelds){
+					flex: 1 0 auto;
+					width: auto;
+					min-width: auto;
+					padding: 1px;
+				}
+			}
+			li:hover .title-item{
+				top: -86px;
+				
+				a{
+					background-color: rgba(18, 69, 148, 1);
+				}
+			
+				@include respond-to(display){
+					top: -77px;
+				}
+				@include respond-to(tablets){
+					top: -87px;
+				}
+				@include respond-to(small-tablets){
+					top: auto;
+				}
+				@include respond-to(wide-handhelds){
+					top: auto;
+				}
+				@include respond-to(handhelds){
+					top: auto;
+				}
+			}
+			li:hover .img-item img{
+				opacity: 1;
+			}
+
+			@include respond-to(small-tablets){
+				bottom: 65px;
+			}
+			@include respond-to(wide-handhelds){
+				width: auto;
+				min-width: auto;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-flex-wrap: wrap;
+					-ms-flex-wrap: wrap;
+						flex-wrap: wrap;
+				list-style: none;
+				position: absolute;
+				margin: -1px 0 0 0;
+				bottom: 5px;
+			}
+			@include respond-to(handhelds){
+				width: auto;
+				min-width: auto;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-flex-wrap: wrap;
+					-ms-flex-wrap: wrap;
+						flex-wrap: wrap;
+				list-style: none;
+				position: absolute;
+				margin: -1px 0 0 0;
+				bottom: 5px;
+			}
+		}
+		
+		
+		
+		
+		.menu-card-noimg{
+			@include width1000;
+			font-size: 0;
+			position: relative;
+			bottom: 70px;
+			left: 0;
+			right:0;
+			
+			li{
+				width: calc(20% - 2px);
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				margin: 0 1px;
+				
+				.title-item{
+					position: absolute;
+					z-index: 9999;
+					top: 0;
+					width: 100%;
+					
+					a{
+						color: #fff;
+						font-size: 14px;
+						text-decoration: none;
+						display: block;
+						padding: 20px 5px;
+						text-align: center;
+						text-transform: uppercase;
+						background-color: rgba(0, 0, 0, 0.7);
+						min-height: 30px;
+						
+						@include respond-to(display){
+							min-height: 30px;
+						}
+						@include respond-to(tablets){
+							font-size: 12px;
+							min-height: 25px;
+						}
+						@include respond-to(small-tablets){
+							font-size: 12px;
+							min-height: 40px;
+						}
+						@include respond-to(wide-handhelds){
+							font-size: 12px;
+							min-height: 15px;
+						}
+						@include respond-to(handhelds){
+							font-size: 12px;
+							min-height: 15px;
+							padding: 15px 5px;
+						}
+					}
+					
+					&:hover{
+						background-color: rgba(0, 0, 0, 1);
+					}
+					
+					@include respond-to(wide-handhelds){
+						position: static;
+						z-index: 9999;
+						top: auto;
+						width: auto;
+					}
+					@include respond-to(handhelds){
+						position: static;
+						z-index: 9999;
+						top: auto;
+						width: auto;
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					margin: 0 1px;
+					width: calc(20% - 2px);
+					bottom: 10px;
+				}
+				@include respond-to(wide-handhelds){
+					flex: 1 0 auto;
+					width: auto;
+					min-width: auto;
+					padding: 1px;
+				}
+				@include respond-to(handhelds){
+					flex: 1 0 auto;
+					width: auto;
+					min-width: auto;
+					padding: 1px;
+				}
+			}
+			
+			@include respond-to(display){
+				bottom: 70px;
+			}
+			@include respond-to(tablets){
+				bottom: 65px;
+			}
+			@include respond-to(small-tablets){
+				bottom: 70px;
+			}
+			@include respond-to(wide-handhelds){
+				width: auto;
+				min-width: auto;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-flex-wrap: wrap;
+					-ms-flex-wrap: wrap;
+						flex-wrap: wrap;
+				list-style: none;
+				position: absolute;
+				margin: -1px 0 0 0;
+				bottom: 5px;
+			}
+			@include respond-to(handhelds){
+				width: auto;
+				min-width: auto;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-flex-wrap: wrap;
+					-ms-flex-wrap: wrap;
+						flex-wrap: wrap;
+				list-style: none;
+				position: absolute;
+				margin: -1px 0 0 0;
+				bottom: 5px;
+			}
+		}
+		
+		@include respond-to(wide-handhelds){
+			background-color: #000;
+		}
+		@include respond-to(handhelds){
+			background-color: #000;
+		}
+	}
+}

@@ -1,0 +1,120 @@
+.path-block{
+	background: url('../images/baner/bg.jpg') no-repeat;
+	background-size: cover;
+	background-position: 100% 100%;
+
+	.path{
+		padding: 60px 5px;
+		@include width1000;
+		@include clearfix;
+
+		.line-fon{
+			position: absolute;
+			left: -55%;
+			top: 45%;
+			
+			@include respond-to(display){
+				display: none;
+			}
+			@include respond-to(tablets){
+				display: none;
+			}
+			@include respond-to(small-tablets){
+				display: none;
+			}
+			@include respond-to(wide-handhelds){
+				display: none;
+			}
+			@include respond-to(handhelds){
+				display: none;
+			}
+		}
+		
+		h1{
+			text-transform: uppercase;
+			font-size: 30px;
+			float: left;
+			color: #fff;
+			margin-left: 60px;
+			
+			@include respond-to(display){
+				margin-left: 0;
+			}
+			@include respond-to(tablets){
+				margin-left: 0;
+				margin-bottom: 20px;
+				float: none;
+			}
+			@include respond-to(small-tablets){
+				margin-left: 0;
+				margin-bottom: 20px;
+				float: none;
+			}
+			@include respond-to(wide-handhelds){
+				margin-left: 0;
+				margin-bottom: 10px;
+				float: none;
+			}
+			@include respond-to(handhelds){
+				margin-left: 0;
+				margin-bottom: 10px;
+				float: none;
+			}
+		}
+		ul{
+			float: right;
+			
+			li{
+				display: inline-block;
+				padding: 5px 3px;
+				color: #fff;
+				
+				a{
+					color: #fff;
+					text-decoration: none;
+					
+					&:hover{
+						color: #aaa;
+					}
+				}
+			}
+			li:after{
+				content: '›';
+				font-size: 15px;
+				margin-left: 10px;
+				color: #fff;
+			}
+			li:last-child:after{
+				content: '';
+			}
+			
+			.place{
+				color: #fff;
+				font-weight: 600;
+			}
+			
+			@include respond-to(tablets){
+				float: none;
+			}
+			@include respond-to(small-tablets){
+				float: none;
+			}
+			@include respond-to(wide-handhelds){
+				float: none;
+			}
+			@include respond-to(handhelds){
+				float: none;
+			}
+		}
+		
+		@include respond-to(small-tablets){
+			padding: 40px 5px;
+		}
+		@include respond-to(wide-handhelds){
+			padding: 30px 5px;
+		}
+		@include respond-to(handhelds){
+			padding: 20px 5px;
+		}
+	}
+}

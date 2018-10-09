@@ -1,0 +1,87 @@
+//extra
+ul.card-inn{
+	@include clearfix;
+	font-size: 0;
+	padding: 10px 0;
+	margin: 0;
+
+	li{
+		display: inline-block;
+		vertical-align:top;
+		margin: 10px 10px 20px 10px;
+		@include clearfix;
+		position: relative;
+		
+		a{
+			background-color: #fff;
+			margin: 0;
+			display: block;
+			padding: 0;
+			background: url('../images/wrp.png') no-repeat;
+			background-size: contain;
+			text-align: center;
+			
+			img{
+				width: calc(100% - 40px);
+				margin: 20px 20px 10px 20px;
+				padding: 0;
+				
+				@include respond-to(wide-handhelds){
+					width: calc(100% - 50px);
+					margin: 25px 25px 15px 25px;
+				}
+				@include respond-to(handhelds){
+					width: calc(100% - 40px);
+					margin: 20px 20px 10px 20px;
+				}
+			}
+			
+			&:hover{
+				background: url('../images/wrp-dark.png') no-repeat;
+				background-size: contain;
+			}
+		}
+		.link-card{
+			text-align: center;
+
+			a{
+				font-size: 13px;
+				text-decoration: underline;
+				color: #006699;
+				font-weight: 600;
+				background: url('');
+				
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+		
+		
+		@include respond-to(display-big){
+			width:calc(33.33% - 20px);
+		}
+		@include respond-to(display){
+			width:calc(33.33% - 20px);
+		}
+		@include respond-to(tablets){
+			width:calc(33.33% - 20px);
+		}
+		@include respond-to(small-tablets ){
+			width:calc(33.33% - 10px);
+			margin: 5px;
+		}
+		@include respond-to(wide-handhelds){
+			width:calc(50% - 10px);
+			margin: 5px;
+		}
+		@include respond-to(handhelds){
+			width:calc(50% - 10px);
+			margin: 5px;
+		}
+	}
+	li:hover .text-card a{
+		color: #fff;
+		border: none;
+	}
+}

@@ -1,0 +1,211 @@
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+		
+	.reveal-modal-bg { 
+		position: fixed; 
+		height: 100%;
+		width: 100%;
+		background: #000;
+		background: rgba(0,0,0,.8);
+		z-index: 100;
+		display: none;
+		top: 0;
+		left: 0; 
+		}
+	
+	.reveal-modal {
+		visibility: hidden;
+		top: 100px; 
+		left: 50%;
+		margin-left: -300px;
+		width: 500px;
+		background: #eee;
+		position: absolute;
+		z-index: 101;
+		padding: 0px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		}
+		
+@media (max-width: 599px){
+	.reveal-modal {
+		visibility: hidden;
+		top: 100px; 
+		left: 50%;
+		margin-left: -140px;
+		width: 280px;
+		background: #eee;
+		position: absolute;
+		z-index: 101;
+		padding: 0px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	}
+}
+		
+	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+	.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+	
+	.reveal-modal .close-reveal-modal {
+		font-size: 22px;
+		line-height: .5;
+		position: absolute;
+		top: -10px;
+		right: -11px;
+		color: #aaa;
+		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+		font-weight: bold;
+		cursor: pointer;
+		} 
+		
+
+	
+.reveal-modal-inner	{background-color: #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    margin: 15px;
+    padding: 10px;
+    width: 450px; }
+	
+@media (max-width: 599px){
+	.reveal-modal-inner	{
+		background-color: #FFFFFF;
+		border-radius: 5px 5px 5px 5px;
+		margin: 15px;
+		padding: 10px;
+		width: 230px;
+	}
+}
+
+.close-reveal-modal {background: url("images/close.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 50px;
+    right: -10px;
+    position: relative;
+    top: -45px;
+    width: 50px;
+	text-indent:-3000px;}	
+	
+	.reveal-modal-inner  h1{font-size:18px!important; text-align:left!important; color:#000!important; padding:0px!important;}
+	
+	.reveal-modal-inner  p {font-size:13px; color:#333; font-weight:normal;}
+	.reveal-modal-inner  p b {color: #439035;}
+	.reveal-modal-inner  h3 {color:#333; margin:10px 0px 0px 0px; text-transform:none;}
+	
+	.reveal-modal-inner input {font-size:16px;}
+	
+	
+	.submit-clickForm0 input {margin:20px 0px 0px 0px; 
+	-moz-box-shadow:inset 0px 2px 3px 0px #a4e271;
+	-webkit-box-shadow:inset 0px 2px 3px 0px #a4e271;
+	box-shadow:inset 0px 2px 3px 0px #a4e271;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #89c403), color-stop(1, #77a809) );
+	background:-moz-linear-gradient( center top, #89c403 5%, #77a809 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809');
+	background-color:#89c403;
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	border:2px solid #74b807;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:18px 30px;
+	text-decoration:none;
+	text-shadow:0px -1px 2px #528009;
+}.submit-clickForm0 input :hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403) );
+	background:-moz-linear-gradient( center top, #77a809 5%, #89c403 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77a809', endColorstr='#89c403');
+	background-color:#77a809;
+}.submit-clickForm0 input :active {
+	position:relative;
+	top:1px;
+}
+
+.captcha-test .name {color:#333;}
+
+
+    .submit-clickForm input {
+        
+        -moz-box-shadow: 0px 1px 0px 0px #fff6af;
+        -webkit-box-shadow: 0px 1px 0px 0px #fff6af;
+        box-shadow: 0px 1px 0px 0px #fff6af;
+        
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+        background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+        background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+        background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+        background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+        background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+        
+        background-color:#ffec64;
+        
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-radius:6px;
+        
+        border:1px solid #ffaa22;
+        
+        display:inline-block;
+        color:#333333;
+        font-family:arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        
+        text-shadow:0px 1px 0px #ffee66;
+        
+    }
+    .submit-clickForm input :hover {
+        
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
+        background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+        background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+        background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+        background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+        background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+        
+        background-color:#ffab23;
+    }
+    .submit-clickForm input :active {
+        position:relative;
+        top:1px;
+    }
+
+
+
+
+		
+	/*
+		
+	NOTES
+	
+	Close button entity is &#215;
+	
+	Example markup
+	
+	<div id="myModal" class="reveal-modal">
+		<h2>Awesome. I have it.</h2>
+		<p class="lead">Your couch.  I it's mine.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices aliquet placerat. Duis pulvinar orci et nisi euismod vitae tempus lorem consectetur. Duis at magna quis turpis mattis venenatis eget id diam. </p>
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+	
+	*/

@@ -1,0 +1,632 @@
+.card{
+	@include width1000;
+	@include clearfix;
+	font-size: 0;
+	padding: 20px 0;
+
+	li{
+		display: inline-block;
+		vertical-align:top;
+		padding: 10px;
+		@include clearfix;
+		position: relative;
+		list-style: none;
+		box-sizing: border-box;
+		
+		span{
+			position: absolute;
+			width: calc(100% - 42px);
+			display: block;
+			padding: 10px;
+			background-color: rgba(0,0,0,0.6);
+			z-index: 9999;
+			margin-left: 1px;
+			min-height: 25px;
+			
+			p{
+				font-size: 13px;
+			}
+
+			p:last-child{
+				color: #fff;
+				width: 50%;
+				float: right;
+				text-align: right;
+				color: orange;
+			}
+			p:first-child{
+				color: #fff;
+				width: 50%;
+				float: left;
+				text-align: left;
+				text-transform: uppercase;
+			}
+			
+			@include respond-to(display){
+				min-height: 40px;
+			}
+			@include respond-to(tablets){
+				min-height: 40px;
+			}
+			@include respond-to(small-tablets){
+				min-height: 40px;
+			}
+			@include respond-to(wide-handhelds){
+				min-height: 40px;
+			}
+		}
+		.spn{
+			position: absolute;
+			width: calc(100% - 42px);
+			display: block;
+			padding: 10px;
+			background-color: rgba(0,0,0,0.6);
+			z-index: 9999;
+			margin-left: 1px;
+			min-height: 25px;
+			
+			p{
+				font-size: 13px;
+			}
+			
+			p:first-child{
+				color: #fff;
+				width: 100%;
+				float: left;
+				text-align: left;
+				text-transform: uppercase;
+			}
+			
+			&:hover{
+				background-color: rgba(0,0,0,1);
+			}
+		}
+		a{
+			width: 100%;
+			background-color: #fff;
+			display: block;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+
+			img{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				line-height: 0;
+			}
+		}
+		
+		@include respond-to(display-full){
+			width:33.33%;
+		}
+		@include respond-to(display-middle){
+			width:33.33%;
+		}
+		@include respond-to(display-big){
+			width:33.33%;
+		}
+		@include respond-to(display){
+			width:33.33%;
+		}
+		@include respond-to(tablets){
+			width:33.33%;
+		}
+		@include respond-to(small-tablets ){
+			width:50%;
+		}
+		@include respond-to(wide-handhelds){
+			width:50%;
+		}
+		@include respond-to(handhelds){
+			width:100%;
+		}
+	}
+	li:hover .text-card a{
+		color: #fff;
+		border: none;
+	}
+	li:hover span{
+		background-color: rgba(0,0,0,1);
+	}
+}
+
+.card4{
+	@extend .card;
+	
+	li{
+		@include respond-to(display-full){
+			width:25%;
+		}
+		@include respond-to(display-middle){
+			width:25%;
+		}
+		@include respond-to(display-big){
+			width:25%;
+		}
+		@include respond-to(display){
+			width:25%;
+		}
+		@include respond-to(tablets){
+			width:25%;
+		}
+		@include respond-to(small-tablets ){
+			width:50%;
+		}
+		@include respond-to(wide-handhelds){
+			width:50%;
+		}
+		@include respond-to(handhelds){
+			width:100%;
+		}
+	}
+}
+
+
+
+	.bottom-menu{
+ 		.extra-card{
+			@include width1000;
+			font-size: 0;
+			bottom: 0;
+			left: 0;
+			right:0;
+			padding: 50px 0 0 0;
+			
+			li{
+				width: 20%;
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				
+				.title-item{
+					position: absolute;
+					z-index: 9999;
+					top: 0;
+					width: 100%;
+					
+					a{
+						color: #fff;
+						font-size: 14px;
+						text-decoration: none;
+						display: block;
+						padding: 30px 20px 20px 30px;
+						text-transform: uppercase;
+						background-color: rgba(0,0,0,0.7);
+						min-height: 37px;
+						
+						@include respond-to(display){
+							font-size: 13px;
+							min-height: 28px;
+							padding: 30px 10px 20px 10px;
+						}
+						@include respond-to(tablets){
+							font-size: 12px;
+							min-height: 37px;
+							padding: 20px 10px 20px 10px;
+						}
+						@include respond-to(small-tablets){
+							font-size: 12px;
+							min-height: 37px;
+							padding: 20px 10px 20px 10px;
+						}
+						@include respond-to(wide-handhelds){
+							font-size: 12px;
+							min-height: auto;
+						}
+						@include respond-to(handhelds){
+							font-size: 12px;
+							min-height: auto;
+						}
+					}
+
+					@include respond-to(wide-handhelds){
+						position: static;
+						z-index: 9999;
+						top: auto;
+						width: auto;
+					}
+					@include respond-to(handhelds){
+						position: static;
+						z-index: 9999;
+						top: auto;
+						width: auto;
+					}
+				}
+				.img-item{
+					position: relative;
+					background-color: #959595;
+					
+					img{
+						width: 100%;
+						padding: 0;
+						margin: 0;
+						    opacity: 0.41;
+					}
+					
+					@include respond-to(small-tablets){
+						display: none;
+					}
+					@include respond-to(wide-handhelds){
+						display: none;
+					}
+					@include respond-to(handhelds){
+						display: none;
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					margin: 0 1px;
+					width: calc(20% - 2px);
+					bottom: 10px;
+				}
+				@include respond-to(wide-handhelds){
+					flex: 1 0 auto;
+					width: auto;
+					min-width: auto;
+					padding: 1px;
+				}
+				@include respond-to(handhelds){
+					flex: 1 0 auto;
+					width: auto;
+					min-width: auto;
+					padding: 1px;
+				}
+			}
+			li:hover .title-item{
+				top: -86px;
+				
+				@include respond-to(display){
+					top: -78px;
+				}
+				@include respond-to(tablets){
+					top: -77px;
+				}
+				@include respond-to(small-tablets){
+					top: auto;
+				}
+				@include respond-to(wide-handhelds){
+					top: auto;
+				}
+				@include respond-to(handhelds){
+					top: auto;
+				}
+			}
+			li:hover .title-item a{
+				background-color: rgba(18,69,148,1);
+			}
+			li:hover .img-item a img{
+				opacity: 1;
+			}
+			
+			@include respond-to(display){
+				bottom: 0;
+				padding: 50px 0 0 0;
+			}
+			@include respond-to(tablets){
+				bottom: 0;
+				padding: 50px 0 0 0;
+			}
+			@include respond-to(small-tablets){
+				bottom: 70px;
+				padding: 70px 0 0 0;
+			}
+			@include respond-to(wide-handhelds){
+				width: auto;
+				min-width: auto;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-flex-wrap: wrap;
+					-ms-flex-wrap: wrap;
+						flex-wrap: wrap;
+				list-style: none;
+				position: absolute;
+				margin: -1px 0 0 0;
+				bottom: 2px;
+			}
+			@include respond-to(handhelds){
+				width: auto;
+				min-width: auto;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-flex-wrap: wrap;
+					-ms-flex-wrap: wrap;
+						flex-wrap: wrap;
+				list-style: none;
+				position: absolute;
+				margin: -1px 0 0 0;
+				bottom: 2px;
+			}
+		}
+		
+		@include respond-to(wide-handhelds){
+			position: relative;
+			height: 340px;
+		}
+		@include respond-to(handhelds){
+			position: relative;
+			height: 350px;
+		}
+	}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+.tarifs-card{
+	@include width1000;
+	@include clearfix;
+	font-size: 0;
+	padding:20px 0;
+	text-align: center;
+
+	li{
+		display: inline-block;
+		vertical-align:top;
+		padding: 15px;
+		@include clearfix;
+		position: relative;
+		list-style: none;
+		box-sizing: border-box;
+		text-align: center;
+		
+		.text-block{
+			background-color: #fff;
+			padding: 20px;
+			box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+			
+			@import "text-default";
+			
+			img{
+				width: 100px;
+				margin: 0;
+				padding: 0;
+				line-height: 0;
+			}
+			a{
+				width: 100%;
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				margin-left: 0;
+			}
+			
+			.title-card{
+				padding: 20px 0;
+				min-height: 45px;
+				text-align: center;
+				
+				h3{
+					font-size: 16px;
+					line-height: 130%;
+					color: #000;
+					text-transform: uppercase;
+					
+					@include respond-to(tablets){
+						font-size: 16px;
+					}
+					@include respond-to(small-tablets){
+						font-size: 16px;
+					}
+					@include respond-to(wide-handhelds){
+						font-size: 15px;
+					}
+					@include respond-to(handhelds){
+						font-size: 15px;
+					}
+				}
+				p{
+					font-size: 18px;
+					color: #000;
+					text-transform: uppercase;
+					
+					@include respond-to(tablets){
+						font-size: 16px;
+					}
+					@include respond-to(small-tablets){
+						font-size: 16px;
+					}
+					@include respond-to(wide-handhelds){
+						font-size: 15px;
+					}
+					@include respond-to(handhelds){
+						font-size: 15px;
+					}
+				}
+				
+				@include respond-to(wide-handhelds){
+					padding: 10px 0;
+				}
+				@include respond-to(handhelds){
+					padding: 10px 0;
+				}
+			}
+			.content-card{
+				min-height: 160px;
+				
+				.list{
+					font-size: 0;
+					margin: 5px 0;
+					padding: 0;
+					
+					li{
+						width: 100%;
+						display: block;
+						line-height: 100%;
+						font-size: 13px;
+						text-align: left;
+
+						@include respond-to(wide-handhelds){
+							font-size: 12px;
+						}
+						@include respond-to(handhelds){
+							font-size: 12px;
+						}
+					}
+					
+					&-center{
+						font-size: 0;
+						margin: 0;
+						padding: 0;
+						
+						li{
+							width: 100%;
+							display: block;
+							line-height: 100%;
+							font-size: 13px;
+							text-align: center;
+							
+							@include respond-to(wide-handhelds){
+								font-size: 12px;
+							}
+							@include respond-to(handhelds){
+								font-size: 12px;
+							}
+						}
+					}
+					
+					@include respond-to(tablets){
+						min-height: 80px;
+					}
+					@include respond-to(wide-handhelds){
+						min-height: 70px;
+					}
+					@include respond-to(handhelds){
+						min-height: 50px;
+					}
+				}
+				.wrp-price{
+					margin: 10px 0;
+				
+					.price{
+						padding: 10px 0;
+						@include clearfix;
+						
+						p:first-child{
+							float: left;
+							
+							@include respond-to(wide-handhelds){
+								font-size: 13px;
+								float: none;
+							}
+						}
+						p:last-child{
+							float: right;
+							
+							@include respond-to(wide-handhelds){
+								font-size: 13px;
+								float: none;
+							}
+						}
+					}
+					.price-list{
+						display: inline-block;
+						width: 33.33%;
+						
+						p{
+							line-height: 100%;
+							font-size: 13px;
+							
+							@include respond-to(wide-handhelds){
+								font-size: 12px;
+							}
+						}
+					}
+				}
+
+				@include respond-to(display){
+					min-height: 200px;
+				}
+				@include respond-to(tablets){
+					min-height: 200px;
+				}
+				@include respond-to(wide-handhelds){
+					min-height: 200px;
+				}
+				@include respond-to(handhelds){
+					min-height: auto;
+				}
+			}
+ 			.button{
+				padding: 10px 0;
+				text-align: center;
+				
+				button{
+					background-color: #fff;
+					color: #000;
+					outline: none;
+
+					&:hover{
+						background-color: #363636;
+						color: #fff;
+						border: 1px solid #000;
+						font-weight: 600;
+					}
+				}
+			}
+			
+			@include respond-to(display){
+				padding: 10px;
+			}
+			@include respond-to(tablets){
+				padding: 10px;
+			}
+			@include respond-to(small-tablets){
+				padding: 10px;
+			}
+			@include respond-to(wide-handhelds){
+				padding: 10px;
+			}
+			@include respond-to(handhelds){
+				padding: 10px;
+			}
+		}
+		
+		@include respond-to(display-full){
+			width:33.33%;
+		}
+		@include respond-to(display-middle){
+			width:33.33%;
+		}
+		@include respond-to(display-big){
+			width:33.33%;
+		}
+		@include respond-to(display){
+			width:33.33%;
+			padding: 10px;
+		}
+		@include respond-to(tablets){
+			width:33.33%;
+			padding: 10px;
+		}
+		@include respond-to(small-tablets){
+			width:50%;
+			padding: 5px;
+		}
+		@include respond-to(wide-handhelds){
+			width:50%;
+			padding: 5px;
+		}
+		@include respond-to(handhelds){
+			width:100%;
+			padding: 5px;
+		}
+	}
+	li:hover .text-card a{
+		color: #fff;
+		border: none;
+	}
+}

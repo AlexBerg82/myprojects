@@ -1,0 +1,262 @@
+.blocks{
+	@include width1000;
+	z-index: 5;
+	font-size: 0;
+	overflow: hidden;
+	
+	.shadow-block{
+		width: 75%;
+		position: absolute;
+		top: 0;
+		right: 9%;
+		height: 0;
+		z-index: 10;
+		border: none;
+		box-shadow: -4px 67px 100px 52px #c0c0c0;
+	}
+	.sh-w100{
+		width: 80%;
+		right: 10%;
+		left: 10%;
+	}
+	
+	.shadow-block{
+		animation: opasra 1s linear;
+	}
+	@keyframes opasra{
+		from{ opacity: 0; }
+		to{ opacity: 1; }
+	}
+	
+ 	@include respond-to(wide-handhelds){
+		@keyframes opasra{
+			from{ opacity: 1; }
+			to{ opacity: 1; }
+		}
+	}
+ 	@include respond-to(handhelds){
+		@keyframes opasra{
+			from{ opacity: 1; }
+			to{ opacity: 1; }
+		}
+	}
+	
+	
+
+	.left-block{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		width: 33.33%;
+		height: 245px;
+		opacity: 0;
+		background: url('../img/list.png') no-repeat bottom center;
+		background-size: 90%;
+		box-sizing: border-box;
+		
+		.knopka{
+			position: absolute;
+			right: 2%;
+			top: 77%;
+			width: 13%;
+			height: 13%;
+			background: url('../img/knopka.png') no-repeat;
+			background-size: contain;
+			opacity: 0;
+		}
+		.knopka-eff{
+			animation:
+				gobee 0.4s ease-out,
+				gobeet 0.3s ease-in,
+				opas 0.5s linear;
+		}
+
+		@keyframes gobee{
+			from{ right: -20%; }
+			to{ right: 2%; }
+		}
+		@keyframes gobeet{
+			from{ top: 50%; }
+			to{ top: 77%; }
+		} 
+		@keyframes opas{
+			from{ opacity: 0; }
+			to{ opacity: 1; }
+		}
+		
+		@include respond-to(small-tablets){
+			height: 225px;
+		}
+	}
+	.center-block{
+		@extend .left-block;
+	}
+	.right-block{
+		@extend .left-block;
+	}
+	
+	.wrp-text-block{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+		
+		.text-blocks{
+			width: 33.33%;
+			padding: 20px 45px 20px 45px;
+			height: 100%;
+			vertical-align: top;
+			display: inline-block;
+			box-sizing: border-box;
+			font-size: 16px;
+			opacity: 0;
+			
+			.title-block{
+				min-height: 40px;
+				
+				h1{
+					transform: rotate(-1.5deg);
+					
+					@include respond-to(tablets){
+						font-size: 24px;
+					}
+					@include respond-to(small-tablets){
+						font-size: 22px;
+					}
+				}
+			}
+			p{
+				margin-top: 10px;
+				line-height: 160%;
+				transform: rotate(-1.5deg);
+				
+				a{
+					i{
+						color: #006699;
+					}
+				}
+				
+				@include respond-to(tablets){
+					font-size: 15px;
+					line-height: 130%;
+				}
+				@include respond-to(small-tablets){
+					font-size: 14px;
+					line-height: 120%;
+				}
+			}
+			
+			@include respond-to(small-tablets){
+				padding: 20px 25px 20px 25px;
+			}
+		}
+	}
+	
+	@include respond-to(wide-handhelds){
+		display: none;
+	}
+	@include respond-to(handhelds){
+		display: none;
+	}
+}
+.bt-pad{
+	padding: 0 0 20px 0;
+}
+
+
+
+.blocks-bottom{
+	@include width1000;
+	z-index: 5;
+	font-size: 0;
+	padding: 20px 0;
+	overflow: hidden;
+	display: none;
+	
+	.left-block{
+		position: relative;
+		height: 200px;
+		background: url('../img/list.png') no-repeat bottom center;
+		background-size: 90%;
+		box-sizing: border-box;
+		//border: 1px solid red;
+		
+		.knopka{
+			position: absolute;
+			right: -5%;
+			top: 60%;
+			width: 18%;
+			height: 18%;
+			background: url('../img/knopka.png') no-repeat;
+			background-size: contain;
+			
+			@include respond-to(handhelds){
+				right: 2%;
+				top: 77%;
+				width: 13%;
+				height: 13%;
+			}
+		}
+		
+		@include respond-to(handhelds){
+			height: 185px;
+		}
+	}
+	.center-block{
+		@extend .left-block;
+	}
+	.right-block{
+		@extend .left-block;
+	}
+	
+	.wrp-text-block{
+		height: 200px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+		
+		.text-blocks{
+			padding: 35px 50px 0 50px;
+			height: 100%;
+			box-sizing: border-box;
+			font-size: 16px;
+			
+			.title-block{
+				min-height: 40px;
+				
+				h1{
+					transform: rotate(-1.5deg);
+					
+					@include respond-to(handhelds){
+						font-size: 18px;
+					}
+				}
+				
+				@include respond-to(handhelds){
+					min-height: 20px;
+				}
+			}
+			p{
+				margin-top: 10px;
+				line-height: 100%;
+				transform: rotate(-1.5deg);
+			}
+			
+			@include respond-to(handhelds){
+				padding: 50px 40px 0 40px;
+			}
+		}
+		
+		@include respond-to(handhelds){
+			height: 185px;
+		}
+	}
+	
+	@include respond-to(wide-handhelds){
+		display: block;
+	}
+	@include respond-to(handhelds){
+		display: block;
+	}
+}

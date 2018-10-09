@@ -1,0 +1,339 @@
+.gallery-slider{
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+	max-width: 1200px;
+	margin: 0 auto;
+	
+	.boking{
+		width: 36%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		position: absolute;
+		top: 0;
+		left: -7%;
+		z-index: 999;
+		transform: skewX(-15deg);
+
+		animation: bgr 1.4s ease-in;
+		@keyframes bgr{
+			from{left: -36%; }
+			to{ left: -7%; }
+		}
+		
+		.close-image{
+			margin: 10px  0 0 50px;
+			transform: skewX(15deg);
+			cursor: pointer;
+		}
+		.add{
+			float: right;
+			margin: 10px 10px 0 0;
+			transform: skewX(15deg);
+			cursor: pointer;
+			display: none;
+
+			@include respond-to(tablets){
+				width: 20px;
+				height: 20px;
+				margin: 3px;
+			}
+		}
+		
+		.zakaz{
+			transform: skewX(15deg);
+			width: 45%;
+			margin: 0 auto;
+			
+			.arrive, .depart{
+				margin-bottom: 20px;
+				text-align: right;
+				opacity:0;
+				
+				p{
+					font-size: 22px;
+					color: #fff;
+					font-weight: 500;
+					display: inline-block;
+					
+					span{
+						font-size: 32px;
+						color: #E8E8E8;
+						
+						@include respond-to(display){
+							font-size: 18px;
+						}
+						@include respond-to(tablets){
+							font-size: 18px;
+						}
+					}
+					
+					@include respond-to(display){
+						font-size: 15px;
+					}
+					@include respond-to(tablets){
+						font-size: 14px;
+					}
+				}
+				i{
+					display: inline-block;
+					font-size: 30px;
+					color: #aaa;
+					margin-left: 20px;
+					cursor: pointer;
+					
+					&:hover{
+						color: #fff;
+					}
+					
+					@include respond-to(display){
+						font-size: 20px;
+						margin-left: 10px;
+					}
+					@include respond-to(tablets){
+						font-size: 18px;
+						margin-left: 10px;
+					}
+				}
+			}
+
+			.rooms{
+				float: right;
+				font-size: 13px;
+				color: #fff;
+				font-weight: 500;
+				display: inline-block;
+				margin-top: 40px;
+				opacity:0;
+				
+				&:hover{
+					color: #aaa;
+				}
+				
+				i{
+					margin-left: 3px;
+				}					
+			}
+			
+			.reserve{
+				font-size: 18px;
+				float: right;
+				margin: 25px 5px 5px 5px;
+				color: #fff;
+				opacity:0;
+				
+				&:hover{
+					color: #aaa;
+					text-decoration: underline;
+				}
+				
+				@include respond-to(display){
+					font-size: 16px;
+					margin: 15px 5px 5px 5px;
+				}
+				@include respond-to(tablets){
+					font-size: 16px;
+					margin: 15px 5px 5px 5px;
+				}
+			}
+			
+			@include respond-to(tablets){
+				width: 70%;
+				text-align: right;
+			}
+		}
+		
+		@include respond-to(small-tablets){
+			display: none;
+		}
+		@include respond-to(wide-handhelds){
+			display: none;
+		}
+		@include respond-to(handhelds){
+			display: none;
+		}
+	}
+}
+
+
+//main slider
+.slider-for{
+	.slick-next:before,.slick-prev:before{
+		z-index: 9999;
+	
+		@include respond-to(wide-handhelds){
+			display: none;
+		}
+		@include respond-to(handhelds){
+			display: none;
+		}
+	}
+	
+	img{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		filter: blur(5px);
+		
+		@include respond-to(handhelds){
+			filter: blur(0px);
+		}
+	}
+	.slick-active{
+		animation: bgrndo 2.5s ease-out;
+		filter: blur(0px);
+		
+		@include respond-to(handhelds){
+			animation: 0;
+			filter: blur(0px);
+		}
+	}
+	@keyframes bgrndo{
+		from{ transform: scale(1.08); }
+		to{ transform: scale(1); }
+	}
+}
+
+.slider-nav{
+	width: 70%;
+	margin-top: -9%;
+	padding: 5px;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9999;
+	float: right;
+	margin-right: 1%;
+	
+	.slick-next:before,.slick-prev:before{
+		display: none;
+	}
+	
+	@include respond-to(small-tablets){
+		margin-top: -13%;
+	}
+}
+.slider-nav .pict{
+	margin: 0 5px;
+	transform: skewX(-25deg);
+	overflow: hidden;
+	outline: none;
+	position: relative;
+	
+	img{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		line-height: 0;
+		transform: skewX(25deg);
+	}
+}
+.vin{
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-shadow: inset 0 0 28px 16px rgba(0,0,0,.7);
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	transform: skewX(25deg);
+	
+	@include respond-to(small-tablets){
+		box-shadow: inset 0 0 28px 8px rgba(0,0,0,.7);
+	}
+}
+
+
+//in foto
+.gallery-slider2{
+	width: 90%;
+	margin: 30px auto;
+	
+	@include respond-to(handhelds){
+		width: 100%;
+	}
+	@include respond-to(wide-handhelds){
+		width: 100%;
+	}
+}
+.slider-nav2{
+	padding: 0 80px;
+	
+	.slick-next:before,.slick-prev:before{
+		z-index: 9999;
+		color: #fff;
+	
+		@include respond-to(wide-handhelds){
+			display: none;
+		}
+		@include respond-to(handhelds){
+			display: none;
+		}
+	}
+	
+	@include respond-to(wide-handhelds){
+		margin: 10px 0;
+		padding: 0 20px;
+	}
+	@include respond-to(handhelds){
+		margin: 10px 0;
+		padding: 0 20px;
+	}
+}
+.slider-nav2 img{
+	width: 100%;
+	margin: 5px;
+	box-shadow: 0 1px 8px #aaa;
+	
+	@include respond-to(handhelds){
+		margin: 0;
+	}
+	@include respond-to(wide-handhelds){
+		margin: 0;
+	}
+}
+.slider-for2{
+	.slick-next:before,.slick-prev:before{
+		z-index: 9999;
+		color: #fff;
+	
+		@include respond-to(wide-handhelds){
+			display: none;
+		}
+		@include respond-to(handhelds){
+			display: none;
+		}
+	}
+	
+	img{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+
+
+//in nomera cell
+.mini-slider{
+	display: none;
+	
+	.owl-carousel{
+		a{
+			display: block;
+			padding: 2px;
+			margin: 0;
+			
+			img{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+	
+	@include respond-to(wide-handhelds){
+		display: block;
+	}
+	@include respond-to(handhelds){
+		display: block;
+	}
+}

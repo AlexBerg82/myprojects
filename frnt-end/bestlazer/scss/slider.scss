@@ -1,0 +1,163 @@
+.left-side-cell{
+	.slider-for-main{
+		width: 100%;
+		height: 480px;
+		
+		.slider-foto{
+			height: 480px;
+			
+			@include respond-to(wide-handhelds){
+				height: 430px;
+			}
+			@include respond-to(handhelds){
+				height: 350px;
+			}
+		}
+		
+		@include respond-to(wide-handhelds){
+			height: 430px;
+		}
+		@include respond-to(handhelds){
+			height: 350px;
+		}
+	}
+}
+
+
+.card{
+	.gallery-slider{
+		margin-bottom: 40px;
+		
+		.slider-for{
+			height: auto;
+		}
+		.slider-nav{
+			padding: 0 80px;
+			height: auto;
+			margin-top: 10px;
+			
+			img{
+				margin: 10px;
+				max-width: 100%;
+			}
+			
+			@include respond-to(wide-handhelds){
+				display: none;
+			}
+			@include respond-to(handhelds){
+				display: none;
+			}
+		}
+	}
+}
+
+
+.slick-dots{
+	bottom: -30px;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	
+	li{
+		width: 14.28%;
+		height: 7px;
+		background-color:#000;
+		margin: 0;
+	}
+	li:before{
+		content: '';
+	}
+ 	li button:before{
+		content: '';
+	}
+	.slick-active{
+		width: 14.28%;
+		height: 7px;
+		background-color: red;
+	}
+}
+
+.prev-btn{
+	position: absolute;
+	top: 43%;
+	left: 4%;
+	padding: 5px 21px 7px 18px;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, 0.6);
+	cursor: pointer;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 50%;
+	
+	i{
+		color:#FC4E4F;
+		font-size: 40px;
+	}
+}
+.next-btn{
+	position: absolute;
+	top: 43%;
+	right: 4%;
+	padding: 5px 18px 7px 21px;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, 0.6);
+	cursor: pointer;
+	text-align: center;
+	border-radius: 50%;
+	box-sizing: border-box;
+	
+	i{
+		color:#FC4E4F;
+		font-size: 40px;
+	}
+}
+
+
+.prev-btn-sm{
+	position: absolute;
+	top: 20%;
+	left: 1%;
+	padding: 5px 21px 7px 18px;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, 0.6);
+	cursor: pointer;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 50%;
+	
+	i{
+		color:#FC4E4F;
+		font-size: 40px;
+	}
+	
+	@include respond-to(small-tablets){
+		top: 30%;
+	}
+	@include respond-to(wide-handhelds){
+		top: 33%;
+	}
+}
+.next-btn-sm{
+	position: absolute;
+	top: 20%;
+	right: 1%;
+	padding: 5px 18px 7px 21px;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, 0.6);
+	cursor: pointer;
+	text-align: center;
+	border-radius: 50%;
+	box-sizing: border-box;
+	
+	i{
+		color:#FC4E4F;
+		font-size: 40px;
+	}
+	
+	@include respond-to(small-tablets){
+		top: 30%;
+	}
+	@include respond-to(wide-handhelds){
+		top: 33%;
+	}
+}

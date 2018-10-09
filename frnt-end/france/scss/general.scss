@@ -1,0 +1,119 @@
+.content{
+	padding: 10px 0 0 0;
+}
+
+.title{
+	text-align: center;
+	padding: 40px 0;
+	
+	h1,h2,h3,h4{
+		text-transform: uppercase;
+	}
+
+	&-cell{
+		text-align: center;
+		padding: 40px 0;
+		
+		h1,h2,h3,h4{
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+.scrollTable2{
+	height: 150px;
+	margin: 10px 0;
+	
+	@include respond-to(tablets){
+		margin: 5px 0;
+		height: 120px;
+	}
+}
+
+
+
+.content{
+	.button{
+		text-align: center;
+		padding: 50px 0;
+		
+		@include respond-to(tablets){
+			padding: 30px 0;
+		}
+		@include respond-to(small-tablets){
+			padding: 20px 0;
+		}
+		@include respond-to(wide-handhelds){
+			padding: 20px 0;
+		}
+		@include respond-to(handhelds){
+			padding: 20px 0;
+		}
+	}
+}
+
+
+.button{
+	text-align: center;
+	padding: 50px 0;
+	
+	button{
+		font-size: 13px;
+		padding: 10px 40px;
+		margin: 0 30px;
+		background-color: #124594;
+		border: 1px solid #000;
+		color: #fff;
+		outline: none;
+		cursor: pointer;
+		
+		&:hover{
+			background-color: #363636;
+			color: #fff;
+			border: 1px solid #000;
+			font-weight: 600;
+		}
+	}
+}
+.btn-fff{
+	padding: 20px 0;
+
+	button{
+		background-color: #fff;
+		border: 1px solid #aaa;
+		color: #000;
+		
+		&:hover{
+			background-color: #124594;
+			color: #fff;
+			border: 1px solid #000;
+		}
+	}
+}
+.btn-000{
+	button{
+		background-color: #000;
+		border: 1px solid #aaa;
+		color: #fff;
+		
+		&:hover{
+			background-color: #363636;
+			color: #000;
+			border: 1px solid #000;
+		}
+	}
+}
+
+
+.bg-aaa{
+	background-color: #F4F4F4;
+}
+
+
+
+
+
+.w1200{
+	@include width1000;
+}

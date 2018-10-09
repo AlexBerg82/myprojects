@@ -1,0 +1,115 @@
+.cell{
+	@include clearfix;
+	margin: 20px 0;
+	padding: 10px;
+	border-bottom: 1px solid #006699;
+	
+	.brdr{
+		text-align: center;
+		line-height: 0;
+		
+		&-left-nobord{
+			float: left;
+			width: 30%;
+			line-height: 0;
+			
+			img{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				
+				@include respond-to(wide-handhelds){
+					max-width: 100%;
+					width: auto;
+					height: 200px;
+				}
+				@include respond-to(handhelds){
+					max-width: 100%;
+					width: auto;
+					height: 200px;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				float: none;
+				width: 100%;
+				text-align: center;
+			}
+			@include respond-to(handhelds){
+				float: none;
+				width: 100%;
+				text-align: center;
+			}
+		}
+		&-right-nobord{
+			float: right;
+			width: 30%;
+			line-height: 0;
+			
+			img{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				
+				@include respond-to(wide-handhelds){
+					max-width: 100%;
+					width: auto;
+					height: 200px;
+				}
+				@include respond-to(handhelds){
+					max-width: 100%;
+					width: auto;
+					height: 200px;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				float: none;
+				text-align: center;
+			}
+			@include respond-to(handhelds){
+				float: none;
+				text-align: center;
+			}
+		}
+		
+		img{
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		
+		.pricer{
+			background-color: #fff;
+			text-align: center;
+			padding: 5px;
+			background: linear-gradient(to bottom, #D3D3D3, #DBDBDB);
+		}
+	}
+	.text-cell{
+		width: 70%;
+		float: left;
+		padding: 20px;
+		box-sizing: border-box;
+		//background-color:red;
+		
+		@include respond-to(wide-handhelds){
+			padding: 10px 0;
+			width: 100%;
+		}
+		@include respond-to(handhelds){
+			padding: 10px 0;
+			width: 100%;
+		}
+	}
+		
+	@include respond-to(wide-handhelds){
+		padding: 0;
+	}
+	@include respond-to(handhelds){
+		padding: 0;
+	}
+}
+.cell:last-child{
+	border-bottom: none;
+}

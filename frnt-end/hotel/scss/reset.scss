@@ -1,0 +1,21 @@
+div, ul, li, p, body, h1, h2{
+    margin: 0;
+    padding: 0;
+}
+ol, ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clear{
+	clear:both;
+}
+.none{
+	line-height:0;
+}

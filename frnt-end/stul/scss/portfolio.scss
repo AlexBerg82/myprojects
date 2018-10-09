@@ -1,0 +1,330 @@
+.portfolio-block{
+	.wrapper-background{
+		@include width1300;
+		
+		.gallery-slider-small{
+			padding: 20px 0;
+			position: relative;
+
+			.slider-for-small{
+				@include width1000;
+				
+				//baner foto
+				.slider-foto{
+					height: 450px;
+					
+					@include respond-to(tablets){
+						height: 500px;
+					}
+					@include respond-to(small-tablets){
+						height: 300px;
+					}
+					@include respond-to(wide-handhelds){
+						height: 300px;
+					}
+					@include respond-to(handhelds){
+						height: 300px;
+					}
+				}
+			}
+			
+			.prev-btn{
+				left: -7%;
+				
+				@include respond-to(small-tablets){
+					left: 2%;
+				}
+			}
+			.next-btn{
+				right: -7%;
+				
+				@include respond-to(small-tablets){
+					right: 2%;
+				}
+			}
+			
+			@media (min-width: 1300px) and (max-width: 1400px){
+				.prev-btn{
+					left: -3%;
+				}
+				.next-btn{
+					right: -3%;
+				}
+			}
+			@media (min-width: 600px) and (max-width: 1299px){
+				.prev-btn{
+					left: 3%;
+				}
+				.next-btn{
+					right: 3%;
+				}
+			}
+			@media (min-width: 0px) and (max-width: 599px){
+				.prev-btn{
+					display: none;
+				}
+				.next-btn{
+					display: none;
+				}
+			}
+		}
+		
+		.card-c2{
+			@include width1000;
+			@include clearfix;
+			font-size: 0;
+
+			li{
+				display: inline-block;
+				vertical-align:top;
+				margin: 10px 5px;
+				@include clearfix;
+				cursor: pointer;
+
+				a{
+					img{
+						width: 100%;
+						padding: 0;
+						margin: 0;
+					}
+				}
+
+				@include respond-to(display-big){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(display){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(tablets){
+					width:calc(33.33% - 5px);
+					margin: 5px 2.5px;
+				}
+				@include respond-to(small-tablets){
+					width:calc(33.33% - 2px);
+					margin: 1px;
+				}
+				@include respond-to(wide-handhelds){
+					width:calc(50% - 10px);
+					margin: 5px;
+				}
+				@include respond-to(handhelds){
+					width:calc(100% - 10px);
+					margin: 5px;
+				}
+			}
+			li:first-child{
+				margin: 10px 10px 10px 0;
+				
+				a{
+					img{
+						width: 100%;
+						padding: 0;
+						margin: 0;
+					}
+				}
+				
+				@include respond-to(display-big){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(display){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(tablets){
+					width:calc(33.33% - 5px);
+					margin: 5px 5px 5px 0;
+				}
+				@include respond-to(small-tablets){
+					width:calc(33.33% - 1px);
+					margin: 1px 1px 1px 0;
+				}
+				@include respond-to(wide-handhelds){
+					width:calc(50% - 10px);
+					margin: 5px;
+				}
+				@include respond-to(handhelds){
+					width:calc(100% - 10px);
+					margin: 5px;
+				}
+			}
+			li:nth-child(3){
+				margin: 10px 0 10px 10px;
+				
+				a{
+					img{
+						width: 100%;
+						padding: 0;
+						margin: 0;
+					}
+				}
+				
+				@include respond-to(display-big){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(display){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(tablets){
+					width:calc(33.33% - 5px);
+					margin: 5px 0 5px 5px;
+				}
+				@include respond-to(small-tablets){
+					width:calc(33.33% - 1px);
+					margin: 0 0 0 1px;
+					margin: 1px 0 1px 1px;
+				}
+				@include respond-to(wide-handhelds){
+					width:calc(50% - 10px);
+					margin: 5px;
+				}
+				@include respond-to(handhelds){
+					width:calc(100% - 10px);
+					margin: 5px;
+				}
+			}
+			li:nth-child(4){
+				margin: 10px 10px 10px 0;
+				
+				a{
+					img{
+						width: 100%;
+						padding: 0;
+						margin: 0;
+					}
+				}
+				
+				@include respond-to(display-big){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(display){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(tablets){
+					width:calc(33.33% - 5px);
+					margin: 5px 5px 5px 0;
+				}
+				@include respond-to(small-tablets){
+					width:calc(33.33% - 1px);
+					margin: 1px 1px 1px 0;
+				}
+				@include respond-to(wide-handhelds){
+					width:calc(50% - 10px);
+					margin: 5px;
+				}
+				@include respond-to(handhelds){
+					width:calc(100% - 10px);
+					margin: 5px;
+				}
+			}
+			li:nth-child(6){
+				margin: 10px 0 10px 10px;
+				
+				a{
+					img{
+						width: 100%;
+						padding: 0;
+						margin: 0;
+					}
+				}
+				
+				@include respond-to(display-big){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(display){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(tablets){
+					width:calc(33.33% - 5px);
+					margin: 5px 0 5px 5px;
+				}
+				@include respond-to(small-tablets){
+					width:calc(33.33% - 1px);
+					margin: 1px 0 1px 1px;
+				}
+				@include respond-to(wide-handhelds){
+					width:calc(50% - 10px);
+					margin: 5px;
+				}
+				@include respond-to(handhelds){
+					width:calc(100% - 10px);
+					margin: 5px;
+				}
+			}
+			li:nth-child(7){
+				margin: 10px 10px 10px 0;
+				
+				a{
+					img{
+						width: 100%;
+						padding: 0;
+						margin: 0;
+					}
+				}
+				
+				@include respond-to(display-big){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(display){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(tablets){
+					width:calc(33.33% - 5px);
+					margin: 5px 5px 5px 0;
+				}
+				@include respond-to(small-tablets){
+					width:calc(33.33% - 1px);
+					margin: 1px 1px 1px 0;
+				}
+				@include respond-to(wide-handhelds){
+					width:calc(50% - 10px);
+					margin: 5px;
+				}
+				@include respond-to(handhelds){
+					width:calc(100% - 10px);
+					margin: 5px;
+				}
+			}
+			li:last-child{
+				margin: 10px 0 10px 10px;
+				
+				a{
+					img{
+						width: 100%;
+						padding: 0;
+						margin: 0;
+					}
+				}
+				
+				@include respond-to(display-big){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(display){
+					width:calc(33.33% - 10px);
+				}
+				@include respond-to(tablets){
+					width:calc(33.33% - 5px);
+					margin: 5px 0 5px 5px;
+				}
+				@include respond-to(small-tablets){
+					width:calc(33.33% - 1px);
+					margin: 1px 0 1px 1px;
+				}
+				@include respond-to(wide-handhelds){
+					width:calc(50% - 10px);
+					margin: 5px;
+				}
+				@include respond-to(handhelds){
+					width:calc(100% - 10px);
+					margin: 5px;
+				}
+			}
+
+			li:hover .title-card{
+				background-color: #BA0C2F;
+			}
+			
+			@include respond-to(wide-handhelds){
+				text-align: center;
+			}
+		}
+	}
+}

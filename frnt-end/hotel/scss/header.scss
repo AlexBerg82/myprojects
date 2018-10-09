@@ -1,0 +1,239 @@
+.wrapper-header{
+	@include clearfix;
+
+	.header{
+		@include width1000;
+		padding: 10px 0;
+		background: url('../img/bg.jpg') repeat;
+		overflow: hidden;
+		@include clearfix;
+
+		.logo{
+			img{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				
+				@include respond-to(wide-handhelds){
+					width: 1000px;
+				}
+				@include respond-to(handhelds){
+					width: 750px;
+				}
+			}
+			
+			.vis-logo{
+				display: block;
+				
+				@include respond-to(small-tablets){
+					display: none;
+				}
+				@include respond-to(wide-handhelds){
+					display: none;
+				}
+				@include respond-to(handhelds){
+					display: none;
+				}
+			}
+			.hide-logo{
+				display: none;
+			
+				@include respond-to(small-tablets){
+					display: block;
+				}
+				@include respond-to(wide-handhelds){
+					display: block;
+				}
+				@include respond-to(handhelds){
+					display: block;
+				}
+			}
+			
+			@include respond-to(handhelds){
+				margin-top: 5px;
+			}
+		}
+
+		.info{
+			width: 100%;
+			position: absolute;
+			top: 67%;
+			left: 0;
+			padding: 0 1%;
+			box-sizing: border-box;
+			@include clearfix;
+			
+			.info-left{
+				float: left;
+			}
+			.info-right{
+				float: right;
+				text-align: right;
+			}
+			.info-left, .info-right{
+				width: 43%;
+				
+				p{
+					color: #aaa;
+
+					span{
+						font-weight: 600;
+						color: #fff;
+						font-size: 12px;
+					}
+					
+					@include respond-to(display){
+						font-size: 13px;
+					}
+					@include respond-to(tablets){
+						font-size: 12px;
+					}
+					@include respond-to(small-tablets){
+						font-size: 12px;
+						margin-bottom: 4px;
+					}
+					@include respond-to(wide-handhelds){
+						font-size: 11px;
+						margin-bottom: 4px;
+					}
+					@include respond-to(handhelds){
+						font-size: 11px;
+						margin-bottom: 3px;
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					width: 100%;
+					text-align: right;
+				}
+				@include respond-to(wide-handhelds){
+					width: 100%;
+					float: none;
+					text-align: left;
+				}
+				@include respond-to(handhelds){
+					width: 100%;
+					float: none;
+					text-align: left;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				position: relative;
+				padding: 1%;
+			}
+			@include respond-to(handhelds){
+				position: relative;
+				padding: 1%;
+			}
+		}
+
+		.mail-lang-block{
+			position: absolute;
+			top: 15%;
+			right: 0;
+			padding: 0 10px;
+			
+			p{
+				display: inline-block;
+				color: #aaa;
+				margin-bottom: 0;
+				line-height: 1;
+		
+				a{
+					color: #fff;
+					
+					&:hover{
+						text-decoration: underline;
+					}
+					
+					@include respond-to(tablets){
+						font-size: 13px;
+					}
+					@include respond-to(wide-handhelds){
+						font-size: 13px;
+					}
+					@include respond-to(handhelds){
+						font-size: 12px;
+					}
+				}
+				
+				@include respond-to(display){
+					font-size: 13px;
+				}
+				@include respond-to(tablets){
+					font-size: 12px;
+				}
+				@include respond-to(small-tablets){
+					font-size: 12px;
+				}
+				@include respond-to(wide-handhelds){
+					font-size: 11px;
+				}
+				@include respond-to(handhelds){
+					font-size: 11px;
+					display: block;
+				}
+			}
+			.lang{
+				display: inline-block;
+				margin-left: 20px;
+				line-height: 0;
+				
+				li{
+					display: inline-block;
+					padding: 3px 0;
+					
+					a{
+						display: block;
+						line-height: 0;
+						
+						img{
+							width: 20px;
+							padding: 0;
+							margin: 0;
+						}
+					}
+				}
+				
+				@include respond-to(tablets){
+					margin-left: 10px;
+				}
+				@include respond-to(wide-handhelds){
+					margin-left: 10px;
+					
+				}
+				@include respond-to(handhelds){
+					margin-left: 10px;
+					display: block;
+					float: right;
+					margin-top: 4px;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				top: 8%;
+			}
+			@include respond-to(handhelds){
+				top: 3%;
+			}
+		}
+
+		@include respond-to(small-tablets){
+			width: 100%;
+			padding: 25px 0;
+		}
+		@include respond-to(tablets){
+			width: 100%;
+			padding: 15px 0;
+		}
+		@include respond-to(wide-handhelds){
+			width: 100%;
+			padding: 10px 0 0 0;
+		}
+		@include respond-to(handhelds){
+			width: 100%;
+			padding: 15px 0 5px 0;
+		}
+	}
+}

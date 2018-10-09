@@ -1,0 +1,146 @@
+.katalog-card-block{
+	@include width1000;
+	
+	.card-c1{
+		@include clearfix;
+		font-size: 0;
+	
+		li{
+			display: inline-block;
+			vertical-align:top;
+			margin: 10px;
+			@include clearfix;
+			cursor: pointer;
+		
+			.title-card{
+				padding: 15px;
+				min-height: 46px;
+				background-color: #252525;
+				
+				p{
+					width: 100%;
+					box-sizing: border-box;
+					line-height: 130%;
+					font-size: 18px;
+					text-align: left;
+					text-transform: uppercase;
+					color: #fff;
+					
+					@include respond-to(tablets){
+						font-size: 16px;
+					}
+					@include respond-to(small-tablets){
+						font-size: 15px;
+					}
+					@include respond-to(wide-handhelds){
+						font-size: 16px;
+					}
+				}
+				
+				@include respond-to(tablets){
+					padding: 15px;
+					min-height: 40px;
+				}
+				@include respond-to(small-tablets){
+					padding: 15px 8px;
+					min-height: 38px;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 15px;
+					min-height: 38px;
+				}
+				@include respond-to(handhelds){
+					padding: 15px;
+				}
+			}
+			.title-card-center{
+				padding: 15px;
+				min-height: 25px;
+				background-color: #252525;
+				
+				p{
+					width: 100%;
+					box-sizing: border-box;
+					line-height: 130%;
+					font-size: 18px;
+					text-align: center;
+					text-transform: uppercase;
+					color: #fff;
+					
+					@include respond-to(tablets){
+						font-size: 16px;
+					}
+					@include respond-to(small-tablets){
+						font-size: 15px;
+					}
+					@include respond-to(wide-handhelds){
+						font-size: 16px;
+					}
+				}
+				
+				@include respond-to(tablets){
+					padding: 15px;
+					min-height: 40px;
+				}
+				@include respond-to(small-tablets){
+					padding: 15px 8px;
+					min-height: 38px;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 15px;
+					min-height: 38px;
+				}
+				@include respond-to(handhelds){
+					padding: 15px;
+				}
+			}
+			.text-card{
+				img{
+					width: 100%;
+					padding: 0;
+					margin: 0;
+				}
+			}
+			
+			&:hover{
+				box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+			}
+			
+			@include respond-to(display-big){
+				width:calc(25% - 20px);
+			}
+			@include respond-to(display){
+				width:calc(25% - 20px);
+			}
+			@include respond-to(tablets){
+				width:calc(25% - 10px);
+				margin: 5px;
+			}
+			@include respond-to(small-tablets){
+				width:calc(25% - 4px);
+				margin: 2px;
+			}
+			@include respond-to(wide-handhelds){
+				width:calc(50% - 10px);
+				margin: 5px;
+			}
+			@include respond-to(handhelds){
+				width:calc(100% - 10px);
+				margin: 5px;
+			}
+		}
+		li:hover{
+			.title-card{
+				background-color: #BA0C2F;
+			}
+			.title-card-center{
+				background-color: #BA0C2F;
+			}
+			.price-unit{
+				p:last-child{
+					color: #BE1A39;
+				}
+			}
+		}
+	}
+}

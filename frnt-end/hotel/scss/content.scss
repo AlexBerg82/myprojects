@@ -1,0 +1,75 @@
+.wrapper{
+	@include clearfix;
+}
+
+.content{
+	@include width1000;
+	@include clearfix;
+	margin: 20px auto;
+	
+	.cant-top{
+		margin: 0;
+		line-height: 0;
+		
+		img{
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+	}
+	
+	.cant-bottom{
+		margin: 0;
+		transform: rotate(180deg);
+		line-height: 0;
+		
+		img{
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+	}
+	
+	@include respond-to(wide-handhelds){
+		margin: 5px auto 20px;
+	}
+	@include respond-to(handhelds){
+		margin: 5px auto 20px;
+	}
+}
+
+
+
+
+
+.sidebar{
+	display: none;
+	width: 70%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	
+	img{
+		padding: 0;
+		margin: 3px;
+		float: right;
+		cursor: pointer;
+	}
+	
+	.side-menu{
+		clear: both;
+		
+		li{
+		background-color: rgba(0, 0, 0, 0.8);
+		margin-bottom: 5px;
+			
+			a{
+				padding: 10px 15px;
+				display: block;
+				color: #fff;
+			}
+		}
+	}
+}

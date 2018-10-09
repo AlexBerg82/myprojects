@@ -1,0 +1,306 @@
+.cell{
+	@include clearfix;
+	width: 100%;
+	padding: 0 20px;
+	margin: 0 auto 20px;
+	box-sizing: border-box;
+	
+	.title-cell{
+		padding: 0 10px;
+		
+		&-hide{
+			h1,h2,h3,h4,h5{
+				color: #aaa;
+				margin-bottom: 10px;
+			}
+			p{
+				color: #fff;
+				font-size: 13px;
+				margin-bottom: 10px;
+			}
+			a{
+				color: #CDBE70;
+				
+				&:hover{
+					color: #aaa;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				display: none;
+			}
+			@include respond-to(handhelds){
+				display: none;
+			}
+		}
+	
+		h1,h2,h3,h4,h5{
+			color: #aaa;
+			margin-bottom: 10px;
+		}
+		p{
+			color: #fff;
+			font-size: 13px;
+			margin-bottom: 10px;
+		}
+		a{
+			color: #CDBE70;
+			
+			&:hover{
+				color: #aaa;
+			}
+		}
+		
+		@include respond-to(display-big){
+			display: none;
+		}
+		@include respond-to(display){
+			display: none;
+		}
+		@include respond-to(tablets){
+			display: none;
+		}
+		@include respond-to(small-tablets ){
+			display: none;
+		}
+	}
+	.brdr{
+		text-align: center;
+		line-height: 0;
+		
+		&-left{
+			float: left;
+			width: 30%;
+			line-height: 0;
+			padding: 5px;
+			box-sizing: border-box;
+			background-color: #aaa;
+			
+			img{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			
+			.pricer{
+				background-color: #fff;
+				text-align: center;
+				padding: 5px;
+				background: linear-gradient(to bottom, #D3D3D3, #DBDBDB);
+			}
+			
+			
+			@include respond-to(wide-handhelds){
+				float: none;
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				float: none;
+				width: 100%;
+			}
+		}
+		&-right{
+			float: right;
+			width: 30%;
+			line-height: 0;
+			padding: 5px;
+			box-sizing: border-box;
+			background-color: #aaa;
+			
+			img{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			
+			.pricer{
+				background-color: #fff;
+				text-align: center;
+				padding: 5px;
+				background: linear-gradient(to bottom, #D3D3D3, #DBDBDB);
+			}
+			
+			
+			@include respond-to(wide-handhelds){
+				float: none;
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				float: none;
+				width: 100%;
+			}
+		}
+		&-left-nobord{
+			float: left;
+			width: 30%;
+			line-height: 0;
+			
+			img{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			
+			@include respond-to(wide-handhelds){
+				float: none;
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				float: none;
+				width: 100%;
+			}
+		}
+		&-right-nobord{
+			float: right;
+			width: 30%;
+			line-height: 0;
+			
+			img{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			
+			@include respond-to(wide-handhelds){
+				float: none;
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				float: none;
+				width: 100%;
+			}
+		}
+		
+		img{
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		
+		.pricer{
+			background-color: #fff;
+			text-align: center;
+			padding: 5px;
+			background: linear-gradient(to bottom, #D3D3D3, #DBDBDB);
+		}
+	}
+	.text-cell{
+		width: 70%;
+		float: left;
+		padding: 0 20px;
+		box-sizing: border-box;
+		
+		h1,h2,h3,h4,h5{
+			color: #aaa;
+			margin-bottom: 10px;
+		}
+		p{
+			color: #fff;
+			font-size: 13px;
+			margin-bottom: 10px;
+		}
+		a{
+			color: #CDBE70;
+			
+			&:hover{
+				color: #aaa;
+			}
+		}
+		
+		.picture-hov{
+			width: 80%;
+			padding: 10px;
+			margin: 0 auto;
+			
+			@include respond-to(wide-handhelds){
+				width: 100%;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+			}
+		}
+
+		@include respond-to(wide-handhelds){
+			float: none;
+			width: 100%;
+			padding: 20px 0px;
+		}
+		@include respond-to(handhelds){
+			float: none;
+			width: 100%;
+			padding: 15px 0 0 0;
+		}
+	}
+	
+	
+	&-nomera{
+		@extend .cell;
+		
+		padding: 0 10px;
+		
+		.brdr-left-nobord{
+			width: 50%;
+			
+			.nomer-view{
+				margin-bottom: 10px;
+				//background-color:red;
+				
+				img{
+					width: 100%;
+				}
+				
+				@include respond-to(wide-handhelds){
+					display: none;
+				}
+				@include respond-to(handhelds){
+					display: none;
+				}
+			}
+			
+			@include respond-to(small-tablets ){
+				width: 60%;
+			}
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				float: none;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				float: none;
+			}
+		}
+		.text-cell{
+			width: 50%;
+		
+			ul{
+				margin-left: 15px;
+				
+				li{
+					color: #fff;
+					font-size: 13px;
+					margin-bottom: 10px;
+					list-style-type: disc;
+					
+					a{
+						color: #fff;
+						font-size: 13px;
+					}
+				}
+			}
+		
+			@include respond-to(small-tablets ){
+				width: 40%;
+			}
+			@include respond-to(wide-handhelds){
+				padding: 20px 10px;
+				width: 100%;
+				float: none;
+			}
+			@include respond-to(handhelds){
+				padding: 20px 10px;
+				width: 100%;
+				float: none;
+			}
+		}
+	}
+}

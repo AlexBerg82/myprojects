@@ -1,0 +1,273 @@
+ul.accordion,
+ol.accordion {
+    margin: 0;
+    padding: 0;
+	line-height: 100%;
+}
+ul.accordion li {
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+	line-height: 100%;
+	
+	.list-menu{
+		padding: 10px 5px;
+		box-sizing: border-box;
+		
+		li{
+			padding: 10px 0;
+			margin-bottom: 0;
+			
+			a{
+				font-size: 17px;
+				color: #262626;
+				text-decoration: none;
+				
+				&:hover{
+					color: #000;
+				}
+			}
+		}
+		.active:before{
+			content: '———';
+			margin-right: 10px;
+			font-weight: 600;
+			color: #BA0C2F;
+		}
+	}
+	
+	@include respond-to(handhelds){
+		margin: 0 0 10px 0;
+	}
+	@include respond-to(wide-handhelds){
+		margin: 0 0 10px 0;
+	}
+}
+ul.accordion li:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    *zoom: 1;
+}
+.loading {
+	display: none;
+}
+ul.accordion {
+	width:  100%;
+}
+
+
+ul.accordion li h3 a {
+	background: #363636;
+	color: #fff;
+	display: block;
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	@include clearfix;
+}
+
+ul.accordion li.active h3 a {
+	color: #fff;
+	background: #FE312C;
+}
+
+ul.accordion li h3 {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	color: #FF312F;
+	text-transform: uppercase;
+}
+
+ul.accordion .panel {
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+.top-menu{
+	.accordeon{
+		clear: both;
+		display: none;
+
+		li{
+			h3{
+				text-align: left;
+				
+				a{
+					padding: 20px;
+					box-sizing: border-box;
+					position: relative;
+					line-height: 120%;
+				}
+
+				span{
+					font-size: 16px;
+					display: inline-block;
+					line-height: 130%;
+					position: absolute;
+					right: 10px;
+					
+					i{
+						font-size: 18px;
+						color: #ff;
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+.price{
+	.accordeon{
+		@include width1000;
+		padding: 20px 5px;
+		
+		li{
+			h3{
+				text-align: left;
+				line-height: 120%;
+				
+				a{
+					padding: 25px 15px;
+					background-color: #E9E9E9;
+					color: #FC403D;
+					text-transform: none;
+					font-size: 18px;
+				}
+
+				span{
+					font-size: 16px;
+					display: inline-block;
+					line-height: 130%;
+					position: absolute;
+					right: 60px;
+					
+					i{
+						font-size: 18px;
+						color: #000;
+					}
+				
+					@include respond-to(small-tablets){
+						display: none;
+					}
+					@include respond-to(handhelds){
+						display: none;
+					}
+					@include respond-to(wide-handhelds){
+						display: none;
+					}
+				}
+			}
+		}
+		.table{
+			margin-bottom: 30px;
+			
+			table{
+				width: 100%;
+				border-spacing: 0;
+				border-collapse: collapse;
+				color: #454545;
+				
+				td{
+					padding: 15px 20px;
+					text-align: center;
+					background-color: #F9F9F9;
+					border: 1px solid #fff;
+					font-size: 15px;
+					font-weight: 600;
+					
+					i{
+						&:hover{
+							color: #087DA8;
+						}
+					}
+				}
+				tr:nth-child(2n+1) td{
+					background-color: #E2E2E2;
+				}
+				tr:first-child td{
+					background-color: #1B1B1B;
+					text-transform: uppercase;
+					font-weight: 600;
+					padding: 20px;
+					color: #fff;
+				}
+
+				@include respond-to(tablets){
+					width: 980px;
+				}
+				@include respond-to(small-tablets){
+					width: 1000px;
+				}
+				@include respond-to(handhelds){
+					width: 1000px;
+				}
+				@include respond-to(wide-handhelds){
+					width: 1000px;
+				}
+			}
+
+			@include respond-to(tablets){
+				max-width: 980px;
+			}
+			@include respond-to(small-tablets){
+				max-width: 768px;
+			}
+			@include respond-to(handhelds){
+				max-width: 768px;
+			}
+			@include respond-to(wide-handhelds){
+				max-width: 768px;
+			}
+		}
+	}
+}
+
+.left-side{
+	.accordeon{
+		li{
+			h3{
+				text-align: left;
+				
+				a{
+					padding: 20px;
+					box-sizing: border-box;
+					position: relative;
+					line-height: 120%;
+				}
+
+				span{
+					font-size: 16px;
+					display: inline-block;
+					line-height: 130%;
+					position: absolute;
+					right: 10px;
+					
+					i{
+						font-size: 18px;
+						color: #ff;
+					}
+				}
+			}
+		}
+		
+		@include respond-to(small-tablets){
+			display: none;
+		}
+		@include respond-to(wide-handhelds){
+			display: none;
+		}		
+		@include respond-to(handhelds){
+			display: none;
+		}
+	}
+}

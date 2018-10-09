@@ -1,0 +1,142 @@
+@import "reset";
+
+@import "fonts";
+
+
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+  @else if $media == wide-handhelds {
+    @media only screen and (min-width: 480px) and (max-width: 599px) { @content; }
+  }
+  @else if $media == small-tablets {
+    @media only screen and (min-width: 600px) and (max-width: 767px) { @content; }
+  }  
+  @else if $media == tablets {
+    @media only screen and (min-width: 768px) and (max-width: 979px) { @content; }
+  }
+  @else if $media == display {
+    @media only screen and (min-width: 980px) and (max-width: 1199px) { @content; }
+  }  
+  @else if $media == display-big {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+}
+
+
+@mixin clearfix { &:after {  content: ".";  display: block;  clear: both;  visibility: hidden;  line-height: 0;  height: 0;} }
+// @include clearfix;
+
+
+@mixin width1000 { max-width: 1000px; margin: 0 auto; position: relative; box-sizing: border-box;}
+// @include width1000;
+@mixin width100pr { width: 100%; margin: 0 auto; position: relative; box-sizing: border-box;}
+// @include width1000;
+
+
+
+
+
+body{
+	background: #000;
+	background: url('../img/bg-darkkk.jpg') repeat-x;
+	background-size:35%;
+	background-attachment: fixed;
+	font-family: sans-serif;
+	font-size: 14px;
+	color: #fff;
+	
+	@include respond-to(tablets){
+		background:#000;
+	}
+	@include respond-to(small-tablets){
+		background:#000;
+	}
+	@include respond-to(wide-handhelds){
+		background:#000;
+	}
+	@include respond-to(handhelds){
+		background:#000;
+	}
+}
+
+
+
+
+
+
+@mixin common-text-default{
+	h1,h2,h3,h4{
+		margin-top: 15px;
+		margin-bottom: 10px;
+	}
+	p{
+		margin-bottom: 5px;
+		line-height: 130%;
+		text-align: justify;
+	}
+	a{
+		text-decoration: none;
+		color: darkblue;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+	table{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border: 1px solid #000;
+		border-collapse: collapse;
+	}
+	table tr{
+		padding: 0;
+		vertical-align: center;
+	}
+	table td{
+		padding: 10px 15px;
+		vertical-align: top;
+		border: 1px solid #000;
+	}
+	ul, ol{
+		margin-top:10px;
+		margin-left: 20px;
+		margin-bottom: 10px;
+	}
+	ul{
+		list-style-type: disc;
+	}
+	ol{
+		list-style-type: decimal;
+	}
+	ul li, ol li{
+		padding: 0;
+		margin-bottom: 5px;
+	}
+	ul li h1,ul li h2,ul li h3,ul li h4,
+	ol li h1,ol li h2,ol li h3,ol li h4{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	img{
+		max-width: 100%;
+		margin: 10px 0;
+	}
+}
+//text styles @include common-text-default;
+
+
+
+
+@import "header";
+
+@import "content-block";
+
+@import "card";
+
+@import "text-block";
+
+@import "footer";
+
+@import "modal";

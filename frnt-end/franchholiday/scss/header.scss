@@ -1,0 +1,348 @@
+.wrapper{
+	@include width1000;
+	@include clearfix;
+}
+
+
+.bg-gray{
+	background:  url(../img/bg-bg-line.png), url(../img/bg-s-grey.jpg);
+	background-repeat: repeat-x, repeat;
+	background-position: bottom center, top left;
+	
+	&-nonline{
+		background:  url(../img/bg-s-grey.jpg);
+		background-repeat: repeat;
+		background-position: top left;
+	}
+	
+	&-lite{
+		background: url(../img/bg-bg-line.png), url(../img/bg-s-grey-lite.jpg);
+	    background-repeat: repeat-x, repeat;
+	    background-position: bottom center, top left;
+		
+		&-nonline{
+			background: url(../img/bg-s-grey-lite.jpg);
+			background-repeat: repeat;
+			background-position: top left;
+		}
+	}
+	&-dark{
+		background: url(../img/bg-bg-line.png), url(../img/bg-s-grey-dark.jpg);
+	    background-repeat: repeat-x, repeat;
+	    background-position: bottom center, top left;
+		
+		&-nonline{
+			background: url(../img/bg-s-grey-dark.jpg);
+			background-repeat: repeat;
+			background-position: top left;
+		}
+	}
+}
+
+
+
+
+
+.block-header{
+	position: relative;
+	@include clearfix;
+	font-size: 0;
+	
+	.top-header-block{
+		padding: 15px 30px 0 30px;
+	
+		.logo{
+			display: inline-block;
+			width: 42%;
+			vertical-align:top;
+			
+			a{
+				img{
+					max-width: 100%;
+				}
+			}
+			
+			@include respond-to(small-tablets){
+				width: 50%;
+			}
+			@include respond-to(wide-handhelds){
+				width: 48%;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				display: block;
+			}
+		}
+
+		.retro-style-block{
+			display: inline-block;
+			width: 17%;
+			vertical-align:top;
+			
+			a{
+				font-size: 13px;
+				text-transform: uppercase;
+				font-weight: 700;
+				
+				img{
+					max-width: 100%;
+				}
+				
+				&:hover{
+					color: #DE511C;
+				}
+			}
+			
+			@include respond-to(small-tablets){
+				display: none;
+			}
+			@include respond-to(wide-handhelds){
+				display: none;
+			}
+			@include respond-to(handhelds){
+				display: none;
+			}
+		}
+
+		.contact-block{
+			display: inline-block;
+			width: 41%;
+			vertical-align:top;
+			@include clearfix;
+			
+			li{
+				font-size: 15px;
+				font-weight: 600;
+				text-transform: uppercase;
+				width: 80%;
+				margin: 2px 0;
+				float: right;
+				color: #F2DF6B;
+				
+				@include respond-to(tablets){
+					font-size: 14px;
+					width: 90%;
+				}
+				@include respond-to(small-tablets){
+					font-size: 13px;
+					width: 90%;
+				}
+				@include respond-to(wide-handhelds){
+					font-size: 12px;
+					width: 95%;
+				}
+				@include respond-to(handhelds){
+					margin-top: 0;
+					font-size: 13px;
+					width: 100%;
+					display: block;
+				}
+			}
+			
+			
+			@include respond-to(small-tablets){
+				width: 50%;
+			}
+			@include respond-to(wide-handhelds){
+				width: 52%;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				padding: 15px 0 0 0;
+			}
+		}
+		
+		@include respond-to(tablets){
+			padding: 5px 10px 0 10px;
+		}
+		@include respond-to(small-tablets){
+			padding: 5px 10px 15px 10px;
+		}
+		@include respond-to(wide-handhelds){
+			padding: 5px 10px 15px 10px;
+		}
+		@include respond-to(handhelds){
+			padding: 5px 10px 15px 10px;
+		}
+	}
+	
+	
+	.top-menu{
+		margin-bottom: 5px;
+		padding: 0 30px;
+		@include clearfix;
+		
+		.wrapper-mobile-menu{
+			float: left;
+			@include clearfix;
+
+			p{
+				float: left;
+				font-weight: 600;
+				color: #fff;
+				padding: 7px;
+				font-size: 16px;
+			}
+			
+			.mobile-menu{
+				padding: 3px;
+				border: 1px solid #aaa;
+				float: left;
+				cursor: pointer;
+				border-radius: 3px;
+			}
+			.mobile-menu .icon_bar{
+				padding: 0 11px;
+				height: 4px;
+				margin: 1px;
+				border-radius: 4px;
+				background-color: #aaa;
+			}
+			
+			@include respond-to(display-big){
+				display: none;
+			}
+			@include respond-to(display){
+				display: none;
+			}
+			@include respond-to(tablets){
+				display: none;
+			}
+		}
+		
+		.menu{
+			display: inline-block;
+			font-size: 0;
+			
+			li{
+				display: inline-block;
+				padding: 0 10px 5px 10px;
+				text-transform: uppercase;
+				max-width: 150px;
+				vertical-align:top;
+				text-align: center;
+				
+				a{
+					display: block;
+					color: #aaa;
+					font-size: 15px;
+					margin-bottom: 0;
+					color: #F2DF6B;
+					
+					&:hover{
+						color: #fff;
+					}
+				}
+			}
+			.active{
+				a{
+					color: #fff;
+					
+					&:hover{
+						color: #fff;
+					}
+				}
+			}
+
+			@include respond-to(small-tablets){
+				display: none;
+			}
+			@include respond-to(wide-handhelds){
+				display: none;
+			}
+			@include respond-to(handhelds){
+				display: none;
+			}
+		}
+		
+		.menu-small{
+			font-size: 0;
+			display: none;
+			clear: both;
+			background-color:#1C1C1C;
+			
+			li{
+				padding: 0 10px 5px 10px;
+				text-transform: uppercase;
+				
+				a{
+					display: block;
+					color: #aaa;
+					font-size: 15px;
+					margin-bottom: 0;
+					color: #F2DF6B;
+					
+					&:hover{
+						color: #F25328;
+					}
+				}
+				
+				@include respond-to(small-tablets){
+					padding: 5px 30px;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 5px 30px;
+				}
+				@include respond-to(handhelds){
+					padding: 5px 30px;
+				}
+			}
+			.active{
+				a{
+					color: #fff;
+					
+					&:hover{
+						color: #fff;
+					}
+				}
+			}
+			
+			@include respond-to(small-tablets){
+				width: 100%;
+				padding: 10px 0;
+			}
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				padding: 10px 0;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				padding: 10px 0;
+			}
+		}
+
+		.language-block{
+			float: right;
+			
+			.languages{
+				margin-bottom: 0;
+				
+				li{
+					display: inline-block;
+					border: 1px solid transparent;
+					margin-left:8px;
+					
+					&:first-child{
+						margin-left: 0;
+					}
+				}
+				.active{
+					border: 1px solid #fff;
+				}
+			}
+		}
+		
+		@include respond-to(tablets){
+			padding: 0 10px;
+		}
+		@include respond-to(small-tablets){
+			padding: 0 10px;
+		}
+		@include respond-to(wide-handhelds){
+			padding: 0 10px;
+		}
+		@include respond-to(handhelds){
+			padding: 0 10px;
+		}
+	}
+}

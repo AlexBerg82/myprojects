@@ -1,0 +1,148 @@
+ul.card-inn{
+	@include clearfix;
+	font-size: 0;
+	padding: 10px 0;
+	margin: 0;
+
+	li{
+		display: inline-block;
+		vertical-align:top;
+		margin: 10px;
+		@include clearfix;
+		position: relative;
+		
+		.wrapper-image{
+			border: 1px solid #CFCFCF;
+			background-color: #fff;
+			margin-bottom: 5px;
+			display: block;
+			box-shadow: 0 1px 8px #aaa;
+			line-height: 0;
+			
+			img{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				box-shadow: 0 1px 5px #aaa;
+			}
+		}
+		p{
+			font-size: 11px;
+			margin: 0 5px;
+			text-align: left;
+			line-height: 100%;
+			
+			span{
+				color: brown;
+			}
+			a{
+				font-size: 11px;
+				color: #000;
+			}
+		}
+		
+		@include respond-to(display-big){
+			width:calc(16.66% - 22px);
+		}
+		@include respond-to(display){
+			width:calc(20% - 22px);
+		}
+		@include respond-to(tablets){
+			width:calc(25% - 22px);
+		}
+		@include respond-to(small-tablets ){
+			width:calc(33.33% - 12px);
+			margin: 5px;
+		}
+		@include respond-to(wide-handhelds){
+			width:calc(50% - 12px);
+			margin: 5px;
+		}
+		@include respond-to(handhelds){
+			width:calc(50% - 12px);
+			margin: 5px;
+		}
+	}
+	li:hover .text-card a{
+		color: #fff;
+		border: none;
+	}
+	
+	
+	&-nomera{
+		@extend .card-inn;
+		
+		padding: 0;
+		
+		li{
+			margin: 5px;
+		
+			@include respond-to(display-big){
+				width:calc(33.33% - 10px);
+			}
+			@include respond-to(display){
+				width:calc(33.33% - 10px);
+			}
+			@include respond-to(tablets){
+				width:calc(33.33% - 10px);
+			}
+			@include respond-to(small-tablets ){
+				width:calc(33.33% - 10px);
+			}
+			@include respond-to(wide-handhelds){
+				width:calc(50% - 10px);
+			}
+			@include respond-to(handhelds){
+				width:calc(100% - 10px);
+			}
+		}
+	
+
+		@include respond-to(wide-handhelds){
+			display: none;
+		}
+		@include respond-to(handhelds){
+			display: none;
+		}
+	}
+}
+
+
+
+/* ul.nomera{
+	padding: 0;
+
+	li{
+		margin: 5px;
+	
+		@include respond-to(display-big){
+			width:calc(33.33% - 12px);
+		}
+		@include respond-to(display){
+			width:calc(33.33% - 12px);
+		}
+		@include respond-to(tablets){
+			width:calc(33.33% - 12px);
+		}
+		@include respond-to(small-tablets ){
+			width:calc(50% - 12px);
+		}
+		@include respond-to(wide-handhelds){
+			width:calc(50% - 12px);
+		}
+		@include respond-to(handhelds){
+			width:calc(100% - 12px);
+		}
+	}
+	li:hover .text-card a{
+		color: #fff;
+		border: none;
+	}
+	
+	@include respond-to(wide-handhelds){
+		display: none;
+	}
+	@include respond-to(handhelds){
+		display: none;
+	}
+} */

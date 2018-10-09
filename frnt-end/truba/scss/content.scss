@@ -1,0 +1,255 @@
+.content{
+	@include width1000;
+	padding: 20px 0;
+	@include clearfix;
+	
+	@import "text-default";
+	
+	.left-side{
+		width: 70%;
+		float: left;
+		padding: 0 20px;
+		box-sizing: border-box;
+		
+		.text-block{
+			padding: 5px;
+			
+			.title{
+				text-decoration: underline;
+				color: #006699;
+
+				&:hover{
+					text-decoration: none;
+				}
+			}
+			.products{
+				padding: 10px 0;
+				
+				li{
+					margin: 10px 0;
+					
+					a{
+						color: #006699;
+						font-size: 16px;
+						text-decoration: underline;
+						
+						&:hover{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			.add-zakaz-block{
+				padding: 20px;
+				margin-bottom: 10px;
+				background-color: #F5F5F5;
+				
+				form{
+					width: 60%;
+					padding: 0;
+					
+					h1,h2,h3,h4,h5{
+						margin-top: 0;
+						margin-bottom: 5px;
+					}
+					
+					input,select{
+						width: calc(60% - 2px);
+						margin-bottom: 10px;
+						padding: 3px;
+						
+						&:focus::placeholder{
+							color: transparent;
+						}
+						&:focus:placeholder{
+							color: transparent;
+						}
+						
+						@include respond-to(wide-handhelds){
+							width: calc(100% - 2px);
+						}
+						@include respond-to(handhelds){
+							width: calc(100% - 2px);
+						}
+					}
+					textarea{
+						width: 100%;
+						margin-bottom: 10px;
+						padding: 3px;
+						resize: none;
+						
+						&:focus::placeholder{
+							color: transparent;
+						}
+						&:focus:placeholder{
+							color: transparent;
+						}
+					}
+					select{
+						width: calc(80% - 2px);
+						padding: 3px;
+						
+						@include respond-to(wide-handhelds){
+							width: calc(100% - 2px);
+						}
+						@include respond-to(handhelds){
+							width: calc(100% - 2px);
+						}
+					}
+					.protector{
+						@include clearfix;
+						margin-bottom: 20px;
+						max-width: 300px;
+						
+						.protect,.cod-pict{
+							width: 50%;
+							float: left;
+							
+							.cod{
+								max-width: 130px;
+								height: 60px;
+								background-color: #aaa;
+							}
+							input{
+								width: 90%;
+							}
+						}
+						.protect{
+							width: calc(50% - 5px);
+							margin-right: 5px;
+						}
+					}
+					
+					button{
+						padding: 5px 10px;
+						cursor: pointer;
+						border: 1px solid #aaa;
+						border-radius: 3px;
+
+						&:hover{
+							background-color: #aaa;
+						}
+					}
+					
+					@include respond-to(small-tablets ){
+						width: 80%;
+					}
+					@include respond-to(wide-handhelds){
+						width: 98%;
+					}
+					@include respond-to(handhelds){
+						width: 98%;
+					}
+				}
+			}
+			.price-list{
+				.price-block{
+					padding: 20px;
+					text-align: center;
+					border-bottom: 1px solid #006699;
+				}
+				.price-block:last-child{
+					border-bottom: none;
+				}
+				p{
+					font-size: 12px;
+					margin: 0;
+				}
+			}
+
+		}
+		
+		@include respond-to(small-tablets){
+			float: none;
+			width: 100%;
+			padding: 10px;
+		}
+		@include respond-to(wide-handhelds){
+			float: none;
+			width: 100%;
+			padding: 5px;
+		}
+		@include respond-to(handhelds){
+			float: none;
+			width: 100%;
+			padding: 5px;
+		}
+	}
+	
+	.right-side{
+		width: 30%;
+		padding: 10px 0;
+		float: right;
+		box-sizing: border-box;
+		
+		@extend .text-block;
+		
+		.wrp{
+			width: 95%;
+			margin: 0 auto;
+			box-sizing: border-box;
+			
+			@include respond-to(tablets){
+				width: 100%;
+			}
+		}
+		
+		@include respond-to(small-tablets){
+			float: none;
+			width: 100%;
+		}
+		@include respond-to(wide-handhelds){
+			float: none;
+			width: 100%;
+			padding: 5px 0;
+		}
+		@include respond-to(handhelds){
+			float: none;
+			width: 100%;
+			padding: 5px 0;
+		}
+	}
+	
+	.download{
+		border-top: 1px solid #006699;
+		border-bottom: 1px solid #006699;
+	
+		img{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			vertical-align: middle;
+		}
+		p{
+			display: inline-block;
+			vertical-align: middle;
+			font-weight: 600;
+			margin: 0;
+			padding: 0;
+			
+			a{
+				color: #006699;
+				
+				@include respond-to(handhelds){
+					font-size: 12px;
+				}
+			}
+
+		}
+	}
+	
+	
+	@include respond-to(tablets){
+		width: 100%;
+	}
+	@include respond-to(small-tablets){
+		width: 100%;
+	}
+	@include respond-to(wide-handhelds){
+		width: 100%;
+	}
+ 	@include respond-to(handhelds){
+		width: 100%;
+		padding: 5px 0;
+	}
+}

@@ -1,0 +1,134 @@
+.sertificates{
+	@include width1000;
+	padding: 30px 0 40px 0;
+	
+	.sertificat{
+		@include clearfix;
+		
+		.left-sertificate{
+			width: 35%;
+			padding: 0 30px 0 5px;
+			float: left;
+			box-sizing: border-box;
+			
+			@import "text-default";
+			
+			p{
+				font-size: 16px;
+			}
+			
+			@include respond-to(small-tablets){
+				padding: 0 5px;
+			}
+			@include respond-to(wide-handhelds){
+				padding: 0 5px;
+				width: 100%;
+				float: none;
+			}
+			@include respond-to(handhelds){
+				padding: 0 5px;
+				width: 100%;
+				float: none;
+			}
+		}
+		.right-sertificate{
+			width: 65%;
+			float: right;
+			
+			.card-line{
+				@include clearfix;
+				font-size: 0;
+
+				li{
+					display: inline-block;
+					vertical-align:middle;
+					margin: 0 10px;
+					@include clearfix;
+					position: relative;
+					text-align: center;
+					
+					img{
+						max-width: 100%;
+						margin: 0;
+						padding: 0;
+					}
+
+					@include respond-to(display-big){
+						width:calc(11.11% - 20px);
+					}
+					@include respond-to(display){
+						width:calc(11.11% - 20px);
+					}
+					@include respond-to(tablets){
+						width:calc(20% - 20px);
+					}
+					@include respond-to(small-tablets){
+						width:calc(20% - 4px);
+						margin: 2px;
+					}
+					@include respond-to(wide-handhelds){
+						width:calc(33.33% - 10px);
+						margin: 5px;
+					}
+					@include respond-to(handhelds){
+						width:calc(33.33% - 10px);
+						margin: 5px;
+					}
+				}
+			
+				@include respond-to(tablets){
+					text-align: center;
+				}
+				@include respond-to(small-tablets){
+					text-align: center;
+				}
+				@include respond-to(wide-handhelds){
+					text-align: center;
+				}
+				@include respond-to(handhelds){
+					text-align: center;
+				}
+			}
+			
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				float: none;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				float: none;
+			}
+		}
+	}
+	
+	.mini-slider{
+		.slide-five{
+			border-bottom: none;
+			padding: 0;
+			
+			.owl-prev{
+				display: none;
+			}
+			.owl-next{
+				display: none;
+			}
+		}
+	}
+	
+	@include respond-to(tablets ){
+		margin: 0 0 20px 0;
+		padding: 0 0 20px 0;
+	}
+	@include respond-to(small-tablets){
+		margin: 0 0 30px 0;
+		padding: 0 0 20px 0;
+	}
+	@include respond-to(wide-handhelds){
+		margin: 0 0 30px 0;
+		padding: 0 0 20px 0;
+	}
+	@include respond-to(handhelds){
+		margin: 0 0 30px 0;
+		padding: 0 0 20px 0;
+	}
+}

@@ -1,0 +1,217 @@
+//top-menu
+.menu{
+	position: absolute;
+	width: 100%;
+	top: 40.5%;
+	left: 0;
+	padding: 0 2%;
+	box-sizing: border-box;
+	@include clearfix;
+	
+	.header-left{
+		float: left;
+	}
+	.header-right{
+		float: right;
+	}
+	
+	.header-left, .header-right{
+		width: 33%;
+		
+		@include respond-to(tablets){
+			width: 33%;
+		}
+		@include respond-to(small-tablets){
+			display: none;
+		}
+		@include respond-to(wide-handhelds){
+			display: none;
+		}
+		@include respond-to(handhelds){
+			display: none;
+		}
+	}
+	
+	@include respond-to(display){
+		top: 40%;
+	}
+	@include respond-to(tablets){
+		top: 39.5%;
+		padding: 0 1%;
+	}
+	@include respond-to(small-tablets){
+		top: 40%;
+		padding: 0;
+	}
+	@include respond-to(wide-handhelds){
+		top: 50px;
+		padding: 0;
+	}
+	@include respond-to(handhelds){
+		top: 50px;
+		padding: 0;
+	}
+}
+
+.menu-left, .menu-right{
+	li{
+		display: inline-block;
+		margin: 0 15px;
+		
+		a{
+			color: #fff;
+			text-transform: uppercase;
+			font-family: serif;
+			font-weight: 600;
+			text-shadow: -0.5px 0.5px 1px #CDBA96;
+			
+			&:hover{
+				color: #EED8AE;
+				text-shadow: none;
+			}
+			&:active{
+				color: #E8E8E8;
+				text-shadow: none;
+			}
+			
+			@include respond-to(tablets){
+				font-size: 13px;
+			}
+			@include respond-to(small-tablets){
+				font-size: 13px;
+				text-shadow: none;
+			}
+			@include respond-to(wide-handhelds){
+				font-size: 13px;
+				text-shadow: none;
+			}
+			@include respond-to(handhelds){
+				font-size: 13px;
+				text-shadow: none;
+			}
+		}
+		
+		@include respond-to(display){
+			margin: 0 10px;
+		}
+		@include respond-to(tablets){
+			margin: 0 3px;
+		}
+		@include respond-to(small-tablets){
+			margin: 0 3px;
+		}
+		@include respond-to(wide-handhelds){
+			margin: 0 3px;
+		}
+		@include respond-to(handhelds){
+			margin: 0 3px;
+		}
+	}
+	.active a{
+		color: #aaa;
+		text-shadow: -0.5px 0.5px 1px #4F4F4F;
+	}
+}
+
+	
+	
+.top-menu{
+	display: none;
+	float: right;
+
+	li{
+		display: inline-block;
+		margin: 0 10px;
+		
+		a{
+			color: #fff;
+			text-transform: uppercase;
+			font-family: serif;
+			font-weight: 600;
+			text-shadow: -0.5px 0.5px 1px #EED8AE;
+			
+			@include respond-to(tablets){
+				font-size: 13px;
+			}
+			@include respond-to(small-tablets){
+				font-size: 13px;
+				text-shadow: none;
+			}
+			@include respond-to(wide-handhelds){
+				font-size: 13px;
+				text-shadow: none;
+			}
+			@include respond-to(handhelds){
+				font-size: 13px;
+				text-shadow: none;
+			}
+		}
+		
+		@include respond-to(small-tablets){
+			margin: 0 5px;
+		}
+		@include respond-to(wide-handhelds){
+			margin: 0 5px;
+		}
+		@include respond-to(handhelds){
+			margin: 0 5px;
+		}
+	}
+
+	@include respond-to(small-tablets){
+		display: block;
+	}
+	@include respond-to(wide-handhelds){
+		display: none;
+	}
+	@include respond-to(handhelds){
+		display: none;
+	}
+}
+
+//mobile menu
+.wrapper-btn-menu{
+	display: none;
+	
+	.btn-menu{
+		height: 20px;
+		margin-top: 2px;
+		background-color:#000;
+		float: right;
+		cursor:pointer;
+		
+		.icon{
+			width: 25px;
+			height: 3px;
+			margin: 3px;
+			background-color: #fff;
+			
+			@include respond-to(handhelds){
+				height: 2px;
+				margin: 2px;
+			}
+		}
+		
+		@include respond-to(handhelds){
+			margin-top: 3px;
+			height: auto;
+		}
+	}
+	p{
+		font-size: 12px;
+		float: right;
+		color: #fff;
+		margin: 5px 10px;
+		
+		@include respond-to(handhelds){
+			margin: 3px 10px;
+		}
+	}
+	
+	@include respond-to(wide-handhelds){
+		display: block;
+	}
+	@include respond-to(handhelds){
+		display: block;
+	}	
+}

@@ -1,0 +1,37 @@
+.path-block{
+	@include width1000;
+	
+	@include respond-to(handhelds){
+		width: 100%;
+	}
+	@include respond-to(wide-handhelds){
+		width: 100%;
+	}
+	@include respond-to(small-tablets){
+		width: 100%;
+	}
+	@include respond-to(tablets){
+		width: 100%;
+	}
+}
+.path{
+	padding-left: 10px;
+	
+	li{
+		display: inline-block;
+		padding: 5px 3px;
+		color: #aaa;
+		a{
+			font-size: 16px;
+			color: #E8E8E8;
+			
+			&:hover{
+				color: #aaa;
+			}
+		}
+	}
+	
+	.place{
+		color: #828282;
+	}
+}

@@ -1,0 +1,116 @@
+.card-block{
+	@include width1000;
+	margin-bottom: 50px;
+	
+	.button-block{
+		padding: 40px 0 10px 0;
+	}
+	
+	@include respond-to(small-tablets){
+		margin-bottom: 0;
+	}
+	@include respond-to(wide-handhelds){
+		margin-bottom: 20px;
+	}
+	@include respond-to(handhelds){
+		margin-bottom: 20px;
+	}
+}
+
+.card-c1{
+	@include clearfix;
+	font-size: 0;
+
+	li{
+		display: inline-block;
+		vertical-align:top;
+		margin: 10px;
+		@include clearfix;
+		cursor: pointer;
+
+		a{
+			color: #000;
+			text-decoration: none;
+		
+			.title-card{
+				padding: 25px 15px;
+				min-height: 25px;
+				background-color: #000;
+				
+				p{
+					width: 100%;
+					box-sizing: border-box;
+					line-height: 130%;
+					font-size: 18px;
+					text-align: center;
+					text-transform: uppercase;
+					color: #fff;
+					
+					@include respond-to(tablets){
+						font-size: 16px;
+					}
+					@include respond-to(small-tablets){
+						font-size: 16px;
+					}
+					@include respond-to(wide-handhelds){
+						font-size: 16px;
+					}
+				}
+				
+				@include respond-to(tablets){
+					padding: 15px;
+					min-height: 40px;
+				}
+				@include respond-to(small-tablets){
+					padding: 15px;
+					min-height: 40px;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 15px;
+					min-height: 40px;
+				}
+				@include respond-to(handhelds){
+					padding: 15px;
+				}
+			}
+			.text-card{
+				img{
+					width: 100%;
+					padding: 0;
+					margin: 0;
+				}
+			}
+		}
+		
+		@include respond-to(display-big){
+			width:calc(33.33% - 20px);
+		}
+		@include respond-to(display){
+			width:calc(33.33% - 20px);
+		}
+		@include respond-to(tablets){
+			width:calc(33.33% - 10px);
+			margin: 0 5px;
+		}
+		@include respond-to(small-tablets){
+			width:calc(33.33% - 2px);
+			margin: 0 1px;
+		}
+		@include respond-to(wide-handhelds){
+			width:calc(50% - 12px);
+			margin: 5px;
+		}
+		@include respond-to(handhelds){
+			width:calc(100% - 12px);
+			margin: 5px;
+		}
+	}
+
+	li:hover .title-card{
+		background-color: #BA0C2F;
+	}
+	
+	@include respond-to(wide-handhelds){
+		text-align: center;
+	}
+}

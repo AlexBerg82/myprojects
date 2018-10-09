@@ -1,0 +1,199 @@
+.chears-block{
+	.wrapper-background{
+		.mini-slider{
+			@include width1000;
+		}
+	}
+}
+
+//card of chears-block
+.chears{
+	@include width1000;
+	padding: 20px 0;
+
+	.cell-chear{
+		padding: 30px 0;
+		@include clearfix;
+	
+		.left-side-chear{
+			width: 50%;
+			float: left;
+			box-sizing: border-box;
+			
+			@include respond-to(small-tablets){
+				width: 100%;
+				float: none;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				float: none;
+			}
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				float: none;
+			}
+		}
+		.right-side-chear{
+			width: 50%;
+			padding: 0 5px;
+			float: right;
+			box-sizing: border-box;
+			
+			.title-chear{
+				margin-bottom: 20px;
+				font-size: 0;
+				@include clearfix;
+				
+				p:first-child{
+					text-transform: uppercase;
+					font-size: 22px;
+					font-weight: 600;
+					color: #9E314B;
+					float: left;
+					
+					@include respond-to(handhelds){
+						float: none;
+						text-align: center;
+						margin-bottom: 10px;
+					}
+				}
+				p:last-child{
+					float: right;
+					font-size: 18px;
+					
+					span{
+						color: #9E314B;
+						font-weight: 600;
+						font-size: 22px;
+					}
+					
+					@include respond-to(handhelds){
+						float: none;
+						text-align: center;
+					}
+				}
+			}
+			.text{
+				@import "text-default";
+				
+				padding: 10px 0 20px 0;
+				border-bottom: 1px solid #aaa;
+				
+				p{
+					font-size: 16px;
+					color: #7B7B7B;
+					line-height: 160%;
+					
+					@include respond-to(wide-handhelds){
+						line-height: 130%;
+					}
+					@include respond-to(handhelds){
+						line-height: 130%;
+					}
+				}
+				h3{
+					margin-bottom: 20px;
+				}
+			}
+			.mini-slider{
+				padding: 30px 0;
+				
+				.owl-prev{
+					display: none;
+				}
+				.owl-next{
+					display: none;
+				}
+			}
+			.button-block{
+				padding: 10px 0;
+			}
+			
+			@include respond-to(small-tablets){
+				width: 100%;
+				float: none;
+				padding: 30px 10px;
+			}
+			@include respond-to(wide-handhelds){
+				width: 100%;
+				float: none;
+				padding: 30px 10px 0 10px;
+			}
+			@include respond-to(handhelds){
+				width: 100%;
+				float: none;
+				padding: 30px 10px 0 10px;
+			}			
+		}
+	}
+	
+	.table{
+		h2{
+			padding: 20px 10px;
+		}
+		
+		table{
+			width: 100%;
+			border-spacing: 0;
+			border-collapse: collapse;
+			color: #454545;
+			
+			td{
+				padding: 15px 20px;
+				text-align: center;
+				background-color: #E4E4E4;
+				border: 3px solid #fff;
+				font-size: 17px;
+				
+				p{
+					margin-bottom: 10px;
+				}
+			}
+			tr:first-child td{
+				background-color: #BA0C2F;
+				padding: 20px;
+				color: #fff;
+			}
+			tr td:nth-child(2){
+				text-align: left;
+			}
+			tr td:nth-child(1){
+				background-color: #333333;
+				color: #fff;
+				width: 20%;
+			}
+			tr:first-child td:first-child{
+				background-color: #BA0C2F;
+			}
+			tr:first-child td:nth-child(2){
+				text-align: center;
+			}
+
+			@include respond-to(tablets){
+				width: 980px;
+			}
+			@include respond-to(small-tablets){
+				width: 1000px;
+			}
+			@include respond-to(handhelds){
+				width: 1000px;
+			}
+			@include respond-to(wide-handhelds){
+				width: 1000px;
+			}
+		}
+
+		@include respond-to(tablets){
+			max-width: 980px;
+		}
+		@include respond-to(small-tablets){
+			max-width: 768px;
+		}
+		@include respond-to(handhelds){
+			max-width: 768px;
+		}
+		@include respond-to(wide-handhelds){
+			max-width: 768px;
+		}
+	}
+}

@@ -1,0 +1,224 @@
+﻿.tabs{
+	padding: 0;
+
+	.tabs__caption{
+		font-size: 0;
+		list-style: none;
+		position: relative;
+		text-align: center;
+		margin: 0 auto -1px;
+		
+		li{
+			position: relative;
+			display: inline-block;
+			padding: 15px;
+			vertical-align:top;
+			box-sizing: border-box;
+			text-align: center;
+			
+			.wrp-tab{
+				cursor: pointer;
+				width: 100%;
+
+				p{
+					font-size: 12px;
+					color: #939393;
+					text-transform: uppercase;
+					
+					&:hover{
+						color: #fff;
+					}
+				}
+			}
+			
+			@include respond-to(display){
+				padding: 5px;
+			}
+			@include respond-to(tablets){
+				flex: 1 0 auto;
+				width: auto;
+				min-width: auto;
+				padding: 5px;
+			}
+			@include respond-to(small-tablets){
+				flex: 1 0 auto;
+				width: auto;
+				min-width: auto;
+				padding: 5px;
+			}
+			@include respond-to(wide-handhelds){
+				flex: 1 0 auto;
+				width: auto;
+				min-width: auto;
+				padding: 5px;
+			}
+			@include respond-to(handhelds){
+				flex: 1 0 auto;
+				width: auto;
+				min-width: auto;
+				padding: 5px;
+			}
+		}
+		.active{
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			padding: 15px;
+			vertical-align:top;
+			
+			.wrp-tab{
+				width: 100%;
+				box-sizing: border-box;
+
+				p{
+					font-size: 12px;
+					font-weight: 600;
+					color: #fff;
+					text-decoration: line-through;
+				}
+			}
+			
+			@include respond-to(display){
+				padding: 5px;
+			}
+			@include respond-to(tablets){
+				padding: 5px;
+			}
+			@include respond-to(small-tablets){
+				padding: 5px;
+			}
+			@include respond-to(wide-handhelds){
+				padding: 5px;
+			}
+			@include respond-to(handhelds){
+				padding: 5px;
+			}
+		}
+
+		@include respond-to(tablets){
+			width: auto;
+			min-width: auto;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+			list-style: none;
+			position: relative;
+			margin: -1px 0 0 0;
+		}
+		@include respond-to(small-tablets){
+			width: auto;
+			min-width: auto;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+			list-style: none;
+			position: relative;
+			margin: -1px 0 0 0;
+		}
+		@include respond-to(wide-handhelds){
+			width: auto;
+			min-width: auto;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+			list-style: none;
+			position: relative;
+			margin: -1px 0 0 0;
+		}
+		@include respond-to(handhelds){
+			width: auto;
+			min-width: auto;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+			list-style: none;
+			position: relative;
+			margin: -1px 0 0 0;
+		}
+	}
+	.tabs__caption:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+	.tabs__content{
+		display: none;
+	}
+	.tabs__content.active{
+		display: block;
+		padding: 65px 0;
+		//background-color: #F5F5F5;
+		@include clearfix;
+		//border: 1px solid #C6C6C6;
+		
+		.button{
+			margin-top: 65px;
+			padding: 10px 0;
+			text-align: center;
+			
+			.btn{
+				display: inline-block;
+				padding: 20px;
+				background-color: #87313D;
+				color: #fff;
+				text-transform: uppercase;
+				font-weight: 600;
+				text-decoration: none;
+				
+				&:hover{
+					background-color: #fff;
+					color: #000;
+				}
+				
+				@include respond-to(small-tablets){
+					padding: 12px;
+				}
+				@include respond-to(wide-handhelds){
+					padding: 12px;
+				}
+				@include respond-to(handhelds){
+					padding: 12px;
+				}
+			}
+			
+			@include respond-to(tablets){
+				margin-top: 30px;
+			}
+			@include respond-to(small-tablets){
+				margin-top: 30px;
+			}
+			@include respond-to(wide-handhelds){
+				margin-top: 30px;
+			}
+			@include respond-to(handhelds){
+				margin-top: 20px;
+				text-align: center;
+			}
+		}
+		
+		@include respond-to(tablets){
+			padding: 45px 0 10px 0;
+		}
+		@include respond-to(small-tablets){
+			padding: 35px 0;
+		}
+		@include respond-to(wide-handhelds){
+			padding: 25px 0;
+		}
+		@include respond-to(handhelds){
+			padding: 15px 0;
+		}
+	}
+}

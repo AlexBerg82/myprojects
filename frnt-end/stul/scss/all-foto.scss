@@ -1,0 +1,91 @@
+.all-foto{
+	@include width1000;
+	display: none;
+
+	.all-grid{
+		font-size: 0;
+		
+		li{
+			display: inline-block;
+			vertical-align:top;
+			margin: 5px 10px;
+			list-style: none;
+			text-align: center;
+			cursor: pointer;
+			
+			a{
+				img{
+					width: 100%;
+					margin: 0;
+					padding: 0;
+				}
+				
+				.title-slid{
+					padding: 20px 15px;
+					min-height: 46px;
+					background-color: #232323;
+					
+					p{
+						width: 100%;
+						box-sizing: border-box;
+						font-size: 18px;
+						line-height: 130%;
+						text-transform: uppercase;
+						text-align: left;
+						color: #fff;
+						
+						@include respond-to(tablets){
+							font-size: 14px;
+						}
+						@include respond-to(small-tablets){
+							font-size: 14px;
+						}
+						@include respond-to(wide-handhelds){
+							font-size: 14px;
+						}
+						@include respond-to(handhelds){
+							font-size: 14px;
+						}
+					}
+					
+					@include respond-to(tablets){
+						padding: 15px;
+					}
+					@include respond-to(small-tablets){
+						padding: 15px;
+						min-height: 35px;
+					}
+					@include respond-to(wide-handhelds){
+						padding: 15px;
+						min-height: 55px;
+					}
+					@include respond-to(handhelds){
+						padding: 15px;
+						min-height: 45px;
+					}
+				}
+			}
+			
+			@include respond-to(display-big){
+				width:calc(25% - 20px);
+			}
+			@include respond-to(display){
+				width:calc(25% - 20px);
+			}
+			@include respond-to(tablets){
+				width:calc(25% - 20px);
+			}
+			@include respond-to(small-tablets){
+				width:calc(33.33% - 20px);
+			}
+			@include respond-to(wide-handhelds){
+				width:calc(50% - 10px);
+				margin: 5px;
+			}
+			@include respond-to(handhelds){
+				width:calc(50% - 10px);
+				margin: 5px;
+			}
+		}		
+	}
+}

@@ -1,0 +1,264 @@
+.slide-one{
+	list-style: none;
+	
+	li{
+		margin: 20px;
+		padding: 25px;
+		font-size: 0;
+		background-color: #fff;
+		@include clearfix;
+		
+		.left-block{
+			width: 50%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.right-block{
+			width: 50%;
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			
+			p{
+				text-align: center;
+			}
+			p:first-child{
+				font-size: 24px;
+				text-transform: uppercase;
+				//background-color:green;
+				letter-spacing: 1px;
+				
+				@include respond-to(display){
+					font-size: 18px;
+				}
+				@include respond-to(tablets){
+					font-size: 14px;
+				}
+				@include respond-to(small-tablets){
+					font-size: 14px;
+				}
+				@include respond-to(wide-handhelds){
+					font-size: 14px;
+				}
+			}
+			p:first-child:after{
+				content: '____';
+				position: absolute;
+				bottom: 14px;
+				left: 50%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+			}
+			p:last-child{
+				font-size: 20px;
+				padding: 10px 0 0 0;
+				//background-color:red;
+				
+				@include respond-to(display){
+					font-size: 18px;
+				}
+				@include respond-to(tablets){
+					font-size: 14px;
+				}
+				@include respond-to(small-tablets){
+					font-size: 14px;
+				}
+				@include respond-to(wide-handhelds){
+					font-size: 14px;
+				}
+			}
+		}
+		.text-block{
+			min-height: 100px;
+			padding: 25px;
+			clear: both;
+			//overflow: hidden;
+			//white-space: nowrap;
+			//text-overflow: ellipsis;
+
+			p{
+				font-size: 13px;
+				line-height: 160%;
+				font-family: sans-serif;
+			}
+		}
+   		@media (max-width: 1500px){
+			.text-block{
+				min-height: 80px;
+				padding: 20px;
+				
+				p{
+					line-height: 130%;
+				}
+			}
+		}
+		@media (max-width: 1400px){
+			.text-block{
+				min-height: 100px;
+				padding: 20px;
+				
+				p{
+					line-height: 130%;
+				}
+			}
+		}
+		@media (max-width: 1200px){
+			.text-block{
+				min-height: 120px;
+				padding: 15px;
+				
+				p{
+					line-height: 130%;
+				}
+			}
+		}
+		@media (max-width: 979px){
+			.text-block{
+				min-height: 125px;
+				padding: 10px 0;
+				
+				p{
+					line-height: 130%;
+				}
+			}
+		}
+		@media (max-width: 600px){
+			.text-block{
+				min-height: 120px;
+				padding: 10px 0;
+			}
+		}
+		@media (max-width: 480px){
+			.text-block{
+				min-height: auto;
+				padding: 10px 0;
+			}
+		}
+	}
+	@media (max-width: 1500px){
+		li{
+			margin: 15px;
+			padding: 20px;
+		}
+	}
+ 	@media (max-width: 1200px){
+		li{
+			margin: 10px;
+			padding: 15px;
+		}
+	}
+ 	@media (max-width: 979px){
+		li{
+			margin: 5px;
+			padding: 10px;
+		}
+	}
+}
+.slide-two{
+	list-style: none;
+	
+	li{
+		position: relative;
+		font-size: 0;
+		//background-color: #fff;
+		@include clearfix;
+		
+		a{
+			display: block;
+			
+			span{
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 0;
+				padding: 40px;
+				background-color: rgba(0,0,0,0.6);
+				box-sizing: border-box;
+				bottom: -80px;
+				
+				p{
+					display: inline-block;
+					vertical-align: middle;
+					width: 50%;
+					padding: 15px 0;
+					text-align: center;
+					font-size: 14px;
+					color: #fff;
+					
+					i{
+						margin-right: 10px;
+						font-size: 14px;
+						color: #EEEEF0;
+						
+						@include respond-to(small-tablets){
+							margin-right: 5px;
+						}
+						@include respond-to(wide-handhelds){
+							margin-right: 5px;
+						}
+						@include respond-to(handhelds){
+							margin-right: 5px;
+						}
+					}
+				}
+				@media (max-width: 1500px){
+					p{
+						padding: 10px 0;
+					}
+				}
+				@media (max-width: 1400px){
+					p{
+						padding: 5px 0;
+					}
+				}
+				@media (max-width: 1200px){
+					p{
+						padding: 5px 0;
+					}
+				}
+				p:last-child{
+					clear: both;
+					display: block;
+					width: 100%;
+					margin-top: 10px;
+					line-height: 160%;
+				}
+				@media (max-width: 1200px){
+					p:last-child{
+						line-height: 130%;
+						font-size: 13px;
+					}
+				}
+			}
+			@media (max-width: 1400px){
+				span{
+					padding: 30px;
+					bottom: -60px;
+				}
+			}
+			@media (max-width: 1200px){
+				span{
+					padding: 30px;
+					bottom: -60px;
+				}
+			}
+			@media (max-width: 980px){
+				span{
+					padding: 20px;
+					bottom: -40px;
+				}
+			}
+			@media (max-width: 768px){
+				span{
+					padding: 10px;
+					bottom: -20px;
+				}
+			}
+		}
+		a:hover span{
+			height: 100%;
+			transition: 0.5s;
+			bottom: 0;
+		}
+	}
+}

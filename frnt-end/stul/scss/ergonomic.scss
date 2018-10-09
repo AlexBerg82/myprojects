@@ -1,0 +1,86 @@
+.ergonomic{
+	@include width1000;
+	padding: 30px 0 40px 0;
+	
+	.card-line-ergo{
+		@include clearfix;
+		font-size: 0;
+
+		li{
+			display: inline-block;
+			vertical-align:top;
+			margin: 0 10px;
+			@include clearfix;
+			position: relative;
+			text-align: center;
+			
+			img{
+				width: calc(100% - 2px);
+				margin: 0;
+				padding: 0;
+				border: 1px solid #aaa;
+			}
+			
+			.title-ergo{
+				padding: 20px 0;
+				
+				p{
+					font-size: 13px;
+					text-align: left;
+				}
+			}
+
+			@include respond-to(display-big){
+				width:calc(16.66% - 20px);
+			}
+			@include respond-to(display){
+				width:calc(16.66% - 20px);
+			}
+			@include respond-to(tablets){
+				width:calc(16.66% - 20px);
+			}
+			@include respond-to(small-tablets ){
+				width:calc(33.33% - 4px);
+				margin: 2px;
+			}
+			@include respond-to(wide-handhelds){
+				width:calc(33.33% - 10px);
+				margin: 5px;
+			}
+			@include respond-to(handhelds){
+				width:calc(50% - 10px);
+				margin: 5px;
+			}
+		}
+	
+		@include respond-to(tablets){
+			text-align: center;
+		}
+		@include respond-to(small-tablets){
+			text-align: center;
+		}
+		@include respond-to(wide-handhelds){
+			text-align: center;
+		}
+		@include respond-to(handhelds){
+			text-align: center;
+		}
+	}
+	
+	@include respond-to(tablets ){
+		margin: 0;
+		padding: 20px 0;
+	}
+	@include respond-to(small-tablets){
+		margin: 0;
+		padding: 20px 0;
+	}
+	@include respond-to(wide-handhelds){
+		margin: 0;
+		padding: 20px 0;
+	}
+	@include respond-to(handhelds){
+		margin: 0;
+		padding: 20px 0;
+	}
+}
