@@ -18,7 +18,7 @@
 					width: 1000px;
 				}
 				@include respond-to(handhelds){
-					width: 750px;
+					width: 740px;
 				}
 			}
 			
@@ -130,7 +130,7 @@
 
 		.mail-lang-block{
 			position: absolute;
-			top: 15%;
+			top: 5%;
 			right: 0;
 			padding: 0 10px;
 			
@@ -212,10 +212,10 @@
 			}
 			
 			@include respond-to(wide-handhelds){
-				top: 8%;
+				top: 0;
 			}
 			@include respond-to(handhelds){
-				top: 3%;
+				top: 2%;
 			}
 		}
 

@@ -22,16 +22,32 @@
 		}
 		
 		.close-image{
-			margin: 10px  0 0 50px;
+			width: 25px;
+			height: 25px;
+			margin: 10px 0 0 50px;
 			transform: skewX(15deg);
 			cursor: pointer;
+			
+			img{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
 		}
 		.add{
+			width: 25px;
+			height: 25px;
 			float: right;
 			margin: 10px 10px 0 0;
 			transform: skewX(15deg);
 			cursor: pointer;
 			display: none;
+			
+			img{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
 
 			@include respond-to(tablets){
 				width: 20px;

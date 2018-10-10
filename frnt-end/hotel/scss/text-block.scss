@@ -1,5 +1,4 @@
 .text-block{
-	@include text-default;
 	padding: 20px;
 	background-color: #FCF4CE;
 	@include clearfix;
@@ -111,6 +110,8 @@
 	}
 	
 	h2{
+		margin-top: 0;
+		
 		@include respond-to(wide-handhelds){
 			font-size: 18px;
 		}

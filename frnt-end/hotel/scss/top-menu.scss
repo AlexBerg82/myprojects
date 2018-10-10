@@ -2,7 +2,7 @@
 .menu{
 	position: absolute;
 	width: 100%;
-	top: 40.5%;
+	top: 39.8%;
 	left: 0;
 	padding: 0 2%;
 	box-sizing: border-box;
@@ -36,11 +36,11 @@
 		top: 40%;
 	}
 	@include respond-to(tablets){
-		top: 39.5%;
+		top: 38.5%;
 		padding: 0 1%;
 	}
 	@include respond-to(small-tablets){
-		top: 40%;
+		top: 31%;
 		padding: 0;
 	}
 	@include respond-to(wide-handhelds){
@@ -54,6 +54,8 @@
 }
 
 .menu-left, .menu-right{
+	padding: 0;
+	margin: 0;
 	li{
 		display: inline-block;
 		margin: 0 15px;
@@ -68,6 +70,7 @@
 			&:hover{
 				color: #EED8AE;
 				text-shadow: none;
+				text-decoration: none;
 			}
 			&:active{
 				color: #E8E8E8;
@@ -129,6 +132,16 @@
 			font-family: serif;
 			font-weight: 600;
 			text-shadow: -0.5px 0.5px 1px #EED8AE;
+			
+			&:hover{
+				color: #EED8AE;
+				text-shadow: none;
+				text-decoration: none;
+			}
+			&:active{
+				color: #E8E8E8;
+				text-shadow: none;
+			}
 			
 			@include respond-to(tablets){
 				font-size: 13px;
