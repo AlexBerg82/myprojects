@@ -1,6 +1,6 @@
 .wrapper{
 	@include width1000;
-	@include clearfix;
+	//@include clearfix;
 }
 
 
@@ -228,6 +228,7 @@
 					font-size: 15px;
 					margin-bottom: 0;
 					color: #F2DF6B;
+					text-decoration: none;
 					
 					&:hover{
 						color: #fff;

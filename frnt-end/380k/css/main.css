@@ -409,7 +409,8 @@ body {
           font-size: 15px;
           padding: 7px 0;
           font-weight: 600;
-          color: #fff; }
+          color: #fff;
+          text-shadow: #4F4F4F 0.5px 0.5px 0.8px; }
         .header-block .header .menu-block .icon-mobile-menu .mobile-menu-i {
           display: block;
           float: right;
@@ -740,7 +741,7 @@ body {
           -webkit-transform: translate(-50%, -50%);
                   transform: translate(-50%, -50%); }
     .card-c2 li a:hover .ytb {
-      background-color: transparent; }
+      background-color: rgba(0, 0, 0, 0); }
     @media only screen and (min-width: 1200px) {
       .card-c2 li {
         width: calc(33.33% - 20px); } }
@@ -1880,14 +1881,8 @@ body {
 .footer-block {
   padding: 70px 0 0 0; }
   .footer-block .footer {
+    overflow: hidden;
     background-color: #aaa; }
-    .footer-block .footer:after {
-      content: ".";
-      display: block;
-      clear: both;
-      visibility: hidden;
-      line-height: 0;
-      height: 0; }
     .footer-block .footer p {
       padding: 20px 5px;
       font-size: 13px;

@@ -2,7 +2,8 @@
 	padding: 70px 0 0 0;
 	
 	.footer{
-		@include clearfix;
+		//@include clearfix;
+		overflow: hidden;
 		background-color: #aaa;
 		
 		p{

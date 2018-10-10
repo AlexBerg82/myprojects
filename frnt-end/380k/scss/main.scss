@@ -1,5 +1,4 @@
 @import "reset";
-
 //@import "fonts";
 
 body{
@@ -10,7 +9,6 @@ body{
 	//font-family: 'Roboto', sans-serif;
 	font-family: 'Montserrat Bold', arial;
 }
-
 
 
 @mixin respond-to($media) {
@@ -38,15 +36,12 @@ body{
 @mixin clearfix { &:after {  content: ".";  display: block;  clear: both;  visibility: hidden;  line-height: 0;  height: 0;} }
 // @include clearfix;
 
-
 @mixin width1000 { max-width: 1200px; margin: 0 auto; position: relative; box-sizing: border-box;}
 // @include width1000;
 @mixin width1300 { max-width: 1400px; margin: 0 auto; position: relative; box-sizing: border-box;}
 // @include width1300;
 @mixin width100pr { width: 100%; margin: 0 auto; position: relative; box-sizing: border-box;}
 // @include width100pr;
-
-
 
 
 

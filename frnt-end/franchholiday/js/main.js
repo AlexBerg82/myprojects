@@ -9,7 +9,6 @@ $(document).ready(function(){
 	
 	$(window).resize(function(){
 		var w = $(window).width();
-		console.log(w);
 		if(w > 750) {
 			menu.removeAttr('style');
 		}

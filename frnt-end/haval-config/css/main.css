@@ -3596,13 +3596,7 @@ select {
 
 .wrapper-footer {
   background: #1E1E1E; }
-  .wrapper-footer:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0; }
+
   .wrapper-footer .footer {
     max-width: 1210px;
     margin: 0 auto;
