@@ -228,6 +228,15 @@
 					font-size: 18px;
 				}
 			}
+			.title{
+				color: #fff;
+				font-size: 40px;
+				
+				@include respond-to(small-tablets){
+					font-size: 32px;
+				}
+			}
+			
 			form{
 				ul{
 					list-style: none;
@@ -478,6 +487,15 @@
 					font-size: 18px;
 				}
 			}
+			.title{
+				color: #fff;
+				font-size: 40px;
+				
+				@include respond-to(small-tablets){
+					font-size: 32px;
+				}
+			}
+			
 			form{
 				ul{
 					list-style: none;
@@ -536,7 +554,6 @@
 							border-bottom: 1px solid #0192C5;
 						}
 
-						
 						.anim{
 							animation:
 								brdt  1.5s ease-in infinite alternate 0.5s,

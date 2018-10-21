@@ -451,6 +451,12 @@ body {
         @media only screen and (max-width: 479px) {
           .wrapper .forma .right p {
             font-size: 18px; } }
+      .wrapper .forma .right .title {
+        color: #fff;
+        font-size: 40px; }
+        @media only screen and (min-width: 600px) and (max-width: 767px) {
+          .wrapper .forma .right .title {
+            font-size: 32px; } }
       .wrapper .forma .right form ul {
         list-style: none;
         margin: 0;
@@ -712,6 +718,12 @@ body {
         @media only screen and (max-width: 479px) {
           .wrapper .forma .forgot p {
             font-size: 18px; } }
+      .wrapper .forma .forgot .title {
+        color: #fff;
+        font-size: 40px; }
+        @media only screen and (min-width: 600px) and (max-width: 767px) {
+          .wrapper .forma .forgot .title {
+            font-size: 32px; } }
       .wrapper .forma .forgot form ul {
         list-style: none;
         margin: 0;
