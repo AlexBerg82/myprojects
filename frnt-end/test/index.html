@@ -1,0 +1,132 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>IO Tech</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	
+</head>
+<body>
+
+<div class="wrapper">
+
+	<div class="container">
+		<div class="content">
+			<div class="left">
+				<div class="title">
+					<img src="img/logo.png" alt="io">
+					<h2>Technologies</h2>
+				</div>
+				<p>Get how-to help and instructions or specific features in </p>
+				
+				<div class="buttonBlock">
+					<a href="">Help center</a>
+					<p>or</p>
+					<a href="">Support</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="forma">
+		<div class="right">
+			<h1>Welcome back</h1>
+			<p>Sign in to contine to IO Technologies.</p>
+			
+			<form method="" action="index.html" class="formUser">
+				<ul>
+					<li><input type="email" class="userMail" placeholder="Your email"><div class="errBulb"><div class="corner"></div>Oops! You entered an invalid email</div></li>
+					<li><input type="password" class="userPass" placeholder="Password"></li>
+				</ul>
+				<button>Log in <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+				
+				<p>Forgot your password? <a href="forgot.html">Reset</a></p>
+			</form>
+		</div>
+	</div>
+
+</div>
+
+
+<script>
+var form = document.querySelector('.formUser');
+var mail = form.querySelector('.userMail');
+var password = form.querySelector('.userPass');
+var error = document.querySelector('.errBulb');
+
+var mailUser = 'mail@mail.mail';
+var passUser = 'parole123';
+
+
+form.addEventListener('submit', function (event) {
+	event.preventDefault();
+	
+	var rezOn;
+	var rez = document.documentElement.clientWidth;
+
+	if (!password.value) {
+		password.classList.remove('anim');
+		password.style.borderBottom = '1px solid red';
+	}
+	if (mail.value && password.value.length >= 8 && password.value == passUser && mail.value == mailUser) {
+		password.classList.remove('anim');
+		password.style.borderBottom = '1px solid #01A488';
+	} else {
+		if (password.value) {
+			password.classList.add('anim');
+			password.style.borderBottom = '1px solid red';
+		}
+	}
+
+	
+	if(mail.value){
+		if(isValidEmailAddress(mail.value) && mail.value == mailUser){
+			error.style.display = 'none';
+			mail.classList.remove('anim');
+			mail.style.borderBottom = '1px solid #01A488';
+		} else {
+			if(isValidEmailAddress(mail.value) && mail.value != mailUser){
+				mail.classList.add('anim');
+				
+				if(rez > 1200){
+					error.style.display = 'block';
+				} else {
+					error.style.display = 'none';
+				}
+				
+				window.onresize = function(event){
+					rezOn = document.documentElement.clientWidth;
+					
+					if(rezOn < 1200){
+						error.style.display = 'none';
+					} else {
+						error.style.display = 'block';
+					}
+				};				
+			} else{
+				error.style.display = 'none';
+				mail.style.borderBottom = '1px solid red';
+			}
+		}
+	} else {
+		password.classList.remove('anim');
+		mail.classList.remove('anim');
+		mail.style.borderBottom = '1px solid red';
+		error.style.display = 'none';
+	}
+
+})
+
+function isValidEmailAddress(emailAddress) {
+	var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+	return pattern.test(emailAddress);
+}
+</script>
+
+</body>
+</html>
