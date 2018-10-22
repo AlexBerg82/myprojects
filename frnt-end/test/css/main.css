@@ -562,10 +562,15 @@ body {
         cursor: pointer;
         position: relative;
         z-index: 1; }
-        .wrapper .forma .right form button i {
-          margin: 0 0 0 5px; }
+        .wrapper .forma .right form button span {
+          position: relative;
+          z-index: 1; }
+          .wrapper .forma .right form button span i {
+            margin: 0 0 0 5px; }
         .wrapper .forma .right form button:hover {
-          color: #CFCFCF; }
+          color: #CFCFCF;
+          -webkit-transition: 0.5s;
+          transition: 0.5s; }
         @media only screen and (min-width: 600px) and (max-width: 767px) {
           .wrapper .forma .right form button {
             margin: 20px 0 30px 0; } }
@@ -575,22 +580,22 @@ body {
         @media only screen and (max-width: 479px) {
           .wrapper .forma .right form button {
             margin: 20px 0 30px 0; } }
-      .wrapper .forma .right form button:before {
+      .wrapper .forma .right form button:after {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: #006BD9;
+        color: #fff;
+        text-decoration: none;
         background: -webkit-gradient(linear, right top, left top, from(#006BD9), to(#006BD9));
         background: linear-gradient(to left, #006BD9, #006BD9);
-        opacity: 0;
-        -webkit-transition: 0.5s;
-        transition: 0.5s;
         border-radius: 5px;
-        z-index: -1; }
-      .wrapper .forma .right form button:hover:before {
+        opacity: 0;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s; }
+      .wrapper .forma .right form button:hover:after {
         opacity: 1; }
       .wrapper .forma .right form button:hover i {
         margin: 0 0 0 15px;
@@ -791,10 +796,15 @@ body {
         cursor: pointer;
         position: relative;
         z-index: 1; }
-        .wrapper .forma .forgot form button i {
-          margin: 0 0 0 5px; }
+        .wrapper .forma .forgot form button span {
+          position: relative;
+          z-index: 1; }
+          .wrapper .forma .forgot form button span i {
+            margin: 0 0 0 5px; }
         .wrapper .forma .forgot form button:hover {
-          color: #CFCFCF; }
+          color: #CFCFCF;
+          -webkit-transition: 0.5s;
+          transition: 0.5s; }
         @media only screen and (min-width: 600px) and (max-width: 767px) {
           .wrapper .forma .forgot form button {
             margin: 20px 0 30px 0; } }
@@ -804,25 +814,27 @@ body {
         @media only screen and (max-width: 479px) {
           .wrapper .forma .forgot form button {
             margin: 20px 0 30px 0; } }
-      .wrapper .forma .forgot form button:before {
+      .wrapper .forma .forgot form button:after {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: #006BD9;
+        color: #fff;
+        text-decoration: none;
         background: -webkit-gradient(linear, right top, left top, from(#006BD9), to(#006BD9));
         background: linear-gradient(to left, #006BD9, #006BD9);
-        opacity: 0;
-        -webkit-transition: 0.5s;
-        transition: 0.5s;
         border-radius: 5px;
-        z-index: -1; }
-      .wrapper .forma .forgot form button:hover:before {
+        opacity: 0;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s; }
+      .wrapper .forma .forgot form button:hover:after {
         opacity: 1; }
       .wrapper .forma .forgot form button:hover i {
-        margin: 0 0 0 15px; }
+        margin: 0 0 0 15px;
+        -webkit-transition: 0.5s;
+        transition: 0.5s; }
       .wrapper .forma .forgot .message {
         display: none; }
       @media only screen and (min-width: 980px) and (max-width: 1199px) {
