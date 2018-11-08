@@ -795,6 +795,7 @@ function initMap(){
 	
 	var valPrice;
 	var valPrice2;
+	
 	var inputDlr = '';
 	var inputTwn = '';
 	
@@ -830,7 +831,6 @@ function initMap(){
 				if(markers[i].color == arr[j] && valPrice == 105560 && valPrice2 == 125560 && inputDlr == '' && inputTwn == ''){
 					addMarker(markers[i]);
 				}
-				
 			}
 			//price
 			if(markers[i].price > valPrice && valPrice2 == 125560 && arr == '' && inputDlr == '' && inputTwn == ''){
@@ -850,8 +850,13 @@ function initMap(){
 		if(valPrice == 105560 && valPrice2 == 125560 && arr == '' && inputDlr != '' && inputTwn == ''){
 			for(var i = 0; i < markers.length; i++){
 				var pos = -1;
-				while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1) {
-					addMarker(markers[i]);
+				var temp = inputDlr.toLowerCase();
+				var str = markers[i].diler;
+				
+				if(str != undefined){
+					while ((pos = str.toLowerCase().indexOf(temp, pos + 1)) != -1) {
+						addMarker(markers[i]);
+					}					
 				}
 			}
 		}
@@ -860,6 +865,7 @@ function initMap(){
 			for(var i = 0; i < markers.length; i++){
 				var pos = -1;
 				while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1) {
+				console.log(pos);
 					addMarker(markers[i]);
 				}
 			}
@@ -900,9 +906,14 @@ function initMap(){
 			for(var i = 0; i < markers.length; i++){
 				for(var j = 0; j < arr.length; j++){
 					var pos = -1;
-					while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
-						if(markers[i].color == arr[j] && pos == 0){
-							addMarker(markers[i]);
+					var temp = inputDlr.toLowerCase();
+					var str = markers[i].diler;
+				
+					if(str != undefined){
+						while ((pos = str.toLowerCase().indexOf(temp, pos + 1)) != -1){
+							if(markers[i].color == arr[j] && pos == 0){
+								addMarker(markers[i]);
+							}
 						}
 					}
 				}
@@ -912,9 +923,14 @@ function initMap(){
 		if(valPrice > 105560 && valPrice2 == 125560 && arr == '' && inputDlr != '' && inputTwn == ''){
 			for(var i = 0; i < markers.length; i++){
 				var pos = -1;
-				while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
-					if(markers[i].price < valPrice && pos == 0){
-						addMarker(markers[i]);
+				var temp = inputDlr.toLowerCase();
+				var str = markers[i].diler;
+			
+				if(str != undefined){
+					while ((pos = str.toLowerCase().indexOf(temp, pos + 1)) != -1){
+						if(markers[i].price < valPrice && pos == 0){
+							addMarker(markers[i]);
+						}
 					}
 				}
 			}
@@ -922,11 +938,15 @@ function initMap(){
 		//price2 / diler
 		if(valPrice == 105560 && valPrice2 < 125560 && arr == '' && inputDlr != '' && inputTwn == ''){
 			for(var i = 0; i < markers.length; i++){
-				var pos = -1;
-				while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
-					if(markers[i].price < valPrice2 && pos == 0){
-						addMarker(markers[i]);
-					}
+				var temp = inputDlr.toLowerCase();
+				var str = markers[i].diler;
+				
+				if(str != undefined){
+					while ((pos = str.toLowerCase().indexOf(temp, pos + 1)) != -1) {
+						if(markers[i].price < valPrice2 && pos == 0){
+							addMarker(markers[i]);
+						}
+					}					
 				}
 			}
 		}
@@ -934,9 +954,14 @@ function initMap(){
 		if(valPrice > 105560 && valPrice2 < 125560 && arr == '' && inputDlr != '' && inputTwn == ''){
 			for(var i = 0; i < markers.length; i++){
 				var pos = -1;
-				while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
-					if(markers[i].price > valPrice && markers[i].price < valPrice2 && pos == 0){
-						addMarker(markers[i]);
+				var temp = inputDlr.toLowerCase();
+				var str = markers[i].diler;
+				
+				if(str != undefined){
+					while ((pos = str.toLowerCase().indexOf(temp, pos + 1)) != -1){
+						if(markers[i].price > valPrice && markers[i].price < valPrice2 && pos == 0){
+							addMarker(markers[i]);
+						}
 					}
 				}
 			}
@@ -992,10 +1017,15 @@ function initMap(){
 			for(var i = 0; i < markers.length; i++){
 				var pos = -1;
 				var pos2 = -1;
+				var temp = inputDlr.toLowerCase();
+				var str = markers[i].diler;
+
 				while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
-					while ((pos2 = markers[i].diler.toLowerCase().indexOf(inputDlr, pos2 + 1)) != -1) {
-						if(pos2 == 0 && pos == 0){
-							addMarker(markers[i]);
+					if(str != undefined){
+						while ((pos2 = str.toLowerCase().indexOf(temp, pos2 + 1)) != -1) {
+							if(pos2 == 0 && pos == 0){
+								addMarker(markers[i]);
+							}
 						}
 					}
 				}
@@ -1006,9 +1036,14 @@ function initMap(){
 			for(var i = 0; i < markers.length; i++){
 				for(var j = 0; j < arr.length; j++){
 					var pos = -1;
-					while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
-						if(markers[i].color == arr[j] && markers[i].price < valPrice && pos == 0){
-							addMarker(markers[i]);
+					var temp = inputDlr.toLowerCase();
+					var str = markers[i].diler;
+					
+					if(str != undefined){
+						while ((pos = str.toLowerCase().indexOf(temp, pos + 1)) != -1){
+							if(markers[i].color == arr[j] && markers[i].price < valPrice && pos == 0){
+								addMarker(markers[i]);
+							}
 						}
 					}
 				}
@@ -1019,9 +1054,14 @@ function initMap(){
 			for(var i = 0; i < markers.length; i++){
 				for(var j = 0; j < arr.length; j++){
 					var pos = -1;
-					while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
-						if(markers[i].color == arr[j] && markers[i].price < valPrice2 && pos == 0){
-							addMarker(markers[i]);
+					var temp = inputDlr.toLowerCase();
+					var str = markers[i].diler;
+					
+					if(str != undefined){
+						while ((pos = str.toLowerCase().indexOf(temp, pos + 1)) != -1){
+							if(markers[i].color == arr[j] && markers[i].price < valPrice2 && pos == 0){
+								addMarker(markers[i]);
+							}
 						}
 					}
 				}
@@ -1032,9 +1072,14 @@ function initMap(){
 			for(var i = 0; i < markers.length; i++){
 				for(var j = 0; j < arr.length; j++){
 					var pos = -1;
-					while ((pos = markers[i].diler.toLowerCase().indexOf(inputDlr.toLowerCase(), pos + 1)) != -1){
-						if(markers[i].color == arr[j] && markers[i].price > valPrice && markers[i].price < valPrice2 && pos == 0){
-							addMarker(markers[i]);
+					var temp = inputDlr.toLowerCase();
+					var str = markers[i].diler;
+					
+					if(str != undefined){
+						while ((pos = str.toLowerCase().indexOf(temp, pos + 1)) != -1){
+							if(markers[i].color == arr[j] && markers[i].price > valPrice && markers[i].price < valPrice2 && pos == 0){
+								addMarker(markers[i]);
+							}
 						}
 					}
 				}
@@ -1046,10 +1091,15 @@ function initMap(){
 				for(var j = 0; j < arr.length; j++){
 					var pos = -1;
 					var pos2 = -1;
+					var temp = inputDlr.toLowerCase();
+					var str = markers[i].diler;
+
 					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
-						while ((pos2 = markers[i].diler.toLowerCase().indexOf(inputDlr, pos2 + 1)) != -1) {
-							if(markers[i].color == arr[j] && pos2 == 0 && pos == 0){
-								addMarker(markers[i]);
+						if(str != undefined){
+							while ((pos2 = str.toLowerCase().indexOf(temp, pos2 + 1)) != -1) {
+								if(markers[i].color == arr[j] && pos2 == 0 && pos == 0){
+									addMarker(markers[i]);
+								}
 							}
 						}
 					}
@@ -1061,9 +1111,14 @@ function initMap(){
 			for(var i = 0; i < markers.length; i++){
 				for(var j = 0; j < arr.length; j++){
 					var pos = -1;
-					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
-						if(markers[i].color == arr[j] && markers[i].price < valPrice && pos == 0){
-							addMarker(markers[i]);
+					var temp = inputDlr.toLowerCase();
+					var str = markers[i].diler;
+					
+					if(str != undefined){
+						while ((pos = str.toLowerCase().indexOf(temp, pos + 1)) != -1){
+							if(markers[i].color == arr[j] && markers[i].price < valPrice && pos == 0){
+								addMarker(markers[i]);
+							}
 						}
 					}
 				}
@@ -1101,10 +1156,15 @@ function initMap(){
 				for(var j = 0; j < arr.length; j++){
 					var pos = -1;
 					var pos2 = -1;
+					var temp = inputDlr.toLowerCase();
+					var str = markers[i].diler;
+
 					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
-						while ((pos2 = markers[i].diler.toLowerCase().indexOf(inputDlr, pos2 + 1)) != -1) {
-							if(markers[i].color == arr[j] && pos2 == 0 && pos == 0 && markers[i].price < valPrice){
-								addMarker(markers[i]);
+						if(str != undefined){
+							while ((pos2 = str.toLowerCase().indexOf(temp, pos2 + 1)) != -1) {
+								if(markers[i].color == arr[j] && pos2 == 0 && pos == 0 && markers[i].price < valPrice){
+									addMarker(markers[i]);
+								}
 							}
 						}
 					}
@@ -1117,10 +1177,15 @@ function initMap(){
 				for(var j = 0; j < arr.length; j++){
 					var pos = -1;
 					var pos2 = -1;
+					var temp = inputDlr.toLowerCase();
+					var str = markers[i].diler;
+					
 					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
-						while ((pos2 = markers[i].diler.toLowerCase().indexOf(inputDlr, pos2 + 1)) != -1) {
-							if(markers[i].color == arr[j] && pos2 == 0 && pos == 0 && markers[i].price < valPrice2){
-								addMarker(markers[i]);
+						if(str != undefined){
+							while ((pos2 = str.toLowerCase().indexOf(temp, pos2 + 1)) != -1) {
+								if(markers[i].color == arr[j] && pos2 == 0 && pos == 0 && markers[i].price < valPrice2){
+									addMarker(markers[i]);
+								}
 							}
 						}
 					}
@@ -1133,10 +1198,15 @@ function initMap(){
 				for(var j = 0; j < arr.length; j++){
 					var pos = -1;
 					var pos2 = -1;
+					var temp = inputDlr.toLowerCase();
+					var str = markers[i].diler;
+					
 					while ((pos = markers[i].town.toLowerCase().indexOf(inputTwn.toLowerCase(), pos + 1)) != -1){
-						while ((pos2 = markers[i].diler.toLowerCase().indexOf(inputDlr, pos2 + 1)) != -1) {
-							if(markers[i].color == arr[j] && pos2 == 0 && pos == 0 && markers[i].price > valPrice && markers[i].price < valPrice2){
-								addMarker(markers[i]);
+						if(str != undefined){
+							while ((pos2 = str.toLowerCase().indexOf(temp, pos2 + 1)) != -1) {
+								if(markers[i].color == arr[j] && pos2 == 0 && pos == 0 && markers[i].price > valPrice && markers[i].price < valPrice2){
+									addMarker(markers[i]);
+								}
 							}
 						}
 					}
@@ -1210,12 +1280,6 @@ $('#chck_line').click(function(){
 	
 	$.cookie('select_style','line');
 });
-
-
-
-//$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div').css('background-color','red');
-//$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(2)').css('background-color','red');
-//$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(4)').css('background-color','red');
 </script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCweNlWEzszWNdx4dwC59DUwAYUo3o08R0&callback=initMap"></script>
