@@ -748,7 +748,8 @@ function initMap(){
 			});
 			marker.addListener('click', function(){
 				infoWindow.open(myMap, marker);
-				//style popap
+				//console.log(infoWindow);
+				/*//style popap
 				//mount (shadow)
 				$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(2)').css('border-radius','5px');
 				//border - outer DIV (background, border)
@@ -757,13 +758,15 @@ function initMap(){
 				$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(4)').css('border-radius','5px');
 				//close - container
 				$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(3)').css('width','22px').css('height','22px').css('background','url("img/close.png") no-repeat').css('background-size','cover');
+				
+				$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > button').css('margin','5px').css('width','22px').css('height','22px').css('background','url("img/close.png") no-repeat').css('background-size','cover');
 				//.append('<i class="fa fa-times" aria-hidden="true"></i>')
 				//close i (color,size)
 				//$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(3) > i').css('font-size','23px').css('color','#aaa');
 				//close img (delete default img)
 				$('#map > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div:nth-child(3) > img').css('display','none');
 				//color title
-				//$('.popup-wnd .link-car').css('color',props.color);
+				//$('.popup-wnd .link-car').css('color',props.color);*/
 			});
 		}
 	}
